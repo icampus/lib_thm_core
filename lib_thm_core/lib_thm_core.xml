@@ -14,5 +14,8 @@
 	<files>
 		<filename>index.html</filename>
         <folder>log</folder>
+        <folder>acl</folder>
+        <folder>test</folder>
+        <folder>util</folder>
 	</files>
 </extension>
