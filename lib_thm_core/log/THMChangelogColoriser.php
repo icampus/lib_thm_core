@@ -1,7 +1,7 @@
 <?php
 
 $doc = JFactory::getDocument();
-$doc->addStyleSheet(dirname(__FILE__) . '/THMChangelogColoriser.css');
+$doc->addStyleSheet(JURI::root(true) . '/libraries/thm_core/log/THMChangelogColoriser.css');
 
 class THMChangelogColoriser
 {
