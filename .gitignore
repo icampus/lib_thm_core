@@ -1,0 +1,14 @@
+# IDE
+.buildpath
+.project
+.settings
+.idea
+
+# vim
+*.swp
+
+.*~
+Thumbs.db
+*~
+.directory
+nbproject
