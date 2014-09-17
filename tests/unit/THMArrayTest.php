@@ -6,7 +6,9 @@
  * Time: 1:38 PM
  */
 
-class THMArrayTest extends  PHPUnit_TestCase
+jimport('thm_core.util.THMArray');
+
+class THMArrayTest extends  TestCase
 {
     public function testT2()
     {

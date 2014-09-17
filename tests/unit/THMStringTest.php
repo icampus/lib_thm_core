@@ -6,19 +6,19 @@
  * Time: 1:39 PM
  */
 
-class THMStringTest extends  PHPUnit_TestCase
+jimport('thm_core.util.THMString');
+
+class THMStringTest extends  TestCase
 {
-
-
     function testContains()
     {
-        $this->assetTrue(THMString::contains('abc', 'a'));
-        $this->assetTrue(THMString::contains('abc', 'b'));
-        $this->assetTrue(THMString::contains('abc', 'c'));
-        $this->assetTrue(THMString::contains('abc', 'bc'));
-        $this->assetTrue(THMString::contains('abc', 'abc'));
+        $this->assertTrue(THMString::contains('abc', 'a'));
+        $this->assertTrue(THMString::contains('abc', 'b'));
+        $this->assertTrue(THMString::contains('abc', 'c'));
+        $this->assertTrue(THMString::contains('abc', 'bc'));
+        $this->assertTrue(THMString::contains('abc', 'abc'));
 
-        $this->assetFalse(THMString::contains('abc', 'abcd'));
-        $this->assetFalse(THMString::contains('abc', 'f'));
+        $this->assertFalse(THMString::contains('abc', 'abcd'));
+        $this->assertFalse(THMString::contains('abc', 'f'));
     }
 } 

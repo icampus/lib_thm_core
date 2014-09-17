@@ -6,7 +6,9 @@
  * Time: 1:38 PM
  */
 
-class THMObjectTest extends  PHPUnit_TestCase
+jimport('thm_core.util.THMOPbject');
+
+class THMObjectTest extends  TestCase
 {
     public function testT2()
     {
