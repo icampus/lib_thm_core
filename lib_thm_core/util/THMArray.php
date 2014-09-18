@@ -1,12 +1,12 @@
 <?php
 
-class HArray
+class THMArray
 {
     /**
      * Transform all elements of on array into a new array.
      *
      * Example: Double all Elements
-     * HArray::map([1,2,3,4], function (elem) { return elem * 2})
+     * THMArray::map([1,2,3,4], function (elem) { return elem * 2})
      * Will return: [2,4,6,8]
      *
      * @require PHP 5.3.0+
@@ -57,16 +57,18 @@ class HArray
         return $result;
     }
 
-    public static function mapReduce($array, $mapFn, $reduceFn)
+    public static function mapReduce($array, $mapFn, $reduceFn, $reduceStart)
     {
         $result = self::map($array, $mapFn);
-        return self::foldLeft($result, $reduceFn);
+        $fn = self::foldLeft($reduceStart, $reduceFn);
+        return $fn($result);
     }
 
-    public static function mapReduceRight($array, $mapFn, $reduceFn)
+    public static function mapReduceRight($array, $mapFn, $reduceFn, $reduceStart)
     {
         $result = self::map($array, $mapFn);
-        return self::foldRight($result, $reduceFn);
+        $fn = self::foldRight($reduceStart, $reduceFn);
+        return $fn($result);
     }
 
     public static function foldLeft($start, $fn)

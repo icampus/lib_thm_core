@@ -21,4 +21,19 @@ class THMStringTest extends  TestCase
         $this->assertFalse(THMString::contains('abc', 'abcd'));
         $this->assertFalse(THMString::contains('abc', 'f'));
     }
+
+    /**
+     * @depends testContains
+     */
+    function testContainsAny()
+    {
+        $this->assertTrue(THMString::containsAny('abc', array('a', 'b', 'c')));
+        $this->assertTrue(THMString::containsAny('abc', array('a', 'x', 'x')));
+        $this->assertTrue(THMString::containsAny('abc', array('f', 'f', 'c')));
+        $this->assertTrue(THMString::containsAny('abc', array('f', 'f', 'a')));
+
+        $this->assertFalse(THMString::containsAny('abc', array()));
+        $this->assertFalse(THMString::containsAny('abc', array('f')));
+        $this->assertFalse(THMString::containsAny('abc', array('f', 'g', 'u')));
+    }
 } 
