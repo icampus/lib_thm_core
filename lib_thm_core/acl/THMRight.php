@@ -40,10 +40,10 @@ class THMRight
      */
     public function __construct($group, $create, $edit, $delete)
     {
-        if (!($group instanceof THMGroup)
-            || !THMPermission::isValidPermission($create)
-            || !THMPermission::isValidPermission($edit)
-            || !THMPermission::isValidPermission($delete))
+        if ( !($group instanceof THMGroup)
+         || !THMPermission::isValidPermission($create)
+         || !THMPermission::isValidPermission($edit)
+         || !THMPermission::isValidPermission($delete) )
         {
             throw new  InvalidArgumentException('One or more argument/s have a wrong type');
         }
