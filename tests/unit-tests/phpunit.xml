@@ -2,7 +2,8 @@
 <phpunit bootstrap="bootstrap.php" colors="false">
 	<testsuites>
         <testsuite name="lib_thm_core">
-            <directory>unit</directory>
+            <directory>tests</directory>
         </testsuite>
 	</testsuites>
 </phpunit>
+
