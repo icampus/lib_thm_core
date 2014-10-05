@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension type="library" version="2.5" method="upgrade">
+<extension type="library" version="3.3" method="upgrade">
 	<libraryname>thm_core</libraryname>
 	<name>THM Core Library</name>
 	<author>THM iCampus</author>
@@ -8,17 +8,16 @@
 	<licence>GNU GPL v.2</licence>
 	<authorEMail>Andrej.Sajenko@mni.thm.de</authorEMail>
     <authorEMail>Ilja.Michajlow@mni.thm.de</authorEMail>
+    <authorEMail>james.antrim@mni.thm.de</authorEMail>
 	<authorUrl>www.mni.thm.de</authorUrl>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 	<description>Library for iCampus</description>
-
 	<files>
         <filename>index.html</filename>
-
+        <folder>list</folder>
         <folder>log</folder>
         <folder>acl</folder>
         <folder>util</folder>
         <folder>exception</folder>
     </files>
-
 </extension>
