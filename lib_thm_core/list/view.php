@@ -1,10 +1,10 @@
 <?php
 /**
  * @category    Joomla library
- * @package     THM_List
+ * @package     THM_Core
  * @subpackage  lib_thm_core.site
- * @name        THM_Core
- * @description Sets standardized list attributes
+ * @name        THM_CoreListView
+ * @description Common list view
  * @author      Melih Cakir, <melih.cakir@mni.thm.de>
  * @author      James Antrim, <james.antrim@mni.thm.de>
  * @copyright   2014 TH Mittelhessen
@@ -30,17 +30,23 @@ class THM_CoreListView
      */
     public static function display(&$view)
     {
-        // Filters which are hidden until search tools is clicked
+        // Don't know which of these filters does what if anything active had no effect on the active highlighting
         $view->filterForm = $view->get('FilterForm');
-
-        // Filters which are always shown
         $view->activeFilters = $view->get('ActiveFilters');
 
-
+        // Items common across list views
         $view->state = $view->get('State');
         $view->pagination = $view->get('Pagination');
         $view->headers = $view->get('Headers');
         $view->items = $view->get('Items');
-    }
 
+        // Allows for component specific menu handling
+        $option = JFactory::getApplication()->input->get('option', '');
+        $path = JPATH_ROOT . "/media/$option/helpers/componenthelper.php";
+        require_once($path);
+        THM_ComponentHelper::addSubmenu($view);
+
+        // Allows for view specific toolbar handling
+        $view->addToolBar();
+    }
 }

@@ -1,10 +1,10 @@
 <?php
 /**
  * @category    Joomla library
- * @package     THM_List
+ * @package     THM_Core
  * @subpackage  lib_thm_core.site
- * @name        THM_Core
- * @description Default template suitable for most list views
+ * @name        THM_CoreListTemplate
+ * @description Common template for list views
  * @author      Melih Cakir, <melih.cakir@mni.thm.de>
  * @author      James Antrim, <james.antrim@mni.thm.de>
  * @copyright   2014 TH Mittelhessen
