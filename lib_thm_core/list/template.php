@@ -2,9 +2,9 @@
 /**
  * @category    Joomla library
  * @package     THM_List
- * @subpackage  lib_thm_list.site
- * @name        THM_List
- * @description Common list view
+ * @subpackage  lib_thm_core.site
+ * @name        THM_Core
+ * @description Default template suitable for most list views
  * @author      Melih Cakir, <melih.cakir@mni.thm.de>
  * @author      James Antrim, <james.antrim@mni.thm.de>
  * @copyright   2014 TH Mittelhessen
@@ -25,12 +25,10 @@ class THM_CoreListTemplate
      * Method to create a list output
      *
      * @param   object  &$view           the view context calling the function
-     * @param   bool    $showSearch      whether the search box should be shown
-     * @param   bool    $showPagination  whether the pagination should be displayed
      *
      * @return void
      */
-    public static function render(&$view, $showSearch = true, $showPagination = true)
+    public static function render(&$view)
     {
         if (!empty($view->sidebar))
         {
@@ -43,13 +41,10 @@ class THM_CoreListTemplate
                 <?php echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $view)); ?>
                 <div class="clr"> </div>
                 <table class="table table-striped" id="<?php echo $view->get('name'); ?>-list">
-                    <?php self::renderHeader($view->headers); ?>
-                    <?php self::renderBody($view->items); ?>
 <?php
-            if ($showPagination)
-            {
-                self::renderFooter($view);
-            }
+                    self::renderHeader($view->headers);
+                    self::renderBody($view->items);
+                    self::renderFooter($view);
 ?>
                 </table>
                 <input type="hidden" name="task" value="" />
