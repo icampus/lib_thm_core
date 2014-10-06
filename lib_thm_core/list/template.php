@@ -19,7 +19,7 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_List
+class THM_CoreListTemplate
 {
     /**
      * Method to create a list output
@@ -32,78 +32,38 @@ class THM_List
      */
     public static function render(&$view, $showSearch = true, $showPagination = true)
     {
+        if (!empty($view->sidebar))
+        {
+            echo '<div id="j-sidebar-container" class="span2">' . $view->sidebar . '</div>';
+        }
 ?>
-    <form action="index.php?" id="adminForm"  method="post"
-          name="adminForm" xmlns="http://www.w3.org/1999/html">
-<?php
-if ($showSearch or !empty($view->filters))
-{
-    self::renderFilterBar($view, $showSearch);
-}
-?>
-        <div class="clr"> </div>
-        <table class="table table-striped" id="<?php echo $view->get('name'); ?>-list">
-            <?php self::renderHeader($view->headers); ?>
-            <?php self::renderBody($view->items); ?>
+        <div id="j-main-container" class="span10">
+            <form action="index.php?" id="adminForm"  method="post"
+                  name="adminForm" xmlns="http://www.w3.org/1999/html">
+                <?php echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $view)); ?>
+                <div class="clr"> </div>
+                <table class="table table-striped" id="<?php echo $view->get('name'); ?>-list">
+                    <?php self::renderHeader($view->headers); ?>
+                    <?php self::renderBody($view->items); ?>
 <?php
             if ($showPagination)
             {
                 self::renderFooter($view);
             }
 ?>
-        </table>
-        <input type="hidden" name="task" value="" />
-        <input type="hidden" name="boxchecked" value="0" />
-        <input type="hidden" name="filter_order" value="<?php echo $view->state->get('list.ordering'); ?>" />
-        <input type="hidden" name="filter_order_Dir" value="<?php echo $view->state->get('list.direction'); ?>" />
-        <input type="hidden" name="option" value="<?php echo $view->model->get('option'); ?>" />
-        <input type="hidden" name="view" value="<?php echo $view->get('name'); ?>" />
-        <?php echo JHtml::_('form.token');?>
-    </form>
+                </table>
+                <input type="hidden" name="task" value="" />
+                <input type="hidden" name="boxchecked" value="0" />
+                <input type="hidden" name="filter_order" value="<?php echo $view->state->get('list.ordering'); ?>" />
+                <input type="hidden" name="filter_order_Dir" value="<?php echo $view->state->get('list.direction'); ?>" />
+                <input type="hidden" name="option" value="<?php echo $view->get('option'); ?>" />
+                <input type="hidden" name="view" value="<?php echo $view->get('name'); ?>" />
+                <?php echo JHtml::_('form.token');?>
+            </form>
+        </div>
 <?php
     }
 
-    /**
-     * Renders the table head
-     *
-     * @param   object  &$view       the view context calling the function
-     * @param   bool    $showSearch  whether the search box should be shown
-     *
-     * @return  void
-     */
-    private static function renderFilterBar(&$view, $showSearch)
-    {
-        echo '<div class="filter-bar">';
-        if ($showSearch)
-        {
-?>
-            <div class="filter-search fltlft pull-left">
-                <label class="filter-search-lbl" for="filter_search">
-                <?php echo JText::_('JSEARCH_FILTER_LABEL'); ?>
-                </label>
-                <input type="text" name="filter_search" id="filter_search"
-                       value="<?php echo $view->escape($view->state->get('filter.search')); ?>"
-                       title="<?php echo JText::_('COM_THM_ORGANIZER_SEARCH_TITLE'); ?>" />
-                <button type="submit" class="btn hasTooltip">
-                    <?php echo JText::_('JSEARCH_FILTER_SUBMIT'); ?>
-                </button>
-                <button type="button" class="btn hasTooltip js-stools-btn-clear"
-                        onclick="document.id('filter_search').value='';this.form.submit();"
-                        title="<?php echo JText::_('JSEARCH_FILTER_CLEAR'); ?>">
-                <?php echo JText::_('JSEARCH_FILTER_CLEAR'); ?>
-                </button>
-            </div>
-<?php
-        }
-        if (count($view->filters))
-        {
-            foreach ($view->filters as $filter)
-            {
-                echo '<div class="filter-select fltrt pull-right">' . $filter . '</div>';
-            }
-        }
-        echo '</div>';
-    }
 
     /**
      * Renders the table head

@@ -14,18 +14,18 @@
 \contentsline {subsubsection}{Global User Configuration}{8}{section*.6}
 \contentsline {subsubsection}{SSH-Key Creation}{9}{section*.7}
 \contentsline {subsubsection}{SSH-Key in Gitorious eintragen}{9}{section*.8}
-\contentsline {section}{\numberline {2.3}PhpStorm}{10}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Installation}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}THM Core Library}{11}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Code Sniffer and Mess Detector}{13}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Standards Directory Inclusion}{13}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}PhpStorm}{14}{subsection.2.4.2}
-\contentsline {subsubsection}{PhpStorm Inclusion}{14}{section*.9}
-\contentsline {subsubsection}{PhpStorm Configuration}{14}{section*.10}
-\contentsline {section}{\numberline {2.5}SASS}{16}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Installation}{16}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}PhpStorm Configuration}{17}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Joomla!}{20}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Database Creation}{20}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}MNI Site Development}{21}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Joomla! 3.x Development}{23}{subsection.2.6.3}
+\contentsline {section}{\numberline {2.3}PhpStorm}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Installation}{11}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}THM Core Library}{12}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Code Sniffer and Mess Detector}{14}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Standards Directory Inclusion}{14}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}PhpStorm}{15}{subsection.2.4.2}
+\contentsline {subsubsection}{PhpStorm Inclusion}{15}{section*.9}
+\contentsline {subsubsection}{PhpStorm Configuration}{15}{section*.10}
+\contentsline {section}{\numberline {2.5}SASS}{17}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Installation}{17}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}PhpStorm Configuration}{18}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Joomla!}{22}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Database Creation}{22}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}MNI Site Development}{23}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Joomla! 3.x Development}{25}{subsection.2.6.3}

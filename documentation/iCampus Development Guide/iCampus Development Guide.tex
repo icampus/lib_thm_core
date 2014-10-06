@@ -253,6 +253,8 @@ Here we need to select the fourth tab \texttt{SSH Keys} and add the key using th
 \noindent
 In the form that opens we have to copy the text of the public key. This can be found in the directory created during the creation of the key, \texttt{C:/Users/$<$Windows Account Name$>$/.ssh/id\_rsa.pub}. Open this file with a text editor, copy the text from the file, and paste it into the available text field. At the end of the pasted text will be a \texttt{$<$Name$>$@$<$Domain$>$}. This should be replaced with the email address from the Git Configuration. When this has been completed click the \texttt{Save} button.
 
+\newpage
+
 \section{PhpStorm}
 \label{sec:PHP-Storm}
 
@@ -270,7 +272,17 @@ During the installation process you will be asked which file extensions should b
 \end{figure}
 
 \noindent
-For the most part the rest of the installation requires nothing special, however at the end you will be asked to chose between several themes and coloring/font style options. As this interface offers no preview it is best to go with the default settings. These selections can later be changed while running the PhpStorm which will actually show you what effects your selection has on its appearance.
+For the most part the rest of the installation requires nothing special, however at the end you will be asked to chose between several themes and coloring/font style options. As this interface offers no preview it is best to go with the default settings. These selections can later be changed while running the PhpStorm which will actually show you what effects your selection has on its appearance.\\
+\\
+After the installation starting PhpStorm will start the activation dialog. Here you will need to enter a ``User or Company Name" and a ``License Key". The name for our license is \texttt{Technische Hochschule Mittelhessen - University of Applied Sciences}. The license key will be given to you directly.
+
+\newpage
+
+\begin{figure}[h] 
+	\centering
+	\includegraphics[width=6cm]{phpstormactivation.png}
+	\caption{PhpStorm License Activation}
+\end{figure}
 
 \subsection{THM Core Library}
 
@@ -281,8 +293,6 @@ Next both for example and the inherent utility of the library we will create the
 	\includegraphics[width=6cm]{newprojectfromgit.png}
 	\caption{Check out a Git Project}
 \end{figure}
-
-\newpage
 
 \noindent
 We will want to use \texttt{git@scm.thm.de:icampus/lib\_thm\_core.git} as the ``Git Repository Url". At this point PhpStorm will complain that the PhpstormProjects directory does not exist. Either create the default directory at the location shown or chose a different directory into which this (and your future projects if you so chose) will be saved.\\
@@ -469,22 +479,24 @@ This brings us to the watcher edit interface seen in Figure \ref{fig:watcheredit
 
 \begin{figure}[h] 
   \centering
-     \includegraphics[width=10cm]{editwatcher.png}
+     \includegraphics[width=16cm]{editwatcher.png}
   \caption{Edit File Watcher}
   \label{fig:watcheredit}
 \end{figure}
 
 \begin{description}
-	\item[Program] $<$Ruby Installation Path$>$\textbackslash bin\textbackslash scss.bat
-	\item[Arguments] --no-cache --update \newline \$FileName\$:\$FileParentDir\$/$<$Project Name$>$/media/css/\$FileNameWithoutExtension\$.css
-	\item[Output Paths] \$FileParentDir\$/$<$Project Name$>$/media/css/\$FileNameWithoutExtension\$.css
+	\item[Program:] \texttt{$<$Ruby Installation Path$>$\textbackslash bin\textbackslash scss.bat}
+	\item[Arguments:] \texttt{--no-cache --update} \newline \texttt{\$FileName\$:\$FileParentDir\$/$<$Project Name$>$/media/css/\$FileNameWithoutExtension\$.css}
+	\item[Output Paths:] \texttt{\$FileParentDir\$/$<$Project Name$>$/media/css/\$FileNameWithoutExtension\$.css}
 \end{description}
 
 \noindent
 Upon completion click ``OK" to save the watcher. As necessary in the \texttt{Settings} interface put a check mark in the box in front of the watcher and click ``Apply" for your changes to take effect.
 
+\newpage
+
 \begin{quote}
-	\emph{SASS version 3.4+ automatically generates $<$File Name$>$.css.map files when used as a plugin. While this may at some point be used for debugging purposes, I would really like to turn it off. If anyone figures out how I would be very grateful. I could not get the method explained} \href{http://sass-lang.com/documentation/file.SASS\_CHANGELOG.html#341\_22_august\_2014}{here} \emph{to work.}
+	\emph{SASS version 3.4+ automatically generates $<$File Name$>$.css.map files when used as a plugin, as well as adds comments to the .css files which reference these. While this may at some point be used for debugging purposes, I would really like to turn it off. If anyone figures out how I would be very grateful. I could not get the method explained} \href{http://sass-lang.com/documentation/file.SASS\_CHANGELOG.html#341\_22_august\_2014}{here} \emph{to work.}
 \end{quote}
 
 \noindent
@@ -532,7 +544,7 @@ To create a database, click on the \texttt{Databases} tab,the interface for data
 
 First we will discuss the installation of the MNI backup. If you will only be developing for Joomla! 3.x you should skip ahead to the next subsection. First extract the backup and give it an URL-friendly name such as ``mni". Next place this folder in your web directory. If you followed the default installation steps this should be located at \texttt{C:\textbackslash xampp\textbackslash htdocs}.\\
 \\
-Open a browser of your choosing and enter \texttt{localhost/$<$Your MNI Backup Folder$>$} in the address bar. If you renamed the backup ``mni" this would then be \url{localhost/mni}. This will automatically start the Akeeba installer. The first page shown should look like Figure \ref{fig:akeebapreinstallation}. As illustrated in the figure, we deviate from the recommended settings in two points ``Display Errors" and ``Output Buffering" since we changed them in Subsection \ref{subsec:phpconfig}. Should your settings not match those displayed, reconfigure your PHP settings to do so.\\
+Open a browser of your choosing and enter \texttt{localhost/$<$Your MNI Backup Folder$>$} in the address bar. If you renamed the backup ``mni" this would then be \url{localhost/mni}. This will automatically start the Akeeba installer. The first page shown should look like Figure \ref{fig:akeebapreinstallation}. As illustrated in the figure, we deviate from the recommended settings in one point ``Display Errors", since we changed it in Subsection \ref{subsec:phpconfig}. Should your settings not match those displayed, reconfigure your PHP settings to do so.\\
 
 \begin{figure}[h] 
 	\centering
@@ -580,7 +592,7 @@ Clicking ``$\Rightarrow$ Next" will trigger the restoration of the database. The
 \noindent
 Here you need to choose a \texttt{Super User}. The available options are the users which have super user access to the live web site. Here it is not important which user you chose, but rather that you remember which user you chose. Also important is setting a local \texttt{Password} for the chosen user, this prevents the system from validating against the data available to the CAS server. Set a new local  \texttt{Password} and repeat it in  \texttt{Password (repeat)}.\\
 \\
-When you click Clicking ``$\Rightarrow$ Next" you will be directed to the final confirmation page. Here you will be notified that you need to delete the \texttt{installation} directory to complete the installation. Do so by clicking on the blue button. You will then automatically 
+When you click Clicking ``$\Rightarrow$ Next" you will be directed to the final confirmation page. Here you will be notified that you need to delete the \texttt{installation} directory to complete the installation. Do so by clicking on the blue button. You will then automatically be redirected to the site's frontend.
 
 \subsection{Joomla! 3.x Development}
 
