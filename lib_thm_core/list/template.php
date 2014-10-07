@@ -30,6 +30,7 @@ class THM_CoreListTemplate
      */
     public static function render(&$view)
     {
+        $option = JFactory::getApplication()->input->get('option');
         if (!empty($view->sidebar))
         {
             echo '<div id="j-sidebar-container" class="span2">' . $view->sidebar . '</div>';
@@ -51,7 +52,7 @@ class THM_CoreListTemplate
                 <input type="hidden" name="boxchecked" value="0" />
                 <input type="hidden" name="filter_order" value="<?php echo $view->state->get('list.ordering'); ?>" />
                 <input type="hidden" name="filter_order_Dir" value="<?php echo $view->state->get('list.direction'); ?>" />
-                <input type="hidden" name="option" value="<?php echo $view->get('option'); ?>" />
+                <input type="hidden" name="option" value="<?php echo $option; ?>" />
                 <input type="hidden" name="view" value="<?php echo $view->get('name'); ?>" />
                 <?php echo JHtml::_('form.token');?>
             </form>

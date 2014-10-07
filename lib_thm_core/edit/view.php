@@ -19,7 +19,7 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreListView
+class THM_CoreEditView
 {
     /**
      * Method to create a list output
@@ -28,25 +28,13 @@ class THM_CoreListView
      *
      * @return void
      */
-    public static function display(&$view)
+    public static function setUp(&$view)
     {
+        JHtml::_('behavior.framework', true);
+        JHtml::_('behavior.formvalidation');
         JHtml::_('behavior.tooltip');
 
-        // Don't know which of these filters does what if anything active had no effect on the active highlighting
-        $view->filterForm = $view->get('FilterForm');
-        $view->activeFilters = $view->get('ActiveFilters');
-
-        // Items common across list views
-        $view->state = $view->get('State');
-        $view->pagination = $view->get('Pagination');
-        $view->headers = $view->get('Headers');
-        $view->items = $view->get('Items');
-
-        // Allows for component specific menu handling
-        $option = JFactory::getApplication()->input->get('option', '');
-        $path = JPATH_ROOT . "/media/$option/helpers/componenthelper.php";
-        require_once($path);
-        THM_ComponentHelper::addSubmenu($view);
+        $view->form = $view->get('Form');
 
         // Allows for view specific toolbar handling
         $view->addToolBar();
