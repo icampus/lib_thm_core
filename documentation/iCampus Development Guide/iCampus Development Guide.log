@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.3)  6 OCT 2014 11:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.3)  7 OCT 2014 14:38
 entering extended mode
 **iCampus*Development*Guide.tex
 
@@ -718,7 +718,7 @@ iCampus Development Guide.out")
 iCampus Development Guide.out")
 \@outlinefile=\write3
 
-<./images/thm.png, id=91, 702.625pt x 150.5625pt>
+<./images/thm.png, id=99, 702.625pt x 150.5625pt>
 File: ./images/thm.png Graphic file (type png)
  <use ./images/thm.png>
 Package pdftex.def Info: ./images/thm.png used on input line 31.
@@ -751,7 +751,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--62
 
  []
 
-<./images/xampp.png, id=137, 388.45125pt x 325.215pt>
+<./images/xampp.png, id=147, 388.45125pt x 325.215pt>
 File: ./images/xampp.png Graphic file (type png)
  <use ./images/xampp.png>
 Package pdftex.def Info: ./images/xampp.png used on input line 65.
@@ -767,7 +767,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-<./images/openphpini.png, id=149, 606.01407pt x 359.84438pt>
+<./images/openphpini.png, id=159, 606.01407pt x 359.84438pt>
 File: ./images/openphpini.png Graphic file (type png)
 
 <use ./images/openphpini.png>
@@ -828,7 +828,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
-<./images/gitbash1.jpg, id=174, 512.91624pt x 397.485pt>
+<./images/gitbash1.jpg, id=184, 512.91624pt x 397.485pt>
 File: ./images/gitbash1.jpg Graphic file (type jpg)
 
 <use ./images/gitbash1.jpg>
@@ -839,7 +839,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
-<./images/gitbash2.jpg, id=175, 509.905pt x 399.4925pt>
+<./images/gitbash2.jpg, id=185, 509.905pt x 399.4925pt>
 File: ./images/gitbash2.jpg Graphic file (type jpg)
 
 <use ./images/gitbash2.jpg>
@@ -888,7 +888,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--233
 
  []
 
-<./images/gitorious1.jpg, id=185, 326.21875pt x 224.84pt>
+<./images/gitorious1.jpg, id=195, 326.21875pt x 224.84pt>
 File: ./images/gitorious1.jpg Graphic file (type jpg)
 
 <use ./images/gitorious1.jpg>
@@ -905,7 +905,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 244--246
 
  []
 
-<./images/gitsettings.png, id=193, 722.7pt x 112.92188pt>
+<./images/gitsettings.png, id=203, 722.7pt x 112.92188pt>
 File: ./images/gitsettings.png Graphic file (type png)
 
 <use ./images/gitsettings.png>
@@ -923,7 +923,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
-<./images/fileassociations.png, id=201, 386.19281pt x 301.125pt>
+<./images/fileassociations.png, id=211, 386.19281pt x 301.125pt>
 File: ./images/fileassociations.png Graphic file (type png)
 
 <use ./images/fileassociations.png>
@@ -936,7 +936,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--278
 
 [11 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
 de/images/fileassociations.png>]
-<./images/phpstormactivation.png, id=207, 311.66437pt x 321.45094pt>
+<./images/phpstormactivation.png, id=217, 311.66437pt x 321.45094pt>
 File: ./images/phpstormactivation.png Graphic file (type png)
 
 <use ./images/phpstormactivation.png>
@@ -944,7 +944,7 @@ Package pdftex.def Info: ./images/phpstormactivation.png used on input line 283
 .
 (pdftex.def)             Requested size: 170.71652pt x 176.07753pt.
 
-<./images/newprojectfromgit.png, id=209, 511.9125pt x 419.31656pt>
+<./images/newprojectfromgit.png, id=219, 511.9125pt x 419.31656pt>
 File: ./images/newprojectfromgit.png Graphic file (type png)
 
 <use ./images/newprojectfromgit.png>
@@ -952,7 +952,7 @@ Package pdftex.def Info: ./images/newprojectfromgit.png used on input line 293.
 
 (pdftex.def)             Requested size: 170.71652pt x 139.83368pt.
 
-<./images/clonerepositoryerror.png, id=210, 280.79906pt x 148.30406pt>
+<./images/clonerepositoryerror.png, id=220, 280.79906pt x 148.30406pt>
 File: ./images/clonerepositoryerror.png Graphic file (type png)
 
 <use ./images/clonerepositoryerror.png>
@@ -967,7 +967,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 297--305
 [12 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
 de/images/phpstormactivation.png> <C:/Users/James/Projects/lib_thm_core/documen
 tation/iCampus Development Guide/images/newprojectfromgit.png>]
-<./images/checkoutbranch.png, id=218, 242.40562pt x 108.405pt>
+<./images/checkoutbranch.png, id=228, 242.40562pt x 108.405pt>
 File: ./images/checkoutbranch.png Graphic file (type png)
 
 <use ./images/checkoutbranch.png>
@@ -1020,7 +1020,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 357--358
 
  []
 
-[14] <./images/codesnifferinclusion.png, id=236, 650.43pt x 370.38374pt>
+[14] <./images/codesnifferinclusion.png, id=246, 650.43pt x 370.38374pt>
 File: ./images/codesnifferinclusion.png Graphic file (type png)
 
 <use ./images/codesnifferinclusion.png>
@@ -1032,7 +1032,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 368--375
 
  []
 
-<./images/codesnifferconfiguration.png, id=237, 681.29532pt x 421.575pt>
+<./images/codesnifferconfiguration.png, id=247, 681.29532pt x 421.575pt>
 File: ./images/codesnifferconfiguration.png Graphic file (type png)
 
 <use ./images/codesnifferconfiguration.png>
@@ -1069,7 +1069,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 417--422
 
  []
 
-[17] <./images/rubyinstallation.png, id=269, 575.90157pt x 447.17062pt>
+[17] <./images/rubyinstallation.png, id=279, 575.90157pt x 447.17062pt>
 File: ./images/rubyinstallation.png Graphic file (type png)
 
 <use ./images/rubyinstallation.png>
@@ -1080,7 +1080,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 432--434
 
  []
 
-<./images/sassinstallation.png, id=271, 557.08125pt x 284.56313pt>
+<./images/sassinstallation.png, id=281, 557.08125pt x 284.56313pt>
 File: ./images/sassinstallation.png Graphic file (type png)
 
 <use ./images/sassinstallation.png>
@@ -1129,7 +1129,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 447--455
 [18 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
 de/images/rubyinstallation.png> <C:/Users/James/Projects/lib_thm_core/documenta
 tion/iCampus Development Guide/images/sassinstallation.png>]
-<./images/scsswatchernotification.png, id=279, 682.80093pt x 27.85406pt>
+<./images/scsswatchernotification.png, id=289, 682.80093pt x 27.85406pt>
 File: ./images/scsswatchernotification.png Graphic file (type png)
 
 <use ./images/scsswatchernotification.png>
@@ -1146,7 +1146,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 463--466
 
  []
 
-<./images/settingsfilewatchers.png, id=280, 543.53062pt x 414.04688pt>
+<./images/settingsfilewatchers.png, id=290, 543.53062pt x 414.04688pt>
 File: ./images/settingsfilewatchers.png Graphic file (type png)
 
 <use ./images/settingsfilewatchers.png>
@@ -1160,7 +1160,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 476--478
 
  []
 
-<./images/editwatcher.png, id=289, 970.3753pt x 584.93532pt>
+<./images/editwatcher.png, id=299, 970.3753pt x 584.93532pt>
 File: ./images/editwatcher.png Graphic file (type png)
 
 <use ./images/editwatcher.png>
@@ -1211,7 +1211,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 532--535
 
  []
 
-<./images/databasecreation.png, id=305, 466.74374pt x 203.25937pt>
+<./images/databasecreation.png, id=315, 466.74374pt x 203.25937pt>
 File: ./images/databasecreation.png Graphic file (type png)
 
 <use ./images/databasecreation.png>
@@ -1229,7 +1229,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 545--548
 
 [22 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
 de/images/databasecreation.png>]
-<./images/akeeba1.png, id=315, 677.53125pt x 639.89063pt>
+<./images/akeeba1.png, id=325, 677.53125pt x 639.89063pt>
 File: ./images/akeeba1.png Graphic file (type png)
 
 <use ./images/akeeba1.png>
@@ -1237,7 +1237,7 @@ Package pdftex.def Info: ./images/akeeba1.png used on input line 551.
 (pdftex.def)             Requested size: 284.52756pt x 268.72293pt.
  [23 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gu
 ide/images/akeeba1.png>]
-<./images/akeeba2.png, id=323, 677.53125pt x 489.32813pt>
+<./images/akeeba2.png, id=333, 677.53125pt x 489.32813pt>
 File: ./images/akeeba2.png Graphic file (type png)
 
 <use ./images/akeeba2.png>
@@ -1250,7 +1250,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 568--579
 
 [24 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
 de/images/akeeba2.png>]
-<./images/akeeba3.png, id=330, 677.53125pt x 436.63126pt>
+<./images/akeeba3.png, id=340, 677.53125pt x 436.63126pt>
 File: ./images/akeeba3.png Graphic file (type png)
 
 <use ./images/akeeba3.png>
@@ -1268,7 +1268,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 599--602
 
 [25 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
 de/images/akeeba3.png>]
-<./images/j3mainconfiguration.png, id=340, 915.42pt x 707.64375pt>
+<./images/j3mainconfiguration.png, id=350, 915.42pt x 707.64375pt>
 File: ./images/j3mainconfiguration.png Graphic file (type png)
 
 <use ./images/j3mainconfiguration.png>
@@ -1280,7 +1280,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 612--614
 
  []
 
-<./images/j3databaseconfiguration.png, id=341, 621.07031pt x 481.8pt>
+<./images/j3databaseconfiguration.png, id=351, 621.07031pt x 481.8pt>
 File: ./images/j3databaseconfiguration.png Graphic file (type png)
 
 <use ./images/j3databaseconfiguration.png>
@@ -1295,21 +1295,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 622--632
 [26 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
 de/images/j3mainconfiguration.png> <C:/Users/James/Projects/lib_thm_core/docume
 ntation/iCampus Development Guide/images/j3databaseconfiguration.png>]
-<./images/j3finalization.png, id=347, 621.07031pt x 316.18124pt>
+<./images/j3finalization.png, id=357, 621.07031pt x 316.18124pt>
 File: ./images/j3finalization.png Graphic file (type png)
 
 <use ./images/j3finalization.png>
 Package pdftex.def Info: ./images/j3finalization.png used on input line 637.
 (pdftex.def)             Requested size: 284.52756pt x 144.85172pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 645.
  [27 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gu
 ide/images/j3finalization.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 645.
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 652--657
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 660.
+[28
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 660.
 
 ("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
 iCampus Development Guide.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 645.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 645.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 660.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 660.
 Package rerunfilecheck Info: File `iCampus*Development*Guide.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: <no file>.
@@ -1317,13 +1326,13 @@ ed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 645.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 660.
  ) 
 Here is how much of TeX's memory you used:
- 9253 strings out of 493706
- 137205 string characters out of 3142166
+ 9260 strings out of 493706
+ 137278 string characters out of 3142166
  229732 words of memory out of 3000000
- 12305 multiletter control sequences out of 15000+200000
+ 12307 multiletter control sequences out of 15000+200000
  13397 words of font info for 52 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  36i,8n,34p,634b,360s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1340,9 +1349,9 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "iCampus Development Guide.pdf" (27 pages, 1641408 bytes).
+Output written on "iCampus Development Guide.pdf" (28 pages, 1644380 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 307 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 101 named destinations out of 1000 (max. 500000)
+ 323 words of extra memory for PDF output out of 10000 (max. 10000000)
 
