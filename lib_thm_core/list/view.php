@@ -42,6 +42,10 @@ class THM_CoreListView
         $view->headers = $view->get('Headers');
         $view->items = $view->get('Items');
 
+        $view->ordering = $view->state->get('list.ordering');
+        $view->direction = $view->state->get('list.direction');
+        $view->search = $view->state->get('filter.search');
+
         // Allows for component specific menu handling
         $option = JFactory::getApplication()->input->get('option', '');
         $path = JPATH_ROOT . "/media/$option/helpers/componenthelper.php";
