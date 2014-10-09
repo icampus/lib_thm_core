@@ -30,6 +30,10 @@ class THM_CoreListTemplate
      */
     public static function render(&$view)
     {
+        JHtml::_('bootstrap.tooltip');
+        JHtml::_('behavior.multiselect');
+        JHtml::_('formbehavior.chosen', 'select');
+
         $option = JFactory::getApplication()->input->get('option');
         if (!empty($view->sidebar))
         {
@@ -39,6 +43,7 @@ class THM_CoreListTemplate
         <div id="j-main-container" class="span10">
             <form action="index.php?" id="adminForm"  method="post"
                   name="adminForm" xmlns="http://www.w3.org/1999/html">
+                <?php // TODO delete joomla default searchtool ?>
                 <?php echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $view)); ?>
                 <div class="clr"> </div>
                 <table class="table table-striped" id="<?php echo $view->get('name'); ?>-list">
@@ -50,8 +55,6 @@ class THM_CoreListTemplate
                 </table>
                 <input type="hidden" name="task" value="" />
                 <input type="hidden" name="boxchecked" value="0" />
-                <input type="hidden" name="filter_order" value="<?php echo $view->state->get('list.ordering'); ?>" />
-                <input type="hidden" name="filter_order_Dir" value="<?php echo $view->state->get('list.direction'); ?>" />
                 <input type="hidden" name="option" value="<?php echo $option; ?>" />
                 <input type="hidden" name="view" value="<?php echo $view->get('name'); ?>" />
                 <?php echo JHtml::_('form.token');?>
