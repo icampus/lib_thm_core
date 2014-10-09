@@ -43,7 +43,7 @@ class THM_CoreListTemplate
         <div id="j-main-container" class="span10">
             <form action="index.php?" id="adminForm"  method="post"
                   name="adminForm" xmlns="http://www.w3.org/1999/html">
-                <?php // TODO delete joomla default searchtool ?>
+                <!--  TODO delete joomla default searchtool & learn to comment in html :D -->
                 <?php echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $view)); ?>
                 <div class="clr"> </div>
                 <table class="table table-striped" id="<?php echo $view->get('name'); ?>-list">
