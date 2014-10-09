@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.3)  7 OCT 2014 14:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.3)  7 OCT 2014 23:35
 entering extended mode
 **iCampus*Development*Guide.tex
 
@@ -1305,20 +1305,25 @@ Package pdftex.def Info: ./images/j3finalization.png used on input line 637.
 ide/images/j3finalization.png>]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--657
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 660.
+
+Underfull \hbox (badness 10000) in paragraph at lines 663--668
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 671.
 [28
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 660.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 671.
 
 ("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
 iCampus Development Guide.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 660.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 660.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 671.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 671.
 Package rerunfilecheck Info: File `iCampus*Development*Guide.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: <no file>.
@@ -1326,11 +1331,11 @@ ed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 660.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 671.
  ) 
 Here is how much of TeX's memory you used:
- 9260 strings out of 493706
- 137278 string characters out of 3142166
+ 9261 strings out of 493706
+ 137289 string characters out of 3142166
  229732 words of memory out of 3000000
  12307 multiletter control sequences out of 15000+200000
  13397 words of font info for 52 fonts, out of 3000000 for 9000
@@ -1349,9 +1354,9 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "iCampus Development Guide.pdf" (28 pages, 1644380 bytes).
+Output written on "iCampus Development Guide.pdf" (28 pages, 1645103 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
+ 434 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
  323 words of extra memory for PDF output out of 10000 (max. 10000000)
 

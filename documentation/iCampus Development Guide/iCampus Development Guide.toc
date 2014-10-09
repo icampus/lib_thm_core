@@ -31,5 +31,6 @@
 \contentsline {subsection}{\numberline {2.6.3}Joomla! 3.x Development}{25}{subsection.2.6.3}
 \contentsline {chapter}{\numberline {3}User's Guide}{28}{chapter.3}
 \contentsline {section}{\numberline {3.1}Git}{28}{section.3.1}
-\contentsline {subsubsection}{Create a new local branch}{28}{section*.11}
-\contentsline {subsubsection}{Add a local branch to remote}{28}{section*.12}
+\contentsline {subsubsection}{Revert to the previous commit}{28}{section*.11}
+\contentsline {subsubsection}{Create a new local branch}{28}{section*.12}
+\contentsline {subsubsection}{Add a local branch to remote}{28}{section*.13}
