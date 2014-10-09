@@ -34,7 +34,7 @@ class THM_CoreListTemplate
         JHtml::_('behavior.multiselect');
         JHtml::_('formbehavior.chosen', 'select');
 
-        $option = JFactory::getApplication()->input->get('option');
+        $layoutData = array('view' => $view, 'options' => array('filtersHidden' => false));
         if (!empty($view->sidebar))
         {
             echo '<div id="j-sidebar-container" class="span2">' . $view->sidebar . '</div>';
@@ -44,7 +44,7 @@ class THM_CoreListTemplate
             <form action="index.php?" id="adminForm"  method="post"
                   name="adminForm" xmlns="http://www.w3.org/1999/html">
                 <!--  TODO delete joomla default searchtool & learn to comment in html :D -->
-                <?php echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $view)); ?>
+                <?php echo JLayoutHelper::render('joomla.searchtools.default', $layoutData); ?>
                 <div class="clr"> </div>
                 <table class="table table-striped" id="<?php echo $view->get('name'); ?>-list">
 <?php
@@ -55,7 +55,7 @@ class THM_CoreListTemplate
                 </table>
                 <input type="hidden" name="task" value="" />
                 <input type="hidden" name="boxchecked" value="0" />
-                <input type="hidden" name="option" value="<?php echo $option; ?>" />
+                <input type="hidden" name="option" value="<?php echo JFactory::getApplication()->input->get('option'); ?>" />
                 <input type="hidden" name="view" value="<?php echo $view->get('name'); ?>" />
                 <?php echo JHtml::_('form.token');?>
             </form>
