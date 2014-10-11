@@ -25,6 +25,35 @@ class THM_CoreListModel extends JModelList
 
     protected $defaultDirection = '';
 
+    protected $defaultLimit = '20';
+
+    protected $defaultStart = '0';
+
+
+    /**
+     * Method to get the data that should be injected in the form.
+     *
+     * @return  mixed  The data for the form.
+     */
+    protected function loadFormData()
+    {
+        // Check the session for previously entered form data.
+        $data = JFactory::getApplication()->getUserState($this->context, new stdClass);
+
+        // Pre-fill the list options
+        if (!property_exists($data, 'list'))
+        {
+            $data->list = array(
+                'direction' => $this->state->get('list.direction', $this->defaultDirection),
+                'limit'     => $this->state->get('list.limit', $this->defaultLimit),
+                'ordering'  => $this->state->get('list.ordering', $this->defaultOrdering),
+                'start'     => $this->state->get('list.start', $this->defaultStart)
+            );
+        }
+
+        return $data;
+    }
+
     /**
      * Overwrites the JModelList populateState function
      *
@@ -56,10 +85,10 @@ class THM_CoreListModel extends JModelList
         }
 
 
-        $limit = $app->getUserStateFromRequest($this->context . 'list.limit', 'list.limit', '20');
+        $limit = $app->getUserStateFromRequest($this->context . 'list.limit', 'list.limit', $this->defaultLimit);
         $this->state->set('list.limit', $limit);
 
-        $start = $app->getUserStateFromRequest($this->context . 'list.limitstart', 'list.limitstart', '0');
+        $start = $app->getUserStateFromRequest($this->context . 'list.start', 'list.start', $this->defaultStart);
         $this->state->set('list.start', $start);
     }
 
