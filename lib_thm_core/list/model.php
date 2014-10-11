@@ -21,18 +21,25 @@
  */
 class THM_CoreListModel extends JModelList
 {
+
+    /**
+     * Overwrites the JModelList populateState function
+     *
+     * @param   string  $ordering   the column by which the table is should be ordered
+     * @param   string  $direction  the direction in which this column should be ordered
+     */
     protected function populateState($ordering = null, $direction = null)
     {
         $app = JFactory::getApplication();
 
-        $search = $app->getUserStateFromRequest($this->context . 'filter.search', 'filter_search');
-        $this->setState('filter.search', $search);
+        $search = $app->getUserStateFromRequest($this->context . 'filter.search', 'filter_search', '');
+        $this->state->set('filter.search', $search);
 
-        $ordering = $app->getUserStateFromRequest($this->context . '.filter_order', 'filter_order');
-        $this->setState('list.ordering', $ordering);
+        $ordering = $app->getUserStateFromRequest($this->context . '.filter_order', 'filter_order', '');
+        $this->state->set('list.ordering', $ordering);
 
-        $direction = $app->getUserStateFromRequest($this->context . 'filter.direction', 'filter_direction');
-        $this->setState('list.direction', $direction);
+        $direction = $app->getUserStateFromRequest($this->context . 'filter.direction', 'filter_direction', '');
+        $this->state->set('list.direction', $direction);
 
         parent::populateState($ordering, $direction);
     }
