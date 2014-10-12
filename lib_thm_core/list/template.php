@@ -5,8 +5,8 @@
  * @subpackage  lib_thm_core.site
  * @name        THM_CoreListTemplate
  * @description Common template for list views
- * @author      Melih Cakir, <melih.cakir@mni.thm.de>
  * @author      James Antrim, <james.antrim@mni.thm.de>
+ * @author      Ilja Michajlow, <Ilja.Michajlow@mni.thm.de>
  * @copyright   2014 TH Mittelhessen
  * @license     GNU GPL v.2
  * @link        www.mni.thm.de
@@ -19,7 +19,7 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreListTemplate
+class THM_CoreTemplateList
 {
     /**
      * Method to create a list output
