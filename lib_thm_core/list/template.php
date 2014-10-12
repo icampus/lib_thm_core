@@ -33,22 +33,36 @@ class THM_CoreTemplateList
         JHtml::_('bootstrap.tooltip');
         JHtml::_('behavior.multiselect');
         JHtml::_('formbehavior.chosen', 'select');
+        JHtml::_('searchtools.form', '#adminForm', array());
 
-        $layoutData = array('view' => $view, 'options' => array('filtersHidden' => false));
         if (!empty($view->sidebar))
         {
             echo '<div id="j-sidebar-container" class="span2">' . $view->sidebar . '</div>';
         }
+
+        $data = array('view' => $view, 'options' => array());
+        $filters = $view->filterForm->getGroup('filter');
 ?>
         <div id="j-main-container" class="span10">
             <form action="index.php?" id="adminForm"  method="post"
                   name="adminForm" xmlns="http://www.w3.org/1999/html">
-                <!--  TODO delete joomla default searchtool & learn to comment in html :D -->
-                <?php echo JLayoutHelper::render('joomla.searchtools.default', $layoutData); ?>
+                <div class="js-stools clearfix">
+                    <div class="clearfix">
+                        <div class="js-stools-container-bar">
+                            <?php echo self::renderSearch($filters); ?>
+                        </div>
+                        <div class="js-stools-container-list hidden-phone hidden-tablet">
+                            <?php echo JLayoutHelper::render('joomla.searchtools.default.list', $data); ?>
+                        </div>
+                    </div>
+                </div>
                 <div class="clr"> </div>
                 <table class="table table-striped" id="<?php echo $view->get('name'); ?>-list">
 <?php
+                    echo '<thead>';
                     self::renderHeader($view->headers);
+                    self::renderHeaderFilters($view->headers, $filters);
+                    echo '</thead>';
                     self::renderBody($view->items);
                     self::renderFooter($view);
 ?>
@@ -63,6 +77,40 @@ class THM_CoreTemplateList
 <?php
     }
 
+    /**
+     * Renders the search input group if set in the filter xml
+     *
+     * @param   array  &$filters  the filters set for the view
+     *
+     * @return  void
+     */
+    private static function renderSearch(&$filters)
+    {
+        $showSearch = !empty($filters['filter_search']);
+        if (!$showSearch)
+        {
+            return;
+        }
+?>
+                <label for="filter_search" class="element-invisible">
+                    <?php echo JText::_('JSEARCH_FILTER'); ?>
+                </label>
+                <div class="btn-wrapper input-append">
+                    <?php echo $filters['filter_search']->input; ?>
+                    <button type="submit" class="btn hasTooltip"
+                            title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_SUBMIT'); ?>">
+                        <i class="icon-search"></i>
+                    </button>
+                </div>
+                <div class="btn-wrapper">
+                    <button type="button" class="btn hasTooltip js-stools-btn-clear"
+                            title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_CLEAR'); ?>">
+                        <i class="icon-delete"></i>
+                    </button>
+                </div>
+<?php
+    }
+
 
     /**
      * Renders the table head
@@ -73,12 +121,56 @@ class THM_CoreTemplateList
      */
     private static function renderHeader(&$headers)
     {
-        echo '<thead><tr>';
+        echo '<tr>';
         foreach ($headers as $header)
         {
             echo "<th>$header</th>";
         }
-        echo '</tr></thead>';
+        echo '</tr>';
+    }
+
+    /**
+     * Renders the table head
+     *
+     * @param   array  &$headers  an array containing the table headers
+     * @param   array  &$filters  the filters set for the view
+     *
+     * @return  void
+     */
+    private static function renderHeaderFilters(&$headers, &$filters)
+    {
+        $noFilters = count($filters) === 0;
+        $onlySearch = (count($filters) === 1 AND !empty($filters['filter_search']));
+        $dontDisplay = ($noFilters OR $onlySearch);
+        if ($dontDisplay)
+        {
+            return;
+        }
+
+        $headerNames = array_keys($headers);
+        echo '<tr>';
+        foreach ($headerNames as $name)
+        {
+            $searchName = "filter_$name";
+            foreach ($filters as $fieldName => $field)
+            {
+                $found = false;
+                if ($fieldName == $searchName)
+                {
+                    echo '<th><div class="js-stools-field-filter">';
+                    echo $field->input;
+                    echo '</div></th>';
+                    $found = true;
+                    break;
+                }
+            }
+            if ($found)
+            {
+                continue;
+            }
+            echo '<th></th>';
+        }
+        echo '</tr>';
     }
 
     /**
