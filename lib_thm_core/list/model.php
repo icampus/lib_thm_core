@@ -43,10 +43,11 @@ class THM_CoreModelList extends JModelList
         // Pre-fill the list options
         if (!property_exists($data, 'list'))
         {
+            // Limit and start are only here to remove errors made by joomla. Pagination does not use these!
             $data->list = array(
                 'direction' => $this->state->get('list.direction', $this->defaultDirection),
-                'limit'     => $this->state->get('list.limit', $this->defaultLimit),
                 'ordering'  => $this->state->get('list.ordering', $this->defaultOrdering),
+                'limit'     => $this->state->get('list.limit', $this->defaultLimit),
                 'start'     => $this->state->get('list.start', $this->defaultStart)
             );
         }
@@ -85,11 +86,7 @@ class THM_CoreModelList extends JModelList
             $this->state->set('list.direction', $direction);
         }
 
-        $limit = empty($list['limit'])? $this->defaultLimit : $list['limit'];
-        $this->state->set('list.limit', $limit);
-
-        $start = empty($list['start'])? $this->defaultStart : $list['start'];
-        $this->state->set('list.start', $start);
+        parent::populateState();
     }
 
     /**
