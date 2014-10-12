@@ -74,7 +74,8 @@ class THM_CoreModelList extends JModelList
             }
         }
 
-        $orderingSet = $this->processFullOrdering();
+        $list = $app->getUserStateFromRequest($this->context . '.list', 'list', array(), 'array');
+        $orderingSet = $this->processFullOrdering($list);
         if (!$orderingSet)
         {
             $ordering = $app->getUserStateFromRequest($this->context . '.list.order', 'list.order', $this->defaultOrdering);
@@ -84,30 +85,29 @@ class THM_CoreModelList extends JModelList
             $this->state->set('list.direction', $direction);
         }
 
-
-        $limit = $app->getUserStateFromRequest($this->context . 'list.limit', 'list.limit', $this->defaultLimit);
+        $limit = empty($list['limit'])? $this->defaultLimit : $list['limit'];
         $this->state->set('list.limit', $limit);
 
-        $start = $app->getUserStateFromRequest($this->context . 'list.start', 'list.start', $this->defaultStart);
+        $start = empty($list['start'])? $this->defaultStart : $list['start'];
         $this->state->set('list.start', $start);
     }
 
     /**
      * Sets the ordering and direction filters should a valid full ordering request be made
      *
+     * @param   array  $list  an array of list variables
+     *
      * @return  bool  true if the full ordering exists and is of correct syntax, otherwise false
      */
-    private function processFullOrdering()
+    private function processFullOrdering($list)
     {
-        $fullOrdering = JFactory::getApplication()->getUserStateFromRequest($this->context . '.list.fullordering', 'list.fullordering', '');
-
         // Not set
-        if (empty($fullOrdering))
+        if (empty($list['fullordering']))
         {
             return false;
         }
 
-        $orderingParts = explode($fullOrdering, ' ');
+        $orderingParts = explode(' ', $list['fullordering']);
 
         // Invalid number of arguments
         if (count($orderingParts) != 2)
@@ -116,10 +116,10 @@ class THM_CoreModelList extends JModelList
         }
 
         // Valid entry
-        if (in_array(strtoupper($fullOrdering[1]), array('ASC', 'DESC', '')))
+        if (in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', '')))
         {
-            $this->setState('list.ordering', $fullOrdering[0]);
-            $this->setState('list.direction', $fullOrdering[1]);
+            $this->setState('list.ordering', $orderingParts[0]);
+            $this->setState('list.direction', $orderingParts[1]);
             return true;
         }
 
