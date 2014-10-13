@@ -19,24 +19,26 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreEditView
+class THM_CoreViewEdit extends JViewLegacy
 {
     /**
-     * Method to create a list output
+     * Method to get display
      *
-     * @param   object  &$view  the view context calling the function
+     * @param   Object  $tpl  template  (default: null)
      *
-     * @return void
+     * @return  void
      */
-    public static function setUp(&$view)
+    public function display($tpl = null)
     {
+        JHtml::_('bootstrap.tooltip');
         JHtml::_('behavior.framework', true);
         JHtml::_('behavior.formvalidation');
-        JHtml::_('behavior.tooltip');
 
-        $view->form = $view->get('Form');
+        $this->item = $this->get('Item');
+        $this->form = $this->get('Form');
 
         // Allows for view specific toolbar handling
-        $view->addToolBar();
+        $this->addToolBar();
+        parent::display($tpl);
     }
 }

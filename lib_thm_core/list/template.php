@@ -30,11 +30,6 @@ class THM_CoreTemplateList
      */
     public static function render(&$view)
     {
-        JHtml::_('bootstrap.tooltip');
-        JHtml::_('behavior.multiselect');
-        JHtml::_('formbehavior.chosen', 'select');
-        JHtml::_('searchtools.form', '#adminForm', array());
-
         if (!empty($view->sidebar))
         {
             echo '<div id="j-sidebar-container" class="span2">' . $view->sidebar . '</div>';
@@ -151,10 +146,10 @@ class THM_CoreTemplateList
         echo '<tr>';
         foreach ($headerNames as $name)
         {
+            $found = false;
             $searchName = "filter_$name";
             foreach ($filters as $fieldName => $field)
             {
-                $found = false;
                 if ($fieldName == $searchName)
                 {
                     echo '<th><div class="js-stools-field-filter">';

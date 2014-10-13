@@ -30,7 +30,10 @@ class THM_CoreViewList extends JViewLegacy
      */
     public function display($tpl = null)
     {
-        JHtml::_('behavior.tooltip');
+        JHtml::_('bootstrap.tooltip');
+        JHtml::_('behavior.multiselect');
+        JHtml::_('formbehavior.chosen', 'select');
+        JHtml::_('searchtools.form', '#adminForm', array());
 
         // Don't know which of these filters does what if anything active had no effect on the active highlighting
         $this->filterForm = $this->get('FilterForm');
