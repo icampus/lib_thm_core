@@ -1,0 +1,79 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{geometry}
+\usepackage{floatflt} 
+\usepackage{float} 
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\geometry{verbose,a4paper,tmargin=15mm,bmargin=15mm,lmargin=15mm,rmargin=15mm}
+%opening
+\date{Do, 05.06.2014 und Fr, 06.06.2014}
+\title{Web Programming Weeks SS14 \\Projektwoche}
+\author{Handout für}
+
+\begin{document}
+
+\maketitle
+
+\section{Entwicklung einer Joomla-Komponente}
+\subsection{Anforderungen}
+Entwickeln Sie eine Komponente für Joomla-Version 2.5. Gehen Sie dabei auf die folgenden Anforderungen ein:
+\begin{itemize}
+	\item Achten Sie bei Ihrer Entwicklung auf die Verwendung von Sprachkonstanten um Ihre Komponente Multi-Sprachen-fähig zu machen.
+	\item Halten Sie sich bei der Entwicklung der Komponente an die vorgegebenen Entwurfsmuster in der Architektur (z.B. MVC auf Code- und Dateiebene).
+	\item Als Datenbasis verwenden und klonen Sie die vorhandene Datenbank-Tabellen der in Joomla bereits existierenden User-Komponente. Übernehmen Sie alle Spalten, benennen Sie aber die Tabellen um (Präfix '\textit{thm\_}'). Bei der Installation Ihrer Komponente sollen die nötigen Tabellen und Einträge automatisch angelegt werden. Alle nachfolgenden Anforderungen beziehen sich auf die geklonten Tabellen.
+	\item Ihre Komponente soll aus einen Backend- und Frontend-Teil mit den folgenden Anforderungen bestehen:\\
+	\textbf{Backend:}
+	\begin{itemize}
+		\item Listendarstellung aller Datenbankeinträge (Benutzer-Daten aus geklonter Tabelle), wobei die Spalten den Tabellenspalten in der Datenbank entsprechen sollen. Außerdem soll zu jedem Benutzer eine Checkbox angezeigt werden, um einen oder mehrere Benutzer für bestimmte Aktionen auszuwählen. Außerdem sollten Sie bei der Listenansicht eine \textit{Suche}, \textit{Filter} und ein \textit{Seitenmanagement} (\textit{Pagination}) umsetzen.
+		\item Aktions-Buttons mit den Aktionen \textit{Neu}, \textit{Bearbeiten}, \textit{Löschen}
+		\item Weiterleitung auf eine Ansicht zum anlegen neuer Einträge, 
+		\begin{itemize}
+			\item welche die Eingabe von Benutzerdaten erlaubt,
+			\item die Aktionen (mit Buttons) \textit{Abbrechen}, \textit{Speichern} (Speichern und zurück zur Listenansicht), \textit{Anwenden} (Speichern und bei der Ansicht bleiben, bzw. eine Editier-Ansicht mit dem neu eingetragenen Benutzer anzeigen) umsetzt,
+			\item die nach erfolgreicher, bzw. nicht-erfolgreicher Speicherung eine Meldung ausgibt.
+		\end{itemize}
+		\item Öffnen einer Bearbeitungs-Ansicht, sobald
+		\begin{itemize}
+			\item ein Benutzer in der Listenansicht angeklickt wird
+			\item ein Häkchen bei einer Checkbox eines Benutzer gesetzt ist und die Aktion Bearbeiten über den Button angestoßen wird.  
+		\end{itemize}
+		Die Bearbeitungsansicht ist analog zur Ansicht zum Anlegen neuer Einträge aufgebaut, wobei die Daten des vorher ausgewählten Benutzers angezeigt und verändert werden können. Das bedeutet, dass es genügt, für die gleiche View zwei unterschiedliche Templates zu entwickeln.
+		\item Die Aktion Löschen löscht alle bei der Listenansicht ausgewählte Benutzer (Checkboxen) und gibt bei Erfolg, bzw. Misserfolg eine entsprechende Meldung aus.
+		\item Setzen Sie eine Globale Einstellungsmöglichkeit für Ihre Komponente um, welche die Einstellungen für die Zugriffsrechte Ihrer Komponente, sowie andere globale Parameter für Ihre Frontend-Ansichten beinhaltet.
+	\end{itemize}
+	\textbf{Frontend:} 
+	\begin{itemize}
+		\item Erstellen Sie analog zu den Backend-Ansichten eine Listenansicht, welche alle Benutzer anzeigt. 
+		\item Bei Klick auf einen Benutzer soll sich eine Profilansicht öffnen, welche 
+		\begin{itemize}
+			\item die Daten des angeklickten Benutzers anzeigt,
+			\item einen Editier-Button anzeigt, falls der ausgewählte Benutzer dem eingeloggten Benutzer entspricht. Bei Klick auf den Button, kann der eingeloggte Benutzer seine Daten editieren.
+			\item einen zurück-Button enthält, welcher zurück auf die Listenansicht leitet.
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{Migration auf Version 3.3}
+Migrieren Sie die Komponente auf die Joomla-Version 3.3. Achten Sie dabei auf die Änderungen des Frameworks gegenüber Version 2.5 und gehen sie auch auf den Aspekt \textit{\textbf{Responsive Design}} ein.
+\section{Entwicklung eines Joomla-Moduls}
+\subsection{Anforderungen}
+Entwickeln Sie ein Modul für Joomla-Version 2.5. Gehen Sie dabei auf die folgenden Anforderungen ein:
+\begin{itemize}
+\item Anzeige der Daten aus der zuvor entwickelten Komponente
+\item Es soll möglich sein die Anzahl der Benutzer zu begrenzen die angezeigt werden.
+\item Es sollen folgende Sortiermöglichkeiten im Backend einstellbar sein: Nach neuestem User und alphabetisch
+\end{itemize}
+\subsection{Migration auf Version 3.3}
+Migrieren Sie das Modul auf die Joomla-Version 3.3. Achten Sie dabei auf die Änderungen des Frameworks gegenüber Version 2.5.
+\section{Entwicklung eines Joomla-Such-Plugins}
+\subsection{Anforderungen}
+Entwickeln Sie ein Such-Plugin für Joomla-Version 2.5. Gehen Sie dabei auf die folgenden Anforderungen ein:
+\begin{itemize}
+\item Das Such-Plugin soll nach allen Wörtern, dem exakten Suchtext und nach einzelnen Wörtern suchen können.
+\item Sortierung der Suchergebnisse nach Neueste zuerst, Älteste zuerst und Alphabetisch.
+\item Ein Suchergebnis soll auf die Editier-Ansicht der Komponente zeigen.
+\end{itemize}
+\subsection{Migration auf Version 3.3}
+Migrieren Sie das Plugin auf die Joomla-Version 3.3. Achten Sie dabei auf die Änderungen des Frameworks gegenüber Version 2.5.
+\end{document}
