@@ -33,6 +33,7 @@ class THM_CoreViewEdit extends JViewLegacy
         JHtml::_('bootstrap.tooltip');
         JHtml::_('behavior.framework', true);
         JHtml::_('behavior.formvalidation');
+        JHtml::_('formbehavior.chosen', 'select');
 
         $this->item = $this->get('Item');
         $this->form = $this->get('Form');
