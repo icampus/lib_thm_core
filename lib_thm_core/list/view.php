@@ -30,6 +30,10 @@ class THM_CoreViewList extends JViewLegacy
      */
     public function display($tpl = null)
     {
+        $option = JFactory::getApplication()->input->get('option');
+        $document = Jfactory::getDocument();
+        $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
+
         JHtml::_('bootstrap.tooltip');
         JHtml::_('behavior.multiselect');
         JHtml::_('formbehavior.chosen', 'select');

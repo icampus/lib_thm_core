@@ -41,13 +41,15 @@ class THM_CoreTemplateList
         <div id="j-main-container" class="span10">
             <form action="index.php?" id="adminForm"  method="post"
                   name="adminForm" xmlns="http://www.w3.org/1999/html">
-                <div class="js-stools clearfix">
-                    <div class="clearfix">
-                        <div class="js-stools-container-bar">
-                            <?php echo self::renderSearch($filters); ?>
-                        </div>
-                        <div class="js-stools-container-list hidden-phone hidden-tablet">
-                            <?php echo JLayoutHelper::render('joomla.searchtools.default.list', $data); ?>
+                <div class="searchArea">
+                    <div class="js-stools clearfix">
+                        <div class="clearfix">
+                            <div class="js-stools-container-bar">
+                                <?php echo self::renderSearch($filters); ?>
+                            </div>
+                            <div class="js-stools-container-list hidden-phone hidden-tablet">
+                                <?php echo JLayoutHelper::render('joomla.searchtools.default.list', $data); ?>
+                            </div>
                         </div>
                     </div>
                 </div>
