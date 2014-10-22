@@ -1,7 +1,7 @@
 @import 'mixins';
 .searchArea {
   background-color: #cce3a7;
-  padding: 5px;
+  padding: 8px;
   border: {
     right: 1px solid rgb(75, 92, 103);
     top: 1px solid rgb(75, 92, 103);
@@ -21,7 +21,6 @@
 
 thead {
   background-color: #cce3a7;
-  padding: 5px;
   tr:nth-child(n+1) th {
     &:first-child {
       border-left: 1px solid rgb(75, 92, 103);
@@ -31,17 +30,27 @@ thead {
     }
   }
   tr:nth-last-child(1) th {
+    white-space: nowrap;
+    padding-top: 0px;
     border: none;
     border-bottom: 1px solid rgb(75, 92, 103);
     &:first-child {
       border-bottom-left-radius: 10px;
     }
     &:last-child {
+      white-space: pre-wrap;
       border-bottom-right-radius: 10px;
     }
   }
 }
 
-tbody tr:first-child td{   //=row0
+tbody tr:first-child td{
   border-top-style: none;
+}
+
+/*Filterbreite anpassen, ohne: von chosen festgelegt */
+.js-stools-field-filter, /*.js-stools-container-list*/ {
+  select{
+    width: auto;
+  }
 }

@@ -479,14 +479,14 @@ This brings us to the watcher edit interface seen in Figure \ref{fig:watcheredit
 
 \begin{figure}[h] 
   \centering
-     \includegraphics[width=16cm]{editwatcher.png}
+     \includegraphics[width=16cm]{editwatcher-withoutMaps.png}
   \caption{Edit File Watcher}
   \label{fig:watcheredit}
 \end{figure}
 
 \begin{description}
 	\item[Program:] \texttt{$<$Ruby Installation Path$>$\textbackslash bin\textbackslash scss.bat}
-	\item[Arguments:] \texttt{--no-cache --update} \newline \texttt{\$FileName\$:\$FileParentDir\$/$<$Project Name$>$/media/css/\$FileNameWithoutExtension\$.css}
+	\item[Arguments:] \texttt{--no-cache --update} \newline \texttt{\$FileName\$:\$FileParentDir\$/$<$Project Name$>$/media/css/\$FileNameWithoutExtension\$.css --sourcemap=none}
 	\item[Output Paths:] \texttt{\$FileParentDir\$/$<$Project Name$>$/media/css/\$FileNameWithoutExtension\$.css}
 \end{description}
 
