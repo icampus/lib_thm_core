@@ -1,14 +1,4 @@
 @import 'mixins';
-.searchArea {
-  background-color: #cce3a7;
-  padding: 8px;
-  border: {
-    right: 1px solid rgb(75, 92, 103);
-    top: 1px solid rgb(75, 92, 103);
-    left: 1px solid rgb(75, 92, 103);
-  }
-  @include border-radius(10px 10px 0 0);
-}
 
 .searchArea a, thead a{
   color: rgb(75, 92, 103);
@@ -17,29 +7,48 @@
   }
 }
 .table-striped{
-  border-collapse: separate; }
+  margin-top: 2px;
+  border-collapse: separate;
+  border-top: 1px solid #bbb;
+  @include border-radius(3px 3px 0 0);
+}
 
 thead {
-  background-color: #cce3a7;
-  tr:nth-child(n+1) th {
+  //white-space: nowrap;
+  // background-color: #cce3a7;
+
+  tr:nth-child(1) th {
+    @include linearGradient(#cce3a7,#B9D986);
+    padding-bottom: 2px;
     &:first-child {
-      border-left: 1px solid rgb(75, 92, 103);
+      //border-top-left-radius: 5px;
+      @include border-radius(3px 0 0 0);
     }
     &:last-child {
-      border-right: 1px solid rgb(75, 92, 103);
+      // border-top-right-radius: 5px;
+      @include border-radius(0 3px 0 0);
+    }
+  }
+  tr:nth-child(n+1) th {
+    &:first-child {
+      border-left: 1px solid #bbb;
+    }
+    &:last-child {
+      border-right: 1px solid #bbb;
     }
   }
   tr:nth-last-child(1) th {
+    @include linearGradient(#B9D986, #cce3a7);
     white-space: nowrap;
     padding-top: 0px;
     border: none;
-    border-bottom: 1px solid rgb(75, 92, 103);
+    border-bottom: 1px solid #bbb;
     &:first-child {
-      border-bottom-left-radius: 10px;
+      border-bottom-left-radius: 3px;
     }
     &:last-child {
       white-space: pre-wrap;
-      border-bottom-right-radius: 10px;
+      border-bottom-right-radius: 3px;
     }
   }
 }
