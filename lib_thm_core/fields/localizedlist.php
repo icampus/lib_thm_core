@@ -20,14 +20,14 @@ jimport('thm_core.helpers.corehelper');
  * @package     thm_organizer
  * @subpackage  com_thm_organizer.admin
  */
-class JFormFieldGenericList extends JFormFieldList
+class JFormFieldLocalizedList extends JFormFieldList
 {
     /**
      * Type
      *
      * @var    String
      */
-    public $type = 'genericlist';
+    public $type = 'localizedlist';
 
     /**
      * Method to get the field options for category
@@ -42,9 +42,9 @@ class JFormFieldGenericList extends JFormFieldList
         $dbo = JFactory::getDbo();
         $query = $dbo->getQuery(true);
 
-        $valueColumn = $this->getAttribute('valueColumn');
         $tag = THM_CoreHelper::getLanguageShortTag();
-        $textColumn = $this->getAttribute('textColumn') . '_' . $tag;
+        $valueColumn = $this->getAttribute('valueColumn') . "_$tag";
+        $textColumn = $this->getAttribute('textColumn') . "_$tag";
 
         $query->select("DISTINCT $valueColumn AS value, $textColumn AS text");
         $this->setFrom($query);
@@ -63,6 +63,7 @@ class JFormFieldGenericList extends JFormFieldList
         }
         catch (Exception $exc)
         {
+            JFactory::getApplication()->enqueueMessage($exc->getMessage(), 'error');
             return parent::getOptions();
         }
     }
