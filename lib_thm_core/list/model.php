@@ -98,10 +98,15 @@ class THM_CoreModelList extends JModelList
      */
     private function processFullOrdering($list)
     {
+        $defaultOrdering = $this->defaultOrdering;
+        $defaultDirection = $this->defaultDirection;
+        $defaultFullOrdering = empty($defaultOrdering)? '' : "$defaultOrdering $defaultDirection";
+
         // Not set
         if (empty($list['fullordering']))
         {
-            return false;
+            $this->setState('list.fullordering', $defaultFullOrdering);
+            return;
         }
 
         $orderingParts = explode(' ', $list['fullordering']);
@@ -109,19 +114,20 @@ class THM_CoreModelList extends JModelList
         // Invalid number of arguments
         if (count($orderingParts) != 2)
         {
-            return false;
+            $this->setState('list.fullordering', $defaultFullOrdering);
+            return;
         }
 
         // Valid entry
         if (in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', '')))
         {
-            $this->setState('list.ordering', $orderingParts[0]);
-            $this->setState('list.direction', $orderingParts[1]);
-            return true;
+            $this->setState('list.fullordering', $list['fullordering']);
+            return;
         }
 
         // Invalid direction
-        return false;
+        $this->setState('list.fullordering', $defaultFullOrdering);
+        return;
     }
 
     /**
@@ -150,5 +156,19 @@ class THM_CoreModelList extends JModelList
         $link = JHtml::_('link', $url, $icon, $attributes);
 
         return '<div class="button-grp">' . $link . '</div>';
+    }
+
+    /**
+     * Provides a default method for setting the list ordering
+     *
+     * @param   object  &$query  the query object
+     *
+     * @return  void
+     */
+    protected function setOrdering(&$query)
+    {
+        $defaultOrdering = "{$this->defaultOrdering} {$this->defaultDirection}";
+        $ordering = $this->state->get('list.fullordering', $defaultOrdering);
+        $query->order($ordering);
     }
 }
