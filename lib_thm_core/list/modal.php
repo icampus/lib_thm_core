@@ -39,9 +39,9 @@ class THM_CoreTemplateModalList
                 <div class="js-stools clearfix">
                     <div class="clearfix">
                         <div class="js-stools-container-bar">
-                            <?php echo self::renderSearch($filters); ?>
+                            <?php self::renderSearch($filters); ?>
                             <?php echo JLayoutHelper::render('joomla.searchtools.default.list', $data); ?>
-                            <?php echo self::renderButtons(); ?>
+                            <?php self::renderButtons(); ?>
                         </div>
                     </div>
                 </div>

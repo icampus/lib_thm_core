@@ -19,8 +19,12 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreViewEdit extends JViewLegacy
+abstract class THM_CoreViewEdit extends JViewLegacy
 {
+    public $item = null;
+
+    public $form = null;
+
     /**
      * Method to get display
      *
@@ -42,4 +46,9 @@ class THM_CoreViewEdit extends JViewLegacy
         $this->addToolBar();
         parent::display($tpl);
     }
+
+    /**
+     * Concrete classes are supposed to use this method to add a toolbar.
+     */
+    protected abstract function addToolBar();
 }

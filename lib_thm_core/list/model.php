@@ -92,7 +92,7 @@ class THM_CoreModelList extends JModelList
     /**
      * Sets the ordering and direction filters should a valid full ordering request be made
      *
-     * @param   array  $list  an array of list variables
+     * @param   object  $list  an array of list variables
      *
      * @return  bool  true if the full ordering exists and is of correct syntax, otherwise false
      */
@@ -103,13 +103,13 @@ class THM_CoreModelList extends JModelList
         $defaultFullOrdering = empty($defaultOrdering)? '' : "$defaultOrdering $defaultDirection";
 
         // Not set
-        if (empty($list['fullordering']))
+        if (empty($list->fullordering))
         {
             $this->setState('list.fullordering', $defaultFullOrdering);
             return;
         }
 
-        $orderingParts = explode(' ', $list['fullordering']);
+        $orderingParts = explode(' ', $list->fullordering);
 
         // Invalid number of arguments
         if (count($orderingParts) != 2)
@@ -121,7 +121,7 @@ class THM_CoreModelList extends JModelList
         // Valid entry
         if (in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', '')))
         {
-            $this->setState('list.fullordering', $list['fullordering']);
+            $this->setState('list.fullordering', $list->fullordering);
             return;
         }
 

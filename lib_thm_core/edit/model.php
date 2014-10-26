@@ -26,7 +26,7 @@ class THM_CoreModelEdit extends JModelAdmin
      * @param   Array    $data      Data         (default: Array)
      * @param   Boolean  $loadData  Load data  (default: true)
      *
-     * @return  A Form object
+     * @return  mixed  JForm object on success, False on error.
      *
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */

@@ -19,8 +19,20 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreViewList extends JViewLegacy
+abstract class THM_CoreViewList extends JViewLegacy
 {
+    public $activeFilters = null;
+
+    public $filterForm = null;
+
+    public $headers = null;
+
+    public $items = null;
+
+    public $pagination = null;
+
+    public $state = null;
+
     /**
      * Method to create a list output
      *
@@ -49,10 +61,6 @@ class THM_CoreViewList extends JViewLegacy
         $this->headers = $this->get('Headers');
         $this->items = $this->get('Items');
 
-        $this->ordering = $this->state->get('list.ordering');
-        $this->direction = $this->state->get('list.direction');
-        $this->search = $this->state->get('filter.search');
-
         // Allows for component specific menu handling
         $option = JFactory::getApplication()->input->get('option', '');
         $path = JPATH_ROOT . "/media/$option/helpers/componenthelper.php";
@@ -63,4 +71,9 @@ class THM_CoreViewList extends JViewLegacy
         $this->addToolBar();
         parent::display();
     }
+
+    /**
+     * Concrete classes are supposed to use this method to add a toolbar.
+     */
+    protected abstract function addToolBar();
 }
