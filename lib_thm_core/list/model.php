@@ -171,4 +171,85 @@ class THM_CoreModelList extends JModelList
         $ordering = $this->state->get('list.fullordering', $defaultOrdering);
         $query->order($ordering);
     }
+
+    /**
+     * Sets the search filter for the query
+     *
+     * @param   object  &$query       the query to modify
+     * @param   array   $columnNames  the column names to use in the search
+     *
+     * @return  void
+     */
+    protected function setSearchFilter(&$query, $columnNames)
+    {
+        $userInput = $this->state->get('filter.search', '');
+        if (empty($userInput))
+        {
+            return;
+        }
+        $search = '%' . $this->_db->escape($userInput, true) . '%';
+        $wherray = array();
+        foreach ($columnNames as $name)
+        {
+            $wherray[] = "$name LIKE '$search'";
+        }
+        $where = implode(' OR ', $wherray);
+        $query->where("( $where )");
+    }
+
+    /**
+     * Provides a default method for setting filters based on id/unique values
+     *
+     * @param   object  &$query       the query object
+     * @param   string  $idColumn     the id column in the table
+     * @param   array   $filterNames  the filter names which filter against ids
+     *
+     * @return  void
+     */
+    protected function setIDFilter(&$query, $idColumn, $filterNames)
+    {
+        foreach ($filterNames AS $name)
+        {
+            $value = $this->state->get("filter.$name", '');
+            if ($value === '')
+            {
+                continue;
+            }
+
+            /**
+             * Special value reserved for empty filtering. Since an empty is dependent upon the column default, we must
+             * check against multiple 'empty' values. Here we check against empty string and null. Should this need to
+             * be extended we could maybe add a parameter for it later.
+             */
+            if($value == '-1')
+            {
+                $query->where("$idColumn = '' OR $idColumn IS NULL");
+            }
+
+            // IDs are unique and therefore mutually exclusive => one is enough!
+            $query->where("$idColumn = '$value'");
+            return;
+        }
+    }
+
+    /**
+     * Provides a default method for setting filters for non-unique values
+     *
+     * @param   object  &$query       the query object
+     * @param   array   $filterNames  the filter names. names should be synonymous with db column names.
+     *
+     * @return  void
+     */
+    protected function setValueFilters(&$query, $filterNames)
+    {
+        foreach ($filterNames AS $name)
+        {
+            $value = $this->state->get("filter.$name", '');
+            if ($value === '')
+            {
+                continue;
+            }
+            $query->where("$name = '$value'");
+        }
+    }
 }

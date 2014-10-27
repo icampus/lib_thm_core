@@ -149,6 +149,7 @@ class THM_CoreTemplateList
         echo '<tr>';
         foreach ($headerNames as $name)
         {
+            $name = str_replace('.', '_', $name);
             $found = false;
             $searchName = "filter_$name";
             foreach ($filters as $fieldName => $field)

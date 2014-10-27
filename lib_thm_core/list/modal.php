@@ -95,7 +95,8 @@ class THM_CoreTemplateModalList
                 <div class="btn-wrapper">
                     <button type="button" class="btn hasTooltip js-stools-btn-clear"
                             title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_CLEAR'); ?>">
-                        <i class="icon-delete"></i>
+                        <i class="icon-refresh"></i>
+                        <?php echo JText::_('JSEARCH_RESET'); ?>
                     </button>
                 </div>
 <?php

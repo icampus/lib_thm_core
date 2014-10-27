@@ -133,7 +133,7 @@ class JFormFieldDisjunctList extends JFormFieldList
         }
 
         $subQuery = JFactory::getDbo()->getQuery(true);
-        $subQuery->select("$disjunctValue")->from("$disjunctTable");
+        $subQuery->select("$disjunctValue")->from("#__$disjunctTable");
         $query->where("$notInColumn NOT IN ( " . (string) $subQuery . " )");
     }
 }
