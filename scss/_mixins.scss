@@ -36,6 +36,10 @@
   color: $color2;
 }
 
+
+//------------------------------------//
+//colorgradient//
+//------------------------------------//
 @mixin linearGradient($top, $bottom){
   background: $top; /* Old browsers */
   background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
