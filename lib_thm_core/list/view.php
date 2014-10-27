@@ -75,6 +75,8 @@ abstract class THM_CoreViewList extends JViewLegacy
 
     /**
      * Concrete classes are supposed to use this method to add a toolbar.
+     *
+     * @return  void  sets context variables
      */
     protected abstract function addToolBar();
 }
