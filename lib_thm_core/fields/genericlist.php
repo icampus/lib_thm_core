@@ -55,8 +55,9 @@ class JFormFieldGenericList extends JFormFieldList
             $options = array();
             foreach ($resources as $resource)
             {
-                $options[] = JHtml::_('select.option', $resource['value'], $resource['text']);
+                $options[$resource['text']] = JHtml::_('select.option', $resource['value'], $resource['text']);
             }
+            $this->setValueParameters($options);
             return array_merge(parent::getOptions(), $options);
         }
         catch (Exception $exc)
@@ -109,5 +110,31 @@ class JFormFieldGenericList extends JFormFieldList
         {
             $query->innerjoin("#__{$tables[$index]}");
         }
+    }
+
+    /**
+     * Sets value oriented parameters from component settings
+     *
+     * @param   array  &$options  the input options
+     */
+    private function setValueParameters(&$options)
+    {
+        $valueParameter = $this->getAttribute('valueParameter', '');
+        if ($valueParameter === '')
+        {
+            return;
+        }
+        $valueParameters = explode(',', $valueParameter);
+        $componentParameters = JComponentHelper::getParams(JFactory::getApplication()->input->get('option'));
+        foreach ($valueParameters AS $parameter)
+        {
+            $componentParameter = $componentParameters->get($parameter);
+            if (empty($componentParameter))
+            {
+                continue;
+            }
+            $options[$componentParameter] = JHtml::_('select.option', $componentParameter, $componentParameter);
+        }
+        ksort($options);
     }
 }
