@@ -56,7 +56,7 @@ class JFormFieldDateList extends JFormFieldList
             $option = JFactory::getApplication()->input->get('option');
             $params =JComponentHelper::getParams($option);
             $type = $this->getAttribute('format');
-            $format = $type == 'time'? $params->get('timeFormat') : $params->get('dateFormat');
+            $format = $type == 'time'? $params->get('timeFormat', 'H:i') : $params->get('dateFormat', 'd.m.Y');
             foreach ($resources as $resource)
             {
                 $text = date($format, strtotime($resource['text']));

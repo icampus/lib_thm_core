@@ -249,6 +249,18 @@ class THM_CoreModelList extends JModelList
             {
                 continue;
             }
+
+            /**
+             * Special value reserved for empty filtering. Since an empty is dependent upon the column default, we must
+             * check against multiple 'empty' values. Here we check against empty string and null. Should this need to
+             * be extended we could maybe add a parameter for it later.
+             */
+            if($value == '-1')
+            {
+                $query->where("( $name = '' OR $name IS NULL )");
+                continue;
+            }
+
             $query->where("$name = '$value'");
         }
     }

@@ -21,7 +21,7 @@ class THMArray
      * Transform all elements of on array into a new array.
      *
      * Example: Double all Elements
-     * THMArray::map([1,2,3,4], function (elem) { return elem * 2})
+     * THMArray::map([1,2,3,4], function ($elem) { return elem * 2})
      * Will return: [2,4,6,8]
      *
      * @param   array          $array  Array of elements which should be transformed.
@@ -34,9 +34,9 @@ class THMArray
     public static function map($array, $fn)
     {
         $result = array();
-        foreach ($array as $elem)
+        foreach ($array as $key => $elem)
         {
-            $result[] = $fn($elem);
+            $result[$key] = $fn($elem);
         }
         return $result;
     }
@@ -62,11 +62,11 @@ class THMArray
     public static function filter($array, $fn)
     {
         $result = array();
-        foreach ($array as $elem)
+        foreach ($array as $key => $elem)
         {
             if ($fn($elem))
             {
-                $result[] = $elem;
+                $result[$key] = $elem;
             }
         }
         return $result;
