@@ -39,6 +39,10 @@ abstract class THM_CoreViewEdit extends JViewLegacy
         JHtml::_('behavior.formvalidation');
         JHtml::_('formbehavior.chosen', 'select');
 
+        $option = JFactory::getApplication()->input->get('option');
+        $document = Jfactory::getDocument();
+        $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
+
         $this->item = $this->get('Item');
         $this->form = $this->get('Form');
 
