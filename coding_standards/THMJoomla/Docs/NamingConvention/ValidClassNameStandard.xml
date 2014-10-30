@@ -1,0 +1,23 @@
+<documentation title="Class Names">
+    <standard>
+    <![CDATA[
+    Classes should be given descriptive names. Avoid using abbreviations where possible. Class names should always begin with THM uppercase letter. The PEAR class hierarchy is also reflected in the class name, each level of the hierarchy separated with a single underscore.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Examples of valid class names">
+        <![CDATA[
+THMGroups
+THMGroupController
+THMGroupsModelView
+        ]]>
+        </code>
+        <code title="Examples of invalid class names">
+        <![CDATA[
+thmGroups
+thmGroups-Controller
+thmGroups-Model-View
+        ]]>
+        </code>
+    </code_comparison>
+</documentation>

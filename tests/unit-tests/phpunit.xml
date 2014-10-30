@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="bootstrap.php" colors="false">
+	<testsuites>
+        <testsuite name="lib_thm_core">
+            <directory>tests</directory>
+        </testsuite>
+	</testsuites>
+</phpunit>
+
