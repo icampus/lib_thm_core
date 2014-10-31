@@ -32,6 +32,7 @@ abstract class THM_CoreViewList extends JViewLegacy
     {
         $option = JFactory::getApplication()->input->get('option');
         $document = Jfactory::getDocument();
+        $document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
         $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
 
         $this->state = $this->get('State');

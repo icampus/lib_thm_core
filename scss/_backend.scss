@@ -1,5 +1,6 @@
 @import 'mixins';
 
+/*Filter- und Search-Bereich anpassen */
 .searchArea a, thead a{
   color: rgb(75, 92, 103);
   &:hover {
@@ -14,19 +15,14 @@
 }
 
 thead {
-  //white-space: nowrap;
-  // background-color: #cce3a7;
-
   tr:nth-child(1) th {
     @include linearGradient(#cce3a7,#B9D986);
     padding-top: 5px;
     padding-bottom: 2px;
     &:first-child {
-      //border-top-left-radius: 5px;
       @include border-radius(3px 0 0 0);
     }
     &:last-child {
-      // border-top-right-radius: 5px;
       @include border-radius(0 3px 0 0);
     }
   }
@@ -64,4 +60,113 @@ tbody tr:first-child td{
   select{
     width: auto;
   }
+}
+
+/* Style fuer Datei-Upload anpassen , nur in Chrome notwendig (Vergleich mit Firefox,IE)*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .controls input[type="file"] {
+    line-height: 0px;
+    padding-top: 3px;
+  }
+}
+
+/*icons anpassen*/
+.icon-diff{
+  font-weight: bold;
+}
+.icon-export{
+  font-family: icomoon;
+  content: "\e604";
+}
+
+/*icons zu sidebar hinzufuegen*/
+li {
+  a[href*="view=thm_organizer"]::before,
+  {
+    font-family: icomoon;
+    content: "\21";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=degree_manager"]::before {
+    font-family: icomoon;
+    content: "\e60a";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=user_manager"]::before {
+    font-family: icomoon;
+    content: "\e01f";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=monitor_manager"]::before {
+    font-family: icomoon;
+    content: "\e01c";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=teacher_manager"]::before {
+    font-family: icomoon;
+    content: "\e608";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=subject_manager"]::before {
+    font-family: icomoon;
+    content: "\e606";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=field_manager"]::before {
+    font-family: icomoon;
+    content: "\74";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=color_manager"]::before {
+    font-family: icomoon;
+    content: "\e014";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=pool_manager"]::before {
+    font-family: icomoon;
+    content: "\43";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=room_manager"]::before {
+    font-family: icomoon;
+    content: "\e600";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=program_manager"]::before {
+    font-family: icomoon;
+    content: "\e609";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=schedule_manager"]::before {
+    font-family: icomoon;
+    content: "\e601";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=category_manager"]::before {
+    font-family: icomoon;
+    content: "\e607";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=virtual_schedule_manager"]::before {
+    font-family: icomoon;
+    content: "\e602";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+}
+.nav-list li.active a{
+  background-color:#51a351;
 }
