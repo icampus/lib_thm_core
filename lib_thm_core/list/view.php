@@ -62,7 +62,7 @@ class THM_CoreViewList extends JViewLegacy
 
         // Allows for component specific menu handling
         $option = JFactory::getApplication()->input->get('option', '');
-        $path = JPATH_ROOT . "/media/$option/helpers/componenthelper.php";
+        $path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
         $helper = str_replace('com_', '', $option) . 'HelperComponent';
         require_once $path;
         $helper::addSubmenu($this);
