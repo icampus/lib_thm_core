@@ -34,9 +34,9 @@ class THMArray
     public static function map($array, $fn)
     {
         $result = array();
-        foreach ($array as $key => $elem)
+        foreach ($array as $elem)
         {
-            $result[$key] = $fn($elem);
+            $result[] = $fn($elem);
         }
         return $result;
     }
@@ -62,11 +62,11 @@ class THMArray
     public static function filter($array, $fn)
     {
         $result = array();
-        foreach ($array as $key => $elem)
+        foreach ($array as $elem)
         {
             if ($fn($elem))
             {
-                $result[$key] = $elem;
+                $result[] = $elem;
             }
         }
         return $result;
