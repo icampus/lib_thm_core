@@ -39,9 +39,14 @@ abstract class THM_CoreViewList extends JViewLegacy
         // Workaround: The state for ordering get lost when you use pagination. So it is saved in a session variable
         // and here saved back to the state.
         $session = JFactory::getSession();
-        $ordering = $session->get( 'ordering');
-        $orders= explode(' ', $ordering);
-        $this->state->set("list.direction", $orders[1]);
+        $ordering = $session->get('ordering');
+        $orders = explode(' ', $ordering);
+        if (2 == count($orders))
+        {
+            $this->state->set("list.fullordering", $orders[0] . " " . $orders[1]);
+            $this->state->set("list.ordering", $orders[0]);
+            $this->state->set("list.direction", $orders[1]);
+        }
 
         JHtml::_('bootstrap.tooltip');
         JHtml::_('behavior.multiselect');

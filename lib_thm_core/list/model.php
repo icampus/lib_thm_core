@@ -81,15 +81,23 @@ abstract class THM_CoreModelList extends JModelList
         // This is a workaround. The ordering get lost in the state when you use paginagtion. So the ordering is saved
         // to a session variable and read from it if the state ordering is null.
         $session = JFactory::getSession();
-        if(strpos($list['fullordering'], 'null') !== false){
+        if(empty($list) || strpos($list['fullordering'], 'null') !== false)
+        {
+            if (empty($list))
+            {
+                $list = array('fullordering'=> '');
+            }
             $list['fullordering'] = $session->get( 'ordering', $list['fullordering'] );
-        } else {
+        }
+        else
+        {
             $session->set( 'ordering', $list['fullordering']);
         }
 
         // This lines may not work correctly, so there is a workaround
         $orderingSet = $this->processFullOrdering($list);
-        if($orderingSet){
+        if($orderingSet)
+        {
             $this->setState('list.ordering', $orderingSet[0]);
             $this->setState('list.direction', $orderingSet[1]);
             $this->setState('list.fullordering',  $orderingSet[0] . " " . $orderingSet[1]);
@@ -175,7 +183,7 @@ abstract class THM_CoreModelList extends JModelList
     protected function setOrdering(&$query)
     {
         $defaultOrdering = "{$this->defaultOrdering} {$this->defaultDirection}";
-        $session = JFactory::getSession();
+        $session =& JFactory::getSession();
         $ordering = $this->state->get('list.fullordering', $defaultOrdering);
         if(strpos($ordering, 'null') !== false){
             $ordering = $session->get( 'ordering', '' );

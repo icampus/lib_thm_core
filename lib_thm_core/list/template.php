@@ -34,7 +34,6 @@ class THM_CoreTemplateList
         {
             echo '<div id="j-sidebar-container" class="span2">' . $view->sidebar . '</div>';
         }
-
         $data = array('view' => $view, 'options' => array());
         $filters = $view->filterForm->getGroup('filter');
 ?>
