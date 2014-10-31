@@ -19,20 +19,8 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-abstract class THM_CoreViewList extends JViewLegacy
+class THM_CoreViewList extends JViewLegacy
 {
-    public $activeFilters = null;
-
-    public $filterForm = null;
-
-    public $headers = null;
-
-    public $items = null;
-
-    public $pagination = null;
-
-    public $state = null;
-
     /**
      * Method to create a list output
      *
@@ -46,24 +34,35 @@ abstract class THM_CoreViewList extends JViewLegacy
         $document = Jfactory::getDocument();
         $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
 
+        $this->state = $this->get('State');
+
+        // Workaround: The state for ordering get lost when you use pagination. So it is saved in a session variable
+        // and here saved back to the state.
+        $session =& JFactory::getSession();
+        $ordering = $session->get( 'ordering');
+        $orders= explode(' ', $ordering);
+        $this->state->set("list.direction", $orders[1]);
+
         JHtml::_('bootstrap.tooltip');
         JHtml::_('behavior.multiselect');
         JHtml::_('formbehavior.chosen', 'select');
         JHtml::_('searchtools.form', '#adminForm', array());
+
+        $this->items = $this->get('Items');
+        $this->pagination = $this->get('Pagination');
 
         // Don't know which of these filters does what if anything active had no effect on the active highlighting
         $this->filterForm = $this->get('FilterForm');
         $this->activeFilters = $this->get('ActiveFilters');
 
         // Items common across list views
-        $this->state = $this->get('State');
-        $this->pagination = $this->get('Pagination');
         $this->headers = $this->get('Headers');
+
         $this->items = $this->get('Items');
 
         // Allows for component specific menu handling
         $option = JFactory::getApplication()->input->get('option', '');
-        $path = JPATH_ROOT . "/media/$option/helpers/componenthelper.php";
+        $path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
         $helper = str_replace('com_', '', $option) . 'HelperComponent';
         require_once $path;
         $helper::addSubmenu($this);

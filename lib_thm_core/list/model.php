@@ -77,16 +77,23 @@ abstract class THM_CoreModelList extends JModelList
         }
 
         $list = $app->getUserStateFromRequest($this->context . '.list', 'list', array(), 'array');
-        $orderingSet = $this->processFullOrdering($list);
-        if (!$orderingSet)
-        {
-            $ordering = $app->getUserStateFromRequest($this->context . '.list.order', 'list.order', $this->defaultOrdering);
-            $this->state->set('list.ordering', $ordering);
 
-            $direction = $app->getUserStateFromRequest($this->context . 'list.direction', 'list.direction', $this->defaultDirection);
-            $this->state->set('list.direction', $direction);
+        // This is a workaround. The ordering get lost in the state when you use paginagtion. So the ordering is saved
+        // to a session variable and read from it if the state ordering is null.
+        $session =& JFactory::getSession();
+        if(strpos($list['fullordering'], 'null') !== false){
+            $list['fullordering'] = $session->get( 'ordering', $list['fullordering'] );
+        } else {
+            $session->set( 'ordering', $list['fullordering']);
         }
 
+        // This lines may not work correctly, so there is a workaround
+        $orderingSet = $this->processFullOrdering($list);
+        if($orderingSet){
+            $this->setState('list.ordering', $orderingSet[0]);
+            $this->setState('list.direction', $orderingSet[1]);
+            $this->setState('list.fullordering',  $orderingSet[0] . " " . $orderingSet[1]);
+        }
         parent::populateState();
     }
 
@@ -122,8 +129,7 @@ abstract class THM_CoreModelList extends JModelList
         // Valid entry
         if (in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', '')))
         {
-            $this->setState('list.fullordering', $list->fullordering);
-            return;
+            return $orderingParts;
         }
 
         // Invalid direction
@@ -169,7 +175,11 @@ abstract class THM_CoreModelList extends JModelList
     protected function setOrdering(&$query)
     {
         $defaultOrdering = "{$this->defaultOrdering} {$this->defaultDirection}";
+        $session =& JFactory::getSession();
         $ordering = $this->state->get('list.fullordering', $defaultOrdering);
+        if(strpos($ordering, 'null') !== false){
+            $ordering = $session->get( 'ordering', '' );
+        }
         $query->order($ordering);
     }
 
