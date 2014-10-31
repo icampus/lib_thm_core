@@ -39,9 +39,9 @@ class THM_CoreTemplateModalList
                 <div class="js-stools clearfix">
                     <div class="clearfix">
                         <div class="js-stools-container-bar">
-                            <?php echo self::renderSearch($filters); ?>
+                            <?php self::renderSearch($filters); ?>
                             <?php echo JLayoutHelper::render('joomla.searchtools.default.list', $data); ?>
-                            <?php echo self::renderButtons(); ?>
+                            <?php self::renderButtons(); ?>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,8 @@ class THM_CoreTemplateModalList
                 <div class="btn-wrapper">
                     <button type="button" class="btn hasTooltip js-stools-btn-clear"
                             title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_CLEAR'); ?>">
-                        <i class="icon-delete"></i>
+                        <i class="icon-refresh"></i>
+                        <?php echo JText::_('JSEARCH_RESET'); ?>
                     </button>
                 </div>
 <?php

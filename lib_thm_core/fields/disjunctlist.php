@@ -11,7 +11,6 @@
  */
 defined('_JEXEC') or die;
 JFormHelper::loadFieldClass('list');
-jimport('thm_core.helpers.corehelper');
 
 /**
  * Class loads a list of fields for selection
@@ -20,14 +19,14 @@ jimport('thm_core.helpers.corehelper');
  * @package     thm_organizer
  * @subpackage  com_thm_organizer.admin
  */
-class JFormFieldLocalizedList extends JFormFieldList
+class JFormFieldDisjunctList extends JFormFieldList
 {
     /**
      * Type
      *
      * @var    String
      */
-    public $type = 'localizedlist';
+    public $type = 'disjunctlist';
 
     /**
      * Method to get the field options for category
@@ -42,12 +41,12 @@ class JFormFieldLocalizedList extends JFormFieldList
         $dbo = JFactory::getDbo();
         $query = $dbo->getQuery(true);
 
-        $tag = THM_CoreHelper::getLanguageShortTag();
-        $valueColumn = $this->getAttribute('valueColumn') . "_$tag";
-        $textColumn = $this->getAttribute('textColumn') . "_$tag";
+        $valueColumn = $this->getAttribute('valueColumn');
+        $textColumn = $this->resolveText($query);
 
         $query->select("DISTINCT $valueColumn AS value, $textColumn AS text");
         $this->setFrom($query);
+        $this->setDisjuncture($query);
         $query->order("text ASC");
         $dbo->setQuery((string) $query);
 
@@ -63,7 +62,6 @@ class JFormFieldLocalizedList extends JFormFieldList
         }
         catch (Exception $exc)
         {
-            JFactory::getApplication()->enqueueMessage($exc->getMessage(), 'error');
             return parent::getOptions();
         }
     }
@@ -75,21 +73,67 @@ class JFormFieldLocalizedList extends JFormFieldList
      *
      * @return  string  the string to use for text selection
      */
+    private function resolveText(&$query)
+    {
+        $textColumn = $this->getAttribute('textColumn');
+        $glue = $this->getAttribute('glue');
+
+        $textColumns = explode(',', $textColumn);
+        if (count($textColumns) === 1 OR empty($glue))
+        {
+            return $textColumn;
+        }
+
+        return '( ' . $query->concatenate($textColumns, $glue) . ' )';
+    }
+
+    /**
+     * Resolves the textColumns for concatenated values
+     *
+     * @param   object  &$query  the query object
+     *
+     * @return  void  sets query object values
+     */
     private function setFrom(&$query)
     {
         $tableParameter = $this->getAttribute('table');
+        $aliasParameter = $this->getAttribute('alias');
         $tables = explode(',', $tableParameter);
+        $aliases = explode(',', $aliasParameter);
         $count = count($tables);
-        if ($count === 1)
+        if ($count === 1 OR $count != count($aliases))
         {
             $query->from("#__$tableParameter");
             return;
         }
 
-        $query->from("#__{$tables[0]}");
+        $query->from("#__{$tables[0]} AS {$aliases[0]}");
         for ($index = 1; $index < $count; $index++)
         {
-            $query->innerjoin("#__{$tables[$index]}");
+            $query->innerjoin("#__{$tables[$index]} AS {$aliases[$index]}");
         }
+    }
+
+    /**
+     * Sets the disjunct conditions for the query
+     *
+     * @param   object  &$query  the query object
+     *
+     * @return  void  sets query object values
+     */
+    private function setDisjuncture(&$query)
+    {
+        $notInColumn = $this->getAttribute('notInColumn');
+        $disjunctValue = $this->getAttribute('disjunctValue');
+        $disjunctTable = $this->getAttribute('disjunctTable');
+
+        if (empty($disjunctValue) OR empty($disjunctTable))
+        {
+            return;
+        }
+
+        $subQuery = JFactory::getDbo()->getQuery(true);
+        $subQuery->select("$disjunctValue")->from("#__$disjunctTable");
+        $query->where("$notInColumn NOT IN ( " . (string) $subQuery . " )");
     }
 }

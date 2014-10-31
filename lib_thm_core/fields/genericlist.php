@@ -55,8 +55,9 @@ class JFormFieldGenericList extends JFormFieldList
             $options = array();
             foreach ($resources as $resource)
             {
-                $options[] = JHtml::_('select.option', $resource['value'], $resource['text']);
+                $options[$resource['text']] = JHtml::_('select.option', $resource['value'], $resource['text']);
             }
+            $this->setValueParameters($options);
             return array_merge(parent::getOptions(), $options);
         }
         catch (Exception $exc)
@@ -95,21 +96,45 @@ class JFormFieldGenericList extends JFormFieldList
      */
     private function setFrom(&$query)
     {
-        $tableParameter = $this->getAttribute('table');
-        $aliasParameter = $this->getAttribute('alias');
-        $tables = explode(',', $tableParameter);
-        $aliases = explode(',', $aliasParameter);
+        $tableParameters = $this->getAttribute('table');
+        $tables = explode(',', $tableParameters);
+
+        $query->from("#__{$tables[0]}");
         $count = count($tables);
-        if ($count === 1 OR $count != count($aliases))
+        if ($count === 1)
         {
-            $query->from("#__$tableParameter");
             return;
         }
 
-        $query->from("#__{$tables[0]} AS {$aliases[0]}");
         for ($index = 1; $index < $count; $index++)
         {
-            $query->innerjoin("#__{$tables[$index]} AS {$aliases[$index]}");
+            $query->innerjoin("#__{$tables[$index]}");
         }
+    }
+
+    /**
+     * Sets value oriented parameters from component settings
+     *
+     * @param   array  &$options  the input options
+     */
+    private function setValueParameters(&$options)
+    {
+        $valueParameter = $this->getAttribute('valueParameter', '');
+        if ($valueParameter === '')
+        {
+            return;
+        }
+        $valueParameters = explode(',', $valueParameter);
+        $componentParameters = JComponentHelper::getParams(JFactory::getApplication()->input->get('option'));
+        foreach ($valueParameters AS $parameter)
+        {
+            $componentParameter = $componentParameters->get($parameter);
+            if (empty($componentParameter))
+            {
+                continue;
+            }
+            $options[$componentParameter] = JHtml::_('select.option', $componentParameter, $componentParameter);
+        }
+        ksort($options);
     }
 }

@@ -28,6 +28,6 @@ class THM_CoreHelper
     {
         $fullTag = JFactory::getLanguage()->getTag();
         $tagParts = explode('-', $fullTag);
-        echo $tagParts[0];
+        return $tagParts[0];
     }
 }

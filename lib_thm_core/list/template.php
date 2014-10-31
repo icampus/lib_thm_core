@@ -45,7 +45,7 @@ class THM_CoreTemplateList
                     <div class="js-stools clearfix">
                         <div class="clearfix">
                             <div class="js-stools-container-bar">
-                                <?php echo self::renderSearch($filters); ?>
+                                <?php self::renderSearch($filters); ?>
                             </div>
                             <div class="js-stools-container-list hidden-phone hidden-tablet">
                                 <?php echo JLayoutHelper::render('joomla.searchtools.default.list', $data); ?>
@@ -148,6 +148,7 @@ class THM_CoreTemplateList
         echo '<tr>';
         foreach ($headerNames as $name)
         {
+            $name = str_replace('.', '_', $name);
             $found = false;
             $searchName = "filter_$name";
             foreach ($filters as $fieldName => $field)

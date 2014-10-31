@@ -1,6 +1,5 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
-jimport('joomla.form.formfield');
 
 class JFormFieldOrderingButton extends JFormField
 {

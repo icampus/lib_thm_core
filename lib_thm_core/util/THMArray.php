@@ -21,7 +21,7 @@ class THMArray
      * Transform all elements of on array into a new array.
      *
      * Example: Double all Elements
-     * THMArray::map([1,2,3,4], function (elem) { return elem * 2})
+     * THMArray::map([1,2,3,4], function ($elem) { return elem * 2})
      * Will return: [2,4,6,8]
      *
      * @param   array          $array  Array of elements which should be transformed.

@@ -19,8 +19,12 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreViewEdit extends JViewLegacy
+abstract class THM_CoreViewEdit extends JViewLegacy
 {
+    public $item = null;
+
+    public $form = null;
+
     /**
      * Method to get display
      *
@@ -35,6 +39,10 @@ class THM_CoreViewEdit extends JViewLegacy
         JHtml::_('behavior.formvalidation');
         JHtml::_('formbehavior.chosen', 'select');
 
+        $option = JFactory::getApplication()->input->get('option');
+        $document = Jfactory::getDocument();
+        $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
+
         $this->item = $this->get('Item');
         $this->form = $this->get('Form');
 
@@ -42,4 +50,9 @@ class THM_CoreViewEdit extends JViewLegacy
         $this->addToolBar();
         parent::display($tpl);
     }
+
+    /**
+     * Concrete classes are supposed to use this method to add a toolbar.
+     */
+    protected abstract function addToolBar();
 }

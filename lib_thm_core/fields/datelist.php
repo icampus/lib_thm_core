@@ -11,7 +11,6 @@
  */
 defined('_JEXEC') or die;
 JFormHelper::loadFieldClass('list');
-jimport('thm_core.helpers.corehelper');
 
 /**
  * Class loads a list of fields for selection
@@ -20,14 +19,14 @@ jimport('thm_core.helpers.corehelper');
  * @package     thm_organizer
  * @subpackage  com_thm_organizer.admin
  */
-class JFormFieldLocalizedList extends JFormFieldList
+class JFormFieldDateList extends JFormFieldList
 {
     /**
      * Type
      *
      * @var    String
      */
-    public $type = 'localizedlist';
+    public $type = 'datelist';
 
     /**
      * Method to get the field options for category
@@ -42,9 +41,8 @@ class JFormFieldLocalizedList extends JFormFieldList
         $dbo = JFactory::getDbo();
         $query = $dbo->getQuery(true);
 
-        $tag = THM_CoreHelper::getLanguageShortTag();
-        $valueColumn = $this->getAttribute('valueColumn') . "_$tag";
-        $textColumn = $this->getAttribute('textColumn') . "_$tag";
+        $valueColumn = $this->getAttribute('valueColumn');
+        $textColumn = $this->resolveText($query);
 
         $query->select("DISTINCT $valueColumn AS value, $textColumn AS text");
         $this->setFrom($query);
@@ -55,15 +53,19 @@ class JFormFieldLocalizedList extends JFormFieldList
         {
             $resources = $dbo->loadAssocList();
             $options = array();
+            $option = JFactory::getApplication()->input->get('option');
+            $params =JComponentHelper::getParams($option);
+            $type = $this->getAttribute('format');
+            $format = $type == 'time'? $params->get('timeFormat', 'H:i') : $params->get('dateFormat', 'd.m.Y');
             foreach ($resources as $resource)
             {
-                $options[] = JHtml::_('select.option', $resource['value'], $resource['text']);
+                $text = date($format, strtotime($resource['text']));
+                $options[] = JHtml::_('select.option', $resource['value'], $text);
             }
             return array_merge(parent::getOptions(), $options);
         }
         catch (Exception $exc)
         {
-            JFactory::getApplication()->enqueueMessage($exc->getMessage(), 'error');
             return parent::getOptions();
         }
     }
@@ -75,18 +77,39 @@ class JFormFieldLocalizedList extends JFormFieldList
      *
      * @return  string  the string to use for text selection
      */
+    private function resolveText(&$query)
+    {
+        $textColumn = $this->getAttribute('textColumn');
+        $glue = $this->getAttribute('glue');
+
+        $textColumns = explode(',', $textColumn);
+        if (count($textColumns) === 1 OR empty($glue))
+        {
+            return $textColumn;
+        }
+
+        return '( ' . $query->concatenate($textColumns, $glue) . ' )';
+    }
+
+    /**
+     * Resolves the textColumns for concatenated values
+     *
+     * @param   object  &$query  the query object
+     *
+     * @return  string  the string to use for text selection
+     */
     private function setFrom(&$query)
     {
-        $tableParameter = $this->getAttribute('table');
-        $tables = explode(',', $tableParameter);
+        $tableParameters = $this->getAttribute('table');
+        $tables = explode(',', $tableParameters);
+
+        $query->from("#__{$tables[0]}");
         $count = count($tables);
         if ($count === 1)
         {
-            $query->from("#__$tableParameter");
             return;
         }
 
-        $query->from("#__{$tables[0]}");
         for ($index = 1; $index < $count; $index++)
         {
             $query->innerjoin("#__{$tables[$index]}");
