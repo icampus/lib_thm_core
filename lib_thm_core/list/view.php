@@ -19,7 +19,7 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreViewList extends JViewLegacy
+abstract class THM_CoreViewList extends JViewLegacy
 {
     /**
      * Method to create a list output
@@ -38,10 +38,15 @@ class THM_CoreViewList extends JViewLegacy
 
         // Workaround: The state for ordering get lost when you use pagination. So it is saved in a session variable
         // and here saved back to the state.
-        $session =& JFactory::getSession();
-        $ordering = $session->get( 'ordering');
-        $orders= explode(' ', $ordering);
-        $this->state->set("list.direction", $orders[1]);
+        $session = JFactory::getSession();
+        $ordering = $session->get('ordering');
+        $orders = explode(' ', $ordering);
+        if (2 == count($orders))
+        {
+            $this->state->set("list.fullordering", $orders[0] . " " . $orders[1]);
+            $this->state->set("list.ordering", $orders[0]);
+            $this->state->set("list.direction", $orders[1]);
+        }
 
         JHtml::_('bootstrap.tooltip');
         JHtml::_('behavior.multiselect');
@@ -58,8 +63,6 @@ class THM_CoreViewList extends JViewLegacy
         // Items common across list views
         $this->headers = $this->get('Headers');
 
-        $this->items = $this->get('Items');
-
         // Allows for component specific menu handling
         $option = JFactory::getApplication()->input->get('option', '');
         $path = JPATH_ROOT . "/media/$option/helpers/componenthelper.php";
@@ -69,6 +72,7 @@ class THM_CoreViewList extends JViewLegacy
 
         // Allows for view specific toolbar handling
         $this->addToolBar();
+
         parent::display();
     }
 
