@@ -19,7 +19,7 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreViewList extends JViewLegacy
+abstract class THM_CoreViewList extends JViewLegacy
 {
     /**
      * Method to create a list output
