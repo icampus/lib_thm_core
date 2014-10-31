@@ -11,6 +11,7 @@
  * @license     GNU GPL v.2
  * @link        www.mni.thm.de
  */
+defined('_JEXEC') or die;
 
 /**
  * Class provides standardized output of list items
@@ -19,7 +20,7 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreModelList extends JModelList
+abstract class THM_CoreModelList extends JModelList
 {
     protected $defaultOrdering = '';
 
@@ -264,4 +265,49 @@ class THM_CoreModelList extends JModelList
             $query->where("$name = '$value'");
         }
     }
+
+    /**
+     * Provides a default method for setting filters for non-unique values
+     *
+     * @param   object  &$query       the query object
+     * @param   array   $filterNames  the filter names. names should be synonymous with db column names.
+     *
+     * @return  void
+     */
+    protected function setLocalizedFilters(&$query, $filterNames)
+    {
+        jimport('thm_core.helpers.corehelper');
+        $tag = THM_CoreHelper::getLanguageShortTag();
+        foreach ($filterNames AS $name)
+        {
+            $value = $this->state->get("filter.$name", '');
+            if ($value === '')
+            {
+                continue;
+            }
+
+            // The column is localized the filter is not
+            $name .= "_$tag";
+
+            /**
+             * Special value reserved for empty filtering. Since an empty is dependent upon the column default, we must
+             * check against multiple 'empty' values. Here we check against empty string and null. Should this need to
+             * be extended we could maybe add a parameter for it later.
+             */
+            if($value == '-1')
+            {
+                $query->where("( $name = '' OR $name IS NULL )");
+                continue;
+            }
+
+            $query->where("$name = '$value'");
+        }
+    }
+
+    /**
+     * Function to get table headers
+     *
+     * @return array including headers
+     */
+    public abstract function getHeaders();
 }

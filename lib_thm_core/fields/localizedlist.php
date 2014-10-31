@@ -78,20 +78,18 @@ class JFormFieldLocalizedList extends JFormFieldList
     private function setFrom(&$query)
     {
         $tableParameter = $this->getAttribute('table');
-        $aliasParameter = $this->getAttribute('alias');
         $tables = explode(',', $tableParameter);
-        $aliases = explode(',', $aliasParameter);
         $count = count($tables);
-        if ($count === 1 OR $count != count($aliases))
+        if ($count === 1)
         {
             $query->from("#__$tableParameter");
             return;
         }
 
-        $query->from("#__{$tables[0]} AS {$aliases[0]}");
+        $query->from("#__{$tables[0]}");
         for ($index = 1; $index < $count; $index++)
         {
-            $query->innerjoin("#__{$tables[$index]} AS {$aliases[$index]}");
+            $query->innerjoin("#__{$tables[$index]}");
         }
     }
 }
