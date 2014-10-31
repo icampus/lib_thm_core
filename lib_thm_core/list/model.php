@@ -183,9 +183,10 @@ abstract class THM_CoreModelList extends JModelList
     protected function setOrdering(&$query)
     {
         $defaultOrdering = "{$this->defaultOrdering} {$this->defaultDirection}";
-        $session =& JFactory::getSession();
+        $session = JFactory::getSession();
         $ordering = $this->state->get('list.fullordering', $defaultOrdering);
-        if(strpos($ordering, 'null') !== false){
+        if (strpos($ordering, 'null') !== false)
+        {
             $ordering = $session->get( 'ordering', '' );
         }
         $query->order($ordering);
