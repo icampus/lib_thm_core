@@ -101,7 +101,7 @@ class THM_CoreTemplateList
                 </div>
                 <div class="btn-wrapper">
                     <button type="button" class="btn hasTooltip js-stools-btn-clear"
-                            title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_CLEAR'); ?>">
+                            title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_CLEAR'); ?>" onclick="document.getElementById('filter_search').value='';">
                         <i class="icon-delete"></i>
                     </button>
                 </div>

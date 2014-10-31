@@ -34,24 +34,29 @@ class THM_CoreViewList extends JViewLegacy
         $document = Jfactory::getDocument();
         $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
 
+        $this->state = $this->get('State');
+
+        // Workaround: The state for ordering get lost when you use pagination. So it is saved in a session variable
+        // and here saved back to the state.
+        $session =& JFactory::getSession();
+        $ordering = $session->get( 'ordering');
+        $orders= explode(' ', $ordering);
+        $this->state->set("list.direction", $orders[1]);
+
         JHtml::_('bootstrap.tooltip');
         JHtml::_('behavior.multiselect');
         JHtml::_('formbehavior.chosen', 'select');
         JHtml::_('searchtools.form', '#adminForm', array());
+
+        $this->items = $this->get('Items');
+        $this->pagination = $this->get('Pagination');
 
         // Don't know which of these filters does what if anything active had no effect on the active highlighting
         $this->filterForm = $this->get('FilterForm');
         $this->activeFilters = $this->get('ActiveFilters');
 
         // Items common across list views
-        $this->state = $this->get('State');
-        $this->pagination = $this->get('Pagination');
         $this->headers = $this->get('Headers');
-        $this->items = $this->get('Items');
-
-        $this->ordering = $this->state->get('list.ordering');
-        $this->direction = $this->state->get('list.direction');
-        $this->search = $this->state->get('filter.search');
 
         // Allows for component specific menu handling
         $option = JFactory::getApplication()->input->get('option', '');
