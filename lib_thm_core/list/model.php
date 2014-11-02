@@ -120,7 +120,7 @@ abstract class THM_CoreModelList extends JModelList
      *
      * @param   object  $list  an array of list variables
      *
-     * @return  bool  true if the full ordering exists and is of correct syntax, otherwise false
+     * @return  void  sets state variables
      */
     private function processFullOrdering($list)
     {
@@ -146,12 +146,11 @@ abstract class THM_CoreModelList extends JModelList
             $this->setState('list.fullordering', $list->fullordering);
             $this->setState('list.ordering', $orderingParts[0]);
             $this->setState('list.direction', $orderingParts[1]);
-            return $orderingParts;
+            return;
         }
 
         // Invalid direction
         $this->setDefaultOrdering();
-        return;
     }
 
     /**
