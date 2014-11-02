@@ -102,6 +102,17 @@ abstract class THM_CoreModelList extends JModelList
         }
 
         $this->processFullOrdering($list);
+        if (!empty($list))
+        {
+            $alreadyProcessed = array('fullordering', 'ordering', 'direction');
+            foreach ($list as $name => $value)
+            {
+                if (!in_array($name, $alreadyProcessed))
+                {
+                    $this->setState("list.$name", $value);
+                }
+            }
+        }
     }
 
     /**
@@ -176,7 +187,9 @@ abstract class THM_CoreModelList extends JModelList
         $attributes['class'] = 'btn btn-micro hasTooltip' ;
         $attributes['class'] .= empty($value)? ' inactive' : '';
 
-        $url = 'index.php?option=com_thm_organizer&task=' . $controller . '.toggle&id=' . $id . '&value=' . $value;
+
+        $option = $this->get('option');
+        $url = "index.php?option=$option&task=" . $controller . ".toggle&id=" . $id . "&value=" . $value;
         $url .= empty($attribute)? '' : "&attribute=$attribute";
         $link = JHtml::_('link', $url, $icon, $attributes);
 

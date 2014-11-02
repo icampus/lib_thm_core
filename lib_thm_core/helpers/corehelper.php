@@ -2,8 +2,8 @@
 /**
  * @category    Joomla component
  * @package     THM_Organizer
- * @subpackage  com_thm_organizer.admin
- * @name        provides functions useful to multiple component files
+ * @subpackage  lib_thm_core.site
+ * @name        provides functions useful to multiple files
  * @author      James Antrim, <james.antrim@mni.thm.de>
  * @author      Wolf Rost, <wolf.rost@mni.thm.de>
  * @copyright   2014 TH Mittelhessen
@@ -15,7 +15,7 @@
  * Class providing functions usefull to multiple component files
  *
  * @category  Joomla.Component.Admin
- * @package   thm_organizer
+ * @package   thm_core
  */
 class THM_CoreHelper
 {

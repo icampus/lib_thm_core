@@ -15,8 +15,8 @@ defined('_JEXEC') or die;
  * Class loads form data to edit an entry.
  *
  * @category    Joomla.Component.Admin
- * @package     thm_organizer
- * @subpackage  com_thm_organizer.admin
+ * @package     thm_core
+ * @subpackage  lib_thm_core.site
  */
 class THM_CoreModelEdit extends JModelAdmin
 {

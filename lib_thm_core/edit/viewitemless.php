@@ -13,13 +13,13 @@
  */
 
 /**
- * Class provides standardized output of an item
+ * Class provides standardized output of a form without an item
  *
  * @category    Joomla.Library
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-abstract class THM_CoreViewEdit extends JViewLegacy
+abstract class THM_CoreViewEditItemless extends JViewLegacy
 {
     public $item = null;
 
@@ -44,7 +44,6 @@ abstract class THM_CoreViewEdit extends JViewLegacy
         $document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
         $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
 
-        $this->item = $this->get('Item');
         $this->form = $this->get('Form');
 
         // Allows for view specific toolbar handling
