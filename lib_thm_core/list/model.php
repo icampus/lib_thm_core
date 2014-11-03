@@ -102,6 +102,17 @@ abstract class THM_CoreModelList extends JModelList
         }
 
         $this->processFullOrdering($list);
+        if (!empty($list))
+        {
+            $alreadyProcessed = array('fullordering', 'ordering', 'direction');
+            foreach ($list as $name => $value)
+            {
+                if (!in_array($name, $alreadyProcessed))
+                {
+                    $this->setState("list.$name", $value);
+                }
+            }
+        }
     }
 
     /**
@@ -109,7 +120,7 @@ abstract class THM_CoreModelList extends JModelList
      *
      * @param   object  $list  an array of list variables
      *
-     * @return  bool  true if the full ordering exists and is of correct syntax, otherwise false
+     * @return  void  sets state variables
      */
     private function processFullOrdering($list)
     {
@@ -135,12 +146,11 @@ abstract class THM_CoreModelList extends JModelList
             $this->setState('list.fullordering', $list->fullordering);
             $this->setState('list.ordering', $orderingParts[0]);
             $this->setState('list.direction', $orderingParts[1]);
-            return $orderingParts;
+            return;
         }
 
         // Invalid direction
         $this->setDefaultOrdering();
-        return;
     }
 
     /**
@@ -176,7 +186,9 @@ abstract class THM_CoreModelList extends JModelList
         $attributes['class'] = 'btn btn-micro hasTooltip' ;
         $attributes['class'] .= empty($value)? ' inactive' : '';
 
-        $url = 'index.php?option=com_thm_organizer&task=' . $controller . '.toggle&id=' . $id . '&value=' . $value;
+
+        $option = $this->get('option');
+        $url = "index.php?option=$option&task=" . $controller . ".toggle&id=" . $id . "&value=" . $value;
         $url .= empty($attribute)? '' : "&attribute=$attribute";
         $link = JHtml::_('link', $url, $icon, $attributes);
 

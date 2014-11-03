@@ -21,6 +21,18 @@
  */
 abstract class THM_CoreViewList extends JViewLegacy
 {
+    public $state = null;
+
+    public $items = null;
+
+    public $pagination = null;
+
+    public $filterForm = null;
+
+    public $activeFilters = null;
+
+    public $headers = null;
+
     /**
      * Method to create a list output
      *
