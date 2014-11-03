@@ -2,7 +2,7 @@
 /**
  * @category    Joomla component
  * @package     THM_Organizer
- * @subpackage  com_thm_organizer.admin
+ * @subpackage  lib_thm_core.site
  * @name        JFormFieldFields
  * @author      James Antrim, <james.antrim@mni.thm.de>
  * @copyright   2014 TH Mittelhessen
@@ -16,8 +16,8 @@ JFormHelper::loadFieldClass('list');
  * Class loads a list of fields for selection
  *
  * @category    Joomla.Component.Admin
- * @package     thm_organizer
- * @subpackage  com_thm_organizer.admin
+ * @package     thm_core
+ * @subpackage  lib_thm_core.site
  */
 class JFormFieldDisjunctList extends JFormFieldList
 {

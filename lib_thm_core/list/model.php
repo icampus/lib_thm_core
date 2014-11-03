@@ -22,9 +22,9 @@ defined('_JEXEC') or die;
  */
 abstract class THM_CoreModelList extends JModelList
 {
-    protected $defaultOrdering = '';
+    protected $defaultOrdering = 'name';
 
-    protected $defaultDirection = '';
+    protected $defaultDirection = 'ASC';
 
     protected $defaultLimit = '20';
 
@@ -81,28 +81,38 @@ abstract class THM_CoreModelList extends JModelList
         // This is a workaround. The ordering get lost in the state when you use paginagtion. So the ordering is saved
         // to a session variable and read from it if the state ordering is null.
         $session = JFactory::getSession();
-        if(empty($list) || strpos($list['fullordering'], 'null') !== false)
+        $getSessionOrdering = (empty($list) OR empty($list['fullordering']) OR strpos($list['fullordering'], 'null') !== false);
+        if($getSessionOrdering)
         {
             if (empty($list))
             {
                 $list = array('fullordering'=> '');
             }
-            $list['fullordering'] = $session->get( 'ordering', $list['fullordering'] );
+            if (empty($list['fullordering']))
+            {
+                $list['fullordering'] = '';
+            }
+            $defaultFullOrdering = "$this->defaultOrdering $this->defaultDirection";
+            $sessionOrdering = $session->get( 'ordering', $list['fullordering'] );
+            $list['fullordering'] = empty($sessionOrdering)? $defaultFullOrdering : $sessionOrdering;
         }
         else
         {
-            $session->set( 'ordering', $list['fullordering']);
+            $session->set('ordering', $list['fullordering']);
         }
 
-        // This lines may not work correctly, so there is a workaround
-        $orderingSet = $this->processFullOrdering($list);
-        if($orderingSet)
+        $this->processFullOrdering($list);
+        if (!empty($list))
         {
-            $this->setState('list.ordering', $orderingSet[0]);
-            $this->setState('list.direction', $orderingSet[1]);
-            $this->setState('list.fullordering',  $orderingSet[0] . " " . $orderingSet[1]);
+            $alreadyProcessed = array('fullordering', 'ordering', 'direction');
+            foreach ($list as $name => $value)
+            {
+                if (!in_array($name, $alreadyProcessed))
+                {
+                    $this->setState("list.$name", $value);
+                }
+            }
         }
-        parent::populateState();
     }
 
     /**
@@ -110,18 +120,14 @@ abstract class THM_CoreModelList extends JModelList
      *
      * @param   object  $list  an array of list variables
      *
-     * @return  bool  true if the full ordering exists and is of correct syntax, otherwise false
+     * @return  void  sets state variables
      */
     private function processFullOrdering($list)
     {
-        $defaultOrdering = $this->defaultOrdering;
-        $defaultDirection = $this->defaultDirection;
-        $defaultFullOrdering = empty($defaultOrdering)? '' : "$defaultOrdering $defaultDirection";
-
         // Not set
         if (empty($list->fullordering))
         {
-            $this->setState('list.fullordering', $defaultFullOrdering);
+            $this->setDefaultOrdering();
             return;
         }
 
@@ -130,19 +136,33 @@ abstract class THM_CoreModelList extends JModelList
         // Invalid number of arguments
         if (count($orderingParts) != 2)
         {
-            $this->setState('list.fullordering', $defaultFullOrdering);
+            $this->setDefaultOrdering();
             return;
         }
 
         // Valid entry
         if (in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', '')))
         {
-            return $orderingParts;
+            $this->setState('list.fullordering', $list->fullordering);
+            $this->setState('list.ordering', $orderingParts[0]);
+            $this->setState('list.direction', $orderingParts[1]);
+            return;
         }
 
         // Invalid direction
-        $this->setState('list.fullordering', $defaultFullOrdering);
-        return;
+        $this->setDefaultOrdering();
+    }
+
+    /**
+     * Sets state variables concerned with the state with default values
+     *
+     * @return  void
+     */
+    private function setDefaultOrdering()
+    {
+        $this->setState('list.fullordering', "$this->defaultOrdering $this->defaultDirection");
+        $this->setState('list.ordering', $this->defaultOrdering);
+        $this->setState('list.direction', $this->defaultDirection);
     }
 
     /**
@@ -166,7 +186,9 @@ abstract class THM_CoreModelList extends JModelList
         $attributes['class'] = 'btn btn-micro hasTooltip' ;
         $attributes['class'] .= empty($value)? ' inactive' : '';
 
-        $url = 'index.php?option=com_thm_organizer&task=' . $controller . '.toggle&id=' . $id . '&value=' . $value;
+
+        $option = $this->get('option');
+        $url = "index.php?option=$option&task=" . $controller . ".toggle&id=" . $id . "&value=" . $value;
         $url .= empty($attribute)? '' : "&attribute=$attribute";
         $link = JHtml::_('link', $url, $icon, $attributes);
 
