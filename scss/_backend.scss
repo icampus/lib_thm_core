@@ -36,15 +36,17 @@ thead {
   }
   tr:nth-last-child(1) th {
     @include linearGradient(#B9D986, #cce3a7);
-    white-space: nowrap;
+    white-space: pre-wrap;
     padding-top: 0px;
+    padding-left: 0px;
     border: none;
     border-bottom: 1px solid #bbb;
     &:first-child {
       border-bottom-left-radius: 3px;
+      padding-left: 8px;
     }
     &:last-child {
-      white-space: pre-wrap;
+     // white-space: pre-wrap;
       border-bottom-right-radius: 3px;
     }
   }
@@ -71,13 +73,10 @@ tbody tr:first-child td{
 }
 
 /*icons anpassen*/
-.icon-diff{
+.icon-diff, .icon-import{
   font-weight: bold;
 }
-.icon-export{
-  font-family: icomoon;
-  content: "\e604";
-}
+
 
 /*icons zu sidebar hinzufuegen*/
 li {
@@ -168,5 +167,5 @@ li {
   }
 }
 .nav-list li.active a{
-  background-color:#51a351;
+  @include linearGradient(#62c462,#51a351);
 }
