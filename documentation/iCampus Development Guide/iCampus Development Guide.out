@@ -20,5 +20,14 @@
 \BOOKMARK [2][-]{subsection.2.6.1}{Database Creation}{section.2.6}% 20
 \BOOKMARK [2][-]{subsection.2.6.2}{MNI Site Development}{section.2.6}% 21
 \BOOKMARK [2][-]{subsection.2.6.3}{Joomla! 3.x Development}{section.2.6}% 22
-\BOOKMARK [0][-]{chapter.3}{User's Guide}{}% 23
-\BOOKMARK [1][-]{section.3.1}{Git}{chapter.3}% 24
+\BOOKMARK [0][-]{chapter.3}{Extension Development}{}% 23
+\BOOKMARK [1][-]{section.3.1}{Installation Files}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.1.1}{Manifest File}{section.3.1}% 25
+\BOOKMARK [2][-]{subsection.3.1.2}{Script File}{section.3.1}% 26
+\BOOKMARK [1][-]{section.3.2}{Components}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.3}{Libraries}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.4}{Templates}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.5}{Modules}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.6}{Plugins}{chapter.3}% 31
+\BOOKMARK [0][-]{chapter.4}{User's Guide}{}% 32
+\BOOKMARK [1][-]{section.4.1}{Git}{chapter.4}% 33

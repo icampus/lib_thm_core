@@ -1,36 +1,46 @@
-\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
-\contentsline {chapter}{\numberline {2}The Development Environment}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Local Web Server Installation and Configuration}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}XAMPP}{4}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}PHP Configuration}{5}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}PEAR Configuration}{6}{subsection.2.1.3}
-\contentsline {subsubsection}{Directory Configuration}{6}{section*.2}
-\contentsline {subsubsection}{Channel Configuration}{7}{section*.3}
-\contentsline {section}{\numberline {2.2}Git}{8}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Installation}{8}{subsection.2.2.1}
-\contentsline {subsubsection}{Command Context}{8}{section*.4}
-\contentsline {subsubsection}{Line Endings}{8}{section*.5}
-\contentsline {subsection}{\numberline {2.2.2}User Configuration}{8}{subsection.2.2.2}
-\contentsline {subsubsection}{Global User Configuration}{8}{section*.6}
-\contentsline {subsubsection}{SSH-Key Creation}{9}{section*.7}
-\contentsline {subsubsection}{SSH-Key in Gitorious eintragen}{9}{section*.8}
-\contentsline {section}{\numberline {2.3}PhpStorm}{11}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Installation}{11}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}THM Core Library}{12}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Code Sniffer and Mess Detector}{14}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Standards Directory Inclusion}{14}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}PhpStorm}{15}{subsection.2.4.2}
-\contentsline {subsubsection}{PhpStorm Inclusion}{15}{section*.9}
-\contentsline {subsubsection}{PhpStorm Configuration}{15}{section*.10}
-\contentsline {section}{\numberline {2.5}SASS}{17}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Installation}{17}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}PhpStorm Configuration}{18}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Joomla!}{22}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Database Creation}{22}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}MNI Site Development}{23}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Joomla! 3.x Development}{25}{subsection.2.6.3}
-\contentsline {chapter}{\numberline {3}User's Guide}{28}{chapter.3}
-\contentsline {section}{\numberline {3.1}Git}{28}{section.3.1}
-\contentsline {subsubsection}{Revert to the previous commit}{28}{section*.11}
-\contentsline {subsubsection}{Create a new local branch}{28}{section*.12}
-\contentsline {subsubsection}{Add a local branch to remote}{28}{section*.13}
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
+\contentsline {chapter}{\numberline {2}The Development Environment}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Local Web Server Installation and Configuration}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}XAMPP}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}PHP Configuration}{6}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}PEAR Configuration}{7}{subsection.2.1.3}
+\contentsline {subsubsection}{Directory Configuration}{7}{section*.2}
+\contentsline {subsubsection}{Channel Configuration}{8}{section*.3}
+\contentsline {section}{\numberline {2.2}Git}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Installation}{9}{subsection.2.2.1}
+\contentsline {subsubsection}{Command Context}{9}{section*.4}
+\contentsline {subsubsection}{Line Endings}{9}{section*.5}
+\contentsline {subsection}{\numberline {2.2.2}User Configuration}{9}{subsection.2.2.2}
+\contentsline {subsubsection}{Global User Configuration}{9}{section*.6}
+\contentsline {subsubsection}{SSH-Key Creation}{10}{section*.7}
+\contentsline {subsubsection}{SSH-Key in Gitorious eintragen}{10}{section*.8}
+\contentsline {section}{\numberline {2.3}PhpStorm}{12}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Installation}{12}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}THM Core Library}{13}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Code Sniffer and Mess Detector}{15}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Standards Directory Inclusion}{15}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}PhpStorm}{16}{subsection.2.4.2}
+\contentsline {subsubsection}{PhpStorm Inclusion}{16}{section*.9}
+\contentsline {subsubsection}{PhpStorm Configuration}{16}{section*.10}
+\contentsline {section}{\numberline {2.5}SASS}{18}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Installation}{18}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}PhpStorm Configuration}{19}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Joomla!}{23}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Database Creation}{23}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}MNI Site Development}{24}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Joomla! 3.x Development}{26}{subsection.2.6.3}
+\contentsline {chapter}{\numberline {3}Extension Development}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Installation Files}{29}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Manifest File}{29}{subsection.3.1.1}
+\contentsline {subsubsection}{Extension Tag}{29}{section*.11}
+\contentsline {subsection}{\numberline {3.1.2}Script File}{29}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Components}{30}{section.3.2}
+\contentsline {section}{\numberline {3.3}Libraries}{30}{section.3.3}
+\contentsline {section}{\numberline {3.4}Templates}{30}{section.3.4}
+\contentsline {section}{\numberline {3.5}Modules}{30}{section.3.5}
+\contentsline {section}{\numberline {3.6}Plugins}{30}{section.3.6}
+\contentsline {chapter}{\numberline {4}User's Guide}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Git}{31}{section.4.1}
+\contentsline {subsubsection}{Revert to the previous commit}{31}{section*.12}
+\contentsline {subsubsection}{Create a new local branch}{31}{section*.13}
+\contentsline {subsubsection}{Add a local branch to remote}{31}{section*.14}

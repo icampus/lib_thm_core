@@ -79,26 +79,26 @@ abstract class THM_CoreModelList extends JModelList
         $list = $app->getUserStateFromRequest($this->context . '.list', 'list', array(), 'array');
 
         // This is a workaround. The ordering get lost in the state when you use paginagtion. So the ordering is saved
-      	// to a session variable and read from it if the state ordering is null.
-	 	$session =& JFactory::getSession();
+        // to a session variable and read from it if the state ordering is null.
+        $session = JFactory::getSession();
         $getSessionOrdering = (empty($list) OR empty($list['fullordering']) OR strpos($list['fullordering'], 'null') !== false);
-	 	if($getSessionOrdering)
+        if($getSessionOrdering)
         {
             if (empty($list) || empty($list['fullordering']))
             {
-             	$list = array('fullordering'=> '');
+                $list = array('fullordering'=> '');
             }
             $defaultFullOrdering = "$this->defaultOrdering $this->defaultDirection";
             $sessionOrdering = $session->get( 'ordering', $list['fullordering'] );
             $list['fullordering'] = empty($sessionOrdering)? $defaultFullOrdering : $sessionOrdering;
-	 	}
+        }
         else
         {
-         	$session->set( 'ordering', $list['fullordering']);
+            $session->set( 'ordering', $list['fullordering']);
         }
 
-	 	// This lines may not work correctly, so there is a workaround
-     	$this->processFullOrdering($list);
+        // This lines may not work correctly, so there is a workaround
+        $this->processFullOrdering($list);
         parent::populateState();
     }
 
