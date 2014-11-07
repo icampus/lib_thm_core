@@ -19,9 +19,8 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-abstract class THM_CoreViewEditItemless extends JViewLegacy
+abstract class THM_CoreViewForm extends JViewLegacy
 {
-    public $item = null;
 
     public $form = null;
 
@@ -42,12 +41,14 @@ abstract class THM_CoreViewEditItemless extends JViewLegacy
         $option = JFactory::getApplication()->input->get('option');
         $document = Jfactory::getDocument();
         $document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
-        $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
 
         $this->form = $this->get('Form');
 
         // Allows for view specific toolbar handling
-        $this->addToolBar();
+        if (method_exists($this, 'addToolBar'))
+        {
+            $this->addToolBar();
+        }
         parent::display($tpl);
     }
 
