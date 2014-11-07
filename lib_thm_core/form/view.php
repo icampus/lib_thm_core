@@ -51,9 +51,4 @@ abstract class THM_CoreViewForm extends JViewLegacy
         }
         parent::display($tpl);
     }
-
-    /**
-     * Concrete classes are supposed to use this method to add a toolbar.
-     */
-    protected abstract function addToolBar();
 }
