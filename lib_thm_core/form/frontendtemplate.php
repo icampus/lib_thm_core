@@ -3,8 +3,8 @@
  * @category    Joomla library
  * @package     THM_Core
  * @subpackage  lib_thm_core.site
- * @name        THM_CoreListTemplate
- * @description Common template for list views
+ * @name        THM_CoreFormTemplateFrontend
+ * @description frontend template for itemless forms
  * @author      James Antrim, <james.antrim@mni.thm.de>
  * @author      Ilja Michajlow, <Ilja.Michajlow@mni.thm.de>
  * @copyright   2014 TH Mittelhessen
@@ -19,7 +19,7 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreTemplateBasic
+class THM_CoreTemplateFrontend
 {
     /**
      * Method to create a list output
@@ -32,13 +32,15 @@ class THM_CoreTemplateBasic
     {
         $option = JFactory::getApplication()->input->get('option');
         $resource = str_replace('_edit', '', $view->get('name'));
+        $showHeading = $view->params->get('show_page_heading');
+        $title = $view->params->get('page_title');
 ?>
         <script type="text/javascript">
             Joomla.submitbutton = function(task)
             {
-                if (task == '<?php echo $resource; ?>.cancel' || document.formvalidator.isValid(document.id('item-form')))
+                if (task == '<?php echo $resource; ?>.cancel' || document.formvalidator.isValid(document.id('form-form')))
                 {
-                    Joomla.submitform(task, document.getElementById('item-form'));
+                    Joomla.submitform(task, document.getElementById('form-form'));
                 }
             }
         </script>
@@ -46,8 +48,16 @@ class THM_CoreTemplateBasic
               enctype="multipart/form-data"
               method="post"
               name="adminForm"
-              id="item-form"
+              id="form-form"
               class="form-horizontal">
+            <?php if (!empty($showHeading)): ?>
+            <h2 class="componentheading">
+                <?php echo $title; ?>
+            </h2>
+            <?php endif; ?>
+            <div class="button-panel">
+                <button type="submit" value="submit"><i class="icon-forward-2"></i><?php echo JText::_('JSUBMIT'); ?></button>
+            </div>
             <div class="form-horizontal">
                 <?php echo $view->form->renderFieldset('details'); ?>
             </div>

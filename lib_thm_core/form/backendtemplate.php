@@ -19,7 +19,7 @@
  * @package     thm_list
  * @subpackage  lib_thm_list.site
  */
-class THM_CoreTemplateAdvanced
+class THM_CoreTemplateBackend
 {
     /**
      * Method to create a list output
@@ -36,9 +36,9 @@ class THM_CoreTemplateAdvanced
         <script type="text/javascript">
             Joomla.submitbutton = function(task)
             {
-                if (task == '<?php echo $resource; ?>.cancel' || document.formvalidator.isValid(document.id('item-form')))
+                if (task == '<?php echo $resource; ?>.cancel' || document.formvalidator.isValid(document.id('form-form')))
                 {
-                    Joomla.submitform(task, document.getElementById('item-form'));
+                    Joomla.submitform(task, document.getElementById('form-form'));
                 }
             }
         </script>
@@ -46,22 +46,11 @@ class THM_CoreTemplateAdvanced
               enctype="multipart/form-data"
               method="post"
               name="adminForm"
-              id="item-form"
+              id="form-form"
               class="form-horizontal">
             <div class="form-horizontal">
-<?php
-echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'details'));
-$sets = $view->form->getFieldSets();
-foreach ($sets as $set)
-{
-    echo JHtml::_('bootstrap.addTab', 'myTab', $set->name, JText::_($set->label, true));
-    echo $view->form->renderFieldset($set->name);
-    echo JHtml::_('bootstrap.endTab');
-}
-echo JHtml::_('bootstrap.endTabSet');
-?>
+                <?php echo $view->form->renderFieldset('details'); ?>
             </div>
-            <?php echo $view->form->getInput('id'); ?>
             <?php echo JHtml::_('form.token'); ?>
             <input type="hidden" name="task" value="" />
         </form>
