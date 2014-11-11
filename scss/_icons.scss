@@ -145,3 +145,143 @@
 %icon-cancel {
   background-image: url("../../../media/com_thm_organizer/images/icon-32-cancel.png");
 }
+
+
+// ---------------------------------
+// Icons - Backend with iconfont
+// ---------------------------------
+/*icons anpassen*/
+.icon-diff, .icon-import{
+  font-weight: bold;
+}
+/*icons in Titelseite hinzufuegen */
+.icon-organizer::before {
+  content: "\21";
+}
+.icon-organizer_degrees::before {
+  content: "\e60a";
+}
+.icon-organizer_users::before {
+  content: "\e01f";
+}
+.icon-organizer_monitors::before{
+  content: "\e01c";
+}
+.icon-organizer_teachers::before{
+  content: "\e608";
+}
+.icon-organizer_subjects::before{
+  content: "\e606";
+}
+.icon-organizer_fields::before{
+  content: "\74";
+}
+.icon-organizer_colors::before{
+  content: "\e014";
+}
+.icon-organizer_subject_pools::before{
+  content: "\43";
+}
+.icon-organizer_rooms::before{
+  content: "\e600";
+}
+.icon-organizer_degree_programs::before{
+  content: "\e609";
+}
+.icon-organizer_schedules::before{
+  content: "\e601";
+}
+.icon-organizer_categories::before{
+  content: "\e607";
+}
+.icon-mni::before{
+  content: "\e602";
+}
+/*icons zu sidebar hinzufuegen*/
+li {
+  a[href*="view=thm_organizer"]::before, a[href*="option=com_thm_organizer"]::before
+  {
+    font-family: icomoon;
+    content: "\21";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=degree_manager"]::before {
+    font-family: icomoon;
+    content: "\e60a";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=user_manager"]::before {
+    font-family: icomoon;
+    content: "\e01f";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=monitor_manager"]::before {
+    font-family: icomoon;
+    content: "\e01c";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=teacher_manager"]::before {
+    font-family: icomoon;
+    content: "\e608";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=subject_manager"]::before {
+    font-family: icomoon;
+    content: "\e606";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=field_manager"]::before {
+    font-family: icomoon;
+    content: "\74";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=color_manager"]::before {
+    font-family: icomoon;
+    content: "\e014";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=pool_manager"]::before {
+    font-family: icomoon;
+    content: "\43";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=room_manager"]::before {
+    font-family: icomoon;
+    content: "\e600";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=program_manager"]::before {
+    font-family: icomoon;
+    content: "\e609";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=schedule_manager"]::before {
+    font-family: icomoon;
+    content: "\e601";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=category_manager"]::before {
+    font-family: icomoon;
+    content: "\e607";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+  a[href*="view=virtual_schedule_manager"]::before {
+    font-family: icomoon;
+    content: "\e602";
+    font-size: 12px;
+    padding-right: 8px;
+  }
+}

@@ -22,7 +22,7 @@ defined('_JEXEC') or die;
  */
 abstract class THM_CoreModelList extends JModelList
 {
-    protected $defaultOrdering = 'name';
+    protected $defaultOrdering = '';
 
     protected $defaultDirection = 'ASC';
 
@@ -84,13 +84,9 @@ abstract class THM_CoreModelList extends JModelList
         $getSessionOrdering = (empty($list) OR empty($list['fullordering']) OR strpos($list['fullordering'], 'null') !== false);
         if($getSessionOrdering)
         {
-            if (empty($list))
+            if (empty($list) || empty($list['fullordering']))
             {
                 $list = array('fullordering'=> '');
-            }
-            if (empty($list['fullordering']))
-            {
-                $list['fullordering'] = '';
             }
             $defaultFullOrdering = "$this->defaultOrdering $this->defaultDirection";
             $sessionOrdering = $session->get( 'ordering', $list['fullordering'] );
@@ -98,21 +94,12 @@ abstract class THM_CoreModelList extends JModelList
         }
         else
         {
-            $session->set('ordering', $list['fullordering']);
+            $session->set( 'ordering', $list['fullordering']);
         }
 
+        // This lines may not work correctly, so there is a workaround
         $this->processFullOrdering($list);
-        if (!empty($list))
-        {
-            $alreadyProcessed = array('fullordering', 'ordering', 'direction');
-            foreach ($list as $name => $value)
-            {
-                if (!in_array($name, $alreadyProcessed))
-                {
-                    $this->setState("list.$name", $value);
-                }
-            }
-        }
+        parent::populateState();
     }
 
     /**
