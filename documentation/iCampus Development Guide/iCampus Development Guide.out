@@ -9,25 +9,18 @@
 \BOOKMARK [2][-]{subsection.2.2.2}{User Configuration}{section.2.2}% 9
 \BOOKMARK [1][-]{section.2.3}{PhpStorm}{chapter.2}% 10
 \BOOKMARK [2][-]{subsection.2.3.1}{Installation}{section.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.3.2}{THM Core Library}{section.2.3}% 12
-\BOOKMARK [1][-]{section.2.4}{Code Sniffer and Mess Detector}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.4.1}{Standards Directory Inclusion}{section.2.4}% 14
-\BOOKMARK [2][-]{subsection.2.4.2}{PhpStorm}{section.2.4}% 15
-\BOOKMARK [1][-]{section.2.5}{SASS}{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.5.1}{Installation}{section.2.5}% 17
-\BOOKMARK [2][-]{subsection.2.5.2}{PhpStorm Configuration}{section.2.5}% 18
-\BOOKMARK [1][-]{section.2.6}{Joomla!}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.6.1}{Database Creation}{section.2.6}% 20
-\BOOKMARK [2][-]{subsection.2.6.2}{MNI Site Development}{section.2.6}% 21
-\BOOKMARK [2][-]{subsection.2.6.3}{Joomla! 3.x Development}{section.2.6}% 22
-\BOOKMARK [0][-]{chapter.3}{Extension Development}{}% 23
-\BOOKMARK [1][-]{section.3.1}{Installation Files}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.1.1}{Manifest File}{section.3.1}% 25
-\BOOKMARK [2][-]{subsection.3.1.2}{Script File}{section.3.1}% 26
-\BOOKMARK [1][-]{section.3.2}{Components}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.3}{Libraries}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.4}{Templates}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.5}{Modules}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.6}{Plugins}{chapter.3}% 31
-\BOOKMARK [0][-]{chapter.4}{User's Guide}{}% 32
-\BOOKMARK [1][-]{section.4.1}{Git}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.2.3.2}{Required Plugins}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.3}{Gerrit Configuration}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.4}{THM Core Library}{section.2.3}% 14
+\BOOKMARK [1][-]{section.2.4}{Code Sniffer and Mess Detector}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.4.1}{Standards Directory Inclusion}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.2}{PhpStorm}{section.2.4}% 17
+\BOOKMARK [1][-]{section.2.5}{SASS}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.5.1}{Installation}{section.2.5}% 19
+\BOOKMARK [2][-]{subsection.2.5.2}{PhpStorm Configuration}{section.2.5}% 20
+\BOOKMARK [1][-]{section.2.6}{Joomla!}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.6.1}{Database Creation}{section.2.6}% 22
+\BOOKMARK [2][-]{subsection.2.6.2}{MNI Site Development}{section.2.6}% 23
+\BOOKMARK [2][-]{subsection.2.6.3}{Joomla! 3.x Development}{section.2.6}% 24
+\BOOKMARK [0][-]{chapter.3}{User's Guide}{}% 25
+\BOOKMARK [1][-]{section.3.1}{Git}{chapter.3}% 26
