@@ -1,0 +1,1994 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.3)  17 NOV 2014 09:18
+entering extended mode
+**untis.tex
+
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\untis.te
+x"
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 68 languages loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2014/04/30 v1.2b Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen111
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen112
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen113
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks19
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks20
+\eqnshift@=\dimen114
+\alignsep@=\dimen115
+\tagshift@=\dimen116
+\tagwidth@=\dimen117
+\totwidth@=\dimen118
+\lineht@=\dimen119
+\@envbody=\toks21
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count103
+))
+\Gin@req@height=\dimen120
+\Gin@req@width=\dimen121
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grffile.sty"
+Package: grffile 2012/04/05 v1.16 Extended file name support for graphics (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 486.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen122
+\epsfysize=\dimen123
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bmpsize.sty"
+Package: bmpsize 2009/09/04 v1.6 Extract size/resolution from bitmap files (HO)
+
+Package bmpsize Info: Superseded by pdfTeX in PDF mode on input line 41.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty"
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2014/05/25 v2.7 package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
+)
+\XKV@depth=\count104
+File: xkeyval.tex 2014/05/25 v2.7 key=value parser (HA)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\trimclip.sty"
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box28
+)
+\tc@llx=\dimen124
+\tc@lly=\dimen125
+\tc@urx=\dimen126
+\tc@ury=\dimen127
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen128
+\adjbox@Height=\dimen129
+\adjbox@Depth=\dimen130
+\adjbox@Totalheight=\dimen131
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count105
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box29
+\sift@deathcycles=\count106
+\@vwid@loff=\dimen132
+\@vwid@roff=\dimen133
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen134
+\WF@size=\dimen135
+\c@WF@wrappedlines=\count107
+\WF@box=\box30
+\WF@everypar=\toks25
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count108
+\c@@ppsavesec=\count109
+\c@@ppsaveapp=\count110
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count111
+\lst@gtempboxa=\box31
+\lst@token=\toks26
+\lst@length=\count112
+\lst@currlwidth=\dimen136
+\lst@column=\count113
+\lst@pos=\count114
+\lst@lostspace=\dimen137
+\lst@width=\dimen138
+\lst@newlines=\count115
+\lst@lineno=\count116
+\lst@maxwidth=\dimen139
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count117
+\lst@skipnumbers=\count118
+\lst@framebox=\box32
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package hobsub Info: Skipping package `kvdefinekeys' (already loaded).
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen140
+\Hy@linkcounter=\count119
+\Hy@pagecounter=\count120
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count121
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count122
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen141
+\Fld@menulength=\count123
+\Field@Width=\dimen142
+\Fld@charsize=\dimen143
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count124
+\c@Item=\count125
+\c@Hfootnote=\count126
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count127
+\c@bookmark@seq@number=\count128
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip46
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 22.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\hypcap.sty"
+Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
+)
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\untis.au
+x"
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\general_
+information.aux")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\data.aux
+")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\advanced
+_settings.aux")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\room_cat
+egories.aux")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\lesson_t
+emporal_behavior.aux"))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=556.47656pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count129
+\scratchdimen=\dimen144
+\scratchbox=\box33
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen145
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
+\everyMPtoPDFconversion=\toks28
+)
+\c@lstlisting=\count135
+\AtBeginShipoutBox=\box34
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 137.
+)
+Package hyperref Info: Link coloring ON on input line 28.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count136
+)
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
+
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\untis.ou
+t")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\untis.ou
+t")
+\@outlinefile=\write3
+LaTeX Font Info:    Try loading font information for U+msa on input line 30.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 30.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]pdfTeX warning (ext4): des
+tination with the same identifier (name{page.1}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.35 \newpage
+              [1]
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\untis.to
+c")
+\tf@toc=\write4
+ [2
+
+]
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\general_
+information.tex"
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+
+ []
+
+<./images/ribbon-menu.png, id=177, 934.24031pt x 109.91063pt>
+File: ./images/ribbon-menu.png Graphic file (type png)
+
+<use ./images/ribbon-menu.png>
+Package pdftex.def Info: ./images/ribbon-menu.png used on input line 14.
+(pdftex.def)             Requested size: 430.00462pt x 50.58968pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 
+      [1
+
+
+ <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/r
+ibbon-menu.png>]
+<./images/context-menu.png, id=182, 383.93437pt x 150.5625pt>
+File: ./images/context-menu.png Graphic file (type png)
+
+<use ./images/context-menu.png>
+Package pdftex.def Info: ./images/context-menu.png used on input line 29.
+(pdftex.def)             Requested size: 163.40385pt x 64.08125pt.
+
+<./images/remove-quick-access-item.png, id=183, 376.40625pt x 225.84375pt>
+File: ./images/remove-quick-access-item.png Graphic file (type png)
+
+<use ./images/remove-quick-access-item.png>
+Package pdftex.def Info: ./images/remove-quick-access-item.png used on input li
+ne 34.
+(pdftex.def)             Requested size: 163.40385pt x 98.0448pt.
+
+Underfull \hbox (badness 1616) in paragraph at lines 41--53
+[]\OT1/cmr/m/n/10 Um An-sichten der Schnellzugriff-Leiste hinzuzufugen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--53
+
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 41--53
+\OT1/cmr/m/n/10 text Menu ent-fer-nen. Wenn man Recht-sklick auf
+ []
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 41--53
+\OT1/cmr/m/n/10 einem solchen Sym-bol macht kommt als er-stes Op-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--53
+
+ []
+
+<./images/default-window-grouping.png, id=185, 271.0125pt x 361.35pt>
+File: ./images/default-window-grouping.png Graphic file (type png)
+
+<use ./images/default-window-grouping.png>
+Package pdftex.def Info: ./images/default-window-grouping.png used on input lin
+e 58.
+(pdftex.def)             Requested size: 163.40385pt x 217.87582pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.65 E
+      ine weitere Neuigkeit gebunden mit der Konsolidierung der Ressourcen-A...
+[2 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
+/context-menu.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Us
+ers Guide/images/remove-quick-access-item.png>]
+Underfull \hbox (badness 2538) in paragraph at lines 65--68
+[]\OT1/cmr/m/n/10 Eine weit-ere Neuigkeit gebun-den mit der Kon-so-li-
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 65--68
+\OT1/cmr/m/n/10 dierung der Ressourcen-Ansichten sind die Stan-dard
+ []
+
+
+Underfull \hbox (badness 2744) in paragraph at lines 65--68
+\OT1/cmr/m/n/10 Fen-ster-grup-pen. Wenn man auf die groe Sym-
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 65--68
+\OT1/cmr/m/n/10 ein Klick auf das Tur Sym-bol wer-den alle bere-its
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
+
+ []
+
+<./images/window-personalization.png, id=191, 436.63126pt x 301.125pt>
+File: ./images/window-personalization.png Graphic file (type png)
+
+<use ./images/window-personalization.png>
+Package pdftex.def Info: ./images/window-personalization.png used on input line
+ 73.
+(pdftex.def)             Requested size: 163.40385pt x 112.69185pt.
+
+Underfull \hbox (badness 1092) in paragraph at lines 79--84
+[]\OT1/cmr/m/n/10 Ab Un-tis 2015 sind die Sym-bol-leis-ten der Fen-stern
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 79--84
+\OT1/cmr/m/n/10 der Pfeil nach un-ten an der rechte Seite der jew-
+ []
+
+
+Underfull \hbox (badness 1635) in paragraph at lines 79--84
+\OT1/cmr/m/n/10 dessen Lange von der An-zahl der nicht angezeigte
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 79--84
+\OT1/cmr/m/n/10 Sym-bolen abhangig ist. Wichtig ist hier der let-
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 79--84
+\OT1/cmr/m/n/10 zter Ein-trag, 'Schaltflachen hinzufugen oder ent-fer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--84
+
+ []
+
+[3 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
+/default-window-grouping.png> <C:/Users/James/Projects/lib_thm_core/documentati
+on/Untis Users Guide/images/window-personalization.png>]
+Overfull \hbox (3.63493pt too wide) in paragraph at lines 87--88
+\OT1/cmr/m/n/10 Die Auswahlbox in Un-tis Ver-sion 2015 wurde deut-lich uberarb
+eitet und bi-etet viele neue Verbesserun-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+<./images/search-field.png, id=198, 489.32813pt x 225.84375pt>
+File: ./images/search-field.png Graphic file (type png)
+
+<use ./images/search-field.png>
+Package pdftex.def Info: ./images/search-field.png used on input line 92.
+(pdftex.def)             Requested size: 163.40385pt x 75.41776pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+
+ []
+
+
+<./images/alle-elemente-im-unterricht-symbol.png, id=199, 16.56187pt x 16.56187
+pt>
+File: ./images/alle-elemente-im-unterricht-symbol.png Graphic file (type png)
+ <use ./images/alle-elemente-im-unterricht-symbol.png>
+Package pdftex.def Info: ./images/alle-elemente-im-unterricht-symbol.png used o
+n input line 110.
+(pdftex.def)             Requested size: 25.79922pt x 25.80103pt.
+
+Overfull \hbox (2.3573pt too wide) in paragraph at lines 114--116
+\OT1/cmr/m/n/10 und, sollte man einen an-deren Plan angeschaut haben, man wird 
+zum Ur-sprungs-plan zuruckgebracht. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
+
+ []
+
+<./images/anderungen-ruckgangig-symbol.png, id=200, 16.56187pt x 16.56187pt>
+File: ./images/anderungen-ruckgangig-symbol.png Graphic file (type png)
+
+<use ./images/anderungen-ruckgangig-symbol.png>
+Package pdftex.def Info: ./images/anderungen-ruckgangig-symbol.png used on inpu
+t line 122.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+
+ []
+
+<./images/ansicht-fixiert-symbol.png, id=201, 16.56187pt x 16.56187pt>
+File: ./images/ansicht-fixiert-symbol.png Graphic file (type png)
+
+<use ./images/ansicht-fixiert-symbol.png>
+Package pdftex.def Info: ./images/ansicht-fixiert-symbol.png used on input line
+ 136.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+ [4 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/search-field.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis U
+sers Guide/images/alle-elemente-im-unterricht-symbol.png> <C:/Users/James/Proje
+cts/lib_thm_core/documentation/Untis Users Guide/images/anderungen-ruckgangig-s
+ymbol.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+
+ []
+
+<./images/einstellungen-symbol.png, id=212, 16.56187pt x 16.56187pt>
+File: ./images/einstellungen-symbol.png Graphic file (type png)
+
+<use ./images/einstellungen-symbol.png>
+Package pdftex.def Info: ./images/einstellungen-symbol.png used on input line 1
+48.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+
+ []
+
+<./images/erweitertes-entkoppeln-symbol.png, id=213, 16.56187pt x 16.56187pt>
+File: ./images/erweitertes-entkoppeln-symbol.png Graphic file (type png)
+
+<use ./images/erweitertes-entkoppeln-symbol.png>
+Package pdftex.def Info: ./images/erweitertes-entkoppeln-symbol.png used on inp
+ut line 164.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+
+ []
+
+<./images/farbe-des-elements-symbol.png, id=214, 16.56187pt x 16.56187pt>
+File: ./images/farbe-des-elements-symbol.png Graphic file (type png)
+
+<use ./images/farbe-des-elements-symbol.png>
+Package pdftex.def Info: ./images/farbe-des-elements-symbol.png used on input l
+ine 176.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
+
+ []
+
+[5 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
+/ansicht-fixiert-symbol.png> <C:/Users/James/Projects/lib_thm_core/documentatio
+n/Untis Users Guide/images/einstellungen-symbol.png> <C:/Users/James/Projects/l
+ib_thm_core/documentation/Untis Users Guide/images/erweitertes-entkoppeln-symbo
+l.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/im
+ages/farbe-des-elements-symbol.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+
+ []
+
+<./images/felder-der-ansicht-symbol.png, id=223, 16.56187pt x 16.56187pt>
+File: ./images/felder-der-ansicht-symbol.png Graphic file (type png)
+
+<use ./images/felder-der-ansicht-symbol.png>
+Package pdftex.def Info: ./images/felder-der-ansicht-symbol.png used on input l
+ine 188.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+<./images/felder-der-ansicht.png, id=224, 316.18124pt x 203.25937pt>
+File: ./images/felder-der-ansicht.png Graphic file (type png)
+
+<use ./images/felder-der-ansicht.png>
+Package pdftex.def Info: ./images/felder-der-ansicht.png used on input line 196
+.
+(pdftex.def)             Requested size: 163.40385pt x 105.04726pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
+
+ []
+
+<./images/felder-mit-inhalt-symbol.png, id=225, 16.56187pt x 16.56187pt>
+File: ./images/felder-mit-inhalt-symbol.png Graphic file (type png)
+
+<use ./images/felder-mit-inhalt-symbol.png>
+Package pdftex.def Info: ./images/felder-mit-inhalt-symbol.png used on input li
+ne 212.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
+
+ []
+
+File: ./images/felder-mit-inhalt-symbol.png Graphic file (type png)
+<use ./images/felder-mit-inhalt-symbol.png>
+Package pdftex.def Info: ./images/felder-mit-inhalt-symbol.png used on input li
+ne 224.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+
+ []
+
+<./images/klassenzeitraster-symbol.png, id=226, 16.56187pt x 16.56187pt>
+File: ./images/klassenzeitraster-symbol.png Graphic file (type png)
+
+<use ./images/klassenzeitraster-symbol.png>
+Package pdftex.def Info: ./images/klassenzeitraster-symbol.png used on input li
+ne 236.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--242
+
+ []
+
+[6 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
+/felder-der-ansicht-symbol.png> <C:/Users/James/Projects/lib_thm_core/documenta
+tion/Untis Users Guide/images/felder-der-ansicht.png> <C:/Users/James/Projects/
+lib_thm_core/documentation/Untis Users Guide/images/felder-mit-inhalt-symbol.pn
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 244--244
+
+ []
+
+<./images/koppeln-symbol.png, id=236, 16.56187pt x 16.56187pt>
+File: ./images/koppeln-symbol.png Graphic file (type png)
+
+<use ./images/koppeln-symbol.png>
+Package pdftex.def Info: ./images/koppeln-symbol.png used on input line 248.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--256
+
+ []
+
+<./images/lehrer-vorschlag-symbol.png, id=237, 26.34843pt x 16.56187pt>
+File: ./images/lehrer-vorschlag-symbol.png Graphic file (type png)
+
+<use ./images/lehrer-vorschlag-symbol.png>
+Package pdftex.def Info: ./images/lehrer-vorschlag-symbol.png used on input lin
+e 260.
+(pdftex.def)             Requested size: 25.79922pt x 16.21687pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
+
+ []
+
+<./images/normal-form-anzeigen-symbol.png, id=238, 16.56187pt x 16.56187pt>
+File: ./images/normal-form-anzeigen-symbol.png Graphic file (type png)
+
+<use ./images/normal-form-anzeigen-symbol.png>
+Package pdftex.def Info: ./images/normal-form-anzeigen-symbol.png used on input
+ line 276.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+
+ []
+
+<./images/raum-zuordnen-loschen-symbol.png, id=239, 16.56187pt x 16.56187pt>
+File: ./images/raum-zuordnen-loschen-symbol.png Graphic file (type png)
+
+<use ./images/raum-zuordnen-loschen-symbol.png>
+Package pdftex.def Info: ./images/raum-zuordnen-loschen-symbol.png used on inpu
+t line 290.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--296
+
+ []
+
+[7 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
+/klassenzeitraster-symbol.png> <C:/Users/James/Projects/lib_thm_core/documentat
+ion/Untis Users Guide/images/koppeln-symbol.png> <C:/Users/James/Projects/lib_t
+hm_core/documentation/Untis Users Guide/images/lehrer-vorschlag-symbol.png> <C:
+/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/norma
+l-form-anzeigen-symbol.png>]
+<./images/raum-zuordnen-loschen.png, id=248, 484.81125pt x 251.43938pt>
+File: ./images/raum-zuordnen-loschen.png Graphic file (type png)
+
+<use ./images/raum-zuordnen-loschen.png>
+Package pdftex.def Info: ./images/raum-zuordnen-loschen.png used on input line 
+298.
+(pdftex.def)             Requested size: 124.69844pt x 64.67058pt.
+
+Underfull \hbox (badness 6592) in paragraph at lines 308--308
+\OT1/cmr/m/it/9 verfugbar in Stam-m-daten (ausser Facher) und Un-ter-richt An
+-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+
+ []
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+310.
+
+<./images/schuljahreskalendar-symbol.png, id=249, 16.56187pt x 16.56187pt>
+File: ./images/schuljahreskalendar-symbol.png Graphic file (type png)
+
+<use ./images/schuljahreskalendar-symbol.png>
+Package pdftex.def Info: ./images/schuljahreskalendar-symbol.png used on input 
+line 312.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 31
+6.
+
+
+Underfull \hbox (badness 1259) in paragraph at lines 316--320
+\OT1/cmr/m/n/10 Lei-der scheint diese Funk-tion nicht vollstandig im-ple-men-t
+iert
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--322
+
+ []
+
+<./images/seitenlayout-symbol.png, id=250, 26.34843pt x 16.56187pt>
+File: ./images/seitenlayout-symbol.png Graphic file (type png)
+
+<use ./images/seitenlayout-symbol.png>
+Package pdftex.def Info: ./images/seitenlayout-symbol.png used on input line 32
+6.
+(pdftex.def)             Requested size: 25.79922pt x 16.21687pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+
+ []
+
+<./images/sortieren-symbol.png, id=251, 16.56187pt x 16.56187pt>
+File: ./images/sortieren-symbol.png Graphic file (type png)
+
+<use ./images/sortieren-symbol.png>
+Package pdftex.def Info: ./images/sortieren-symbol.png used on input line 338.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--344
+
+ []
+
+<./images/sortierkriterien.png, id=252, 264.23718pt x 356.0803pt>
+File: ./images/sortierkriterien.png Graphic file (type png)
+
+<use ./images/sortierkriterien.png>
+Package pdftex.def Info: ./images/sortierkriterien.png used on input line 347.
+(pdftex.def)             Requested size: 124.69844pt x 168.03693pt.
+
+Underfull \hbox (badness 1442) in paragraph at lines 353--357
+\OT1/cmr/m/n/10 wird, kann es nicht nach dem Schlieen des Fen-sters nicht
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
+
+ []
+
+[8 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
+/raum-zuordnen-loschen-symbol.png> <C:/Users/James/Projects/lib_thm_core/docume
+ntation/Untis Users Guide/images/raum-zuordnen-loschen.png> <C:/Users/James/Pro
+jects/lib_thm_core/documentation/Untis Users Guide/images/schuljahreskalendar-s
+ymbol.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guid
+e/images/seitenlayout-symbol.png> <C:/Users/James/Projects/lib_thm_core/documen
+tation/Untis Users Guide/images/sortieren-symbol.png> <C:/Users/James/Projects/
+lib_thm_core/documentation/Untis Users Guide/images/sortierkriterien.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 359--359
+
+ []
+
+
+<./images/unterrichtsstunde-fixieren-symbol.png, id=262, 16.56187pt x 16.56187p
+t>
+File: ./images/unterrichtsstunde-fixieren-symbol.png Graphic file (type png)
+ <use ./images/unterrichtsstunde-fixieren-symbol.png>
+Package pdftex.def Info: ./images/unterrichtsstunde-fixieren-symbol.png used on
+ input line 363.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--369
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+
+ []
+
+<./images/unterrichtsvergleich-symbol.png, id=263, 16.56187pt x 16.56187pt>
+File: ./images/unterrichtsvergleich-symbol.png Graphic file (type png)
+
+<use ./images/unterrichtsvergleich-symbol.png>
+Package pdftex.def Info: ./images/unterrichtsvergleich-symbol.png used on input
+ line 375.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
+
+ []
+
+<./images/zeitwunsche-symbol.png, id=264, 16.56187pt x 16.56187pt>
+File: ./images/zeitwunsche-symbol.png Graphic file (type png)
+
+<use ./images/zeitwunsche-symbol.png>
+Package pdftex.def Info: ./images/zeitwunsche-symbol.png used on input line 387
+.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--393
+
+ []
+
+<./images/zeitwunsche-gruppen.png, id=265, 300.3722pt x 255.20343pt>
+File: ./images/zeitwunsche-gruppen.png Graphic file (type png)
+
+<use ./images/zeitwunsche-gruppen.png>
+Package pdftex.def Info: ./images/zeitwunsche-gruppen.png used on input line 39
+5.
+(pdftex.def)             Requested size: 124.69844pt x 105.94638pt.
+
+Underfull \hbox (badness 5533) in paragraph at lines 397--397
+[]\OT1/cmr/m/n/10 Figure 1.10: []Zeitwunsche
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 401--405
+\OT1/cmr/m/n/10 nen-dif-feren-zen im Abhangigkeit von aufrufende An-sicht, ggf
+.
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 401--405
+\OT1/cmr/m/n/10 Zeitraster. Im Fig-ure [][]1.10[][] se-hen wir den Zeitwunsche
+ An-
+ []
+
+
+Underfull \hbox (badness 2237) in paragraph at lines 401--405
+\OT1/cmr/m/n/10 sicht fur die Ressource Grup-pen. Im Haupt-teil des Fen-
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 401--405
+\OT1/cmr/m/n/10 sters steht mit-tig der Zeitraster des El-e-ments. Hier kann
+ []
+
+
+Underfull \hbox (badness 3417) in paragraph at lines 401--405
+\OT1/cmr/m/n/10 Grup-pen und Dozen-ten Zeitwunsche hat man eine er-weit-
+ []
+
+
+Underfull \hbox (badness 1975) in paragraph at lines 401--405
+\OT1/cmr/m/n/10 erte Hil-f-s-mit-tel in dem man fur ganze Zeit-bere-iche, Ganz
+-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--405
+
+ []
+
+[9 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
+/unterrichtsstunde-fixieren-symbol.png> <C:/Users/James/Projects/lib_thm_core/d
+ocumentation/Untis Users Guide/images/unterrichtsvergleich-symbol.png> <C:/User
+s/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/zeitwunsch
+e-symbol.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users G
+uide/images/zeitwunsche-gruppen.png>]
+<./images/zeitwunsche-multiraster.png, id=276, 679.03688pt x 188.20313pt>
+File: ./images/zeitwunsche-multiraster.png Graphic file (type png)
+
+<use ./images/zeitwunsche-multiraster.png>
+Package pdftex.def Info: ./images/zeitwunsche-multiraster.png used on input lin
+e 407.
+(pdftex.def)             Requested size: 430.00462pt x 119.18027pt.
+
+<./images/zeitwunsche-unterricht.png, id=277, 422.32782pt x 379.4175pt>
+File: ./images/zeitwunsche-unterricht.png Graphic file (type png)
+
+<use ./images/zeitwunsche-unterricht.png>
+Package pdftex.def Info: ./images/zeitwunsche-unterricht.png used on input line
+ 415.
+(pdftex.def)             Requested size: 124.69844pt x 112.0256pt.
+) [10 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/ima
+ges/zeitwunsche-multiraster.png> <C:/Users/James/Projects/lib_thm_core/document
+ation/Untis Users Guide/images/zeitwunsche-unterricht.png>] [11]
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\data.tex
+"
+Chapter 2.
+<./images/Perioden.png, id=294, 154.32657pt x 52.69687pt>
+File: ./images/Perioden.png Graphic file (type png)
+
+<use ./images/Perioden.png>
+Package pdftex.def Info: ./images/Perioden.png used on input line 6.
+(pdftex.def)             Requested size: 163.40385pt x 55.80132pt.
+
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 12
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--20
+
+ []
+
+[12
+
+
+
+ <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/P
+erioden.png>] <./images/Programs.png, id=301, 398.99063pt x 165.61874pt>
+File: ./images/Programs.png Graphic file (type png)
+
+<use ./images/Programs.png>
+Package pdftex.def Info: ./images/Programs.png used on input line 26.
+(pdftex.def)             Requested size: 163.40385pt x 67.82831pt.
+
+<./images/ProgramNavigation.png, id=302, 199.49532pt x 229.60782pt>
+File: ./images/ProgramNavigation.png Graphic file (type png)
+
+<use ./images/ProgramNavigation.png>
+Package pdftex.def Info: ./images/ProgramNavigation.png used on input line 31.
+(pdftex.def)             Requested size: 163.40385pt x 188.07642pt.
+
+<./images/Descriptions.png, id=303, 412.54124pt x 200.24812pt>
+File: ./images/Descriptions.png Graphic file (type png)
+
+<use ./images/Descriptions.png>
+Package pdftex.def Info: ./images/Descriptions.png used on input line 36.
+(pdftex.def)             Requested size: 163.40385pt x 79.31561pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+
+Underfull \hbox (badness 7595) in paragraph at lines 47--49
+\OT1/cmr/bx/n/10 Langname\OT1/cmr/m/n/10 : Der Na-men des Stu-di-en-gangs mit
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 52--59
+\OT1/cmr/m/n/10 Beschreibungen sind eine Untis-Ressource, die von
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--59
+
+ []
+
+[13 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/Programs.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users
+ Guide/images/ProgramNavigation.png> <C:/Users/James/Projects/lib_thm_core/docu
+mentation/Untis Users Guide/images/Descriptions.png>]
+<./images/DescNavigation.png, id=312, 225.84375pt x 263.48438pt>
+File: ./images/DescNavigation.png Graphic file (type png)
+
+<use ./images/DescNavigation.png>
+Package pdftex.def Info: ./images/DescNavigation.png used on input line 66.
+(pdftex.def)             Requested size: 163.40385pt x 190.64937pt.
+
+Underfull \hbox (badness 2269) in paragraph at lines 72--77
+[]\OT1/cmr/m/n/10 Kompetenzen sagen was aus uber den groben In-
+ []
+
+
+Underfull \hbox (badness 7777) in paragraph at lines 72--77
+\OT1/cmr/m/n/10 halt von Grup-pen und Facher, oder die The-
+ []
+
+
+Underfull \hbox (badness 6204) in paragraph at lines 72--77
+\OT1/cmr/m/n/10 menge-bi-ete in der sich ein Dozent ein Ex-perte
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--77
+
+ []
+
+
+Underfull \hbox (badness 2035) in paragraph at lines 72--77
+\OT1/cmr/m/n/10 Sys-tem besteht aus Basis-Kompetenzen, die jew-eils
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 72--77
+\OT1/cmr/m/n/10 durch drei Buch-staben gekennze-ich-net sind. Diese
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--86
+
+ []
+
+[14 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/DescNavigation.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 90--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--95
+
+ []
+
+<./images/MethodsUntis.png, id=319, 222.07968pt x 199.49532pt>
+File: ./images/MethodsUntis.png Graphic file (type png)
+
+<use ./images/MethodsUntis.png>
+Package pdftex.def Info: ./images/MethodsUntis.png used on input line 99.
+(pdftex.def)             Requested size: 96.75037pt x 86.91064pt.
+
+<./images/MethodsOrganizer.png, id=320, 219.06844pt x 186.6975pt>
+File: ./images/MethodsOrganizer.png Graphic file (type png)
+
+<use ./images/MethodsOrganizer.png>
+Package pdftex.def Info: ./images/MethodsOrganizer.png used on input line 106.
+(pdftex.def)             Requested size: 96.75037pt x 82.45482pt.
+
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 97--110
+[]$[]$ $[]$ 
+ []
+
+[15 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/MethodsUntis.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis U
+sers Guide/images/MethodsOrganizer.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 115--118
+
+ []
+
+<./images/Gruppen.png, id=328, 656.4525pt x 154.32657pt>
+File: ./images/Gruppen.png Graphic file (type png)
+
+<use ./images/Gruppen.png>
+Package pdftex.def Info: ./images/Gruppen.png used on input line 120.
+(pdftex.def)             Requested size: 430.00462pt x 101.09052pt.
+
+<./images/MedInfNodes.png, id=329, 180.675pt x 105.39375pt>
+File: ./images/MedInfNodes.png Graphic file (type png)
+
+<use ./images/MedInfNodes.png>
+Package pdftex.def Info: ./images/MedInfNodes.png used on input line 135.
+(pdftex.def)             Requested size: 163.40385pt x 95.31985pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
+
+ []
+
+[16 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/Gruppen.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users 
+Guide/images/MedInfNodes.png>] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 157--160
+
+ []
+
+<./images/Teachers.png, id=342, 532.23843pt x 164.86594pt>
+File: ./images/Teachers.png Graphic file (type png)
+
+<use ./images/Teachers.png>
+Package pdftex.def Info: ./images/Teachers.png used on input line 162.
+(pdftex.def)             Requested size: 430.00462pt x 133.20103pt.
+
+<./images/GroupsProfile.png, id=343, 730.22812pt x 639.89063pt>
+File: ./images/GroupsProfile.png Graphic file (type png)
+
+<use ./images/GroupsProfile.png>
+Package pdftex.def Info: ./images/GroupsProfile.png used on input line 175.
+(pdftex.def)             Requested size: 163.40385pt x 143.18805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--189
+
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 179--189
+\OT1/cmr/bx/n/10 Ext.Name\OT1/cmr/m/n/10 : (\OT1/cmr/bx/n/10 Pflicht, falls gew
+unschter Dozent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--189
+
+ []
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 179--189
+\OT1/cmr/m/n/10 Kom-pe-tenz. (Sehe Kom-pe-ten-zen, Sub-sec-tion [][]2.3.1[][],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--189
+
+ []
+
+[18 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/Teachers.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users
+ Guide/images/GroupsProfile.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 193--196
+
+ []
+
+<./images/Rooms.png, id=351, 521.69907pt x 137.7647pt>
+File: ./images/Rooms.png Graphic file (type png)
+
+<use ./images/Rooms.png>
+Package pdftex.def Info: ./images/Rooms.png used on input line 198.
+(pdftex.def)             Requested size: 430.00462pt x 113.55215pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--216
+
+ []
+
+[19 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/Rooms.png>]
+Overfull \hbox (17.17679pt too wide) in paragraph at lines 220--225
+\OT1/cmr/m/n/10 Raumgruppen sind Grup-pierun-gen von Raumen nach Typ, Ausstat-
+tung, Ka-pazitat, Ver-wen-dungszweck,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--225
+
+ []
+
+<./images/RoomGroups.png, id=361, 475.02469pt x 112.92188pt>
+File: ./images/RoomGroups.png Graphic file (type png)
+
+<use ./images/RoomGroups.png>
+Package pdftex.def Info: ./images/RoomGroups.png used on input line 227.
+(pdftex.def)             Requested size: 430.00462pt x 102.22318pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--239
+
+ []
+
+[20 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/RoomGroups.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 243--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--248
+
+ []
+
+<./images/Subjects.png, id=367, 497.60907pt x 161.85469pt>
+File: ./images/Subjects.png Graphic file (type png)
+
+<use ./images/Subjects.png>
+Package pdftex.def Info: ./images/Subjects.png used on input line 250.
+(pdftex.def)             Requested size: 430.00462pt x 139.869pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--264
+
+ []
+
+[21 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/Subjects.png>])
+Underfull \hbox (badness 10000) in paragraph at lines 268--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--42
+
+ []
+
+[22]
+Chapter 3.
+[23
+
+
+]
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\advanced
+_settings.tex"
+Chapter 4.
+) [24
+
+
+]
+Appendix A.
+[25
+
+
+]
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\room_cat
+egories.tex" [26
+
+]) [27]
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\lesson_t
+emporal_behavior.tex"
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
+ [28
+
+
+]) [29]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
+
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\untis.au
+x"
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\general_
+information.aux")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\data.aux
+")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\advanced
+_settings.aux")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\room_cat
+egories.aux")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\lesson_t
+emporal_behavior.aux"))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
+Package rerunfilecheck Info: File `untis.out' has not changed.
+(rerunfilecheck)             Checksum: 8B6DBAB6F3071F657C1DE60F994CA33E;2132.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
+ ) 
+Here is how much of TeX's memory you used:
+ 9410 strings out of 493706
+ 143482 string characters out of 3142166
+ 233580 words of memory out of 3000000
+ 12412 multiletter control sequences out of 15000+200000
+ 13705 words of font info for 52 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 36i,8n,35p,799b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on untis.pdf (32 pages, 851833 bytes).
+PDF statistics:
+ 464 PDF objects out of 1000 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
+ 474 words of extra memory for PDF output out of 10000 (max. 10000000)
+

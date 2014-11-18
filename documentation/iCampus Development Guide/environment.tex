@@ -203,7 +203,7 @@ During the installation process you will be asked which file extensions should b
 \begin{figure}[h] 
 	\centering
 	\vspace{3pt}
-	\includegraphics[width=5cm]{fileassociations.png}
+	\includegraphics[width=5cm]{file-associations.png}
 	\caption{File Associations}
 \end{figure}
 
@@ -215,7 +215,7 @@ After the installation starting PhpStorm will request the lisence information. H
 \begin{figure}[h]
 	\centering
 	\vspace{3pt}
-	\includegraphics[width=4.5cm]{phpstormactivation.png}
+	\includegraphics[width=4.5cm]{phpstorm-activation.png}
 	\caption{PhpStorm License Activation}
 \end{figure}
 
@@ -223,7 +223,9 @@ After the installation starting PhpStorm will request the lisence information. H
 
 \subsection{Required Plugins}
 
-Next we will need to install two plugins, Gerrit and Jenkins, but to do so we must first navigate to the plugins view. Open the PhpStorm plugin store by clicking \texttt{Configure} and then \texttt{Plugins} on the next screen. This can later be accessed through the menu under \texttt{File} $\Rightarrow$ \texttt{Settings} $\Rightarrow$ \texttt{Plugins} (under \texttt{IDE Settings}). The installation steps are also depicted below in Figures \ref{fig:ws-plugin-installation} and \ref{fig:project-plugin-installation}.\\
+Next we will need to install two plugins, Gerrit and Jenkins. Gerrit is a repository and code review system based on Git.\footnote{For  further information visit the Gerrit documentation page at \url{https://gerrit-review.googlesource.com/Documentation/intro-quick.html\#\_what\_is\_gerrit}} where Jenkins is a Continuous Integration (CI) tool which builds and tests projects.\footnote{For  further information visit the Jenkins documentation page at \url{https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins}}\\
+\\
+To do so we must first navigate to the plugins view. Open the PhpStorm plugin store by clicking \texttt{Configure} and then \texttt{Plugins} on the next screen. This can later be accessed through the menu under \texttt{File} $\Rightarrow$ \texttt{Settings} $\Rightarrow$ \texttt{Plugins} (under \texttt{IDE Settings}). The installation steps are also depicted below in Figures \ref{fig:ws-plugin-installation} and \ref{fig:project-plugin-installation}.\\
 
 \begin{figure}[h]
 	\centering
@@ -290,7 +292,7 @@ You will then be prompted to restart PhpStorm to enable the plugin. \textbf{Do n
 
 \subsection{Gerrit Configuration}
 
-Gerrit is a repository and code review system based on Git.\footnote{For  further information visit the Gerrit documentation page at \url{https://gerrit-review.googlesource.com/Documentation/intro-quick.html\#\_what\_is\_gerrit}} Visit our Gerrit repository located at \url{http://gerrit.mni.thm.de/gerrit}. In the upper right corner is a link to \texttt{Sign In} to the server. Use your THM user credentials to log in.
+Visit our Gerrit repository located at \url{http://gerrit.mni.thm.de/gerrit}. In the upper right corner is a link to \texttt{Sign In} to the server. Use your THM user credentials to log in.
 
 \begin{figure}[h]
 	\centering
@@ -333,19 +335,30 @@ Should everything be correctly entered we can now checkout a project.
 
 \subsection{THM Core Library}
 
-The project we will be checking out is the THM Core Library (\texttt{lib\_thm\_core}). The THM Core Library carries with it many useful functions helpful in developing Joomla! extensions as well as documentation, styles, coding standards and much more.\\
+The project we will be checking out is the THM Core Library (\texttt{lib\_thm\_core}). The THM Core Library carries with it many useful functions helpful in developing Joomla! extensions as well as documentation (including this document), styles, coding standards and much more.\\
 \\
-For the ``Git Repository Url" select \texttt{http://gerrit.mni.thm.de/gerrit/lib\_thm\_core}. After this PhpStorm may complain that the PhpstormProjects directory does not exist. Either create the default ``PhpStormProjects" at the location shown or chose a different one into which this (and your future projects if you so chose) will be saved.\\
-\\
+For the ``Git Repository Url" select \texttt{http://gerrit.mni.thm.de/gerrit/lib\_thm\_core}. After this PhpStorm may complain that the PhpstormProjects directory does not exist. Either create the default ``PhpStormProjects" at the location shown or chose a different one into which this (and your future projects if you so chose) will be saved.
+
 \begin{figure}[h] 
 	\centering
+	\vspace{3pt}
 	\includegraphics[width=5cm]{clone-repository.png}
 	\caption{Clone Repository}
 \end{figure}
 
-\subsubsection{Jenkins}
+\subsection{Tool Window Activation}
 
-\newpage
+For quick access to the Gerrit and Jenkins plugins it is helpful to add their tool windows to the PhpStorm displays. To do so click on \texttt{View} $\rightarrow$ \texttt{Tool Windows} and then click on \texttt{Gerrit} and \texttt{Jenkins} in turn.
+
+\begin{figure}[h] 
+	\centering
+	\vspace{3pt}
+	\includegraphics[width=5cm]{tool-window-activation}
+	\caption{Tool Window Activation}
+\end{figure}
+
+\noindent
+This will add icons with text to the borders of the PhpStorm window. Clicking these opens the corresponding tool windows.
 
 \section{Code Sniffer and Mess Detector}
 \label{sec:qatools}
@@ -365,6 +378,8 @@ PHP Mess Detector on the other hand searches for problems more abstract and more
 	\item Overcomplicated expressions
 	\item Unused parameters, methods, properties
 \end{itemize}
+
+\newpage
 
 \subsection{Standards Directory Inclusion}
 
@@ -386,8 +401,6 @@ First we will create symbolic links from the Joomla and THMJoomla folders to the
 	\item[Link] \texttt{C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash PHP\textbackslash CodeSniffer\textbackslash Standards\textbackslash THMJoomla}\\
 	\item[Target] \texttt{C:\textbackslash $<$System Specific Path$>$\textbackslash lib\_thm\_core\textbackslash coding\_standards\textbackslash THMJoomla}\\
 \end{description}
-
-\newpage
 
 \subsection{PhpStorm}
 
@@ -438,6 +451,7 @@ In iCampus we strive to maintain a standardized appearance both within views of 
 	Sass is an extension of CSS that adds power and elegance to the basic language. It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized, and get small stylesheets up and running quickly, particularly with the help of the Compass style library.\footnote{\url{http://sass-lang.com/documentation/file.SASS_REFERENCE.html} Stand 27 September, 2014}
 \end{quote}
 
+\noindent
 The above mentioned variables, nested rules, mixins, and inline imports allow the centralization of style structures and recurring themes, while still allowing for individualized style elements as required.\\
 \\
 In iCampus we use the SCSS SASS syntax which closely resembles most .css you will have seen, and, stand alone, are actually valid CSS3 documents. This has as a consequence that our SASS files developed later will actually end with the extension .scss. For more information read \href{http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax}{the SASS syntax explanation}.
@@ -449,8 +463,6 @@ Logically SASS must first be installed on the local system in order to function.
 Ruby can be installed by visiting \href{http://www.rubyinstaller.org/downloads/}{the ruby installer downloads page} and choosing the download that best suits your operating systems needs, as described in the right hand column.\footnote{Stand 27 September, 2014}\\
 \\
 After you have downloaded and started the Ruby installation executable and accepted the license agreement you will be confronted with choices regarding the installation directory, support features, path variables, and file associations. We recommend using the default file path as it makes finding the installation easier, should any problems arise. You should only choose to install Td/Tk support if you know that you will be developing GUI applications in Ruby. The path variable is required in order for SASS to function. The association of .rb and .rbw files with this installation is recommended.
-
-\newpage
 
 \begin{figure}[h] 
 	\centering

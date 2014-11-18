@@ -18,21 +18,21 @@
 \contentsline {subsection}{\numberline {2.3.2}Required Plugins}{11}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Gerrit Configuration}{13}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}THM Core Library}{14}{subsection.2.3.4}
-\contentsline {subsubsection}{Jenkins}{15}{section*.8}
-\contentsline {section}{\numberline {2.4}Code Sniffer and Mess Detector}{16}{section.2.4}
+\contentsline {subsection}{\numberline {2.3.5}Tool Window Activation}{15}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.4}Code Sniffer and Mess Detector}{15}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Standards Directory Inclusion}{16}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}PhpStorm}{17}{subsection.2.4.2}
-\contentsline {subsubsection}{PhpStorm Inclusion}{17}{section*.9}
-\contentsline {subsubsection}{PhpStorm Configuration}{17}{section*.10}
-\contentsline {section}{\numberline {2.5}SASS}{19}{section.2.5}
+\contentsline {subsection}{\numberline {2.4.2}PhpStorm}{16}{subsection.2.4.2}
+\contentsline {subsubsection}{PhpStorm Inclusion}{16}{section*.8}
+\contentsline {subsubsection}{PhpStorm Configuration}{16}{section*.9}
+\contentsline {section}{\numberline {2.5}SASS}{18}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Installation}{19}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}PhpStorm Configuration}{20}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Joomla!}{24}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Database Creation}{24}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}MNI Site Development}{25}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Joomla! 3.x Development}{27}{subsection.2.6.3}
-\contentsline {chapter}{\numberline {3}User's Guide}{30}{chapter.3}
-\contentsline {section}{\numberline {3.1}Git}{30}{section.3.1}
-\contentsline {subsubsection}{Revert to the previous commit}{30}{section*.11}
-\contentsline {subsubsection}{Create a new local branch}{30}{section*.12}
-\contentsline {subsubsection}{Add a local branch to remote}{30}{section*.13}
+\contentsline {subsection}{\numberline {2.5.2}PhpStorm Configuration}{19}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Joomla!}{23}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Database Creation}{23}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}MNI Site Development}{24}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Joomla! 3.x Development}{26}{subsection.2.6.3}
+\contentsline {chapter}{\numberline {3}Tool Guide}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Git}{29}{section.3.1}
+\contentsline {subsubsection}{Revert to the previous commit}{29}{section*.10}
+\contentsline {subsubsection}{Create a new local branch}{29}{section*.11}
+\contentsline {subsubsection}{Add a local branch to remote}{29}{section*.12}

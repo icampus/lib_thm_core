@@ -1,0 +1,68 @@
+\documentclass[]{report}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[pdftex]{graphicx}
+\usepackage[space]{grffile}
+\usepackage{epstopdf}
+\usepackage{epsfig}
+\usepackage{bmpsize}
+\graphicspath{{./images/}}
+\usepackage[export]{adjustbox}
+\usepackage{wrapfig}
+\usepackage{appendix}
+\usepackage{listings}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	allcolors=blue,
+	pdfborderstyle={/S/U/W 1}
+}
+\usepackage{hypcap}
+
+\title{THM Benutzerhandbuch \\Untis \& THM Organizer}
+\author{James Antrim}
+
+\begin{document}
+\maketitle
+
+\newpage
+\thispagestyle{empty}
+\section*{}
+
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\include{general_information}
+\include{data}
+
+
+\chapter{Unterrichtplanung}
+
+Die Unterrichtsplanung in Untis geschieht in zwei Schritte die Lehrplanung in der abstrakte Unterrichte eingepflegt werden und die Stundenplanung in der die Instanzen mit einer festen Zeit und Raum verbunden werden.
+
+\section{Lehrplanung}
+\label{sec:lehrplanung}
+
+
+\subsection{Räume}
+\label{subsec:rooms}
+
+\section{Stundenplanung}
+
+
+\include{advanced_settings}
+
+\begin{appendices}
+\chapter{Zusatzmaterial}
+\include{room_categories}
+\include{lesson_temporal_behavior}
+	
+\end{appendices}
+
+\end{document}          
