@@ -43,6 +43,7 @@ abstract class THM_CoreViewEdit extends JViewLegacy
         $document = Jfactory::getDocument();
         $document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
         $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
+        $document -> addScript($this->baseurl . "../../libraries/thm_core/js/formbehaviorChosenHelper.js");
 
         $this->item = $this->get('Item');
         $this->form = $this->get('Form');
