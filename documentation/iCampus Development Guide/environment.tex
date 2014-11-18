@@ -190,30 +190,6 @@ After the user configuration is completed, an SSH-Key can be created using the f
 The first question determines where the generated key will be saved and what its name will be. Per default this will be \textbf{\texttt{C:/Users/$<$Windows Account Name$>$/.ssh/id\_rsa}}. This directory is important for the next steps, as well as later when repositories are cloned. Press enter to confirm the default.
 The next two questions will be to enter and confirm your password. You can also elect to have no password by pressing enter in answer to both questions.
 
-\subsubsection{SSH-Key in Gitorious eintragen}
-
-The freshly created key must now be added to the repository server in order to associate you as a user to projects for which you have access. First visit \url{http://scm.thm.de} and log in. After this your username will appear in the upper right hand corner between the search field and a button with a white arrow on it. Click on the arrow and select \texttt{Settings}.\\
-\\
-\begin{figure}[h] 
-	\centering
-	\includegraphics[width=5cm]{gitorious1.jpg}
-	\caption{Settings Selection}
-\end{figure}
-
-\noindent
-Here we need to select the fourth tab \texttt{SSH Keys} and add the key using the \texttt{Add new} button.\\
-
-\begin{figure}[h] 
-	\centering
-	\includegraphics[width=10cm]{gitsettings.png}
-	\caption{Settings Navigation}
-\end{figure}
-
-\noindent
-In the form that opens we have to copy the text of the public key. This can be found in the directory created during the creation of the key, \texttt{C:/Users/$<$Windows Account Name$>$/.ssh/id\_rsa.pub}. Open this file with a text editor, copy the text from the file, and paste it into the available text field. At the end of the pasted text will be a \texttt{$<$Name$>$@$<$Domain$>$}. This should be replaced with the email address from the Git Configuration. When this has been completed click the \texttt{Save} button.
-
-\newpage
-
 \section{PhpStorm}
 \label{sec:PHP-Storm}
 
@@ -222,10 +198,11 @@ PhpStorm is the IDE used in iCampus. While others are allowed the use of a singl
 PhpStorm was chosen for its ease of use and integration of many tools which simplify development, including CodeSniffer, database connection tools, SASS support, Git support, and many others. PhpStorm can be downloaded from the \href{http://www.jetbrains.com/phpstorm/}{JetBrains Website}.
 
 \subsection{Installation}
-During the installation process you will be asked which file extensions should be associated with PhpStorm. As we use PhpStorm for the development with all given extensions, all can be selected. As of PhpStorm 8 this also allows for the editing of single files without the creation of a project.\\
+During the installation process you will be asked which file extensions should be associated with PhpStorm. As we use PhpStorm for the development with all given extensions, all can be selected. As of PhpStorm 8 this also allows for the editing of single files without the creation of a project.
 
 \begin{figure}[h] 
 	\centering
+	\vspace{3pt}
 	\includegraphics[width=5cm]{fileassociations.png}
 	\caption{File Associations}
 \end{figure}
@@ -233,46 +210,140 @@ During the installation process you will be asked which file extensions should b
 \noindent
 For the most part the rest of the installation requires nothing special, however at the end you will be asked to chose between several themes and coloring/font style options. As this interface offers no preview it is best to go with the default settings. These selections can later be changed while running the PhpStorm which will actually show you what effects your selection has on its appearance.\\
 \\
-After the installation starting PhpStorm will start the activation dialog. Here you will need to enter a ``User or Company Name" and a ``License Key". The name for our license is \texttt{Technische Hochschule Mittelhessen - University of Applied Sciences}. The license key will be given to you directly.
+After the installation starting PhpStorm will request the lisence information. Here use \texttt{Technische Hochschule Mittelhessen - University of Applied Sciences} for the ``User or Company Name" and the ``License key provided for you.
 
-\newpage
-
-\begin{figure}[h] 
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=6cm]{phpstormactivation.png}
+	\vspace{3pt}
+	\includegraphics[width=4.5cm]{phpstormactivation.png}
 	\caption{PhpStorm License Activation}
 \end{figure}
 
-\subsection{THM Core Library}
+\newpage
 
-Next both for example and the inherent utility of the library we will create the project \texttt{lib\_thm\_core} by cloning the respository and checking out the development branch. Start PhpStorm and select \texttt{Check out from Version Control} from the ``Quick Start" area and \texttt{Git} from the drop-down menu that appears. \texttt{Check out from Version Control} can later be reached under the \texttt{VCS} main menu entry.
+\subsection{Required Plugins}
 
-\begin{figure}[h] 
+Next we will need to install two plugins, Gerrit and Jenkins, but to do so we must first navigate to the plugins view. Open the PhpStorm plugin store by clicking \texttt{Configure} and then \texttt{Plugins} on the next screen. This can later be accessed through the menu under \texttt{File} $\Rightarrow$ \texttt{Settings} $\Rightarrow$ \texttt{Plugins} (under \texttt{IDE Settings}). The installation steps are also depicted below in Figures \ref{fig:ws-plugin-installation} and \ref{fig:project-plugin-installation}.\\
+
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=6cm]{newprojectfromgit.png}
-	\caption{Check out a Git Project}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.4\linewidth]{configurePhpStorm}
+		\caption{Configure}
+		\label{fig:configurePhpStorm}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.4\linewidth]{plugins}
+		\caption{Plugins}
+		\label{fig:plugins}
+	\end{subfigure}
+	\caption{Welcome Screen Plugin Installation}
+	\label{fig:ws-plugin-installation}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.4\linewidth]{phpStormProjectSettings}
+		\caption{Settings}
+		\label{fig:phpStormProjectSettings}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.4\linewidth]{phpStormSettingsPlugins}
+		\caption{Plugins}
+		\label{fig:plugins}
+	\end{subfigure}
+	\caption{Project Plugin Installation}
+	\label{fig:project-plugin-installation}
+\end{figure}
+
+\newpage
+
+\noindent
+Then we need to access the plugin store to find yet uninstalled plugins To do so click \texttt{Browse repositories...}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.6\linewidth]{phpStormPluginStore}
+	\caption{Browse Repositories}
+	\label{fig:browse-plugin-repositories}
 \end{figure}
 
 \noindent
-We will want to use \texttt{git@scm.thm.de:icampus/lib\_thm\_core.git} as the ``Git Repository Url". At this point PhpStorm will complain that the PhpstormProjects directory does not exist. Either create the default directory at the location shown or chose a different directory into which this (and your future projects if you so chose) will be saved.\\
+Once the plugin store is open enter ``Gerrit" in the search to find the appropriate plugin. Then click on the green \texttt{Install plugin} button, or use the item's context menu and click \texttt{Download and Install}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\linewidth]{downloadGerritPlugin}
+	\caption{Gerrit Installation}
+	\label{fig:intall-gerrit-plugin}
+\end{figure}
+
+\noindent
+You will then be prompted to restart PhpStorm to enable the plugin. \textbf{Do not restart yet}. Instead search the store for the Jenkins plugin in the same way as we just searched for Gerrit and install it. Now perform the restart.
+
+\newpage
+
+\subsection{Gerrit Configuration}
+
+Gerrit is a repository and code review system based on Git.\footnote{For  further information visit the Gerrit documentation page at \url{https://gerrit-review.googlesource.com/Documentation/intro-quick.html\#\_what\_is\_gerrit}} Visit our Gerrit repository located at \url{http://gerrit.mni.thm.de/gerrit}. In the upper right corner is a link to \texttt{Sign In} to the server. Use your THM user credentials to log in.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.8\linewidth]{gerritSignIn}
+	\caption{Gerrit Sign In}
+	\label{fig:gerrit-sign-in}
+\end{figure}
+
+\noindent
+After signing in you need to create a HTTP password for yourself. Your name should be shown in the same position where \texttt{Sign In} stood before. Next to it is a small black arrow pointing down. Clicking this arrow opens a small window. Click \texttt{Settings}. This opens your account settings. Click \texttt{HTTP Password} then \texttt{Generate Password} in the view which opens. This generates the password in the field above the button. Copy this manually or use the button to the right of the field. This password can be viewed at anytime by navigating to the \texttt{HTTP Password} settings item.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.8\linewidth]{gerritServerHTTPPassword}
+	\caption{Gerrit HTTP Password Generation}
+	\label{fig:gerrit-password-creation}
+\end{figure}
+
+\noindent
+Next we will checkout a project using the Gerrit plugin. Click \texttt{Checkout from Version Control} and then select Gerrit from the window which opens.
+
+\begin{figure}[h] 
+	\centering
+	\includegraphics[width=6cm]{new-gerrit-project.png}
+	\caption{Check out a Gerrit Project}
+\end{figure}
+
+\noindent
+After making the selection the system will ask you to set a master password. \textbf{Leave these fields blank}. Setting a password will cause you to have to enter a it every time you perform writing repository actions. (This can later be changed.) After this you will then be prompted to enter the connection information for Gerrit. This includes the ``URL" (http://gerrit.mni.thm.de/gerrit), ``Login" (your THM username), and ``Password" (the HTTP Password generated). 
+
+\begin{figure}[h] 
+	\centering
+	\includegraphics[width=6cm]{phpstorm-gerrit-password.png}
+	\caption{Gerrit Connection Setup}
+\end{figure}
+
+\noindent
+Should everything be correctly entered we can now checkout a project.
+
+
+\subsection{THM Core Library}
+
+The project we will be checking out is the THM Core Library (\texttt{lib\_thm\_core}). The THM Core Library carries with it many useful functions helpful in developing Joomla! extensions as well as documentation, styles, coding standards and much more.\\
+\\
+For the ``Git Repository Url" select \texttt{http://gerrit.mni.thm.de/gerrit/lib\_thm\_core}. After this PhpStorm may complain that the PhpstormProjects directory does not exist. Either create the default ``PhpStormProjects" at the location shown or chose a different one into which this (and your future projects if you so chose) will be saved.\\
 \\
 \begin{figure}[h] 
 	\centering
-	\includegraphics[width=5cm]{clonerepositoryerror.png}
+	\includegraphics[width=5cm]{clone-repository.png}
 	\caption{Clone Repository}
 \end{figure}
 
-\noindent
-While checking out you will be asked if you wish to save the server's SSH key to your list of known hosts, click ok to continue. You will then be asked if you would like to open the project you just created, click yes.\\
-\\
-Since we did not include the branch name while cloning the repository, you will have checked out the master branch. In iCampus, with few very specific exceptions, \textbf{no one should be developing in the master branch}, for this reason we will now check out the development branch. This can be accessed in at least three ways. The way I find easiest is the branch display in the lower right hand corner. Click on the branch display, then the branch to be checked out, \texttt{origin/development}, and then \texttt{Checkout as a new local branch}.\\
-\\
-\begin{figure}[h] 
-	\centering
-	\includegraphics[width=5cm]{checkoutbranch.png}
-	\caption{Branch Checkout}
-	\vspace{-15pt}
-\end{figure}
+\subsubsection{Jenkins}
 
 \newpage
 
