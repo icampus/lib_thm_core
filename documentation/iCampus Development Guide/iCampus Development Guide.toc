@@ -36,3 +36,9 @@
 \contentsline {subsubsection}{Revert to the previous commit}{29}{section*.10}
 \contentsline {subsubsection}{Create a new local branch}{29}{section*.11}
 \contentsline {subsubsection}{Add a local branch to remote}{29}{section*.12}
+\contentsline {section}{\numberline {3.2}Gerrit}{29}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Workflow}{30}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Cloning repository}{30}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Push to repository}{30}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Review change}{32}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Submit/Abandon change}{33}{subsection.3.2.5}

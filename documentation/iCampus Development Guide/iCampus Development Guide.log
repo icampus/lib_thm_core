@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.3)  18 NOV 2014 17:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.4)  20 NOV 2014 14:23
 entering extended mode
-**iCampus*Development*Guide.tex
-
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-iCampus Development Guide.tex"
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"iCampus Development Guide.tex"
+(./iCampus Development Guide.tex
 LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 68 languages loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,22 +24,22 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count88
@@ -54,21 +54,20 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2014/04/30 v1.2b Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -218,7 +217,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -249,7 +248,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -273,24 +272,24 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen111
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen112
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count91
@@ -331,37 +330,37 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count103
@@ -369,19 +368,19 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen120
 \Gin@req@width=\dimen121
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grffile.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grffile.sty
 Package: grffile 2012/04/05 v1.16 Extended file name support for graphics (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -390,7 +389,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -403,55 +402,57 @@ Package grffile Info: Option `extendedchars' is set to `false'.
 Package grffile Info: Option `space' is set to `true'.
 Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 486.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfxsize=\dimen122
 \epsfysize=\dimen123
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bmpsize.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/bmpsize.sty
 Package: bmpsize 2009/09/04 v1.6 Extract size/resolution from bitmap files (HO)
 
 Package bmpsize Info: Superseded by pdfTeX in PDF mode on input line 41.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
-Package: xkeyval 2014/05/25 v2.7 package option processing (HA)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/05/09 v2.6d package option processing (HA)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks23
 \XKV@tempa@toks=\toks24
-)
 \XKV@depth=\count104
-File: xkeyval.tex 2014/05/25 v2.7 key=value parser (HA)
+File: xkeyval.tex 2014/05/09 v2.6d key=value parser (HA)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\trimclip.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box28
 )
@@ -461,7 +462,7 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@ury=\dimen127
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen128
@@ -469,18 +470,18 @@ File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 \adjbox@Depth=\dimen130
 \adjbox@Totalheight=\dimen131
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
 \c@checkoddpage=\count105
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box29
 \sift@deathcycles=\count106
 \@vwid@loff=\dimen132
 \@vwid@roff=\dimen133
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen134
 \WF@size=\dimen135
 \c@WF@wrappedlines=\count107
@@ -488,13 +489,13 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \WF@everypar=\toks25
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@pps=\count108
 \c@@ppsavesec=\count109
 \c@@ppsaveapp=\count110
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count111
 \lst@gtempboxa=\box31
 \lst@token=\toks26
@@ -508,27 +509,27 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \lst@lineno=\count116
 \lst@maxwidth=\dimen139
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 \c@lstnumber=\count117
 \lst@skipnumbers=\count118
 \lst@framebox=\box32
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2014/09/06 1.5e listings configuration
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
 ))
-Package: listings 2014/09/06 1.5e (Carsten Heinz)
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
@@ -547,7 +548,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -555,21 +556,21 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen140
 \Hy@linkcounter=\count119
 \Hy@pagecounter=\count120
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count121
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -581,7 +582,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count122
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -606,30 +607,38 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count127
 \c@bookmark@seq@number=\count128
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip46
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 22.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count129
+\float@exts=\toks27
+\float@box=\box33
+\@float@everytoks=\toks28
+\@floatcapt=\box34
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 23.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\hypcap.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen144
@@ -640,42 +649,40 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen149
 \caption@hangindent=\dimen150
 )
-\c@ContinuedFloat=\count129
+\c@ContinuedFloat=\count130
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: hypcap package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
-\c@subfigure=\count130
-\c@subtable=\count131
+\c@subfigure=\count131
+\c@subtable=\count132
 )
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-iCampus Development Guide.aux"
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-environment.aux"
+(./iCampus Development Guide.aux (./environment.aux
 
 LaTeX Warning: Label `fig:plugins' multiply defined.
 
 
 LaTeX Warning: Label `sub@fig:plugins' multiply defined.
 
-)
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-extension_development.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+) (./extension_development.aux) (./tool_guide.aux) (./development_guide.aux))
+\openout1 = `"iCampus Development Guide.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -711,71 +718,75 @@ LaTeX Font Info:    ... okay on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
+\scratchcounter=\count133
 \scratchdimen=\dimen151
-\scratchbox=\box33
-\nofMPsegments=\count133
-\nofMParguments=\count134
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count135
+\scratchbox=\box35
+\nofMPsegments=\count134
+\nofMParguments=\count135
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count136
 \MPscratchDim=\dimen152
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
-\everyMPtoPDFconversion=\toks28
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
+\everyMPtoPDFconversion=\toks30
 )
-\c@lstlisting=\count138
-\AtBeginShipoutBox=\box34
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+\c@lstlisting=\count139
+\AtBeginShipoutBox=\box36
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 137.
 )
-Package hyperref Info: Link coloring ON on input line 26.
+Package hyperref Info: Link coloring ON on input line 27.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count139
+\c@section@level=\count140
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-iCampus Development Guide.out")
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-iCampus Development Guide.out")
+(./iCampus Development Guide.out) (./iCampus Development Guide.out)
 \@outlinefile=\write3
+\openout3 = `"iCampus Development Guide.out"'.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-<./images/thm.png, id=111, 702.625pt x 150.5625pt>
+<./images/thm.png, id=136, 702.625pt x 150.5625pt>
 File: ./images/thm.png Graphic file (type png)
  <use ./images/thm.png>
-Package pdftex.def Info: ./images/thm.png used on input line 32.
+Package pdftex.def Info: ./images/thm.png used on input line 33.
 (pdftex.def)             Requested size: 398.33858pt x 85.35973pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+LaTeX Font Info:    Try loading font information for U+msa on input line 35.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/James/Projec
-ts/lib_thm_core/documentation/iCampus Development Guide/images/thm.png>]
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-iCampus Development Guide.toc")
+)
+Overfull \hbox (89.03043pt too wide) in paragraph at lines 35--35
+ [][] 
+ []
+
+[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ima
+ges/thm.png>] (./iCampus Development Guide.toc)
 \tf@toc=\write4
+\openout4 = `"iCampus Development Guide.toc"'.
+
  [2
 
 
@@ -784,15 +795,16 @@ Chapter 1.
 [3
 
 ]
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-environment.tex"
+\openout2 = `environment.aux'.
+
+ (./environment.tex
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 17--21
 
  []
 
-<./images/xampp.png, id=162, 388.45125pt x 325.215pt>
+<./images/xampp.png, id=194, 388.45125pt x 325.215pt>
 File: ./images/xampp.png Graphic file (type png)
  <use ./images/xampp.png>
 Package pdftex.def Info: ./images/xampp.png used on input line 24.
@@ -809,7 +821,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-<./images/openphpini.png, id=174, 606.01407pt x 359.84438pt>
+<./images/openphpini.png, id=206, 606.01407pt x 359.84438pt>
 File: ./images/openphpini.png Graphic file (type png)
 
 <use ./images/openphpini.png>
@@ -833,15 +845,13 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbackslash' on input line 55.
 
-[5 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Guid
-e/images/xampp.png> <C:/Users/James/Projects/lib_thm_core/documentation/iCampus
- Development Guide/images/openphpini.png>]
+[5 <./images/xampp.png> <./images/openphpini.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 82.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -869,7 +879,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
-<./images/gitbash1.jpg, id=199, 512.91624pt x 397.485pt>
+<./images/gitbash1.jpg, id=231, 512.91624pt x 397.485pt>
 File: ./images/gitbash1.jpg Graphic file (type jpg)
 
 <use ./images/gitbash1.jpg>
@@ -880,7 +890,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-<./images/gitbash2.jpg, id=200, 509.905pt x 399.4925pt>
+<./images/gitbash2.jpg, id=232, 509.905pt x 399.4925pt>
 File: ./images/gitbash2.jpg Graphic file (type jpg)
 
 <use ./images/gitbash2.jpg>
@@ -915,8 +925,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--183
 
  []
 
-[8 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Guid
-e/images/gitbash1.jpg>]
+[8 <./images/gitbash1.jpg>]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 190.
 
@@ -934,9 +943,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--199
 
  []
 
-[9 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Guid
-e/images/gitbash2.jpg>]
-<./images/file-associations.png, id=216, 386.19281pt x 301.125pt>
+[9 <./images/gitbash2.jpg>]
+<./images/file-associations.png, id=248, 386.19281pt x 301.125pt>
 File: ./images/file-associations.png Graphic file (type png)
 
 <use ./images/file-associations.png>
@@ -954,16 +962,14 @@ Overfull \hbox (8.85417pt too wide) in paragraph at lines 210--214
 cmr/m/n/10 for the ``User or Com-pany Name"
  []
 
-<./images/phpstorm-activation.png, id=217, 311.66437pt x 321.45094pt>
+<./images/phpstorm-activation.png, id=249, 311.66437pt x 321.45094pt>
 File: ./images/phpstorm-activation.png Graphic file (type png)
 
 <use ./images/phpstorm-activation.png>
 Package pdftex.def Info: ./images/phpstorm-activation.png used on input line 21
 8.
 (pdftex.def)             Requested size: 128.0374pt x 132.0606pt.
- [10 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gu
-ide/images/file-associations.png> <C:/Users/James/Projects/lib_thm_core/documen
-tation/iCampus Development Guide/images/phpstorm-activation.png>]
+ [10 <./images/file-associations.png> <./images/phpstorm-activation.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 226--229
 
  []
@@ -973,7 +979,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--229
 
  []
 
-<./images/configurePhpStorm.png, id=232, 612.03656pt x 464.4853pt>
+<./images/configurePhpStorm.png, id=264, 612.03656pt x 464.4853pt>
 File: ./images/configurePhpStorm.png Graphic file (type png)
 
 <use ./images/configurePhpStorm.png>
@@ -981,14 +987,14 @@ Package pdftex.def Info: ./images/configurePhpStorm.png used on input line 234.
 
 (pdftex.def)             Requested size: 85.9996pt x 65.26138pt.
 
-<./images/plugins.png, id=233, 612.03656pt x 464.4853pt>
+<./images/plugins.png, id=265, 612.03656pt x 464.4853pt>
 File: ./images/plugins.png Graphic file (type png)
 
 <use ./images/plugins.png>
 Package pdftex.def Info: ./images/plugins.png used on input line 240.
 (pdftex.def)             Requested size: 85.9996pt x 65.26138pt.
 
-<./images/phpStormProjectSettings.png, id=234, 188.95593pt x 240.9pt>
+<./images/phpStormProjectSettings.png, id=266, 188.95593pt x 240.9pt>
 File: ./images/phpStormProjectSettings.png Graphic file (type png)
 
 <use ./images/phpStormProjectSettings.png>
@@ -996,20 +1002,16 @@ Package pdftex.def Info: ./images/phpStormProjectSettings.png used on input lin
 e 252.
 (pdftex.def)             Requested size: 85.9996pt x 109.63907pt.
 
-<./images/phpStormSettingsPlugins.png, id=235, 263.48438pt x 484.81125pt>
+<./images/phpStormSettingsPlugins.png, id=267, 263.48438pt x 484.81125pt>
 File: ./images/phpStormSettingsPlugins.png Graphic file (type png)
 
 <use ./images/phpStormSettingsPlugins.png>
 Package pdftex.def Info: ./images/phpStormSettingsPlugins.png used on input lin
 e 258.
 (pdftex.def)             Requested size: 85.9996pt x 158.24236pt.
- [11 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gu
-ide/images/configurePhpStorm.png> <C:/Users/James/Projects/lib_thm_core/documen
-tation/iCampus Development Guide/images/plugins.png> <C:/Users/James/Projects/l
-ib_thm_core/documentation/iCampus Development Guide/images/phpStormProjectSetti
-ngs.png> <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Developmen
-t Guide/images/phpStormSettingsPlugins.png>] <./images/phpStormPluginStore.png,
- id=252, 559.33969pt x 292.09125pt>
+ [11 <./images/configurePhpStorm.png> <./images/plugins.png> <./images/phpStorm
+ProjectSettings.png> <./images/phpStormSettingsPlugins.png>]
+<./images/phpStormPluginStore.png, id=284, 559.33969pt x 292.09125pt>
 File: ./images/phpStormPluginStore.png Graphic file (type png)
 
 <use ./images/phpStormPluginStore.png>
@@ -1017,24 +1019,22 @@ Package pdftex.def Info: ./images/phpStormPluginStore.png used on input line 27
 3.
 (pdftex.def)             Requested size: 258.00539pt x 134.73798pt.
 
-<./images/downloadGerritPlugin.png, id=253, 632.3625pt x 525.46312pt>
+<./images/downloadGerritPlugin.png, id=285, 632.3625pt x 525.46312pt>
 File: ./images/downloadGerritPlugin.png Graphic file (type png)
 
 <use ./images/downloadGerritPlugin.png>
 Package pdftex.def Info: ./images/downloadGerritPlugin.png used on input line 2
 83.
 (pdftex.def)             Requested size: 171.99922pt x 142.91927pt.
- [12 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gu
-ide/images/phpStormPluginStore.png> <C:/Users/James/Projects/lib_thm_core/docum
-entation/iCampus Development Guide/images/downloadGerritPlugin.png>]
-<./images/gerritSignIn.png, id=261, 871.75688pt x 255.95625pt>
+ [12 <./images/phpStormPluginStore.png> <./images/downloadGerritPlugin.png>]
+<./images/gerritSignIn.png, id=293, 871.75688pt x 255.95625pt>
 File: ./images/gerritSignIn.png Graphic file (type png)
 
 <use ./images/gerritSignIn.png>
 Package pdftex.def Info: ./images/gerritSignIn.png used on input line 299.
 (pdftex.def)             Requested size: 344.005pt x 101.00201pt.
 
-<./images/gerritServerHTTPPassword.png, id=262, 865.73438pt x 451.6875pt>
+<./images/gerritServerHTTPPassword.png, id=294, 865.73438pt x 451.6875pt>
 File: ./images/gerritServerHTTPPassword.png Graphic file (type png)
 
 <use ./images/gerritServerHTTPPassword.png>
@@ -1042,7 +1042,7 @@ Package pdftex.def Info: ./images/gerritServerHTTPPassword.png used on input li
 ne 309.
 (pdftex.def)             Requested size: 344.005pt x 179.47945pt.
 
-<./images/new-gerrit-project.png, id=263, 612.03656pt x 464.4853pt>
+<./images/new-gerrit-project.png, id=295, 612.03656pt x 464.4853pt>
 File: ./images/new-gerrit-project.png Graphic file (type png)
 
 <use ./images/new-gerrit-project.png>
@@ -1053,51 +1053,35 @@ Package pdftex.def Info: ./images/new-gerrit-project.png used on input line 319
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./images/phpstorm-gerrit-password.png, id=264, 877.02657pt x 463.7325pt>
+<./images/phpstorm-gerrit-password.png, id=296, 877.02657pt x 463.7325pt>
 File: ./images/phpstorm-gerrit-password.png Graphic file (type png)
 
 <use ./images/phpstorm-gerrit-password.png>
 Package pdftex.def Info: ./images/phpstorm-gerrit-password.png used on input li
 ne 328.
 (pdftex.def)             Requested size: 170.71652pt x 90.26118pt.
- [13 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gu
-ide/images/gerritSignIn.png> <C:/Users/James/Projects/lib_thm_core/documentatio
-n/iCampus Development Guide/images/gerritServerHTTPPassword.png>]
+ [13 <./images/gerritSignIn.png> <./images/gerritServerHTTPPassword.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 338--341
 
  []
 
-<./images/clone-repository.png, id=272, 545.03625pt x 134.00063pt>
+<./images/clone-repository.png, id=304, 545.03625pt x 134.00063pt>
 File: ./images/clone-repository.png Graphic file (type png)
 
 <use ./images/clone-repository.png>
 Package pdftex.def Info: ./images/clone-repository.png used on input line 345.
 (pdftex.def)             Requested size: 142.26378pt x 34.97632pt.
- [14 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gu
-ide/images/new-gerrit-project.png> <C:/Users/James/Projects/lib_thm_core/docume
-ntation/iCampus Development Guide/images/phpstorm-gerrit-password.png> <C:/User
-s/James/Projects/lib_thm_core/documentation/iCampus Development Guide/images/cl
-one-repository.png>]
-<./images/tool-window-activation.png, id=281, 363.60844pt x 250.68657pt>
+ [14 <./images/new-gerrit-project.png> <./images/phpstorm-gerrit-password.png> 
+<./images/clone-repository.png>]
+<./images/tool-window-activation.png, id=314, 363.60844pt x 250.68657pt>
 File: ./images/tool-window-activation.png Graphic file (type png)
 
 <use ./images/tool-window-activation.png>
 Package pdftex.def Info: ./images/tool-window-activation.png used on input line
- 356.
+ 357.
 (pdftex.def)             Requested size: 142.26378pt x 98.08484pt.
- [15 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gu
-ide/images/tool-window-activation.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 386--389
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+ [15 <./images/tool-window-activation.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 388--391
 
  []
 
@@ -1107,12 +1091,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 393--394
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
@@ -1121,30 +1105,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
 
-<./images/codesnifferinclusion.png, id=293, 650.43pt x 370.38374pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+
+ []
+
+<./images/codesnifferinclusion.png, id=326, 650.43pt x 370.38374pt>
 File: ./images/codesnifferinclusion.png Graphic file (type png)
 
 <use ./images/codesnifferinclusion.png>
 Package pdftex.def Info: ./images/codesnifferinclusion.png used on input line 4
-15.
+17.
 (pdftex.def)             Requested size: 398.33858pt x 226.838pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--418
+Underfull \hbox (badness 10000) in paragraph at lines 413--420
 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./images/codesnifferconfiguration.png, id=294, 681.29532pt x 421.575pt>
+<./images/codesnifferconfiguration.png, id=327, 681.29532pt x 421.575pt>
 File: ./images/codesnifferconfiguration.png Graphic file (type png)
 
 <use ./images/codesnifferconfiguration.png>
 Package pdftex.def Info: ./images/codesnifferconfiguration.png used on input li
-ne 425.
+ne 427.
 (pdftex.def)             Requested size: 398.33858pt x 246.4885pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--429
+Underfull \hbox (badness 10000) in paragraph at lines 423--431
 
  []
 
@@ -1152,58 +1146,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 421--429
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 440--444
+Underfull \hbox (badness 10000) in paragraph at lines 442--446
 
  []
 
-[17 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
-de/images/codesnifferinclusion.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 454--458
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--466
+[17 <./images/codesnifferinclusion.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 456--460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--466
+Underfull \hbox (badness 10000) in paragraph at lines 463--468
 
  []
 
-[18 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
-de/images/codesnifferconfiguration.png>]
-<./images/rubyinstallation.png, id=325, 575.90157pt x 447.17062pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 463--468
+
+ []
+
+[18 <./images/codesnifferconfiguration.png>]
+<./images/rubyinstallation.png, id=358, 575.90157pt x 447.17062pt>
 File: ./images/rubyinstallation.png Graphic file (type png)
 
 <use ./images/rubyinstallation.png>
-Package pdftex.def Info: ./images/rubyinstallation.png used on input line 469.
+Package pdftex.def Info: ./images/rubyinstallation.png used on input line 471.
 (pdftex.def)             Requested size: 142.26378pt x 110.46184pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--476
+Underfull \hbox (badness 10000) in paragraph at lines 476--478
 
  []
 
-<./images/sassinstallation.png, id=327, 557.08125pt x 284.56313pt>
+<./images/sassinstallation.png, id=360, 557.08125pt x 284.56313pt>
 File: ./images/sassinstallation.png Graphic file (type png)
 
 <use ./images/sassinstallation.png>
-Package pdftex.def Info: ./images/sassinstallation.png used on input line 479.
+Package pdftex.def Info: ./images/sassinstallation.png used on input line 481.
 (pdftex.def)             Requested size: 227.62204pt x 116.26782pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (35.05309pt too wide) in paragraph at lines 489--497
+Overfull \hbox (35.05309pt too wide) in paragraph at lines 491--499
 \OT1/cmr/m/n/10 In iCam-pus our SASS in-fras-truc-ture, or SCSS in our case, ar
 e stored at iCam-pus level in \OT1/cmtt/m/n/10 lib[]thm[]core\OMS/cmsy/m/n/10 n
 \OT1/cmtt/m/n/10 scss\OT1/cmr/m/n/10 ,
  []
 
 
-Overfull \hbox (1.77151pt too wide) in paragraph at lines 489--497
+Overfull \hbox (1.77151pt too wide) in paragraph at lines 491--499
 \OT1/cmr/m/n/10 at project level in $\OML/cmm/m/it/10 <$\OT1/cmtt/m/n/10 Projec
 t Name$\OML/cmm/m/it/10 >$\OMS/cmsy/m/n/10 nn\OT1/cmtt/m/n/10 scss\OT1/cmr/m/n/
 10 , and lastly the com-piled CSS files are stored in $\OML/cmm/m/it/10 <$\OT1/
@@ -1211,76 +1203,73 @@ cmtt/m/n/10 Project
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--497
+Underfull \hbox (badness 10000) in paragraph at lines 491--499
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--497
+Underfull \hbox (badness 10000) in paragraph at lines 491--499
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--497
+Underfull \hbox (badness 10000) in paragraph at lines 491--499
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--497
+Underfull \hbox (badness 10000) in paragraph at lines 491--499
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--497
+Underfull \hbox (badness 10000) in paragraph at lines 491--499
 
  []
 
-[19 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
-de/images/rubyinstallation.png>]
-<./images/scsswatchernotification.png, id=337, 682.80093pt x 27.85406pt>
+[19 <./images/rubyinstallation.png>]
+<./images/scsswatchernotification.png, id=370, 682.80093pt x 27.85406pt>
 File: ./images/scsswatchernotification.png Graphic file (type png)
 
 <use ./images/scsswatchernotification.png>
 Package pdftex.def Info: ./images/scsswatchernotification.png used on input lin
-e 500.
+e 502.
 (pdftex.def)             Requested size: 284.52756pt x 11.60724pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--508
+Underfull \hbox (badness 10000) in paragraph at lines 507--510
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--508
+Underfull \hbox (badness 10000) in paragraph at lines 507--510
 
  []
 
-<./images/settingsfilewatchers.png, id=338, 543.53062pt x 414.04688pt>
+<./images/settingsfilewatchers.png, id=371, 543.53062pt x 414.04688pt>
 File: ./images/settingsfilewatchers.png Graphic file (type png)
 
 <use ./images/settingsfilewatchers.png>
 Package pdftex.def Info: ./images/settingsfilewatchers.png used on input line 5
-11.
+13.
 (pdftex.def)             Requested size: 284.52756pt x 216.7524pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
-de/images/sassinstallation.png> <C:/Users/James/Projects/lib_thm_core/documenta
-tion/iCampus Development Guide/images/scsswatchernotification.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 518--520
+[20 <./images/sassinstallation.png> <./images/scsswatchernotification.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 520--522
 
  []
 
-<./images/editwatcher-withoutMaps.png, id=345, 793.46437pt x 448.67625pt>
+<./images/editwatcher-withoutMaps.png, id=378, 793.46437pt x 448.67625pt>
 File: ./images/editwatcher-withoutMaps.png Graphic file (type png)
 
 <use ./images/editwatcher-withoutMaps.png>
 Package pdftex.def Info: ./images/editwatcher-withoutMaps.png used on input lin
-e 524.
+e 526.
 (pdftex.def)             Requested size: 455.24408pt x 257.4323pt.
 
-Overfull \hbox (25.23946pt too wide) in paragraph at lines 524--525
+Overfull \hbox (25.23946pt too wide) in paragraph at lines 526--527
  [][] 
  []
 
@@ -1288,182 +1277,219 @@ Overfull \hbox (25.23946pt too wide) in paragraph at lines 524--525
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (30.54735pt too wide) in paragraph at lines 531--532
+Overfull \hbox (30.54735pt too wide) in paragraph at lines 533--534
 \OT1/cmtt/m/n/10 $FileName$:$FileParentDir$/$\OML/cmm/m/it/10 <$\OT1/cmtt/m/n/1
 0 Project Name$\OML/cmm/m/it/10 >$\OT1/cmtt/m/n/10 /media/css/$FileNameWithoutE
 xtension$.css
  []
 
 
-Overfull \hbox (25.10434pt too wide) in paragraph at lines 532--533
+Overfull \hbox (25.10434pt too wide) in paragraph at lines 534--535
 []\OT1/cmtt/m/n/10 $FileParentDir$/$\OML/cmm/m/it/10 <$\OT1/cmtt/m/n/10 Project
  Name$\OML/cmm/m/it/10 >$\OT1/cmtt/m/n/10 /media/css/$FileNameWithoutExtension$
 .css 
  []
 
-[21 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
-de/images/settingsfilewatchers.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 544--550
+[21 <./images/settingsfilewatchers.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 546--552
 
  []
 
-[22 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
-de/images/editwatcher-withoutMaps.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 565--571
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 565--571
+[22 <./images/editwatcher-withoutMaps.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 567--573
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--577
+Underfull \hbox (badness 10000) in paragraph at lines 567--573
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--577
+Underfull \hbox (badness 10000) in paragraph at lines 576--579
 
  []
 
-<./images/databasecreation.png, id=363, 466.74374pt x 203.25937pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 576--579
+
+ []
+
+<./images/databasecreation.png, id=396, 466.74374pt x 203.25937pt>
 File: ./images/databasecreation.png Graphic file (type png)
 
 <use ./images/databasecreation.png>
-Package pdftex.def Info: ./images/databasecreation.png used on input line 580.
+Package pdftex.def Info: ./images/databasecreation.png used on input line 582.
 (pdftex.def)             Requested size: 170.71652pt x 74.34258pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--590
+Underfull \hbox (badness 10000) in paragraph at lines 589--592
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--590
+Underfull \hbox (badness 10000) in paragraph at lines 589--592
 
  []
 
-[23 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
-de/images/databasecreation.png>]
-<./images/akeeba1.png, id=373, 677.53125pt x 639.89063pt>
+[23 <./images/databasecreation.png>]
+<./images/akeeba1.png, id=406, 677.53125pt x 639.89063pt>
 File: ./images/akeeba1.png Graphic file (type png)
 
 <use ./images/akeeba1.png>
-Package pdftex.def Info: ./images/akeeba1.png used on input line 593.
+Package pdftex.def Info: ./images/akeeba1.png used on input line 595.
 (pdftex.def)             Requested size: 284.52756pt x 268.72293pt.
- [24 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gu
-ide/images/akeeba1.png>]
-<./images/akeeba2.png, id=381, 677.53125pt x 489.32813pt>
+ [24 <./images/akeeba1.png>]
+<./images/akeeba2.png, id=414, 677.53125pt x 489.32813pt>
 File: ./images/akeeba2.png Graphic file (type png)
 
 <use ./images/akeeba2.png>
-Package pdftex.def Info: ./images/akeeba2.png used on input line 605.
+Package pdftex.def Info: ./images/akeeba2.png used on input line 607.
 (pdftex.def)             Requested size: 284.52756pt x 205.494pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--621
+Underfull \hbox (badness 10000) in paragraph at lines 612--623
 
  []
 
-[25 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
-de/images/akeeba2.png>]
-<./images/akeeba3.png, id=389, 677.53125pt x 436.63126pt>
+[25 <./images/akeeba2.png>]
+<./images/akeeba3.png, id=422, 677.53125pt x 436.63126pt>
 File: ./images/akeeba3.png Graphic file (type png)
 
 <use ./images/akeeba3.png>
-Package pdftex.def Info: ./images/akeeba3.png used on input line 629.
+Package pdftex.def Info: ./images/akeeba3.png used on input line 631.
 (pdftex.def)             Requested size: 284.52756pt x 183.36389pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 634--638
+Underfull \hbox (badness 10000) in paragraph at lines 636--640
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--644
+Underfull \hbox (badness 10000) in paragraph at lines 643--646
 
  []
 
-[26 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
-de/images/akeeba3.png>]
-<./images/j3mainconfiguration.png, id=398, 915.42pt x 707.64375pt>
+[26 <./images/akeeba3.png>]
+<./images/j3mainconfiguration.png, id=432, 915.42pt x 707.64375pt>
 File: ./images/j3mainconfiguration.png Graphic file (type png)
 
 <use ./images/j3mainconfiguration.png>
-Package pdftex.def Info: ./images/j3mainconfiguration.png used on input line 64
-9.
+Package pdftex.def Info: ./images/j3mainconfiguration.png used on input line 65
+1.
 (pdftex.def)             Requested size: 227.62204pt x 175.9495pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 654--656
+Underfull \hbox (badness 10000) in paragraph at lines 656--658
 
  []
 
-<./images/j3databaseconfiguration.png, id=399, 621.07031pt x 481.8pt>
+<./images/j3databaseconfiguration.png, id=433, 621.07031pt x 481.8pt>
 File: ./images/j3databaseconfiguration.png Graphic file (type png)
 
 <use ./images/j3databaseconfiguration.png>
 Package pdftex.def Info: ./images/j3databaseconfiguration.png used on input lin
-e 659.
+e 661.
 (pdftex.def)             Requested size: 227.62204pt x 176.57967pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 664--674
+Underfull \hbox (badness 10000) in paragraph at lines 666--676
 
  []
 
-[27 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development Gui
-de/images/j3mainconfiguration.png> <C:/Users/James/Projects/lib_thm_core/docume
-ntation/iCampus Development Guide/images/j3databaseconfiguration.png>]
-<./images/j3finalization.png, id=405, 621.07031pt x 316.18124pt>
+[27 <./images/j3mainconfiguration.png> <./images/j3databaseconfiguration.png>]
+<./images/j3finalization.png, id=439, 621.07031pt x 316.18124pt>
 File: ./images/j3finalization.png Graphic file (type png)
 
 <use ./images/j3finalization.png>
-Package pdftex.def Info: ./images/j3finalization.png used on input line 679.
+Package pdftex.def Info: ./images/j3finalization.png used on input line 681.
 (pdftex.def)             Requested size: 284.52756pt x 144.85172pt.
-) [28 <C:/Users/James/Projects/lib_thm_core/documentation/iCampus Development G
-uide/images/j3finalization.png>]
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-extension_development.tex")
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-tool_guide.tex"
+) [28 <./images/j3finalization.png>]
+\openout2 = `extension_development.aux'.
+
+
+(./extension_development.tex)
+\openout2 = `tool_guide.aux'.
+
+ (./tool_guide.tex
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-! Too many }'s.
-l.24 \end{tabular}}
-                   
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 20--47
+Underfull \hbox (badness 10000) in paragraph at lines 20--25
 
  []
 
-[29
+<./images/Git_gerrit_jenkins.png, id=445, 910.15031pt x 597.73312pt>
+File: ./images/Git_gerrit_jenkins.png Graphic file (type png)
+
+<use ./images/Git_gerrit_jenkins.png>
+Package pdftex.def Info: ./images/Git_gerrit_jenkins.png used on input line 37.
+
+(pdftex.def)             Requested size: 341.43306pt x 224.23145pt.
+ [29
 
 
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
+<./images/gerrit-commit-directory.png, id=456, 700.6175pt x 583.17876pt>
+File: ./images/gerrit-commit-directory.png Graphic file (type png)
 
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-iCampus Development Guide.aux"
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-environment.aux")
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-extension_development.aux")
-("C:\Users\James\Projects\lib_thm_core\documentation\iCampus Development Guide\
-tool_guide.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
-Package rerunfilecheck Info: File `iCampus*Development*Guide.out' has not chang
-ed.
-(rerunfilecheck)             Checksum: <no file>.
+<use ./images/gerrit-commit-directory.png>
+Package pdftex.def Info: ./images/gerrit-commit-directory.png used on input lin
+e 51.
+(pdftex.def)             Requested size: 199.16928pt x 165.78053pt.
+ [30 <./images/Git_gerrit_jenkins.png>]
+<./images/gerrit-commit-directory-amend.png, id=464, 700.6175pt x 583.17876pt>
+File: ./images/gerrit-commit-directory-amend.png Graphic file (type png)
+
+<use ./images/gerrit-commit-directory-amend.png>
+Package pdftex.def Info: ./images/gerrit-commit-directory-amend.png used on inp
+ut line 60.
+(pdftex.def)             Requested size: 199.16928pt x 165.78053pt.
+
+<./images/gerrit-push-new.png, id=465, 686.565pt x 474.77374pt>
+File: ./images/gerrit-push-new.png Graphic file (type png)
+
+<use ./images/gerrit-push-new.png>
+Package pdftex.def Info: ./images/gerrit-push-new.png used on input line 69.
+(pdftex.def)             Requested size: 227.62204pt x 157.40025pt.
+ [31 <./images/gerrit-commit-directory.png> <./images/gerrit-commit-directory-a
+mend.png>]
+<./images/gerrit-push-old.pdf, id=475, 678.535pt x 216.81pt>
+File: ./images/gerrit-push-old.pdf Graphic file (type pdf)
+
+<use ./images/gerrit-push-old.pdf>
+Package pdftex.def Info: ./images/gerrit-push-old.pdf used on input line 78.
+(pdftex.def)             Requested size: 227.62204pt x 72.72856pt.
+
+<./images/gerrit-review.png, id=478, 601.24625pt x 313.17pt>
+File: ./images/gerrit-review.png Graphic file (type png)
+
+<use ./images/gerrit-review.png>
+Package pdftex.def Info: ./images/gerrit-review.png used on input line 90.
+(pdftex.def)             Requested size: 227.62204pt x 118.56142pt.
+ [32 <./images/gerrit-push-new.png> <./images/gerrit-push-old.pdf>]
+<./images/gerrit-feature.png, id=499, 1034.86626pt x 363.3575pt>
+File: ./images/gerrit-feature.png Graphic file (type png)
+
+<use ./images/gerrit-feature.png>
+Package pdftex.def Info: ./images/gerrit-feature.png used on input line 102.
+(pdftex.def)             Requested size: 284.52756pt x 99.89867pt.
+) [33 <./images/gerrit-review.png> <./images/gerrit-feature.png>]
+\openout2 = `development_guide.aux'.
+
+ (./development_guide.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
+ (./iCampus Development Guide.aux
+(./environment.aux) (./extension_development.aux) (./tool_guide.aux)
+(./development_guide.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
+Package rerunfilecheck Info: File `"iCampus Development Guide".out' has not cha
+nged.
+(rerunfilecheck)             Checksum: 7E46FB260F1FDE7052CA6534F4196EF5;2185.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1471,33 +1497,34 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 55.
  ) 
 Here is how much of TeX's memory you used:
- 10394 strings out of 493706
- 159943 string characters out of 3142166
- 251305 words of memory out of 3000000
- 13397 multiletter control sequences out of 15000+200000
- 13696 words of font info for 53 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 59i,8n,94p,676b,567s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "iCampus Development Guide.pdf" (29 pages, 1925427 bytes).
+ 10506 strings out of 493117
+ 160134 string characters out of 6135433
+ 255408 words of memory out of 5000000
+ 13622 multiletter control sequences out of 15000+600000
+ 13696 words of font info for 53 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 59i,9n,94p,719b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on "iCampus Development Guide.pdf" (33 pages, 2284572 bytes).
 PDF statistics:
- 489 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 382 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 477 compressed objects within 5 object streams
+ 136 named destinations out of 1000 (max. 500000)
+ 465 words of extra memory for PDF output out of 10000 (max. 10000000)
 
