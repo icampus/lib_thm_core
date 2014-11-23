@@ -10,7 +10,7 @@
     <authorEMail>Ilja.Michajlow@mni.thm.de</authorEMail>
     <authorEMail>james.antrim@mni.thm.de</authorEMail>
 	<authorUrl>www.mni.thm.de</authorUrl>
-	<version>0.0.12</version>
+	<version>0.0.13</version>
 	<description>Library for iCampus</description>
 	<files>
         <filename>index.html</filename>
@@ -19,7 +19,7 @@
         <folder>exception</folder>
         <folder>fields</folder>
         <folder>fonts</folder>
-        <folder>helpers</folder>>
+        <folder>helpers</folder>&gt;
         <folder>form</folder>
         <folder>js</folder>
         <folder>list</folder>
