@@ -19,7 +19,8 @@
         <folder>exception</folder>
         <folder>fields</folder>
         <folder>fonts</folder>
-        <folder>helpers</folder>
+        <folder>helpers</folder>>
+        <folder>form</folder>
         <folder>js</folder>
         <folder>list</folder>
         <folder>log</folder>
