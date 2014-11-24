@@ -22,6 +22,17 @@
 }
 \usepackage{hypcap}
 
+% Add semantic reference commands
+\newcommand*{\figref}[1]{%
+	\hyperref[{#1}]{Figure~\ref*{#1}}%
+}%
+\newcommand*{\chapref}[1]{%
+	\hyperref[{#1}]{\nameref{#1},~Kapital~\ref*{#1}}%
+}%
+\newcommand*{\secref}[1]{%
+	\hyperref[{#1}]{\nameref{#1},~Sektion~\ref*{#1}}%
+}%
+
 \title{THM Benutzerhandbuch \\Untis \& THM Organizer}
 \author{James Antrim}
 
@@ -38,24 +49,11 @@
 
 \newpage
 \setcounter{page}{1}
+
 \include{general_information}
 \include{data}
-
-
-\chapter{Unterrichtplanung}
-
-Die Unterrichtsplanung in Untis geschieht in zwei Schritte die Lehrplanung in der abstrakte Unterrichte eingepflegt werden und die Stundenplanung in der die Instanzen mit einer festen Zeit und Raum verbunden werden.
-
-\section{Lehrplanung}
-\label{sec:lehrplanung}
-
-
-\subsection{Räume}
-\label{subsec:rooms}
-
-\section{Stundenplanung}
-
-
+\include{lessons}
+\include{schedules}
 \include{advanced_settings}
 
 \begin{appendices}

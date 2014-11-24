@@ -49,7 +49,9 @@ Da die Ribbon-Oberfläche von der Fläche der Arbeitsfläche weg nimmt, hat Grub
 \\
 Letztlich kann man auch die Schnellzugriff-Leiste unterhalb der Ribbon-Oberfläche darstellen lassen, in dem man im Kontext Menü der dritte Punkt 'Symbolleiste für den Schnellzugriff unter der Multifunktionsleiste anzeigen' klickt. So eingestellt kann man die Leiste auf ihre Ursprungsposition bringen in dem man nochmal auf den dritten Punkt der Kontext Menü klickt.\\
 \\
-Weiter fortgeschrittene Personalisierungseinstellungen befinden sich im Schaltfläche Personalisierung, Sektion \ref{sec:advanced-quick-access}.
+Weiter fortgeschrittene Personalisierungseinstellungen befinden sich im \secref{sec:advanced-quick-access}.
+
+\newpage
 
 \subsection{Standard Fenstergruppen}
 
@@ -66,6 +68,16 @@ Eine weitere Neuigkeit gebunden mit der Konsolidierung der Ressourcen-Ansichten 
 \\
 Obwohl die voreingestellte Ansichten nicht zu gebrauchen sind, deuten sie an welche Fülle man in die Arbeitsfläche packen kann und können sehr leicht an Ihre persönliche Bedürfnisse angepasst werden. Um eine solche Fenstergruppe zu erstellen, öffnen Sie vorerst die Ansichten und Formaten mit den Sie gerne arbeiten würden und verteilen sie auf der Arbeitsfläche wie sie Ihnen am besten gefallen.\\
 
+\section{Fensterbereiche}
+
+Jede Untis Fenster hat zwei Bereiche mit Informationsgehalt. Der obere Bereich ist der sogenannte 'Rasteransicht' und ist für die Hauptdarstellung und -bearbeitung der Informationen gedacht. Auch wenn die zu darstellende Informationen und die damit verbundene Bearbeitung zwischen die einzelne Ansichten recht unterschiedlich ist, ist sie immer vorhanden.\\
+\\
+In Stammdaten und Unterricht Ansichten kann man in diesem Bereich Informationen zu den unterschiedlichen Ressourcen eintragen. Welche Daten einzupflegen sind wird in die \chapref{chap:data}, und \chapref{chap:lessons}, erläutert. In Stundenplan Ansichten kann man in diesem Bereich die Ressourcenpläne gestalten, sehe \chapref{chap:schedules}.\\
+\\
+Der untere Bereich ist in der Stammdaten und Unterricht Ansichten ein 'Formularansicht'. Dieser Bereich ist per Default versteckt und, falls gewollt, muss mit dem nach-unten-zeigender Pfeilkopf in der untere linke Ecke des Fensters eingeblendet werden. Hier werden alle verfügbare Angaben zur Ressource in einem Formular dargestellt. Um den Benutzer nicht zu überfordern sind diese in verschiedenen Themenbereiche aufgeteilt. Diese werden wiederum auf eine Reiterleiste abgebildet.\\
+\\
+In Stundenplan Ansichten ist diesen Bereich immer eingeblendet. Wenn man ein geplante oder ungeplante Unterrichtsstunde klickt wird dessen Informationen in diesem Bereich angezeigt. Sollte man diese Stunde hin und herziehen über den Stundenplan werden Informationen zur Unterrichte angezeigt mit dem der zu planende Unterrichtsstunde kollidieren würde.\\
+
 \section{Fensterbedienung}
 
 \begin{wrapfigure}{r}{0.4\textwidth}
@@ -80,9 +92,9 @@ Ab Untis 2015 sind die Symbolleisten der Fenstern nicht mehr frei verschiebbar, 
 \\
 Dieser blendet eine weitere Menü ein mit dem man die angezeigt Elemente das eigene Vorlieben anpassen kann. Wobei hier die Elemente, die zur Auswahl stehen, vom jeweiligen Fenstertyp abhängig sind. Stammdaten Fenster werden beispielsweise teilweise andere Bedienungssymbole zur Verfügung haben als Übersichtspläne. Es ist sogar so, dass zwischen unterschiedlichen Fenstertypen unterschiedliche Funktionalität hinter die gleiche Symbolik steckt. Mehr Informationen dazu später in diesem Sektion und die ansichtsspezifischen Sektionen.\\
 \\
-Im ersten Teil der Sektion werde ich die mit der überarbeitete Auswahlbox kurz erläutern. Danach werden die Symbolleiste verbundene Aktionen angesprochen. Diese handelt sich um Aktionen die über diese Leiste abgeschlossene Aktionen durchführen oder weitere Schnittstellen öffnen. Ich nenne diese Symbolleiste Aktionen. Im dritten Teil werde ich Bedienungsfunktionen, die erst mit der Eingabe und Anzeige der Daten einleuchten können, beschreiben. Ich nenne solche Funktionen Fenster-Aktionen.
+Im ersten Teil der Sektion werde ich die mit der überarbeitete Auswahlbox kurz erläutern. Danach werden die, von mir genannte, Symbolleiste Aktionen angesprochen. Diese führen abgeschlossene Funktionalität durch, oder öffnen weitere Schnittstellen. Im dritten Teil werde ich Bedienungsfunktionen, die erst mit der Eingabe und Anzeige der Daten einleuchten können, beschreiben. Ich nenne solche Funktionen Fenster-Aktionen.
 
-\subsection{Auswahl und Suche}
+\subsection{Auswahl / Suche}
 
 Die Auswahlbox in Untis Version 2015 wurde deutlich überarbeitet und bietet viele neue Verbesserungen. Erstens die statische Auswahl wächst nun dynamisch in die Breite. Damit werden die, für gewöhnlich aussagekräftigere, Langnamen immer angezeigt.\\
 
@@ -126,7 +138,7 @@ Dieser erzeugt einen kleinen Reiterleiste im oberen linken Ecke eines Einzelplan
 \noindent
 Änderungen in Untis werden Protokolliert und können rückgängig gemacht werden. Stundenpläne haben diesen Symbol in der Symbolleiste stehen. Das Rückgängig-Machen kann aber in jede Ansicht verwendet werden. In der Ansichten in dem das Symbol nicht steht kann man entweder STRG + Z drücken oder in das Symbol in der Schnellzugriff Leiste betätigen.\\
 \\
-\textbf{Vorsicht}: \textit{Diese Funktion protokolliert im aktuellen Stand den zugewiesenen Räume in der Planung nicht mit! Manuell zugewiesene Räume gehen verloren!}
+\textbf{Vorsicht}: \textit{Diese Funktion protokolliert im aktuellen Stand den zugewiesenen Räume in der Planung nicht mit! Manuell zugewiesene Räume gehen verloren!}\\
 
 \subsubsection{Ansicht Fixiert}
 {\small\textit{verfügbar in allen Fenster Ansichten\\}\par}
@@ -156,6 +168,13 @@ Bei Stammdaten und Unterricht Ansichten sind die Einstellungen hauptsächlich mi
 \\
 Bei Stundenplan Ansichten öffnen sich weitere Einstellungen die ich später im Sektion !!!!!!! näher erklären werde.\\
 
+
+\subsubsection{Elementart}
+{\small\textit{verfügbar in Stundenplan Ansichten\\}\par}
+
+\noindent
+Erlaubt einen direkt von einem Ressourcenart zu einem Anderen zu wechseln. Das Icon ist abhängig von der ausgewählte Ressourcentyp. Obwohl Studenten als Ressourcentyp zur Auswahl steht dieser scheint nicht implementiert zu sein, bitte nicht benutzen.
+
 \subsubsection{Erweitertes Entkoppeln}
 {\small\textit{verfügbar in Unterricht Ansichten\\}\par}
 
@@ -166,7 +185,7 @@ Bei Stundenplan Ansichten öffnen sich weitere Einstellungen die ich später im 
 \end{wrapfigure}
 
 \noindent
-Dieser Symbol öffnet ein das Entkoppeln Ansicht, wo man ausgewählte Unterrichtskopplungszeilen zu eigenständige Unterrichten umgestalten kann. Mehr dazu im Sektion !!!!!!!.\\
+Dieser Symbol öffnet ein das Entkoppeln Ansicht, wo man ausgewählte Unterrichtskopplungszeilen zu eigenständige Unterrichten umgestalten kann. Mehr dazu im Sektion !!!!!!!.
 
 \subsubsection{Farbe des Elements}
 {\small\textit{verfügbar in Stammdaten und Unterricht Ansichten\\}\par}
@@ -178,7 +197,7 @@ Dieser Symbol öffnet ein das Entkoppeln Ansicht, wo man ausgewählte Unterricht
 \end{wrapfigure}
 
 \noindent
-Öffnet die Farbe Ansicht. Hier kann man Elemente Vorgrund (Schrift) sowie Hintergrund Farben zuweisen. Untis hat von sich aus eine Palette mit 48 Farben und lässt bis zu 12 eigene definieren. Man kann die Farbe-Einstellungen eines Elements leicht entfernen in dem man ein Häkchen bei keine Farben setzt. Sofern man den Ansicht noch nicht geschlossen hat kann man die bisherige Einstellungen durch das entfernen des Häkchens wiederherstellen. Desweiteren kann man Stammdaten Elemente so einstellen, dass neue automatisch Farben zugewiesen bekommen.\\
+Öffnet die Farbe Ansicht. Hier kann man Elemente Vorgrund (Schrift) sowie Hintergrund Farben zuweisen. Untis hat von sich aus eine Palette mit 48 Farben und lässt bis zu 12 eigene definieren. Man kann die Farbe-Einstellungen eines Elements leicht entfernen in dem man ein Häkchen bei keine Farben setzt. Sofern man den Ansicht noch nicht geschlossen hat kann man die bisherige Einstellungen durch das entfernen des Häkchens wiederherstellen. Desweiteren kann man Stammdaten Elemente so einstellen, dass neue automatisch Farben zugewiesen bekommen.
 
 \subsubsection{Felder der Ansicht}
 {\small\textit{verfügbar in Stammdaten und Unterricht Ansichten\\}\par}
@@ -197,12 +216,13 @@ Untis, von sich aus, verlangt nur das nötigste an Daten, um diese Anzulegen, be
 	\vspace{-15pt}
 	\caption{Felder der Ansicht}
 	\label{fig:felder-der-ansicht}
+	\vspace{10pt}
 \end{wrapfigure}
 
 \noindent
 Damit wir möglichst aussagekräftige Daten haben im System, müssen die Felder erst angepasst werden. Diese werden über das Symbol, bzw. der Ansicht ``Felder der Ansicht" eingeblendet. Hier kann man überflüßige Angaben, wie Hohlstunden, ausblendet und wichtige wie Schulübergreifender Name eingeblendet werden. Die spezifische Felder werden bei der jeweilige Ansicht näher erläutert.\\
 \\
-Sofern die Angabe eine weitere verwaltete Ressource ist kann man auch auswählen wie die Angabe dieser Ressource erfolgen soll. Möglich sind der ``Kurzname", der ``Langname" (bzw. ``Nachname") oder beide Namen mit einem Schrägstrich ``/" getrennt.
+Sofern die Angabe eine weitere verwaltete Ressource ist kann man auch auswählen wie die Angabe dieser Ressource erfolgen soll. Möglich sind der ``Kurzname", der ``Langname" (bzw. ``Nachname") oder beide Namen mit einem Schrägstrich ``/" getrennt.\\
 
 \subsubsection{Felder mit Inhalt}
 {\small\textit{verfügbar in Stammdaten und Unterricht Ansichten\\}\par}
@@ -238,7 +258,9 @@ Aktualisiert das Fenster. Untis sucht nach lokale und externe Änderungen und pf
 \end{wrapfigure}
 
 \noindent
-Hier wird ein Fenster geöffnet in dem man den Tagesablauf einer Gruppe anhand der assoziierte Raster für die automatische/optimierte Planung festlegen können sollte. Diese scheint nicht vollständig implementiert zu sein. Bitte nicht benutzen.\\
+Hier wird ein Fenster geöffnet in dem man den Tagesablauf einer Gruppe anhand der assoziierte Raster für die automatische/optimierte Planung festlegen können sollte. Diese scheint nicht vollständig implementiert zu sein. Bitte nicht benutzen.
+
+\newpage
 
 \subsubsection{Koppeln}
 {\small\textit{verfügbar in Unterricht Ansichten\\}\par}
@@ -268,6 +290,18 @@ Der Lehrer-Vorschlag Ansicht listet alle Dozenten anhand ihre von Untis eingetra
 \\
 Die Option Vorjahres-Lehrer bezieht sich auf Klassen-Lehrer wie man von der Grundschule oder Gymnasium kennt und ist für unsere Zwecke nicht zu gebrauchen.\\
 
+\subsubsection{Löschen}
+{\small\textit{verfügbar in Stammdaten und Unterricht Ansichten\\}\par}
+
+\begin{wrapfigure}{r}{.05\textwidth}
+	\vspace{-50pt}
+	\includegraphics[width=.05\textwidth]{loschen-symbol}
+	\vspace{-35pt}
+\end{wrapfigure}
+
+\noindent
+Entfernt alle markierte Einträge von der aktuelle Periode. Die Einträge können weiterhin in andere Perioden bestehen.\\
+
 \subsubsection{Normalform Anzeigen}
 {\small\textit{verfügbar in allen Fenster Ansichten\\}\par}
 
@@ -282,7 +316,20 @@ Die Schaltfläche Normalform Anzeigen bewirkt, dass die Breite des Fensters pass
 \\
 Zusätzlich bei manche Ansichten führt das Klicken auf diesem Symbol eine Art Zurücksetzen durch. Bei Gruppenstundenpläne zum Beispiel wird man zurück zum Gruppenplan vom letzten angeklickten Unterricht. Diese kann eine ganz andere Gruppe sein als die mit der man angefangen hat.\\
 
+\subsubsection{Nur geänderte Pläne}
+{\small\textit{verfügbar in Stundenplan Ansichten\\}\par}
+
+\begin{wrapfigure}{r}{.05\textwidth}
+	\vspace{-50pt}
+	\includegraphics[width=.05\textwidth]{nur-geanderte-plane-symbol}
+	\vspace{-35pt}
+\end{wrapfigure}
+
+\noindent
+Diese Funktion soll der Vergleich zwischen zweier Pläne auf das Geänderte einschränken. Da der Vergleich-Funktion nicht funktioniert könnte ich das nicht ausprobieren.
+
 \subsubsection{Raum Zuordnen / Löschen}
+\label{subsubsec:raum-zuordnen-loschen}
 {\small\textit{verfügbar in Unterricht Ansichten\\}\par}
 
 \begin{wrapfigure}{r}{.05\textwidth}
@@ -292,9 +339,10 @@ Zusätzlich bei manche Ansichten führt das Klicken auf diesem Symbol eine Art Z
 \end{wrapfigure}
 
 \noindent
-Dieses Symbol, oder der entsprechende Unterrichtsstunde Kontextmenüeintrag, öffnet die Ansicht ``Raum zuordnen / löschen" für die im Stundenplan selektierte Stunde. Hier kann man alle Räume einer Periode anschauen mit ausgewählte Informationen wie ``Besetzt" (ob der Raum schon in der Stunde verplant ist), Kapazität (Anzahl der Sitzplätze), ob ein Raum als Ausweichraum für den gewünschten Raum eingetragen ist, soweie die Raumgruppenzugehörigkeit, falls eingetragen.\\
+Dieses Symbol, oder der entsprechende Unterrichtsstunde Kontextmenüeintrag, öffnet die Ansicht ``Raum zuordnen / löschen" für die im Stundenplan selektierte Stunde. Hier kann man alle Räume einer Periode anschauen mit ausgewählte Informationen wie ``Besetzt" (ob der Raum schon in der Stunde verplant ist), Kapazität (Anzahl der Sitzplätze), ob ein Raum als Ausweichraum für den gewünschten Raum eingetragen ist, sowie die Raumgruppenzugehörigkeit, falls eingetragen.\\
 
 \begin{wrapfigure}{r}{0.3\textwidth}
+	\vspace{-14pt}
 	\includegraphics[width=.29\textwidth,right]{raum-zuordnen-loschen}
 	\vspace{-15pt}
 	\caption{Raum zuordnen / löschen}
@@ -302,7 +350,23 @@ Dieses Symbol, oder der entsprechende Unterrichtsstunde Kontextmenüeintrag, öf
 \end{wrapfigure}
 
 \noindent
-Man kann Raume zuordnen in dem man ein Raum selektiert und den Knopf Raum 
+Man kann Raume zuordnen in dem man ein Raum selektiert und den Knopf \texttt{Rm zuordnen} drückt, oder aber zwei mal auf den gewünschten Raum klicken. Man kann auf ähnlicher Weise die Zuordnung löschen in dem man \texttt{Raum löschen} drückt oder zwei mal auf den nicht erwünschten Raum klickt.\\
+\\
+Besetzte Räume werden mit einem Häkchen dargestellt in der entsprechende Spalte. Als dieser Ansicht geöffnet wird werden solche Räume entweder unten an der Liste der Räume angehängt oder gar ausgeblendet. Falls zweites eintreffen sollte muss man ein Häkchen bei \texttt{Auch besetzte Räume Anzeigen} um diese einzublenden. Auch wenn Räume besetzt sind kann man dennoch Unterrichtsstunden zugewiesen werden wie oben beschrieben. Diese Zuordnung bringt eine weitere Warnungs- /Bestätigunsansicht hoch \texttt{Raum nicht frei}.\\
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\vspace{-14pt}
+	\includegraphics[width=.29\textwidth,right]{raum-nicht-frei}
+	\vspace{-15pt}
+	\caption{Raum nicht frei}
+	\label{fig:raum-nicht-frei}
+	\vspace{10pt}
+\end{wrapfigure}
+
+\noindent
+\texttt{Raum nicht frei} gibt eine kurze Auflistung der Unterrichte die durch diese Raumbelegung betroffen wären sowie drei Optionen wie dieser Konflikt gelöst werden könnte: \texttt{Behinderten Unt. aus Raum verdrängen} (andere Unterrichte verlieren ihre Raumzuordnung), \texttt{Kollision erzeugen} (alle Unterrichte behalten ihre Zuordnung und der neue kommt dazu) und \texttt{Räume tauschen} (andere Unterrichte bekommen die vorherige des aktuellen Unterrichts). Alle drei haben ihre situationsbedingte Einsatz, normalerweise ist \texttt{Kollsion erzeugen} ein sichere Wahl vorausgesetzt man geht bewusst mit der Erzeugung von Kollisionen um. Unten gibt es eine weitere Einstellungsmöglichkeit, \texttt{Diese Meldung dauerhaft nicht mehr anzeig...}, das setzten dieses Häkchen bewirkt, dass der \texttt{Raum nicht frei} Ansicht nicht mehr zum Vorschein kommt. Bisher habe ich keine Möglichkeit gefunden diese wieder anzeigen zu lassen. \textbf{Bitte setze nicht das Häkchen.}
+
+\newpage
 
 \subsubsection{Schuljahreskalendar}
 {\small\textit{verfügbar in Stammdaten (ausser Fächer) und Unterricht Ansichten\\}\par}
@@ -328,7 +392,7 @@ Bei Unterrichte wird tatsächlich den Schuljahreskalender geöffnet. Hier wird e
 \end{wrapfigure}
 
 \noindent
-Ein klick auf dieses Symbol eröffnet ein kleines Menü in dem Seitenanischt und Seitenlayout stehen. Seitenansicht ist die drückbare Ausgabe der in dem Fenster erhaltene Informationen, wohingegen Seitenlayout beinhaltet die Gestaltungseinstellungen dessen. Mehr Informationen dazu finden Sie im Sektion !!!!!!.\\
+Ein klick auf dieses Symbol eröffnet ein kleines Menü in dem Seitenanischt und Seitenlayout stehen. Seitenansicht ist die drückbare Ausgabe der in dem Fenster erhaltene Informationen, wohingegen Seitenlayout beinhaltet die Gestaltungseinstellungen dessen. Mehr Informationen dazu finden Sie im Sektion !!!!!!.
 
 \subsubsection{Sortieren (automatische)}
 {\small\textit{verfügbar in Stammdaten und Unterricht Ansichten\\}\par}
@@ -343,7 +407,7 @@ Ein klick auf dieses Symbol eröffnet ein kleines Menü in dem Seitenanischt und
 Das Sortieren-Symbol öffnet eine weitere Ansicht, die das Automatische sortieren ermöglicht. Hier kann man mehrere Spalten auswählen die als Sortierkriterien dienen können, sowie die Sortierrichtung dieser.\\
 
 \begin{wrapfigure}{r}{0.3\textwidth}
-	\vspace{-24pt}
+	\vspace{-14pt}
 	\includegraphics[width=.29\textwidth,right]{sortierkriterien}
 	\vspace{-15pt}
 	\caption{Sortierkriterien}
@@ -365,7 +429,7 @@ Ansichten, die mit Stammdaten assoziiert sind, kann man auch ein Häkchen unten 
 \end{wrapfigure}
 
 \noindent
-_\begin{Dieser Symbol soll es ermöglichen zwei Stundenpläne zu vergleichen. Laut dem Tooltip soll
+Dieser Symbol soll es ermöglichen zwei Stundenpläne zu vergleichen. Laut dem Tooltip soll Untis deswegen ein zweites mal gestartet werden. Diese Funktion hat bei jedem klick verursacht, dass das Programm sich aufgehalten hat. Bitte nicht verwenden.\\
 
 \subsubsection{Unterrichtsstunde Fixieren}
 {\small\textit{verfügbar in Stundenplan Ansichten\\}\par}
@@ -403,6 +467,8 @@ Dieser Symbol lässen sich Unterrichte mit dem selben ID unterschiedliche Period
 \noindent
 Zeitwünsche öffnet eine weitere Fenster in dem man Präferenzen zu der Zeiten, in den Stammdaten zur Verfügung stehen oder Unterrichte gehalten werden gehalten werden sollen, angeben kann. Diese Präferenzen sind abgebildet auf numerische Werte zwischen -3 und +3 mit einem großen 'X' anstelle der 0 Wert. Im wesentlichen dienen diese Angaben die automatische/optimierte Stundenplanerstellung. Doch die Angabe -3 hat eine besondere Stellenwert, in der er als absolute Sperre gilt. Einst belegt mit diesem Wert, wird Untis einen Fehler, sobald man manuell versucht einen Unterricht zu einer gesperrten Zeit zu planen, melden.\\
 
+\newpage
+
 \begin{wrapfigure}{r}{0.3\textwidth}
 	\includegraphics[width=.29\textwidth,right]{zeitwunsche-gruppen}
 	\vspace{-15pt}
@@ -411,9 +477,9 @@ Zeitwünsche öffnet eine weitere Fenster in dem man Präferenzen zu der Zeiten,
 \end{wrapfigure}
 
 \noindent
-Die Zeitwünsche Ansichten haben ein paar wesentlichen Binnendifferenzen im Abhängigkeit von aufrufende Ansicht, ggf. Ressourcentyp dessen und die Verwendung der sogenannte Multi-Zeitraster. Im Figure \ref{fig:zeitwunsche-gruppen} sehen wir den Zeitwünsche Ansicht für die Ressource Gruppen. Im Hauptteil des Fensters steht mittig der Zeitraster des Elements. Hier kann man die Werte Blockweise Eintragen in dem Unterrichte für diese Ressource stattfinden, bzw. nicht-stattfinden sollen. Bei Gruppen und Dozenten Zeitwünsche hat man eine erweiterte Hilfsmittel in dem man für ganze Zeitbereiche, Ganztags, Vormittags oder Nachmittags, diese Werte setzen kann. Räume und Fächer Zeitwünsche haben kein solches Hilfsmittel.\\
+Die Zeitwünsche Ansichten haben ein paar wesentlichen Binnendifferenzen im Abhängigkeit von aufrufende Ansicht, ggf. Ressourcentyp dessen und die Verwendung der sogenannte Multi-Zeitraster. Im \figref{fig:zeitwunsche-gruppen} sehen wir den Zeitwünsche Ansicht für die Ressource Gruppen. Im Hauptteil des Fensters steht mittig der Zeitraster des Elements. Hier kann man die Werte Blockweise Eintragen in dem Unterrichte für diese Ressource stattfinden, bzw. nicht-stattfinden sollen. Bei Gruppen und Dozenten Zeitwünsche hat man eine erweiterte Hilfsmittel in dem man für ganze Zeitbereiche, Ganztags, Vormittags oder Nachmittags, diese Werte setzen kann. Räume und Fächer Zeitwünsche haben kein solches Hilfsmittel.\\
 \\
-Da Gruppen immer mit einem festen Zeitraster gebunden sind wird immer diese in dem entsprechenden Zeitwünsche Ansicht angezeigt. Bei Dozenten, Räume und Fächer hingegen kann kein eindeutiger Zeitraster angegeben werden. Sollte mehrere Raster vorliegen, sehen ihre Zeitwünsche komplizierter aus, wie in Figure \ref{fig:zeitwunsche-multiraster} veranschaulicht. Hier muss man entsprechende Zeitbereiche mit den jeweiligen Wert belegen. Die aktuelle Position des Cursors (in Minuten) wird in der erste Reihe/Spalte angezeigt.
+Da Gruppen immer mit einem festen Zeitraster gebunden sind wird immer diese in dem entsprechenden Zeitwünsche Ansicht angezeigt. Bei Dozenten, Räume und Fächer hingegen kann kein eindeutiger Zeitraster angegeben werden. Sollte mehrere Raster vorliegen, sehen ihre Zeitwünsche komplizierter aus, wie in \figref{fig:zeitwunsche-multiraster} veranschaulicht. Hier muss man entsprechende Zeitbereiche mit den jeweiligen Wert belegen. Die aktuelle Position des Cursors (in Minuten) wird in der erste Reihe/Spalte angezeigt.
 
 \begin{figure}[h]
 	\includegraphics[width=1\textwidth]{zeitwunsche-multiraster}
@@ -431,14 +497,62 @@ Da Gruppen immer mit einem festen Zeitraster gebunden sind wird immer diese in d
 \end{wrapfigure}
 
 \noindent
-Unterrichte sind über die zugewiesenen Klassen auch an einem festen Raster gebunden und wie Gruppen und Dozenten kann man auch ganze Zeitbereiche mit einem Wert belegen. Man hat hier die Wahl zwischen drei Verschiedene Darstellungsmöglichkeiten: Unterricht, alle Elemente und alle Elemente ohne Räume. Bei allen drei Möglichkeiten werden automatisch die Zeitwunsch-Werte der assoziierte Ressourcen tageweise unten dargestellt. In Figure \ref{fig:zeitwunsche-unterricht} z.B. sieht man in der Liste der Ressourcen unten eine Sperre bei Frau Just Montags im 3. Block. Bei alle Elemente und ohne Räume werden die Zeitwünsche der assoziierte Ressourcen direkt als die des Unterrichts angezeigt. 
+Unterrichte sind über die zugewiesenen Klassen auch an einem festen Raster gebunden und wie Gruppen und Dozenten kann man auch ganze Zeitbereiche mit einem Wert belegen. Man hat hier die Wahl zwischen drei Verschiedene Darstellungsmöglichkeiten: Unterricht, alle Elemente und alle Elemente außer Räume. Bei allen drei Möglichkeiten werden automatisch die Zeitwunsch-Werte der assoziierte Ressourcen tageweise unten dargestellt. In \figref{fig:zeitwunsche-unterricht} z.B. sieht man in der Liste der Ressourcen unten eine Sperre bei Frau Just Montags im 3. Block. Bei alle Elemente und ohne Räume werden die Zeitwünsche der assoziierte Ressourcen direkt als die des Unterrichts angezeigt. 
 
 \subsection{Fenster-Aktionen}
 
 \subsubsection{Filter}
+{\small\textit{verfügbar in Stammdaten und Unterricht Ansichten\\}\par}
 
-\subsubsection{Sortieren}
+\begin{wrapfigure}{r}{.05\textwidth}
+	\vspace{-50pt}
+	\includegraphics[width=.05\textwidth]{filter-symbol}
+	\vspace{-35pt}
+\end{wrapfigure}
+
+\noindent
+Filtern ermöglicht das Einschränken der angezeigten Einträge nach der eingetragenen Werte einer Spalte. Man klickt auf das Filter-Symbol um das Filtern zu aktivieren. Danach erscheint ein neue Zeile als erster Eintrag in der Tabelle. Hier trägt man in der Spalte nach dem gesucht wird einen Wert ein. Prinzipiell gilt der ganze Wert, es kann aber nach der Anfang des Werts gesucht werden. Zum Beispiel, sollte man im Langname-Spalte der Filterzeile von Raumstammdaten 'A20.*' wäre die Liste auf alle Räume in Gebäude A20.
 
 \subsubsection{Neu}
+{\small\textit{verfügbar in Stammdaten und Unterricht Ansichten\\}\par}
 
-\subsubsection{Serienänderungen}
+\begin{wrapfigure}{r}{.05\textwidth}
+	\vspace{-50pt}
+	\includegraphics[width=.05\textwidth]{neu-symbol}
+	\vspace{-35pt}
+\end{wrapfigure}
+
+\noindent
+Das Klicken des Neu-Symbols bringt der Fokus zum ersten Spalte der letzten Zeile des Fensters. Man kann auch selber dahin scrollen. Welche Daten einzupflegen sind wird in die \chapref{chap:data}, und \chapref{chap:lessons}, näher erläutert.\\
+
+\subsubsection{Serien-Änderung}
+{\small\textit{verfügbar in Stammdaten und Unterricht Ansichten\\}\par}
+
+\begin{wrapfigure}{r}{.05\textwidth}
+	\vspace{-50pt}
+	\includegraphics[width=.05\textwidth]{serien-anderung-symbol}
+	\vspace{-35pt}
+\end{wrapfigure}
+
+\noindent
+Serienänderungen sind Änderungen die auf einem bestimmten Bereich oder Einzeleinträge einer Spalte ausgeführt werden. Diese Funktionalität kann sehr behilflich sein bei der Pflege von neuen Informationen, oder das löschen von nicht verwendete/gewollte Attribute. Man kann diese Funktionalität mit oder ohne die vorgesehene Schnittstelle ausführen. Beide Möglichkeiten haben ihre stärken und setzen Interaktion mit dem Listenbereich des Fensters voraus, denn die zu ändernde Einträge müssen erst ausgewählt werden.\\
+\\
+Einzeleinträge werden durch mehrfaches STRG + Klick ausgewählt. Bereiche können mit dem Streichen der Maus oder in dem man einen Eintrag auswählt und UMSCHALT + Klick auf den letzten im gewünschten Bereich macht. Die Methode um einen Bereich zu markieren ist auch nachher mit der Methode um Einzeleinträge kombinierbar, aber nicht anders herum.\\
+
+\begin{figure}[h]
+	\includegraphics[width=1\textwidth]{serien-anderung}
+	\vspace{-15pt}
+	\caption{Serien Änderung}
+	\label{fig:serien-anderung}
+\end{figure}
+
+\noindent
+Im \figref{fig:serien-anderung} habe ich vier Felder markiert. Ich kann nach dieser Markierung direkt einen neuen Wert eintragen die in allen markierten Felder übernommen wird. Darüber hinaus bietet mir die \texttt{Serien-Änderung} Schnittstelle viele weiter Möglichkeiten. In der Ansicht reicht es vollkommen aus nur einen Feld auszuwählen, denn standardmäßig werden alle angezeigte Werte der Spalte miteinbezogen. Man kann diese ausdehnen in dem man ein Häkchen bei \texttt{Ganze Datei} setzt, diese beeinflusst auch die, durch Filteriren, ausgeblendete Werte. Der Einflussbereich kann man auch durch Markieren und den Auswahl von \texttt{Nur Markierte} ebenso gut einschränken. Sofern ein Wert in \texttt{Alter Wert} eingetragen ist werden nur die Einträge, in den dieser Wert vorkommt, durch den neuen Wert geändert. 
+
+\newpage
+
+\subsubsection{Sortieren (manuell)}
+{\small\textit{implizti verfügbar in Stammdaten und Unterricht Ansichten\\}\par}
+
+\noindent
+Zusätzlich zum Automatischen sortieren gibt es zwei arten von manuelle Sortierung. Erstens kann man einzelne Zeilen per Drag \& Drop in der gewünschte Reihenfolge anbringen. Die hierdurch erzeugte Sortierung wird nachhaltig gespeichert. Man kann auch die Spaltennamen anklicken, diese sortiert die Einträge klein nach groß nach der Werte die in dieser Spalte eingetragen sind. Weitere Klicks ändern die Sortierrichtung. Diese Methode sortiert die vorhandene Einträge nur vorübergehend.

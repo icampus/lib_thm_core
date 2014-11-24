@@ -12,3 +12,10 @@ Thumbs.db
 *~
 .directory
 nbproject
+
+#tex
+*.aux
+*.log
+*.synctex.gz
+*.toc
+*.out

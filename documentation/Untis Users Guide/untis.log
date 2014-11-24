@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.3)  17 NOV 2014 09:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.3)  23 NOV 2014 19:24
 entering extended mode
 **untis.tex
 
@@ -629,26 +629,30 @@ x"
 information.aux")
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\data.aux
 ")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\lessons.
+aux")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\schedule
+s.aux")
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\advanced
 _settings.aux")
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\room_cat
 egories.aux")
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\lesson_t
 emporal_behavior.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -708,7 +712,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 137.
 )
-Package hyperref Info: Link coloring ON on input line 28.
+Package hyperref Info: Link coloring ON on input line 39.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -718,20 +722,20 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count136
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
 
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\untis.ou
 t")
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\untis.ou
 t")
 \@outlinefile=\write3
-LaTeX Font Info:    Try loading font information for U+msa on input line 30.
+LaTeX Font Info:    Try loading font information for U+msa on input line 41.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 30.
+LaTeX Font Info:    Try loading font information for U+msb on input line 41.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -742,14 +746,14 @@ tination with the same identifier (name{page.1}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.35 \newpage
+l.46 \newpage
               [1]
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\untis.to
-c")
-\tf@toc=\write4
- [2
+c" [2
 
-]
+])
+\tf@toc=\write4
+ [3]
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\general_
 information.tex"
 Chapter 1.
@@ -768,7 +772,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--8
 
  []
 
-<./images/ribbon-menu.png, id=177, 934.24031pt x 109.91063pt>
+<./images/ribbon-menu.png, id=191, 934.24031pt x 109.91063pt>
 File: ./images/ribbon-menu.png Graphic file (type png)
 
 <use ./images/ribbon-menu.png>
@@ -789,14 +793,14 @@ l.26
 
  <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/r
 ibbon-menu.png>]
-<./images/context-menu.png, id=182, 383.93437pt x 150.5625pt>
+<./images/context-menu.png, id=196, 383.93437pt x 150.5625pt>
 File: ./images/context-menu.png Graphic file (type png)
 
 <use ./images/context-menu.png>
 Package pdftex.def Info: ./images/context-menu.png used on input line 29.
 (pdftex.def)             Requested size: 163.40385pt x 64.08125pt.
 
-<./images/remove-quick-access-item.png, id=183, 376.40625pt x 225.84375pt>
+<./images/remove-quick-access-item.png, id=197, 376.40625pt x 225.84375pt>
 File: ./images/remove-quick-access-item.png Graphic file (type png)
 
 <use ./images/remove-quick-access-item.png>
@@ -843,176 +847,233 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--53
 
  []
 
-<./images/default-window-grouping.png, id=185, 271.0125pt x 361.35pt>
-File: ./images/default-window-grouping.png Graphic file (type png)
-
-<use ./images/default-window-grouping.png>
-Package pdftex.def Info: ./images/default-window-grouping.png used on input lin
-e 58.
-(pdftex.def)             Requested size: 163.40385pt x 217.87582pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.65 E
-      ine weitere Neuigkeit gebunden mit der Konsolidierung der Ressourcen-A...
-[2 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
-/context-menu.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Us
-ers Guide/images/remove-quick-access-item.png>]
-Underfull \hbox (badness 2538) in paragraph at lines 65--68
+l.54 \newpage
+              [2 <C:/Users/James/Projects/lib_thm_core/documentation/Untis User
+s Guide/images/context-menu.png> <C:/Users/James/Projects/lib_thm_core/document
+ation/Untis Users Guide/images/remove-quick-access-item.png>]
+<./images/default-window-grouping.png, id=207, 271.0125pt x 361.35pt>
+File: ./images/default-window-grouping.png Graphic file (type png)
+
+<use ./images/default-window-grouping.png>
+Package pdftex.def Info: ./images/default-window-grouping.png used on input lin
+e 60.
+(pdftex.def)             Requested size: 163.40385pt x 217.87582pt.
+
+Underfull \hbox (badness 2538) in paragraph at lines 67--70
 []\OT1/cmr/m/n/10 Eine weit-ere Neuigkeit gebun-den mit der Kon-so-li-
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 65--68
+Underfull \hbox (badness 1168) in paragraph at lines 67--70
 \OT1/cmr/m/n/10 dierung der Ressourcen-Ansichten sind die Stan-dard
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 65--68
+Underfull \hbox (badness 2744) in paragraph at lines 67--70
 \OT1/cmr/m/n/10 Fen-ster-grup-pen. Wenn man auf die groe Sym-
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 65--68
+Underfull \hbox (badness 1565) in paragraph at lines 67--70
 \OT1/cmr/m/n/10 ein Klick auf das Tur Sym-bol wer-den alle bere-its
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
+Underfull \hbox (badness 3281) in paragraph at lines 67--70
+\OT1/cmr/m/n/10 Obwohl die vor-eingestellte An-sichten nicht zu ge-
+ []
+
+
+Underfull \hbox (badness 1275) in paragraph at lines 67--70
+\OT1/cmr/m/n/10 brauchen sind, deuten sie an welche Fulle man in
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 67--70
+\OT1/cmr/m/n/10 die Ar-beitsflache packen kann und konnen sehr le-
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 67--70
+\OT1/cmr/m/n/10 icht an Ihre personliche Bedurfnisse angepasst wer-
+ []
+
+
+Underfull \hbox (badness 2393) in paragraph at lines 67--70
+\OT1/cmr/m/n/10 den. Um eine solche Fen-ster-gruppe zu er-stellen,
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 67--70
+\OT1/cmr/m/n/10 offnen Sie vor-erst die An-sichten und For-maten mit
+ []
+
+
+Underfull \hbox (badness 3954) in paragraph at lines 67--70
+\OT1/cmr/m/n/10 den Sie gerne ar-beiten wurden und verteilen sie
+ []
+
+
+Underfull \hbox (badness 7099) in paragraph at lines 67--70
+\OT1/cmr/m/n/10 auf der Ar-beitsflache wie sie Ih-nen am besten
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
 
  []
 
-<./images/window-personalization.png, id=191, 436.63126pt x 301.125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--80
+
+ []
+
+
+Overfull \hbox (13.82014pt too wide) in paragraph at lines 73--80
+\OT1/cmr/m/n/10 schiedlichen Ressourcen ein-tra-gen. Welche Daten einzupfle-gen
+ sind wird in die [][][][]Stam-m-datenpflege[][], Kap-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--80
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.81 \section
+             {Fensterbedienung} [3 <C:/Users/James/Projects/lib_thm_core/docume
+ntation/Untis Users Guide/images/default-window-grouping.png>]
+<./images/window-personalization.png, id=220, 436.63126pt x 301.125pt>
 File: ./images/window-personalization.png Graphic file (type png)
 
 <use ./images/window-personalization.png>
 Package pdftex.def Info: ./images/window-personalization.png used on input line
- 73.
+ 85.
 (pdftex.def)             Requested size: 163.40385pt x 112.69185pt.
 
-Underfull \hbox (badness 1092) in paragraph at lines 79--84
+Underfull \hbox (badness 1092) in paragraph at lines 91--96
 []\OT1/cmr/m/n/10 Ab Un-tis 2015 sind die Sym-bol-leis-ten der Fen-stern
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 79--84
+Underfull \hbox (badness 1325) in paragraph at lines 91--96
 \OT1/cmr/m/n/10 der Pfeil nach un-ten an der rechte Seite der jew-
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 79--84
+Underfull \hbox (badness 1635) in paragraph at lines 91--96
 \OT1/cmr/m/n/10 dessen Lange von der An-zahl der nicht angezeigte
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 79--84
+Underfull \hbox (badness 1675) in paragraph at lines 91--96
 \OT1/cmr/m/n/10 Sym-bolen abhangig ist. Wichtig ist hier der let-
  []
 
 
-Underfull \hbox (badness 2096) in paragraph at lines 79--84
+Underfull \hbox (badness 2096) in paragraph at lines 91--96
 \OT1/cmr/m/n/10 zter Ein-trag, 'Schaltflachen hinzufugen oder ent-fer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--84
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--84
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
 
  []
 
-[3 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
-/default-window-grouping.png> <C:/Users/James/Projects/lib_thm_core/documentati
-on/Untis Users Guide/images/window-personalization.png>]
-Overfull \hbox (3.63493pt too wide) in paragraph at lines 87--88
+
+Overfull \hbox (3.63493pt too wide) in paragraph at lines 99--100
 \OT1/cmr/m/n/10 Die Auswahlbox in Un-tis Ver-sion 2015 wurde deut-lich uberarb
 eitet und bi-etet viele neue Verbesserun-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-<./images/search-field.png, id=198, 489.32813pt x 225.84375pt>
+<./images/search-field.png, id=221, 489.32813pt x 225.84375pt>
 File: ./images/search-field.png Graphic file (type png)
 
 <use ./images/search-field.png>
-Package pdftex.def Info: ./images/search-field.png used on input line 92.
+Package pdftex.def Info: ./images/search-field.png used on input line 104.
 (pdftex.def)             Requested size: 163.40385pt x 75.41776pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+[4 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
+/window-personalization.png> <C:/Users/James/Projects/lib_thm_core/documentatio
+n/Untis Users Guide/images/search-field.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-
- []
-
-
-<./images/alle-elemente-im-unterricht-symbol.png, id=199, 16.56187pt x 16.56187
+<./images/alle-elemente-im-unterricht-symbol.png, id=228, 16.56187pt x 16.56187
 pt>
 File: ./images/alle-elemente-im-unterricht-symbol.png Graphic file (type png)
  <use ./images/alle-elemente-im-unterricht-symbol.png>
 Package pdftex.def Info: ./images/alle-elemente-im-unterricht-symbol.png used o
-n input line 110.
+n input line 122.
 (pdftex.def)             Requested size: 25.79922pt x 25.80103pt.
 
-Overfull \hbox (2.3573pt too wide) in paragraph at lines 114--116
+Overfull \hbox (2.3573pt too wide) in paragraph at lines 126--128
 \OT1/cmr/m/n/10 und, sollte man einen an-deren Plan angeschaut haben, man wird 
 zum Ur-sprungs-plan zuruckgebracht. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--116
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--118
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 
  []
 
-<./images/anderungen-ruckgangig-symbol.png, id=200, 16.56187pt x 16.56187pt>
+<./images/anderungen-ruckgangig-symbol.png, id=229, 16.56187pt x 16.56187pt>
 File: ./images/anderungen-ruckgangig-symbol.png Graphic file (type png)
 
 <use ./images/anderungen-ruckgangig-symbol.png>
 Package pdftex.def Info: ./images/anderungen-ruckgangig-symbol.png used on inpu
-t line 122.
+t line 134.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--130
+Underfull \hbox (badness 10000) in paragraph at lines 138--142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-
- []
-
-<./images/ansicht-fixiert-symbol.png, id=201, 16.56187pt x 16.56187pt>
-File: ./images/ansicht-fixiert-symbol.png Graphic file (type png)
-
-<use ./images/ansicht-fixiert-symbol.png>
-Package pdftex.def Info: ./images/ansicht-fixiert-symbol.png used on input line
- 136.
-(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
- [4 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
-s/search-field.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis U
-sers Guide/images/alle-elemente-im-unterricht-symbol.png> <C:/Users/James/Proje
-cts/lib_thm_core/documentation/Untis Users Guide/images/anderungen-ruckgangig-s
-ymbol.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 140--142
+Underfull \hbox (badness 10000) in paragraph at lines 138--142
 
  []
 
@@ -1021,920 +1082,1189 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--144
 
  []
 
-<./images/einstellungen-symbol.png, id=212, 16.56187pt x 16.56187pt>
+<./images/ansicht-fixiert-symbol.png, id=230, 16.56187pt x 16.56187pt>
+File: ./images/ansicht-fixiert-symbol.png Graphic file (type png)
+
+<use ./images/ansicht-fixiert-symbol.png>
+Package pdftex.def Info: ./images/ansicht-fixiert-symbol.png used on input line
+ 148.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+
+ []
+
+<./images/einstellungen-symbol.png, id=231, 16.56187pt x 16.56187pt>
 File: ./images/einstellungen-symbol.png Graphic file (type png)
 
 <use ./images/einstellungen-symbol.png>
 Package pdftex.def Info: ./images/einstellungen-symbol.png used on input line 1
-48.
+60.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--158
+Underfull \hbox (badness 10000) in paragraph at lines 164--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--158
+Underfull \hbox (badness 10000) in paragraph at lines 164--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--158
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-
- []
-
-<./images/erweitertes-entkoppeln-symbol.png, id=213, 16.56187pt x 16.56187pt>
-File: ./images/erweitertes-entkoppeln-symbol.png Graphic file (type png)
-
-<use ./images/erweitertes-entkoppeln-symbol.png>
-Package pdftex.def Info: ./images/erweitertes-entkoppeln-symbol.png used on inp
-ut line 164.
-(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
-
- []
-
-<./images/farbe-des-elements-symbol.png, id=214, 16.56187pt x 16.56187pt>
-File: ./images/farbe-des-elements-symbol.png Graphic file (type png)
-
-<use ./images/farbe-des-elements-symbol.png>
-Package pdftex.def Info: ./images/farbe-des-elements-symbol.png used on input l
-ine 176.
-(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--182
+Underfull \hbox (badness 10000) in paragraph at lines 164--170
 
  []
 
 [5 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
-/ansicht-fixiert-symbol.png> <C:/Users/James/Projects/lib_thm_core/documentatio
-n/Untis Users Guide/images/einstellungen-symbol.png> <C:/Users/James/Projects/l
-ib_thm_core/documentation/Untis Users Guide/images/erweitertes-entkoppeln-symbo
-l.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/im
-ages/farbe-des-elements-symbol.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+/alle-elemente-im-unterricht-symbol.png> <C:/Users/James/Projects/lib_thm_core/
+documentation/Untis Users Guide/images/anderungen-ruckgangig-symbol.png> <C:/Us
+ers/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/ansicht-
+fixiert-symbol.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis U
+sers Guide/images/einstellungen-symbol.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
 
  []
 
-<./images/felder-der-ansicht-symbol.png, id=223, 16.56187pt x 16.56187pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+<./images/erweitertes-entkoppeln-symbol.png, id=242, 16.56187pt x 16.56187pt>
+File: ./images/erweitertes-entkoppeln-symbol.png Graphic file (type png)
+
+<use ./images/erweitertes-entkoppeln-symbol.png>
+Package pdftex.def Info: ./images/erweitertes-entkoppeln-symbol.png used on inp
+ut line 183.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+
+ []
+
+<./images/farbe-des-elements-symbol.png, id=243, 16.56187pt x 16.56187pt>
+File: ./images/farbe-des-elements-symbol.png Graphic file (type png)
+
+<use ./images/farbe-des-elements-symbol.png>
+Package pdftex.def Info: ./images/farbe-des-elements-symbol.png used on input l
+ine 195.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+
+ []
+
+<./images/felder-der-ansicht-symbol.png, id=244, 16.56187pt x 16.56187pt>
 File: ./images/felder-der-ansicht-symbol.png Graphic file (type png)
 
 <use ./images/felder-der-ansicht-symbol.png>
 Package pdftex.def Info: ./images/felder-der-ansicht-symbol.png used on input l
-ine 188.
+ine 207.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-<./images/felder-der-ansicht.png, id=224, 316.18124pt x 203.25937pt>
+<./images/felder-der-ansicht.png, id=245, 316.18124pt x 203.25937pt>
 File: ./images/felder-der-ansicht.png Graphic file (type png)
 
 <use ./images/felder-der-ansicht.png>
-Package pdftex.def Info: ./images/felder-der-ansicht.png used on input line 196
+Package pdftex.def Info: ./images/felder-der-ansicht.png used on input line 215
 .
 (pdftex.def)             Requested size: 163.40385pt x 105.04726pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--206
+ [6 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/erweitertes-entkoppeln-symbol.png> <C:/Users/James/Projects/lib_thm_core/docu
+mentation/Untis Users Guide/images/farbe-des-elements-symbol.png> <C:/Users/Jam
+es/Projects/lib_thm_core/documentation/Untis Users Guide/images/felder-der-ansi
+cht-symbol.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 222--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--208
+Underfull \hbox (badness 10000) in paragraph at lines 222--226
 
  []
 
-<./images/felder-mit-inhalt-symbol.png, id=225, 16.56187pt x 16.56187pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--228
+
+ []
+
+<./images/felder-mit-inhalt-symbol.png, id=254, 16.56187pt x 16.56187pt>
 File: ./images/felder-mit-inhalt-symbol.png Graphic file (type png)
 
 <use ./images/felder-mit-inhalt-symbol.png>
 Package pdftex.def Info: ./images/felder-mit-inhalt-symbol.png used on input li
-ne 212.
+ne 232.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--218
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--220
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
 
  []
 
 File: ./images/felder-mit-inhalt-symbol.png Graphic file (type png)
 <use ./images/felder-mit-inhalt-symbol.png>
 Package pdftex.def Info: ./images/felder-mit-inhalt-symbol.png used on input li
-ne 224.
+ne 244.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--230
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
 
  []
 
-<./images/klassenzeitraster-symbol.png, id=226, 16.56187pt x 16.56187pt>
+<./images/klassenzeitraster-symbol.png, id=255, 16.56187pt x 16.56187pt>
 File: ./images/klassenzeitraster-symbol.png Graphic file (type png)
 
 <use ./images/klassenzeitraster-symbol.png>
 Package pdftex.def Info: ./images/klassenzeitraster-symbol.png used on input li
-ne 236.
+ne 256.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
-
- []
-
-[6 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
-/felder-der-ansicht-symbol.png> <C:/Users/James/Projects/lib_thm_core/documenta
-tion/Untis Users Guide/images/felder-der-ansicht.png> <C:/Users/James/Projects/
-lib_thm_core/documentation/Untis Users Guide/images/felder-mit-inhalt-symbol.pn
+ [7 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/felder-der-ansicht.png> <C:/Users/James/Projects/lib_thm_core/documentation/U
+ntis Users Guide/images/felder-mit-inhalt-symbol.png> <C:/Users/James/Projects/
+lib_thm_core/documentation/Untis Users Guide/images/klassenzeitraster-symbol.pn
 g>]
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 266--266
 
  []
 
-<./images/koppeln-symbol.png, id=236, 16.56187pt x 16.56187pt>
+<./images/koppeln-symbol.png, id=264, 16.56187pt x 16.56187pt>
 File: ./images/koppeln-symbol.png Graphic file (type png)
 
 <use ./images/koppeln-symbol.png>
-Package pdftex.def Info: ./images/koppeln-symbol.png used on input line 248.
+Package pdftex.def Info: ./images/koppeln-symbol.png used on input line 270.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
 
  []
 
-<./images/lehrer-vorschlag-symbol.png, id=237, 26.34843pt x 16.56187pt>
+<./images/lehrer-vorschlag-symbol.png, id=265, 26.34843pt x 16.56187pt>
 File: ./images/lehrer-vorschlag-symbol.png Graphic file (type png)
 
 <use ./images/lehrer-vorschlag-symbol.png>
 Package pdftex.def Info: ./images/lehrer-vorschlag-symbol.png used on input lin
-e 260.
+e 282.
 (pdftex.def)             Requested size: 25.79922pt x 16.21687pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--270
+Underfull \hbox (badness 10000) in paragraph at lines 286--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--270
+Underfull \hbox (badness 10000) in paragraph at lines 286--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--270
+Underfull \hbox (badness 10000) in paragraph at lines 286--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--272
+Underfull \hbox (badness 10000) in paragraph at lines 294--294
 
  []
 
-<./images/normal-form-anzeigen-symbol.png, id=238, 16.56187pt x 16.56187pt>
+<./images/loschen-symbol.png, id=266, 16.56187pt x 16.56187pt>
+File: ./images/loschen-symbol.png Graphic file (type png)
+
+<use ./images/loschen-symbol.png>
+Package pdftex.def Info: ./images/loschen-symbol.png used on input line 298.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
+
+ []
+
+<./images/normal-form-anzeigen-symbol.png, id=267, 16.56187pt x 16.56187pt>
 File: ./images/normal-form-anzeigen-symbol.png Graphic file (type png)
 
 <use ./images/normal-form-anzeigen-symbol.png>
 Package pdftex.def Info: ./images/normal-form-anzeigen-symbol.png used on input
- line 276.
+ line 310.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 314--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 314--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
 
  []
 
-<./images/raum-zuordnen-loschen-symbol.png, id=239, 16.56187pt x 16.56187pt>
+<./images/nur-geanderte-plane-symbol.png, id=268, 16.56187pt x 16.56187pt>
+File: ./images/nur-geanderte-plane-symbol.png Graphic file (type png)
+
+<use ./images/nur-geanderte-plane-symbol.png>
+Package pdftex.def Info: ./images/nur-geanderte-plane-symbol.png used on input 
+line 324.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+ [8 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/koppeln-symbol.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis
+ Users Guide/images/lehrer-vorschlag-symbol.png> <C:/Users/James/Projects/lib_t
+hm_core/documentation/Untis Users Guide/images/loschen-symbol.png> <C:/Users/Ja
+mes/Projects/lib_thm_core/documentation/Untis Users Guide/images/normal-form-an
+zeigen-symbol.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+
+ []
+
+<./images/raum-zuordnen-loschen-symbol.png, id=277, 16.56187pt x 16.56187pt>
 File: ./images/raum-zuordnen-loschen-symbol.png Graphic file (type png)
 
 <use ./images/raum-zuordnen-loschen-symbol.png>
 Package pdftex.def Info: ./images/raum-zuordnen-loschen-symbol.png used on inpu
-t line 290.
+t line 337.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--296
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
 
  []
 
-[7 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
-/klassenzeitraster-symbol.png> <C:/Users/James/Projects/lib_thm_core/documentat
-ion/Untis Users Guide/images/koppeln-symbol.png> <C:/Users/James/Projects/lib_t
-hm_core/documentation/Untis Users Guide/images/lehrer-vorschlag-symbol.png> <C:
-/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/norma
-l-form-anzeigen-symbol.png>]
-<./images/raum-zuordnen-loschen.png, id=248, 484.81125pt x 251.43938pt>
+<./images/raum-zuordnen-loschen.png, id=278, 484.81125pt x 251.43938pt>
 File: ./images/raum-zuordnen-loschen.png Graphic file (type png)
 
 <use ./images/raum-zuordnen-loschen.png>
 Package pdftex.def Info: ./images/raum-zuordnen-loschen.png used on input line 
-298.
+346.
 (pdftex.def)             Requested size: 124.69844pt x 64.67058pt.
 
-Underfull \hbox (badness 6592) in paragraph at lines 308--308
-\OT1/cmr/m/it/9 verfugbar in Stam-m-daten (ausser Facher) und Un-ter-richt An
--
+Underfull \hbox (badness 2027) in paragraph at lines 352--356
+[]\OT1/cmr/m/n/10 Man kann Raume zuord-nen in dem man ein Raum se-lek-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
+Underfull \hbox (badness 2384) in paragraph at lines 352--356
+\OT1/cmr/m/n/10 tiert und den Knopf \OT1/cmtt/m/n/10 Rm zuordnen \OT1/cmr/m/n/1
+0 druckt, oder aber zwei
+ []
+
+
+Underfull \hbox (badness 2644) in paragraph at lines 352--356
+\OT1/cmr/m/n/10 mal auf den gewunschten Raum klicken. Man kann auf
+ []
+
+
+Underfull \hbox (badness 2951) in paragraph at lines 352--356
+\OT1/cmr/m/n/10 ahnlicher Weise die Zuord-nung loschen in dem man \OT1/cmtt/m
+/n/10 Raum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--356
 
  []
 
 
-Package wrapfig Warning: Collision between wrapping environments on input line 
-310.
+Underfull \hbox (badness 10000) in paragraph at lines 352--356
 
-<./images/schuljahreskalendar-symbol.png, id=249, 16.56187pt x 16.56187pt>
+ []
+
+<./images/raum-nicht-frei.png, id=279, 194.97844pt x 193.47281pt>
+File: ./images/raum-nicht-frei.png Graphic file (type png)
+
+<use ./images/raum-nicht-frei.png>
+Package pdftex.def Info: ./images/raum-nicht-frei.png used on input line 359.
+(pdftex.def)             Requested size: 124.69844pt x 123.73361pt.
+ [9 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/nur-geanderte-plane-symbol.png> <C:/Users/James/Projects/lib_thm_core/documen
+tation/Untis Users Guide/images/raum-zuordnen-loschen-symbol.png> <C:/Users/Jam
+es/Projects/lib_thm_core/documentation/Untis Users Guide/images/raum-zuordnen-l
+oschen.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Gui
+de/images/raum-nicht-frei.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 372--372
+
+ []
+
+<./images/schuljahreskalendar-symbol.png, id=290, 16.56187pt x 16.56187pt>
 File: ./images/schuljahreskalendar-symbol.png Graphic file (type png)
 
 <use ./images/schuljahreskalendar-symbol.png>
 Package pdftex.def Info: ./images/schuljahreskalendar-symbol.png used on input 
-line 312.
+line 376.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 31
-6.
-
-
-Underfull \hbox (badness 1259) in paragraph at lines 316--320
-\OT1/cmr/m/n/10 Lei-der scheint diese Funk-tion nicht vollstandig im-ple-men-t
-iert
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--320
+Underfull \hbox (badness 10000) in paragraph at lines 380--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--320
+Underfull \hbox (badness 10000) in paragraph at lines 380--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
+Underfull \hbox (badness 10000) in paragraph at lines 386--386
 
  []
 
-<./images/seitenlayout-symbol.png, id=250, 26.34843pt x 16.56187pt>
+<./images/seitenlayout-symbol.png, id=291, 26.34843pt x 16.56187pt>
 File: ./images/seitenlayout-symbol.png Graphic file (type png)
 
 <use ./images/seitenlayout-symbol.png>
-Package pdftex.def Info: ./images/seitenlayout-symbol.png used on input line 32
-6.
+Package pdftex.def Info: ./images/seitenlayout-symbol.png used on input line 39
+0.
 (pdftex.def)             Requested size: 25.79922pt x 16.21687pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--332
+Underfull \hbox (badness 10000) in paragraph at lines 398--398
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--334
-
- []
-
-<./images/sortieren-symbol.png, id=251, 16.56187pt x 16.56187pt>
+<./images/sortieren-symbol.png, id=292, 16.56187pt x 16.56187pt>
 File: ./images/sortieren-symbol.png Graphic file (type png)
 
 <use ./images/sortieren-symbol.png>
-Package pdftex.def Info: ./images/sortieren-symbol.png used on input line 338.
+Package pdftex.def Info: ./images/sortieren-symbol.png used on input line 402.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--344
+Underfull \hbox (badness 10000) in paragraph at lines 406--408
 
  []
 
-<./images/sortierkriterien.png, id=252, 264.23718pt x 356.0803pt>
+<./images/sortierkriterien.png, id=293, 264.23718pt x 356.0803pt>
 File: ./images/sortierkriterien.png Graphic file (type png)
 
 <use ./images/sortierkriterien.png>
-Package pdftex.def Info: ./images/sortierkriterien.png used on input line 347.
+Package pdftex.def Info: ./images/sortierkriterien.png used on input line 411.
 (pdftex.def)             Requested size: 124.69844pt x 168.03693pt.
 
-Underfull \hbox (badness 1442) in paragraph at lines 353--357
+Underfull \hbox (badness 1442) in paragraph at lines 417--421
 \OT1/cmr/m/n/10 wird, kann es nicht nach dem Schlieen des Fen-sters nicht
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--357
+Underfull \hbox (badness 10000) in paragraph at lines 417--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--357
-
- []
-
-[8 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
-/raum-zuordnen-loschen-symbol.png> <C:/Users/James/Projects/lib_thm_core/docume
-ntation/Untis Users Guide/images/raum-zuordnen-loschen.png> <C:/Users/James/Pro
-jects/lib_thm_core/documentation/Untis Users Guide/images/schuljahreskalendar-s
-ymbol.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guid
-e/images/seitenlayout-symbol.png> <C:/Users/James/Projects/lib_thm_core/documen
-tation/Untis Users Guide/images/sortieren-symbol.png> <C:/Users/James/Projects/
-lib_thm_core/documentation/Untis Users Guide/images/sortierkriterien.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
-
+Underfull \hbox (badness 1418) in paragraph at lines 417--421
+\OT1/cmr/m/n/10 ein Hakchen un-ten set-zen. Diese be-wirkt, dass die gespe-
  []
 
 
-<./images/unterrichtsstunde-fixieren-symbol.png, id=262, 16.56187pt x 16.56187p
+Underfull \hbox (badness 2503) in paragraph at lines 417--421
+\OT1/cmr/m/n/10 icherte Sortierung auch fur Auswahlboxen fur die Ressour-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--421
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
+
+ []
+
+<./images/stundenplan-vergleich-symbol.png, id=294, 16.56187pt x 16.56187pt>
+File: ./images/stundenplan-vergleich-symbol.png Graphic file (type png)
+
+<use ./images/stundenplan-vergleich-symbol.png>
+Package pdftex.def Info: ./images/stundenplan-vergleich-symbol.png used on inpu
+t line 427.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+ [10 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/imag
+es/schuljahreskalendar-symbol.png> <C:/Users/James/Projects/lib_thm_core/docume
+ntation/Untis Users Guide/images/seitenlayout-symbol.png> <C:/Users/James/Proje
+cts/lib_thm_core/documentation/Untis Users Guide/images/sortieren-symbol.png> <
+C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/sor
+tierkriterien.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 431--433
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--435
+
+ []
+
+
+<./images/unterrichtsstunde-fixieren-symbol.png, id=303, 16.56187pt x 16.56187p
 t>
 File: ./images/unterrichtsstunde-fixieren-symbol.png Graphic file (type png)
  <use ./images/unterrichtsstunde-fixieren-symbol.png>
 Package pdftex.def Info: ./images/unterrichtsstunde-fixieren-symbol.png used on
- input line 363.
+ input line 439.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--369
+Underfull \hbox (badness 10000) in paragraph at lines 443--445
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
+Underfull \hbox (badness 10000) in paragraph at lines 447--447
 
  []
 
-<./images/unterrichtsvergleich-symbol.png, id=263, 16.56187pt x 16.56187pt>
+<./images/unterrichtsvergleich-symbol.png, id=304, 16.56187pt x 16.56187pt>
 File: ./images/unterrichtsvergleich-symbol.png Graphic file (type png)
 
 <use ./images/unterrichtsvergleich-symbol.png>
 Package pdftex.def Info: ./images/unterrichtsvergleich-symbol.png used on input
- line 375.
+ line 451.
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--381
+Underfull \hbox (badness 10000) in paragraph at lines 455--457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 459--459
 
  []
 
-<./images/zeitwunsche-symbol.png, id=264, 16.56187pt x 16.56187pt>
+<./images/zeitwunsche-symbol.png, id=305, 16.56187pt x 16.56187pt>
 File: ./images/zeitwunsche-symbol.png Graphic file (type png)
 
 <use ./images/zeitwunsche-symbol.png>
-Package pdftex.def Info: ./images/zeitwunsche-symbol.png used on input line 387
+Package pdftex.def Info: ./images/zeitwunsche-symbol.png used on input line 463
 .
 (pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--393
+Underfull \hbox (badness 10000) in paragraph at lines 467--469
 
  []
 
-<./images/zeitwunsche-gruppen.png, id=265, 300.3722pt x 255.20343pt>
+[11 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/stundenplan-vergleich-symbol.png> <C:/Users/James/Projects/lib_thm_core/docum
+entation/Untis Users Guide/images/unterrichtsstunde-fixieren-symbol.png> <C:/Us
+ers/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/unterric
+htsvergleich-symbol.png> <C:/Users/James/Projects/lib_thm_core/documentation/Un
+tis Users Guide/images/zeitwunsche-symbol.png>]
+<./images/zeitwunsche-gruppen.png, id=314, 300.3722pt x 255.20343pt>
 File: ./images/zeitwunsche-gruppen.png Graphic file (type png)
 
 <use ./images/zeitwunsche-gruppen.png>
-Package pdftex.def Info: ./images/zeitwunsche-gruppen.png used on input line 39
-5.
+Package pdftex.def Info: ./images/zeitwunsche-gruppen.png used on input line 47
+3.
 (pdftex.def)             Requested size: 124.69844pt x 105.94638pt.
 
-Underfull \hbox (badness 5533) in paragraph at lines 397--397
-[]\OT1/cmr/m/n/10 Figure 1.10: []Zeitwunsche
+Underfull \hbox (badness 5533) in paragraph at lines 475--475
+[]\OT1/cmr/m/n/10 Figure 1.11: []Zeitwunsche
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 401--405
+Underfull \hbox (badness 1533) in paragraph at lines 479--483
 \OT1/cmr/m/n/10 nen-dif-feren-zen im Abhangigkeit von aufrufende An-sicht, ggf
 .
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 401--405
-\OT1/cmr/m/n/10 Zeitraster. Im Fig-ure [][]1.10[][] se-hen wir den Zeitwunsche
- An-
+Underfull \hbox (badness 1087) in paragraph at lines 479--483
+\OT1/cmr/m/n/10 Zeitraster. Im [][]Fig-ure 1.11[][][] se-hen wir den Zeitwunsc
+he An-
  []
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 401--405
+Underfull \hbox (badness 2237) in paragraph at lines 479--483
 \OT1/cmr/m/n/10 sicht fur die Ressource Grup-pen. Im Haupt-teil des Fen-
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 401--405
+Underfull \hbox (badness 1668) in paragraph at lines 479--483
 \OT1/cmr/m/n/10 sters steht mit-tig der Zeitraster des El-e-ments. Hier kann
  []
 
 
-Underfull \hbox (badness 3417) in paragraph at lines 401--405
+Underfull \hbox (badness 3417) in paragraph at lines 479--483
 \OT1/cmr/m/n/10 Grup-pen und Dozen-ten Zeitwunsche hat man eine er-weit-
  []
 
 
-Underfull \hbox (badness 1975) in paragraph at lines 401--405
+Underfull \hbox (badness 1975) in paragraph at lines 479--483
 \OT1/cmr/m/n/10 erte Hil-f-s-mit-tel in dem man fur ganze Zeit-bere-iche, Ganz
 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--405
+Underfull \hbox (badness 10000) in paragraph at lines 479--483
 
  []
 
-[9 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images
-/unterrichtsstunde-fixieren-symbol.png> <C:/Users/James/Projects/lib_thm_core/d
-ocumentation/Untis Users Guide/images/unterrichtsvergleich-symbol.png> <C:/User
-s/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/zeitwunsch
-e-symbol.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users G
-uide/images/zeitwunsche-gruppen.png>]
-<./images/zeitwunsche-multiraster.png, id=276, 679.03688pt x 188.20313pt>
+<./images/zeitwunsche-multiraster.png, id=317, 679.03688pt x 188.20313pt>
 File: ./images/zeitwunsche-multiraster.png Graphic file (type png)
 
 <use ./images/zeitwunsche-multiraster.png>
 Package pdftex.def Info: ./images/zeitwunsche-multiraster.png used on input lin
-e 407.
+e 485.
 (pdftex.def)             Requested size: 430.00462pt x 119.18027pt.
 
-<./images/zeitwunsche-unterricht.png, id=277, 422.32782pt x 379.4175pt>
+<./images/zeitwunsche-unterricht.png, id=318, 422.32782pt x 379.4175pt>
 File: ./images/zeitwunsche-unterricht.png Graphic file (type png)
 
 <use ./images/zeitwunsche-unterricht.png>
 Package pdftex.def Info: ./images/zeitwunsche-unterricht.png used on input line
- 415.
+ 493.
 (pdftex.def)             Requested size: 124.69844pt x 112.0256pt.
-) [10 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/ima
-ges/zeitwunsche-multiraster.png> <C:/Users/James/Projects/lib_thm_core/document
-ation/Untis Users Guide/images/zeitwunsche-unterricht.png>] [11]
+
+Underfull \hbox (badness 10000) in paragraph at lines 505--505
+
+ []
+
+<./images/filter-symbol.png, id=320, 16.56187pt x 16.56187pt>
+File: ./images/filter-symbol.png Graphic file (type png)
+
+<use ./images/filter-symbol.png>
+Package pdftex.def Info: ./images/filter-symbol.png used on input line 509.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+ [12 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/imag
+es/zeitwunsche-gruppen.png> <C:/Users/James/Projects/lib_thm_core/documentation
+/Untis Users Guide/images/zeitwunsche-multiraster.png> <C:/Users/James/Projects
+/lib_thm_core/documentation/Untis Users Guide/images/zeitwunsche-unterricht.png
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 517--517
+
+ []
+
+<./images/neu-symbol.png, id=328, 16.56187pt x 16.56187pt>
+File: ./images/neu-symbol.png Graphic file (type png)
+
+<use ./images/neu-symbol.png>
+Package pdftex.def Info: ./images/neu-symbol.png used on input line 521.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--529
+
+ []
+
+<./images/serien-anderung-symbol.png, id=333, 16.56187pt x 16.56187pt>
+File: ./images/serien-anderung-symbol.png Graphic file (type png)
+
+<use ./images/serien-anderung-symbol.png>
+Package pdftex.def Info: ./images/serien-anderung-symbol.png used on input line
+ 533.
+(pdftex.def)             Requested size: 21.50154pt x 21.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--541
+
+ []
+
+<./images/serien-anderung.png, id=334, 421.575pt x 133.24782pt>
+File: ./images/serien-anderung.png Graphic file (type png)
+
+<use ./images/serien-anderung.png>
+Package pdftex.def Info: ./images/serien-anderung.png used on input line 543.
+(pdftex.def)             Requested size: 430.00462pt x 135.91502pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/filter-symbol.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis 
+Users Guide/images/neu-symbol.png> <C:/Users/James/Projects/lib_thm_core/docume
+ntation/Untis Users Guide/images/serien-anderung-symbol.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 555--555
+
+ []
+
+) [14 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/ima
+ges/serien-anderung.png>]
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\data.tex
 "
 Chapter 2.
-<./images/Perioden.png, id=294, 154.32657pt x 52.69687pt>
-File: ./images/Perioden.png Graphic file (type png)
 
-<use ./images/Perioden.png>
-Package pdftex.def Info: ./images/Perioden.png used on input line 6.
-(pdftex.def)             Requested size: 163.40385pt x 55.80132pt.
-
-
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 12
-.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+[15
+
+
+
+] <./images/perioden.png, id=358, 85.82062pt x 67.75313pt>
+File: ./images/perioden.png Graphic file (type png)
+
+<use ./images/perioden.png>
+Package pdftex.def Info: ./images/perioden.png used on input line 27.
+(pdftex.def)             Requested size: 103.20346pt x 81.47597pt.
+
+Underfull \hbox (badness 2717) in paragraph at lines 33--35
+\OT1/cmr/bx/n/10 der Pe-ri-ode ``Schul-jahr" gemacht wer-den. \OT1/cmr/m/n/10 W
+enn Daten
+ []
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 33--35
+\OT1/cmr/m/n/10 in der Schul-jahr Pe-ri-ode eingepflegt sind, wer-den die neuen
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-
+Underfull \hbox (badness 2426) in paragraph at lines 33--35
+\OT1/cmr/m/n/10 Daten, bzw. []Anderungen, au-toma-tisch im Winter- und Som-
  []
 
-[12
+
+Underfull \hbox (badness 1342) in paragraph at lines 33--35
+\OT1/cmr/m/n/10 Pe-ri-o-den eingepflegt wer-den, sind diese Daten nur in diese 
+eine
+ []
 
 
+Underfull \hbox (badness 1173) in paragraph at lines 33--35
+\OT1/cmr/m/n/10 Pe-ri-ode er-sichtlich. Das fuhrt zwangslaufig zu Dateninkon-
+sis-ten-
+ []
 
- <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/images/P
-erioden.png>] <./images/Programs.png, id=301, 398.99063pt x 165.61874pt>
-File: ./images/Programs.png Graphic file (type png)
 
-<use ./images/Programs.png>
-Package pdftex.def Info: ./images/Programs.png used on input line 26.
-(pdftex.def)             Requested size: 163.40385pt x 67.82831pt.
-
-<./images/ProgramNavigation.png, id=302, 199.49532pt x 229.60782pt>
-File: ./images/ProgramNavigation.png Graphic file (type png)
-
-<use ./images/ProgramNavigation.png>
-Package pdftex.def Info: ./images/ProgramNavigation.png used on input line 31.
-(pdftex.def)             Requested size: 163.40385pt x 188.07642pt.
-
-<./images/Descriptions.png, id=303, 412.54124pt x 200.24812pt>
-File: ./images/Descriptions.png Graphic file (type png)
-
-<use ./images/Descriptions.png>
-Package pdftex.def Info: ./images/Descriptions.png used on input line 36.
-(pdftex.def)             Requested size: 163.40385pt x 79.31561pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--46
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--46
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+<./images/spezielle-daten-menu.png, id=359, 383.93437pt x 158.09062pt>
+File: ./images/spezielle-daten-menu.png Graphic file (type png)
+
+<use ./images/spezielle-daten-menu.png>
+Package pdftex.def Info: ./images/spezielle-daten-menu.png used on input line 4
+2.
+(pdftex.def)             Requested size: 344.005pt x 141.65787pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
 
-Underfull \hbox (badness 7595) in paragraph at lines 47--49
-\OT1/cmr/bx/n/10 Langname\OT1/cmr/m/n/10 : Der Na-men des Stu-di-en-gangs mit
- []
-
-
-Underfull \hbox (badness 3058) in paragraph at lines 52--59
-\OT1/cmr/m/n/10 Beschreibungen sind eine Untis-Ressource, die von
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--59
-
- []
-
-[13 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
-s/Programs.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users
- Guide/images/ProgramNavigation.png> <C:/Users/James/Projects/lib_thm_core/docu
-mentation/Untis Users Guide/images/Descriptions.png>]
-<./images/DescNavigation.png, id=312, 225.84375pt x 263.48438pt>
-File: ./images/DescNavigation.png Graphic file (type png)
-
-<use ./images/DescNavigation.png>
-Package pdftex.def Info: ./images/DescNavigation.png used on input line 66.
-(pdftex.def)             Requested size: 163.40385pt x 190.64937pt.
-
-Underfull \hbox (badness 2269) in paragraph at lines 72--77
-[]\OT1/cmr/m/n/10 Kompetenzen sagen was aus uber den groben In-
- []
-
-
-Underfull \hbox (badness 7777) in paragraph at lines 72--77
-\OT1/cmr/m/n/10 halt von Grup-pen und Facher, oder die The-
- []
-
-
-Underfull \hbox (badness 6204) in paragraph at lines 72--77
-\OT1/cmr/m/n/10 menge-bi-ete in der sich ein Dozent ein Ex-perte
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--77
-
- []
-
-
-Underfull \hbox (badness 2035) in paragraph at lines 72--77
-\OT1/cmr/m/n/10 Sys-tem besteht aus Basis-Kompetenzen, die jew-eils
- []
-
-
-Underfull \hbox (badness 1472) in paragraph at lines 72--77
-\OT1/cmr/m/n/10 durch drei Buch-staben gekennze-ich-net sind. Diese
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--77
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--86
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--86
-
- []
-
-[14 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
-s/DescNavigation.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 90--95
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--95
-
- []
-
-<./images/MethodsUntis.png, id=319, 222.07968pt x 199.49532pt>
-File: ./images/MethodsUntis.png Graphic file (type png)
-
-<use ./images/MethodsUntis.png>
-Package pdftex.def Info: ./images/MethodsUntis.png used on input line 99.
-(pdftex.def)             Requested size: 96.75037pt x 86.91064pt.
-
-<./images/MethodsOrganizer.png, id=320, 219.06844pt x 186.6975pt>
-File: ./images/MethodsOrganizer.png Graphic file (type png)
-
-<use ./images/MethodsOrganizer.png>
-Package pdftex.def Info: ./images/MethodsOrganizer.png used on input line 106.
-(pdftex.def)             Requested size: 96.75037pt x 82.45482pt.
-
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 97--110
-[]$[]$ $[]$ 
- []
-
-[15 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
-s/MethodsUntis.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis U
-sers Guide/images/MethodsOrganizer.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 115--118
-
- []
-
-<./images/Gruppen.png, id=328, 656.4525pt x 154.32657pt>
-File: ./images/Gruppen.png Graphic file (type png)
-
-<use ./images/Gruppen.png>
-Package pdftex.def Info: ./images/Gruppen.png used on input line 120.
-(pdftex.def)             Requested size: 430.00462pt x 101.09052pt.
-
-<./images/MedInfNodes.png, id=329, 180.675pt x 105.39375pt>
-File: ./images/MedInfNodes.png Graphic file (type png)
-
-<use ./images/MedInfNodes.png>
-Package pdftex.def Info: ./images/MedInfNodes.png used on input line 135.
-(pdftex.def)             Requested size: 163.40385pt x 95.31985pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--139
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--139
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--139
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--139
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--153
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
 [16 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
-s/Gruppen.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users 
-Guide/images/MedInfNodes.png>] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 157--160
+s/perioden.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users
+ Guide/images/spezielle-daten-menu.png>]
+<./images/studiengange.png, id=366, 278.54062pt x 184.43906pt>
+File: ./images/studiengange.png Graphic file (type png)
 
+<use ./images/studiengange.png>
+Package pdftex.def Info: ./images/studiengange.png used on input line 59.
+(pdftex.def)             Requested size: 163.40385pt x 108.20175pt.
+
+Underfull \hbox (badness 1270) in paragraph at lines 65--67
+\OT1/cmr/m/n/10 deutigkeit, z.B. der gle-iche Name fur einen Bach-e-
  []
 
-<./images/Teachers.png, id=342, 532.23843pt x 164.86594pt>
-File: ./images/Teachers.png Graphic file (type png)
 
-<use ./images/Teachers.png>
-Package pdftex.def Info: ./images/Teachers.png used on input line 162.
-(pdftex.def)             Requested size: 430.00462pt x 133.20103pt.
-
-<./images/GroupsProfile.png, id=343, 730.22812pt x 639.89063pt>
-File: ./images/GroupsProfile.png Graphic file (type png)
-
-<use ./images/GroupsProfile.png>
-Package pdftex.def Info: ./images/GroupsProfile.png used on input line 175.
-(pdftex.def)             Requested size: 163.40385pt x 143.18805pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--179
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--179
+Underfull \hbox (badness 4886) in paragraph at lines 68--70
+\OT1/cmtt/m/n/10 Langname\OT1/cmr/m/n/10 : Der Name des Stu-di-en-gangs mit of-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--179
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--189
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+<./images/beschreibungen.png, id=367, 344.03531pt x 197.23688pt>
+File: ./images/beschreibungen.png Graphic file (type png)
+
+<use ./images/beschreibungen.png>
+Package pdftex.def Info: ./images/beschreibungen.png used on input line 82.
+(pdftex.def)             Requested size: 163.40385pt x 93.67944pt.
+
+Underfull \hbox (badness 2027) in paragraph at lines 89--93
+[]\OT1/cmtt/m/n/10 Art\OT1/cmr/m/n/10 : Dieser Angabe ist nicht zu ge-brauchen 
+und
+ []
+
+
+Underfull \hbox (badness 6725) in paragraph at lines 89--93
+\OT1/cmr/m/n/10 kann nicht aus-ge-blendet wer-den. Bitte ig-nori-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--189
+Underfull \hbox (badness 3872) in paragraph at lines 89--93
+\OT1/cmr/m/n/10 die tatsachliche Ver-wen-dung festzule-gen ver-wen-det.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--93
 
  []
 
 
-Underfull \hbox (badness 1082) in paragraph at lines 179--189
-\OT1/cmr/bx/n/10 Ext.Name\OT1/cmr/m/n/10 : (\OT1/cmr/bx/n/10 Pflicht, falls gew
-unschter Dozent
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--189
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 179--189
-\OT1/cmr/m/n/10 Kom-pe-tenz. (Sehe Kom-pe-ten-zen, Sub-sec-tion [][]2.3.1[][],
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--189
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--189
-
- []
-
-[18 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
-s/Teachers.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users
- Guide/images/GroupsProfile.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 193--196
-
- []
-
-<./images/Rooms.png, id=351, 521.69907pt x 137.7647pt>
-File: ./images/Rooms.png Graphic file (type png)
-
-<use ./images/Rooms.png>
-Package pdftex.def Info: ./images/Rooms.png used on input line 198.
-(pdftex.def)             Requested size: 430.00462pt x 113.55215pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--216
+[17 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/studiengange.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis U
+sers Guide/images/beschreibungen.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--216
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--216
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--216
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--216
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--216
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+<./images/MethodsUntis.png, id=376, 222.07968pt x 199.49532pt>
+File: ./images/MethodsUntis.png Graphic file (type png)
+
+<use ./images/MethodsUntis.png>
+Package pdftex.def Info: ./images/MethodsUntis.png used on input line 127.
+(pdftex.def)             Requested size: 146.2pt x 131.33246pt.
+
+Underfull \hbox (badness 1038) in paragraph at lines 134--138
+[]\OT1/cmr/m/n/10 Ubung, oder ``S/P" fur Sem-i-nar oder Prak-tikum. Fur
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
+
+ []
+
+<./images/gruppen-menu.png, id=378, 38.39343pt x 49.68562pt>
+File: ./images/gruppen-menu.png Graphic file (type png)
+
+<use ./images/gruppen-menu.png>
+Package pdftex.def Info: ./images/gruppen-menu.png used on input line 143.
+(pdftex.def)             Requested size: 34.40115pt x 44.5218pt.
+ [18 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/imag
+es/MethodsUntis.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
+
+ []
+
+<./images/Gruppen.png, id=386, 656.4525pt x 154.32657pt>
+File: ./images/Gruppen.png Graphic file (type png)
+
+<use ./images/Gruppen.png>
+Package pdftex.def Info: ./images/Gruppen.png used on input line 153.
+(pdftex.def)             Requested size: 430.00462pt x 101.09052pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
 
  []
 
 [19 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
-s/Rooms.png>]
-Overfull \hbox (17.17679pt too wide) in paragraph at lines 220--225
+s/gruppen-menu.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis U
+sers Guide/images/Gruppen.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 188--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--191
+
+ []
+
+<./images/dozenten-menu.png, id=399, 41.4047pt x 49.68562pt>
+File: ./images/dozenten-menu.png Graphic file (type png)
+
+<use ./images/dozenten-menu.png>
+Package pdftex.def Info: ./images/dozenten-menu.png used on input line 196.
+(pdftex.def)             Requested size: 34.40115pt x 41.28302pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--204
+
+ []
+
+<./images/Teachers.png, id=400, 532.23843pt x 164.86594pt>
+File: ./images/Teachers.png Graphic file (type png)
+
+<use ./images/Teachers.png>
+Package pdftex.def Info: ./images/Teachers.png used on input line 207.
+(pdftex.def)             Requested size: 344.005pt x 106.56033pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
+
+ []
+
+[20 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/dozenten-menu.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis 
+Users Guide/images/Teachers.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
+
+ []
+
+<./images/raume-menu.png, id=412, 31.61812pt x 49.68562pt>
+File: ./images/raume-menu.png Graphic file (type png)
+
+<use ./images/raume-menu.png>
+Package pdftex.def Info: ./images/raume-menu.png used on input line 243.
+(pdftex.def)             Requested size: 34.40115pt x 54.05997pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--251
+
+ []
+
+<./images/Rooms.png, id=413, 521.69907pt x 137.7647pt>
+File: ./images/Rooms.png Graphic file (type png)
+
+<use ./images/Rooms.png>
+Package pdftex.def Info: ./images/Rooms.png used on input line 254.
+(pdftex.def)             Requested size: 344.005pt x 90.84088pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--275
+
+ []
+
+[21 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/raume-menu.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Use
+rs Guide/images/Rooms.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 276--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
+
+ []
+
+
+Overfull \hbox (17.17679pt too wide) in paragraph at lines 284--289
 \OT1/cmr/m/n/10 Raumgruppen sind Grup-pierun-gen von Raumen nach Typ, Ausstat-
 tung, Ka-pazitat, Ver-wen-dungszweck,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--225
+Underfull \hbox (badness 10000) in paragraph at lines 284--289
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--225
+Underfull \hbox (badness 10000) in paragraph at lines 284--289
 
  []
 
-<./images/RoomGroups.png, id=361, 475.02469pt x 112.92188pt>
+<./images/RoomGroups.png, id=425, 475.02469pt x 112.92188pt>
 File: ./images/RoomGroups.png Graphic file (type png)
 
 <use ./images/RoomGroups.png>
-Package pdftex.def Info: ./images/RoomGroups.png used on input line 227.
-(pdftex.def)             Requested size: 430.00462pt x 102.22318pt.
+Package pdftex.def Info: ./images/RoomGroups.png used on input line 292.
+(pdftex.def)             Requested size: 344.005pt x 81.77924pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--239
+Underfull \hbox (badness 10000) in paragraph at lines 302--304
+
+ []
+
+<./images/facher-menu.png, id=426, 31.61812pt x 49.68562pt>
+File: ./images/facher-menu.png Graphic file (type png)
+
+<use ./images/facher-menu.png>
+Package pdftex.def Info: ./images/facher-menu.png used on input line 309.
+(pdftex.def)             Requested size: 34.40115pt x 54.05997pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--239
+Underfull \hbox (badness 10000) in paragraph at lines 314--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--239
-
- []
-
-[20 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
-s/RoomGroups.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 243--248
-
+Overfull \hbox (0.60715pt too wide) in paragraph at lines 314--321
+\OT1/cmr/m/n/10 Facher haben die beson-dere Eigen-schaft, dass sie nicht im Sc
+huljahr-Periode gepflegt wer-den mussen,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--248
+Underfull \hbox (badness 10000) in paragraph at lines 314--321
 
  []
 
-<./images/Subjects.png, id=367, 497.60907pt x 161.85469pt>
+[22 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/RoomGroups.png> <C:/Users/James/Projects/lib_thm_core/documentation/Untis Use
+rs Guide/images/facher-menu.png>]
+<./images/Subjects.png, id=433, 497.60907pt x 161.85469pt>
 File: ./images/Subjects.png Graphic file (type png)
 
 <use ./images/Subjects.png>
-Package pdftex.def Info: ./images/Subjects.png used on input line 250.
-(pdftex.def)             Requested size: 430.00462pt x 139.869pt.
+Package pdftex.def Info: ./images/Subjects.png used on input line 324.
+(pdftex.def)             Requested size: 344.005pt x 111.8947pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--264
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--264
+Underfull \hbox (badness 10000) in paragraph at lines 334--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--264
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 
  []
 
-[21 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
-s/Subjects.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 268--42
+[23 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/image
+s/Subjects.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 344--346
+
+ []
+
+<./images/unterrichtsgruppen-symbol.png, id=443, 234.8775pt x 67.75313pt>
+File: ./images/unterrichtsgruppen-symbol.png Graphic file (type png)
+
+<use ./images/unterrichtsgruppen-symbol.png>
+Package pdftex.def Info: ./images/unterrichtsgruppen-symbol.png used on input l
+ine 349.
+(pdftex.def)             Requested size: 146.2pt x 42.17293pt.
+
+Underfull \hbox (badness 2073) in paragraph at lines 354--357
+[]\OT1/cmr/m/n/10 Unterrichtsgruppen findet man in der \OT1/cmtt/m/n/10 Start \
+OT1/cmr/m/n/10 Leiste im
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 354--357
+\OT1/cmr/m/n/10 Rubrik \OT1/cmtt/m/n/10 Module\OT1/cmr/m/n/10 . Es sind bere-it
+s in jede Schule Un-
+ []
+
+
+Underfull \hbox (badness 4899) in paragraph at lines 354--357
+\OT1/cmr/m/n/10 es eure Auf-gabe diese die Gegeben-heiten eure Fach-
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 354--357
+\OT1/cmr/m/n/10 bere-iche anzu-passen. Beispiele fur Un-ter-richts-grup-pen
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 354--357
+\OT1/cmr/m/n/10 findet man in [][][][]Un-ter-richts-grup-pen MNI 2014/2015[][],
+ Sek-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--357
+
+ []
+
+<./images/unterrichtsgruppen-ansicht.png, id=446, 424.58624pt x 222.07968pt>
+File: ./images/unterrichtsgruppen-ansicht.png Graphic file (type png)
+
+<use ./images/unterrichtsgruppen-ansicht.png>
+Package pdftex.def Info: ./images/unterrichtsgruppen-ansicht.png used on input 
+line 362.
+(pdftex.def)             Requested size: 146.2pt x 76.46846pt.
+
+<./images/unterrichtsgruppen-kalender-ansicht.png, id=447, 785.18344pt x 374.14
+781pt>
+File: ./images/unterrichtsgruppen-kalender-ansicht.png Graphic file (type png)
+ <use ./images/unterrichtsgruppen-kalender-ansicht.png>
+Package pdftex.def Info: ./images/unterrichtsgruppen-kalender-ansicht.png used 
+on input line 367.
+(pdftex.def)             Requested size: 146.2pt x 69.66156pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--379
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--42
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
 
  []
 
-[22]
+
+Underfull \hbox (badness 1102) in paragraph at lines 387--389
+\OT1/cmr/m/n/10 ist die Fein-justierung. Um akku-rate Un-ter-richtsverlaufe
+ []
+
+) [24 <C:/Users/James/Projects/lib_thm_core/documentation/Untis Users Guide/ima
+ges/unterrichtsgruppen-symbol.png> <C:/Users/James/Projects/lib_thm_core/docume
+ntation/Untis Users Guide/images/unterrichtsgruppen-ansicht.png> <C:/Users/Jame
+s/Projects/lib_thm_core/documentation/Untis Users Guide/images/unterrichtsgrupp
+en-kalender-ansicht.png>]
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\lessons.
+tex"
 Chapter 3.
-[23
+) [25
+
+
+
+]
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\schedule
+s.tex"
+Chapter 4.
+) [26
+
 
 
 ]
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\advanced
 _settings.tex"
-Chapter 4.
-) [24
+Chapter 5.
+) [27
+
 
 
 ]
 Appendix A.
-[25
+[28
 
 
 ]
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\room_cat
-egories.tex" [26
+egories.tex" [29
 
-]) [27]
+]) [30]
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\lesson_t
 emporal_behavior.tex"
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
@@ -1944,12 +2274,12 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
- [28
+ [31
 
 
-]) [29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
+]) [32]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
 
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\untis.au
 x"
@@ -1957,38 +2287,42 @@ x"
 information.aux")
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\data.aux
 ")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\lessons.
+aux")
+("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\schedule
+s.aux")
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\advanced
 _settings.aux")
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\room_cat
 egories.aux")
 ("C:\Users\James\Projects\lib_thm_core\documentation\Untis Users Guide\lesson_t
 emporal_behavior.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
 Package rerunfilecheck Info: File `untis.out' has not changed.
-(rerunfilecheck)             Checksum: 8B6DBAB6F3071F657C1DE60F994CA33E;2132.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
+(rerunfilecheck)             Checksum: A971065C076FE3631EFB3B721B0B65EE;2258.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
- 9410 strings out of 493706
- 143482 string characters out of 3142166
- 233580 words of memory out of 3000000
- 12412 multiletter control sequences out of 15000+200000
- 13705 words of font info for 52 fonts, out of 3000000 for 9000
+ 9498 strings out of 493706
+ 146639 string characters out of 3142166
+ 234853 words of memory out of 3000000
+ 12471 multiletter control sequences out of 15000+200000
+ 13873 words of font info for 53 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,8n,35p,799b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,7n,35p,1045b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on untis.pdf (32 pages, 851833 bytes).
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on untis.pdf (36 pages, 804458 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 474 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 548 PDF objects out of 1000 (max. 8388607)
+ 127 named destinations out of 1000 (max. 500000)
+ 545 words of extra memory for PDF output out of 10000 (max. 10000000)
 
