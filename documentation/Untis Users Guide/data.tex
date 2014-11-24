@@ -1,5 +1,5 @@
 
-\chapter{Stammdatenpflege}
+\chapter{Stammdaten- und Lehrplanungpflege}
 \label{chap:data}
 
 \section{Allgemeine Hinweise zur Datenpflege}
@@ -8,7 +8,7 @@
 
 \subsubsection{Allgemeine Pflichtfelder}
 
-Bei einzelne Datensätze ist \texttt{Name} ist ein einzigartiger Schlüsselwert, der das schnelle eintippen diese Ressource in Untis ermöglicht. Er soll dementsprechend so kurz und aussagekräftig wie möglich, gehalten werden. Der \texttt{Langname}, bzw. \texttt{Nachname}, hingegen enthält den tatsächlichen Namen der jeweilige Ressource. \textbf{Bei einzelne Datensätze sind die Name und Langname Angaben immer Pflicht}.\\
+Bei einzelne Datensätze ist \texttt{Name} ist ein einzigartiger Schlüsselwert, der das schnelle eintippen diese Ressource in Untis ermöglicht. Er soll dementsprechend so kurz und aussagekräftig wie möglich, gehalten werden. Der \texttt{Langname}, bzw. \texttt{Nachname}, hingegen enthält den tatsächlichen Namen der jeweilige Ressource. \textbf{Bei einzelne Datensätze sind die Name und Langname Angaben immer Pflicht}.
 
 \subsubsection{Externer Name}
 \label{sec:ext-name}
@@ -19,8 +19,6 @@ Bei einzelne Datensätze ist \texttt{Name} ist ein einzigartiger Schlüsselwert,
 \subsection{Planungsabschnitte (Perioden)}
 
 Planungsabschnitte werden mit der Ressource \texttt{Perioden} in Untis modelliert. Diese Ressourcen sind bereits eingepflegt. Man kann zwischen den jeweiligen Perioden mittels eine Auswahlbox in der obere Menüleiste zwischen den jeweiligen Perioden wechseln. Die Semester sind in der Regel der Hauptplanungsabschnitt an der THM, das Schuljahr hingegen ist für die Pflege von Stammdaten gedacht.\\
-
-\newpage
 
 \begin{wrapfigure}{r}{0.25\textwidth}
 	\vspace{-4pt}
@@ -302,6 +300,8 @@ Von der \texttt{Start} Leiste drückt man klappt man \texttt{Räume} auf und wä
 \noindent
 \texttt{Raum}: Eine Komma-getrennte Liste der Räume, die dieser Gruppe gehören. (Pflicht, sofern verwendet)\\
 
+\newpage
+
 \section{Fächer}
 
 \begin{wrapfigure}{r}{0.08\textwidth}
@@ -337,8 +337,6 @@ Um diese zu erstellen oder bearbeiten, muss man in der \texttt{Start} Leiste \te
 \noindent
 \texttt{Beschr.} (Kompetenz): Assoziiert das Fach mit einem Kompetenz. (Pflicht, sehe \secref{subsec:fachkompetenzen})\\
 
-\newpage
-
 \section{Unterrichtsgruppen}
 
 \noindent
@@ -368,6 +366,7 @@ Unterrichtsgruppen findet man in der \texttt{Start} Leiste im Rubrik \texttt{Mod
 	\vspace{-5pt}
 	\caption{Unterrichtsgruppen Kalender}
 	\label{fig:unterrichtsgruppen-kalender-ansicht}
+	\vspace{-25pt}
 \end{wrapfigure}
 
 \noindent
@@ -385,10 +384,35 @@ Unterrichtsgruppen findet man in der \texttt{Start} Leiste im Rubrik \texttt{Mod
 \vspace{8pt}
 
 \noindent
-Was Unterrichtsgruppen von der Datenpflege besonders macht ist die Feinjustierung. Um akkurate Unterrichtsverläufe einzupflegen reichen diese Start- und Enddaten selten aus. Daher muss man hier meistens den Schuljahreskalender-Ansicht verwenden. Im Kalender Ansicht kann man Datenbereiche überstreichen oder einzelne Tage anklicken um diese in den Verlauf der Unterrichtgruppe zu übernehmen oder entfernen. Schliesslich klickt man auf \texttt{Ok} oder \texttt{Übernahme} um die Änderungen geltend zu machen.
+Was Unterrichtsgruppen von der Datenpflege besonders macht ist die Feinjustierung. Um akkurate Unterrichtsverläufe einzupflegen reichen diese Start- und Enddaten selten aus. Daher muss man hier meistens den Schuljahreskalender-Ansicht verwenden. Im Kalender Ansicht kann man Datenbereiche überstreichen oder einzelne Tage anklicken um diese in den Verlauf der Unterrichtgruppe zu übernehmen oder entfernen. Schließlich klickt man auf \texttt{Ok} oder \texttt{Übernahme} um die Änderungen geltend zu machen.\\
 
+\section{Unterrichte (Lehrplanung)}
 
+Unterrichte sind die Untis Umsetzung der Lehrplanung, welche aus der Ressourcen der Stammdaten zusammensetzt. Sie sind die Instanzen eines Faches, gehalten in einem Unterrichtsform von einem Dozenten in einem Raum, für bestimmte Studentengruppen.\\
+\\
+Unterricht erreicht man in dem man die Pfeile unter die vier Hauptstammdaten betätigt und \texttt{Unterrichte} anklickt.
 
+\newpage
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.8\textwidth]{unterrichte}
+	\vspace{-5pt}
+	\caption{Unterrichte}
+	\label{fig:unterrichte}
+\end{figure}
+
+\noindent
+{\large Attributes\par}
+\vspace{8pt}
+
+\noindent
+\texttt{Wochenstunden} (Wst):  Die Anzahl der Stunden pro Woche in dem dieser Unterricht stattfinden sollte. Abhängig von wie (Pflicht bei reguläre Veranstaltungen, sehe \secref{sec:zeitverlauf})\\
+
+\subsubsection{Zeitverlauf}
+\label{sec:zeitverlauf}
+
+bla
 
 
 
