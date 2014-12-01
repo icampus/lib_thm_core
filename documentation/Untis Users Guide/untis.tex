@@ -21,10 +21,15 @@
 	pdfborderstyle={/S/U/W 1}
 }
 \usepackage{hypcap}
+\usepackage{multicol}
+\usepackage{wasysym}
+\usepackage[german]{babel}
+
+
 
 % Add semantic reference commands
 \newcommand*{\figref}[1]{%
-	\hyperref[{#1}]{Figure~\ref*{#1}}%
+	\hyperref[{#1}]{Abbildung~\ref*{#1}}%
 }%
 \newcommand*{\chapref}[1]{%
 	\hyperref[{#1}]{\nameref{#1},~Kapital~\ref*{#1}}%
@@ -52,7 +57,9 @@
 
 \include{general_information}
 \include{data}
+\include{lessons}
 \include{schedules}
+\include{overview}
 \include{advanced_settings}
 
 \begin{appendices}
