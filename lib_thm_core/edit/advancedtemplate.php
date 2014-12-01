@@ -30,6 +30,7 @@ class THM_CoreTemplateAdvanced
      */
     public static function render(&$view)
     {
+
         $option = JFactory::getApplication()->input->get('option');
         $resource = str_replace('_edit', '', $view->get('name'));
 ?>
