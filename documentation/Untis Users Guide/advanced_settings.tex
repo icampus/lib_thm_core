@@ -124,9 +124,10 @@ Fenstergruppen die als \texttt{Public} gekennzeichnet sind, können von allen Be
 \section{Formate}
 \label{sec:formate}
 
-Wo Fenstergruppen schnellen Zugriff auf mehrere Fenster ermöglichen, ermöglichen Formate den schnellen Zugriff auf Informationen, inden man Fenster seine Informationsverbrauch und sein Umgang mit dem Programm anpasst, z.B. durch eingeblendete Attribute, Font-Anpassungen, etc.\\
+Wo Fenstergruppen schnellen Zugriff auf mehrere Fenster ermöglichen, ermöglichen Formate den schnellen Zugriff auf Informationen, inden man Fenster seine Informationsverbrauch und sein Umgang mit dem Programm anpasst, z.B. durch eingeblendete Attribute, Font-Anpassungen, etc. Obwohl schon für Stammdaten- und Unterricht-Ansichten in 
+\secref{sec:formate-dialog}, dieser Sektion liefert für diese eine neue Perspektive, sowie die einzige direkte Bearbeitungsmöglichkeit für Stundenplan-Ansichten.\\
 \\
-Formate erreicht man am leichtesten im Reiter \texttt{Dateieingabe} über \texttt{Formate} im Rubrik \texttt{Werkzeuge}.
+Formate erreicht man am leichtesten im Reiter \texttt{Dateieingabe} über \texttt{Formate} im Rubrik \texttt{Werkzeuge}.\\
 
 \begin{figure}[h]
 	\includegraphics[width=1\textwidth]{formate-menu}
@@ -135,10 +136,11 @@ Formate erreicht man am leichtesten im Reiter \texttt{Dateieingabe} über \textt
 	\label{fig:formate-menu}
 \end{figure}
 
-\newpage
+\vspace{10pt}
 
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
+	\vspace{-14pt}
 	\includegraphics[width=.38\textwidth]{formate-unterricht-schnittstelle}
 	\vspace{-5pt}
 	\caption{Formate: Unterricht-Ansicht}
@@ -152,9 +154,9 @@ Es gibt drei Formatierbare Ansichtstyps: Stammdaten, Unterrichte und Stundenplä
 \subsection{Aktionen}
 
 \begin{wrapfigure}{r}{.05\textwidth}
-	\vspace{-25pt}
+	\vspace{-14pt}
 	\includegraphics[width=.05\textwidth]{ansicht-anzeigen-symbol}
-	\vspace{-35pt}
+	\vspace{-40pt}
 \end{wrapfigure}
 
 \subsubsection{Ansicht Anzeigen}
@@ -165,9 +167,9 @@ Es gibt drei Formatierbare Ansichtstyps: Stammdaten, Unterrichte und Stundenplä
 Eröffnet die markierte Format des Ansichtstyps.\\
 
 \begin{wrapfigure}{r}{.05\textwidth}
-	\vspace{-25pt}
+	\vspace{-14pt}
 	\includegraphics[width=.05\textwidth]{neu-symbol}
-	\vspace{-35pt}
+	\vspace{-40pt}
 \end{wrapfigure}
 
 \subsubsection{Neu}
@@ -175,12 +177,12 @@ Eröffnet die markierte Format des Ansichtstyps.\\
 \vspace{10pt}
 
 \noindent
-Das Klicken des Neu-Symbols bewirkt nur das erzeugen eines neues Formates bei Stundenpläne. Stammdatenformate und Unterrichtsformatte müssen von der jeweilige Ansicht erzeugt werden.\\
+Das Klicken des Neu-Symbols bewirkt das erzeugen eines neues Formates nur bei Stundenpläne. Stammdatenformate und Unterrichtsformatte müssen von der jeweilige Ansicht erzeugt werden und das Symbol hier ist völlig wirkungslos.\\
 
 \begin{wrapfigure}{r}{.05\textwidth}
-	\vspace{-25pt}
+	\vspace{-14pt}
 	\includegraphics[width=.05\textwidth]{loschen-symbol}
-	\vspace{-35pt}
+	\vspace{-40pt}
 \end{wrapfigure}
 
 \subsubsection{Löschen}
@@ -191,9 +193,9 @@ Das Klicken des Neu-Symbols bewirkt nur das erzeugen eines neues Formates bei St
 Hat man ein, von einem Benutzer erstellten, Format markiert wird er beim anklicken des Symbols gelöscht.\\
 
 \begin{wrapfigure}{r}{.06\textwidth}
-	\vspace{-25pt}
+	\vspace{-14pt}
 	\includegraphics[width=.06\textwidth]{ressource-auswahl-symbol}
-	\vspace{-35pt}
+	\vspace{-40pt}
 \end{wrapfigure}
 
 \subsubsection{Ressourcenauswahl}
@@ -206,16 +208,16 @@ Schränkt die angezeigten Ansichtsformate auf die der ausgewählte Ressource ein
 \subsection{Attribute}
 
 \subsubsection{Standard}
-Man soll hiermit entscheiden können ob diese als Standard-Format einsetzen soll. Leider funktioniert dies nicht, denn vieles an Klärungsbedarf würde hiermit entfallen. (Ignorieren)
+Man soll hiermit entscheiden können ob diese als Standard-Format einsetzen soll. Leider funktioniert dies nicht, denn vieles an Klärungsbedarf würde hiermit entfallen.\\ (Ignorieren)
 
 \subsubsection{im Menu}
-Mit dieser Angabe kann man entscheiden ob das Format im jeweiligen Ressourcenmenü erscheinen soll. Diese funktioniert und erleichtert die Benutzung des Programms sehr. (Empfohlen)
+Mit dieser Angabe kann man entscheiden ob das Format im jeweiligen Ressourcenmenü erscheinen soll. Diese funktioniert und erleichtert die Benutzung des Programms sehr. (Empfohlen)\\
 
 \subsubsection{- Alle -}
-Diese Angabe scheint wirkungslos zu sein und ist nur bei Format-Typ Unterricht vertreten. Sie wird weder im Untis eigene Dokumentation vorgeführt, noch gibt es einen Tooltip. (Ignorieren)
+Diese Angabe scheint wirkungslos zu sein und ist nur bei Format-Typ Unterricht vertreten. Sie wird weder im Untis eigene Dokumentation vorgeführt, noch gibt es einen Tooltip. (Ignorieren)\\
 
 \subsubsection{Public}
-Diese Angabe macht die Ansicht für andere Benutzer sichtbar und kann ich nur empfehlen, wenn mehrere Kollegen die gleiche sicht auf Daten und/oder Pläne haben sollten. Im Zusammenspiel mit der Angabe \texttt{im Menu}, werden entsprechend andere Benutzer auch dieses Format im Stammdatenmenü verwenden können. (Empfohlen)
+Diese Angabe macht die Ansicht für andere Benutzer sichtbar und kann ich nur empfehlen, wenn mehrere Kollegen die gleiche sicht auf Daten und/oder Pläne haben sollten. Im Zusammenspiel mit der Angabe \texttt{im Menu}, werden entsprechend andere Benutzer auch dieses Format im Stammdatenmenü verwenden können. (Empfohlen)\\
 
 \section{Stundenplan-Einstellungen}
 \label{sec:stundenplan-einstellungen}
@@ -234,12 +236,11 @@ Alle Stundenplan-Ansichten haben die gleiche Einstellung-Ansicht, wie im \figref
 
 \vspace{20pt}
 
-\subsection{Format}
+\subsection{Stundenplan-Ausrichtungen}
+\label{sec:stundenplan-formate}
 
 \noindent
-Im \texttt{Stundenplanformate} kann man zwischen sechs unterschiedliche Stundenplanformate auswählen. Diese werden wiederum untergeordnet in \texttt{Einzelstundenpläne}, Pläne für eine Ressource, und \texttt{Stundenplan-Übersichtspläne}, in dem mehrere Ressourcen dargestellt werden. Wenn man eine bereits vorhandene Einzelstundenplan- oder Übersichtsplan-Format anpasst, kann man nur andere Formate des gleichen untergeordneten Format auswählen. Bei neu erstellte, wie in \secref{sec:formate} beschrieben, kann man frei zwischen beide Unterformate entscheiden.\\
-
-\newpage
+Im \texttt{Stundenplanformate} kann man zwischen sechs unterschiedliche Stundenplan-Ausrichtungen auswählen. Diese werden wiederum untergeordnet in \texttt{Einzelstundenpläne}, Pläne für eine Ressource, und \texttt{Stundenplan-Übersichtspläne}, in dem mehrere Ressourcen dargestellt werden. Wenn man eine bereits vorhandene Einzelstundenplan- oder Übersichtsplan-Format anpasst, kann man nur andere Formate des gleichen untergeordneten Format auswählen. Bei neu erstellte, wie in \secref{sec:formate} beschrieben, kann man frei zwischen beide Unterformate entscheiden.\\
 
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\vspace{-14pt}
@@ -248,6 +249,7 @@ Im \texttt{Stundenplanformate} kann man zwischen sechs unterschiedliche Stundenp
 	\vspace{-5pt}
 	\caption{Stundenplanformate}
 	\label{fig:stundenplanformate}
+	\vspace{-15pt}
 \end{wrapfigure}
 
 \noindent
@@ -351,3 +353,5 @@ Im Bereich \texttt{Feldart} können Sie auswählen welches Attribut eines Unterr
 
 \section{Drück-Einstellungen}
 \label{sec:druck-einstellungen}
+
+Werden später ergänzt.

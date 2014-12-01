@@ -586,11 +586,13 @@ Es gibt Felder in Untis, die mit mehrere Ressourcen befüllt werden können. Um 
 \section{Formate}
 \label{sec:formate-dialog}
 
-Formate sind festgelegte Darstellungen von Ressourcen. Wegen der Zwiespalt in der Untis-Benutzerführung, zwischen Stammdaten/Unterrichte und Stundenpläne, werden sowohl hier als auch in \secref{sec:formate}, behandelt. Die Beschreibungen hier betreffen Stammdaten- und Unterricht-Ansichten.
+Formate sind festgelegte Darstellungen von Ressourcen. Wegen der Zwiespalt in der Untis-Benutzer-führung, zwischen Stammdaten/Unterrichte und Stundenpläne, werden sowohl hier als auch in \secref{sec:formate}, behandelt. Die Beschreibungen hier betreffen Stammdaten- und Unterricht-Ansichten. Man kann zwischen Formate mittels die Auswahlbox im unteren rechen Bereich des Fensters wechseln.
 
 \subsection{Formate Ändern}
 
-Um Ihren Umgang mit Untis zu erleichtern werden Sie oft die dargestellte Informationen anpassen wollen. Es gibt viele Änderungen die man vornehmen kann. Bis jetzt würden zwei davon in \secref{sec:symbolleiste-aktionen}, erwähnt: das ein- oder ausblenden von Attribute über \nameref{sec:felder-der-ansicht} und Schriftanpassungen über  \nameref{sec:einstellungen}. Es gibt aber zwei weitere Anpassungen, die man vornehmen kann.
+Um Ihren Umgang mit Untis zu erleichtern werden Sie oft die dargestellte Informationen anpassen wollen. Es gibt viele Änderungen die man vornehmen kann. Bis jetzt würden zwei davon in \secref{sec:symbolleiste-aktionen}, erwähnt: das ein- oder ausblenden von Attribute über \nameref{sec:felder-der-ansicht} und Schriftanpassungen über  \nameref{sec:einstellungen}. Es gibt aber zwei weitere Anpassungen, die man vornehmen kann.\\
+\\
+Sollte man Spalten ein- oder ausgeblendet haben, wird nach der aktuell angezeigte Format ein ``*" \hspace{1pt} an den Namen angehängt, um Ihnen zu zeigen, dass Sie Änderungen vorgenommen haben. Bei andere Änderungsarten wird jedoch kein ``*" \hspace{1pt} angehängt.
 
 \subsubsection{Spaltenreihenfolge Ändern}
 
@@ -601,7 +603,7 @@ Wenn man die Trennung zwischen zwei Spalten bewegt ändert sich die Breite der e
 
 \newpage
 
-\subsection{Formate Speichern}
+\subsection{Formate speichern}
 
 \begin{wrapfigure}{r}{.4\textwidth}
 	\vspace{-14pt}
@@ -610,6 +612,34 @@ Wenn man die Trennung zwischen zwei Spalten bewegt ändert sich die Breite der e
 	\vspace{-5pt}
 	\caption{Formatbox}
 	\label{fig:format-speichern}
+	\vspace{-35pt}
 \end{wrapfigure}
 
-Um die vorgenommene Änderungen wieder aufrufbar zu machen, speichert man die als \texttt{Formate}. In Stammdaten- und Unterricht-Ansichten sieht man im jeweiligen Fenster unten rechts eine Auswahlbox.
+Um die vorgenommene Änderungen wieder aufrufbar zu machen, speichert man die als \texttt{Formate}. Dies wird vorgenommen durch die zuvor erwähnte Auswahlbox in der unteren rechten Ecke des Fensters.
+
+\subsubsection{Format Speichern}
+
+Speichert alle vorgenommene Änderungen zur aktuellen Ansicht in der aktuelle Ansicht. Sollte man eine Ansicht, die nicht von einem Benutzer erstellt wurde, geändert haben, wird doch eine neue Ansicht angelegt. Dieses Verhalten wird aber erst bemerkbar wenn ein andere Benutzer die 'selbe' Ansicht verwendet und sie sieht komplett anders aus.
+
+\subsubsection{Format speichern als...}
+
+\begin{wrapfigure}{r}{.4\textwidth}
+	\vspace{-14pt}
+	\centering
+	\includegraphics[width=.38\textwidth]{neues-format}
+	\vspace{-5pt}
+	\caption{Neues Format}
+	\label{fig:neues-format}
+	\vspace{-15pt}
+\end{wrapfigure}
+
+Speichert die vorgenommene Änderungen als ein neues Format. Nach der Auswahl wird ein Dialog geöffnet in dem man einen neuen Namen und Langnamen angeben kann. Hier kann man auch ein Häkchen setzten, um die Ansicht dem respektiven Stammdatenmenü hinzuzufügen, oder das Format alle Benutzer der Schule zugänglich zu machen. Sollte mehrere Benutzer häufig auf die selben Daten zugreifen ist es auf jeden Fall empfehlenswert diese zwei Häkchen zu setzen.
+
+\subsubsection{Bearbeiten}
+
+Öffnet die gleiche Dialog wie bei \texttt{Format speichern als...} mit einer anderen Beschriftung. Hier kann man vorhandene Formate umbenennen, sowie nachträglich die Häkchen für den Menüeintrag und Veröffentlichung setzen oder entfernen.
+
+\subsubsection{Löschen}
+
+Löscht die aktuelle Ansicht. Sollte dieses Format nicht von einem Benutzer erstellt sein, kann es unter Umständen dazu führen, dass das Programm abstürzt.
+ 
