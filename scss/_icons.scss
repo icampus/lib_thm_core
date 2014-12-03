@@ -154,12 +154,20 @@
 .icon-diff, .icon-import{
   font-weight: bold;
 }
-/*icons in Titelseite hinzufuegen */
+.icon-import{
+
+  content:"\51";
+}
+.icon-merge{
+
+  content:"\69";
+}
+/*icons zur jeweiligen View im Header hinzufuegen */
 .icon-organizer::before {
-  content: "\21";
+  content: "\e60b";
 }
 .icon-organizer_degrees::before {
-  content: "\e60a";
+  content: "\e606";
 }
 .icon-organizer_users::before {
   content: "\e01f";
@@ -168,10 +176,10 @@
   content: "\e01c";
 }
 .icon-organizer_teachers::before{
-  content: "\e608";
+  content: "\e604";
 }
 .icon-organizer_subjects::before{
-  content: "\e606";
+  content: "\e603";
 }
 .icon-organizer_fields::before{
   content: "\74";
@@ -183,32 +191,33 @@
   content: "\43";
 }
 .icon-organizer_rooms::before{
-  content: "\e600";
+  content: "\e60a";
 }
 .icon-organizer_degree_programs::before{
-  content: "\e609";
+  content: "\31";
 }
 .icon-organizer_schedules::before{
-  content: "\e601";
+  content: "\e600";
 }
 .icon-organizer_categories::before{
-  content: "\e607";
+  content: "\e601";
 }
 .icon-mni::before{
-  content: "\e602";
+  content: "\e600";
 }
 /*icons zu sidebar hinzufuegen*/
 li {
-  a[href*="view=thm_organizer"]::before, a[href*="option=com_thm_organizer"]::before
+  a[href$="view=thm_organizer"]::before, a[href$="option=com_thm_organizer"]::before
   {
     font-family: icomoon;
-    content: "\21";
-    font-size: 12px;
+    content: "\e60b";
+    font-size: 16px;
     padding-right: 8px;
+    color:#80ba24;
   }
   a[href*="view=degree_manager"]::before {
     font-family: icomoon;
-    content: "\e60a";
+    content: "\e606";
     font-size: 12px;
     padding-right: 8px;
   }
@@ -226,13 +235,13 @@ li {
   }
   a[href*="view=teacher_manager"]::before {
     font-family: icomoon;
-    content: "\e608";
+    content: "\e604";
     font-size: 12px;
     padding-right: 8px;
   }
   a[href*="view=subject_manager"]::before {
     font-family: icomoon;
-    content: "\e606";
+    content: "\e603";
     font-size: 12px;
     padding-right: 8px;
   }
@@ -256,31 +265,31 @@ li {
   }
   a[href*="view=room_manager"]::before {
     font-family: icomoon;
-    content: "\e600";
+    content: "\e60a";
     font-size: 12px;
     padding-right: 8px;
   }
   a[href*="view=program_manager"]::before {
     font-family: icomoon;
-    content: "\e609";
+    content: "\31";
     font-size: 12px;
     padding-right: 8px;
   }
   a[href*="view=schedule_manager"]::before {
     font-family: icomoon;
-    content: "\e601";
+    content: "\e600";
     font-size: 12px;
     padding-right: 8px;
   }
   a[href*="view=category_manager"]::before {
     font-family: icomoon;
-    content: "\e607";
+    content: "\e601";
     font-size: 12px;
     padding-right: 8px;
   }
   a[href*="view=virtual_schedule_manager"]::before {
     font-family: icomoon;
-    content: "\e602";
+    content: "\e600";
     font-size: 12px;
     padding-right: 8px;
   }

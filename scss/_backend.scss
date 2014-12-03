@@ -1,5 +1,6 @@
 @import 'mixins';
 @import 'icons';
+@import 'variables';
 
 /*Filter- und Search-Bereich anpassen */
 .searchArea a, thead a{
@@ -17,7 +18,7 @@
 
 thead {
   tr:nth-child(1) th {
-    @include linearGradient(#cce3a7,#B9D986);
+    @include linearGradient($gr-color-bottom-bg,$gr-color-top-bg);
     padding-top: 5px;
     padding-bottom: 2px;
     padding-left: 1px;
@@ -37,7 +38,7 @@ thead {
     }
   }
   tr:nth-last-child(1) th {
-    @include linearGradient(#B9D986, #cce3a7);
+    @include linearGradient($gr-color-top-bg, $gr-color-bottom-bg);
     white-space: pre-wrap;
     padding-top: 0px;
     padding-left: 0px;
@@ -48,7 +49,6 @@ thead {
       padding-left: 8px;
     }
     &:last-child {
-      // white-space: pre-wrap;
       border-bottom-right-radius: 3px;
     }
   }
@@ -59,10 +59,13 @@ tbody tr:first-child td{
 }
 
 /*Filterbreite anpassen, ohne: von chosen festgelegt */
-.js-stools-field-filter {
+.js-stools-field-filter, .js-stools-field-list {
   max-width: 200px;
   select{
     width: auto;
+  }
+  span{
+    overflow: hidden !important;  /* sonst von jquery.searchtools.css überschrieben */
   }
 }
 
@@ -74,33 +77,48 @@ tbody tr:first-child td{
   }
 }
 
-.nav-list li.active a{
-  @include linearGradient(#62c462,#51a351);
+.nav-list li.active a, .dropdown-submenu:hover > a[href*="option=com_thm_organizer"], #menu-com-thm-organizer a:hover{
+  @include linearGradient($gr-color-top-item,$gr-color-bottom-item);
 }
-
 /* Mapping anpassen */
 #mapping{
-  .control-group:nth-of-type(1){
-    width:50%;
-    float: left;
-    .controls select {
-      width: 90%;
+  @media (min-width: 768px) {
+    .control-group:nth-of-type(1) {
+      width: 50%;
+      float: left;
+      .controls select {
+        width: 95%;
+      }
     }
-  }
-  .control-group:nth-of-type(2){
-    width:50%;
-    float: right;
-    .controls select {
-      width: 90%;
+    .control-group:nth-of-type(2) {
+      width: 50%;
+      float: right;
+      .controls select {
+        width: 95%;
+      }
     }
-  }
-  .control-group:nth-of-type(3){
-    clear:both;
+    .control-group:nth-of-type(3) {
+      clear: both;
+    }
   }
   .chzn-container-multi .chzn-choices li {
     float: none;
     margin-right:5px;
     margin-top:5px;
+  }
+  .search-choice{
+    border: 1px solid #bbb;
+    @include linearGradient(#ffffff, #f4f4f4);
+    line-height: 14px;
+  }
+  .chzn-choices{
+    @include linearGradient($gr-color-top-bg, $gr-color-bottom-bg);
+    border: 1px solid #bbb;
+    @include border-radius(3px);
+
+  }
+  .highlighted{
+    @include linearGradient($gr-color-top-item,$gr-color-bottom-item);
   }
   table{
     width: auto;
@@ -131,5 +149,3 @@ tbody tr:first-child td{
     }
   }
 }
-
-/*TEST FOR GERRIT */
