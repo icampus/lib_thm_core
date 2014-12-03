@@ -46,10 +46,10 @@ abstract class THM_CoreModelList extends JModelList
         {
             // Limit and start are only here to remove errors made by joomla. Pagination does not use these!
             $data->list = array(
-                'direction' => $this->state->get('list.direction', $this->defaultDirection),
-                'ordering'  => $this->state->get('list.ordering', $this->defaultOrdering),
-                'limit'     => $this->state->get('list.limit', $this->defaultLimit),
-                'start'     => $this->state->get('list.start', $this->defaultStart)
+                'direction' => $this->state->get($this->context . '.list.direction', $this->defaultDirection),
+                'ordering'  => $this->state->get($this->context . '.list.ordering', $this->defaultOrdering),
+                'limit'     => $this->state->get($this->context . '.list.limit', $this->defaultLimit),
+                'start'     => $this->state->get($this->context . '.list.start', $this->defaultStart)
             );
         }
 
@@ -72,7 +72,7 @@ abstract class THM_CoreModelList extends JModelList
         {
             foreach ($filters as $name => $value)
             {
-                $this->setState('filter.' . $name, $value);
+                $this->setState($this->context . '.filter.' . $name, $value);
             }
         }
 
@@ -89,12 +89,12 @@ abstract class THM_CoreModelList extends JModelList
                 $list = array('fullordering'=> '');
             }
             $defaultFullOrdering = "$this->defaultOrdering $this->defaultDirection";
-            $sessionOrdering = $session->get( 'ordering', $list['fullordering'] );
+            $sessionOrdering = $session->get($this->context . '.ordering', $list['fullordering'] );
             $list['fullordering'] = empty($sessionOrdering)? $defaultFullOrdering : $sessionOrdering;
         }
         else
         {
-            $session->set( 'ordering', $list['fullordering']);
+            $session->set($this->context . '.ordering', $list['fullordering']);
         }
 
         // This lines may not work correctly, so there is a workaround
@@ -130,9 +130,9 @@ abstract class THM_CoreModelList extends JModelList
         // Valid entry
         if (in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', '')))
         {
-            $this->setState('list.fullordering', $list->fullordering);
-            $this->setState('list.ordering', $orderingParts[0]);
-            $this->setState('list.direction', $orderingParts[1]);
+            $this->setState($this->context . '.list.fullordering', $list->fullordering);
+            $this->setState($this->context . '.list.ordering', $orderingParts[0]);
+            $this->setState($this->context . '.list.direction', $orderingParts[1]);
             return;
         }
 
@@ -147,9 +147,9 @@ abstract class THM_CoreModelList extends JModelList
      */
     private function setDefaultOrdering()
     {
-        $this->setState('list.fullordering', "$this->defaultOrdering $this->defaultDirection");
-        $this->setState('list.ordering', $this->defaultOrdering);
-        $this->setState('list.direction', $this->defaultDirection);
+        $this->setState($this->context . '.list.fullordering', "$this->defaultOrdering $this->defaultDirection");
+        $this->setState($this->context . '.list.ordering', $this->defaultOrdering);
+        $this->setState($this->context . '.list.direction', $this->defaultDirection);
     }
 
     /**
@@ -193,13 +193,13 @@ abstract class THM_CoreModelList extends JModelList
     {
         $defaultOrdering = "{$this->defaultOrdering} {$this->defaultDirection}";
         $session = JFactory::getSession();
-        $listOrdering = $this->state->get('list.fullordering', $defaultOrdering);
+        $listOrdering = $this->state->get($this->context . '.list.fullordering', $defaultOrdering);
         if (strpos($listOrdering, 'null') !== false)
         {
             $sessionOrdering = $session->get( 'ordering', '' );
             if (empty($sessionOrdering))
             {
-                $session->set('ordering', $defaultOrdering);
+                $session->set($this->context . '.ordering', $defaultOrdering);
                 $query->order($defaultOrdering);
                 return;
             }
@@ -217,7 +217,7 @@ abstract class THM_CoreModelList extends JModelList
      */
     protected function setSearchFilter(&$query, $columnNames)
     {
-        $userInput = $this->state->get('filter.search', '');
+        $userInput = $this->state->get($this->context . '.filter.search', '');
         if (empty($userInput))
         {
             return;
@@ -245,7 +245,7 @@ abstract class THM_CoreModelList extends JModelList
     {
         foreach ($filterNames AS $name)
         {
-            $value = $this->state->get("filter.$name", '');
+            $value = $this->state->get($this->context . ".filter.$name", '');
             if ($value === '')
             {
                 continue;
@@ -279,7 +279,7 @@ abstract class THM_CoreModelList extends JModelList
     {
         foreach ($filterNames AS $name)
         {
-            $value = $this->state->get("filter.$name", '');
+            $value = $this->state->get($this->context . ".filter.$name", '');
             if ($value === '')
             {
                 continue;
@@ -314,7 +314,7 @@ abstract class THM_CoreModelList extends JModelList
         $tag = THM_CoreHelper::getLanguageShortTag();
         foreach ($filterNames AS $name)
         {
-            $value = $this->state->get("filter.$name", '');
+            $value = $this->state->get($this->context . ".filter.$name", '');
             if ($value === '')
             {
                 continue;
