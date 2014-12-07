@@ -85,7 +85,7 @@ abstract class THM_CoreModelList extends JModelList
 
         $value = $this->getUserStateFromRequest('limitstart', 'limitstart', 0);
         $start = ($limit != 0 ? (floor($value / $limit) * $limit) : 0);
-        $this->setState('list.start', $start);echo "<pre>" . print_r($this->state, true) . "</pre>";
+        $this->setState('list.start', $start);
     }
 
     /**
