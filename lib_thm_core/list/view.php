@@ -47,25 +47,12 @@ abstract class THM_CoreViewList extends JViewLegacy
         $document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
         $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
 
-        $this->state = $this->get('State');
-
-        // Workaround: The state for ordering get lost when you use pagination. So it is saved in a session variable
-        // and here saved back to the state.
-        $session = JFactory::getSession();
-        $ordering = $session->get('ordering');
-        $orders = explode(' ', $ordering);
-        if (2 == count($orders))
-        {
-            $this->state->set("list.fullordering", $orders[0] . " " . $orders[1]);
-            $this->state->set("list.ordering", $orders[0]);
-            $this->state->set("list.direction", $orders[1]);
-        }
-
         JHtml::_('bootstrap.tooltip');
         JHtml::_('behavior.multiselect');
         JHtml::_('formbehavior.chosen', 'select');
         JHtml::_('searchtools.form', '#adminForm', array());
 
+        $this->state = $this->get('State');
         $this->items = $this->get('Items');
         $this->pagination = $this->get('Pagination');
 

@@ -41,17 +41,18 @@ abstract class THM_CoreModelList extends JModelList
         // Check the session for previously entered form data.
         $data = JFactory::getApplication()->getUserState($this->context, new stdClass);
 
-        // Pre-fill the list options
+        // Pre-create the list options
         if (!property_exists($data, 'list'))
         {
-            // Limit and start are only here to remove errors made by joomla. Pagination does not use these!
-            $data->list = array(
-                'direction' => $this->state->get($this->context . '.list.direction', $this->defaultDirection),
-                'ordering'  => $this->state->get($this->context . '.list.ordering', $this->defaultOrdering),
-                'limit'     => $this->state->get($this->context . '.list.limit', $this->defaultLimit),
-                'start'     => $this->state->get($this->context . '.list.start', $this->defaultStart)
-            );
+            $data->list = array();
         }
+
+        // Joomla doesn't fill these correctly but requires some of them
+        $data->list['fullordering'] = $this->state->get($this->context . '.list.fullordering', "$this->defaultOrdering $this->defaultDirection");
+        $data->list['ordering'] = $this->state->get($this->context . '.list.ordering', $this->defaultOrdering);
+        $data->list['direction'] = $this->state->get($this->context . '.list.direction', $this->defaultDirection);
+        $data->list['limit'] = $this->state->get($this->context . '.list.limit', $this->defaultLimit);
+        $data->list['start'] = $this->state->get($this->context . '.list.start', $this->defaultStart);
 
         return $data;
     }
@@ -72,34 +73,19 @@ abstract class THM_CoreModelList extends JModelList
         {
             foreach ($filters as $name => $value)
             {
-                $this->setState($this->context . '.filter.' . $name, $value);
+                $this->setState('filter.' . $name, $value);
             }
         }
 
         $list = $app->getUserStateFromRequest($this->context . '.list', 'list', array(), 'array');
+        $this->setStateOrdering($list);
 
-        // This is a workaround. The ordering get lost in the state when you use paginagtion. So the ordering is saved
-        // to a session variable and read from it if the state ordering is null.
-        $session = JFactory::getSession();
-        $getSessionOrdering = (empty($list) OR empty($list['fullordering']) OR strpos($list['fullordering'], 'null') !== false);
-        if($getSessionOrdering)
-        {
-            if (empty($list) || empty($list['fullordering']))
-            {
-                $list = array('fullordering'=> '');
-            }
-            $defaultFullOrdering = "$this->defaultOrdering $this->defaultDirection";
-            $sessionOrdering = $session->get($this->context . '.ordering', $list['fullordering'] );
-            $list['fullordering'] = empty($sessionOrdering)? $defaultFullOrdering : $sessionOrdering;
-        }
-        else
-        {
-            $session->set($this->context . '.ordering', $list['fullordering']);
-        }
+        $limit = empty($list['limit'])? $this->defaultLimit : $list['limit'];
+        $this->setState('list.limit', $limit);
 
-        // This lines may not work correctly, so there is a workaround
-        $this->processFullOrdering($list);
-        parent::populateState();
+        $value = $this->getUserStateFromRequest('limitstart', 'limitstart', 0);
+        $start = ($limit != 0 ? (floor($value / $limit) * $limit) : 0);
+        $this->setState('list.start', $start);echo "<pre>" . print_r($this->state, true) . "</pre>";
     }
 
     /**
@@ -109,47 +95,39 @@ abstract class THM_CoreModelList extends JModelList
      *
      * @return  void  sets state variables
      */
-    private function processFullOrdering($list)
+    private function setStateOrdering($list)
     {
-        // Not set
-        if (empty($list->fullordering))
+        $validRequestOrdering = (!empty($list['ordering']) AND strpos('null', $list['ordering']) !== null);
+        $ordering = $validRequestOrdering? $list['ordering'] : $this->defaultOrdering;
+
+        $validRequestDirection = (!empty($list['direction']) AND in_array(strtoupper($list['direction']), array('ASC', 'DESC', '')));
+        $direction = $validRequestDirection? $list['direction'] : $this->defaultDirection;
+
+        $session = JFactory::getSession();
+        if (!empty($list['fullordering']))
         {
-            $this->setDefaultOrdering();
-            return;
+            // Joomla lost the ordering part through pagination use
+            if (strpos($list['fullordering'], 'null') !== false)
+            {
+                $list['fullordering'] = $sessionOrdering = $session->get($this->context . '.ordering', "$ordering $direction");
+            }
+            $orderingParts = explode(' ', $list['fullordering']);
+            if (count($orderingParts) == 2)
+            {
+                $plausibleOrdering = $orderingParts[0] != 'null';
+                $validDirection = in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', ''));
+                if ($plausibleOrdering AND $validDirection)
+                {
+                    $ordering = $orderingParts[0];
+                    $direction = $orderingParts[1];
+                }
+            }
         }
 
-        $orderingParts = explode(' ', $list->fullordering);
-
-        // Invalid number of arguments
-        if (count($orderingParts) != 2)
-        {
-            $this->setDefaultOrdering();
-            return;
-        }
-
-        // Valid entry
-        if (in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', '')))
-        {
-            $this->setState($this->context . '.list.fullordering', $list->fullordering);
-            $this->setState($this->context . '.list.ordering', $orderingParts[0]);
-            $this->setState($this->context . '.list.direction', $orderingParts[1]);
-            return;
-        }
-
-        // Invalid direction
-        $this->setDefaultOrdering();
-    }
-
-    /**
-     * Sets state variables concerned with the state with default values
-     *
-     * @return  void
-     */
-    private function setDefaultOrdering()
-    {
-        $this->setState($this->context . '.list.fullordering', "$this->defaultOrdering $this->defaultDirection");
-        $this->setState($this->context . '.list.ordering', $this->defaultOrdering);
-        $this->setState($this->context . '.list.direction', $this->defaultDirection);
+        $session->set($this->context . '.ordering', "$ordering $direction");
+        $this->setState('list.fullordering', "$ordering $direction");
+        $this->setState('list.ordering', $ordering);
+        $this->setState('list.direction', $direction);
     }
 
     /**
