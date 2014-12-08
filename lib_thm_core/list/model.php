@@ -48,11 +48,11 @@ abstract class THM_CoreModelList extends JModelList
         }
 
         // Joomla doesn't fill these correctly but requires some of them
-        $data->list['fullordering'] = $this->state->get($this->context . '.list.fullordering', "$this->defaultOrdering $this->defaultDirection");
-        $data->list['ordering'] = $this->state->get($this->context . '.list.ordering', $this->defaultOrdering);
-        $data->list['direction'] = $this->state->get($this->context . '.list.direction', $this->defaultDirection);
-        $data->list['limit'] = $this->state->get($this->context . '.list.limit', $this->defaultLimit);
-        $data->list['start'] = $this->state->get($this->context . '.list.start', $this->defaultStart);
+        $data->list['fullordering'] = $this->state->get('list.fullordering', "$this->defaultOrdering $this->defaultDirection");
+        $data->list['ordering'] = $this->state->get('list.ordering', $this->defaultOrdering);
+        $data->list['direction'] = $this->state->get('list.direction', $this->defaultDirection);
+        $data->list['limit'] = $this->state->get('list.limit', $this->defaultLimit);
+        $data->list['start'] = $this->state->get('list.start', $this->defaultStart);
 
         return $data;
     }
@@ -171,7 +171,7 @@ abstract class THM_CoreModelList extends JModelList
     {
         $defaultOrdering = "{$this->defaultOrdering} {$this->defaultDirection}";
         $session = JFactory::getSession();
-        $listOrdering = $this->state->get($this->context . '.list.fullordering', $defaultOrdering);
+        $listOrdering = $this->state->get('list.fullordering', $defaultOrdering);
         if (strpos($listOrdering, 'null') !== false)
         {
             $sessionOrdering = $session->get( 'ordering', '' );
@@ -195,7 +195,7 @@ abstract class THM_CoreModelList extends JModelList
      */
     protected function setSearchFilter(&$query, $columnNames)
     {
-        $userInput = $this->state->get($this->context . '.filter.search', '');
+        $userInput = $this->state->get( 'filter.search', '');
         if (empty($userInput))
         {
             return;
@@ -223,7 +223,7 @@ abstract class THM_CoreModelList extends JModelList
     {
         foreach ($filterNames AS $name)
         {
-            $value = $this->state->get($this->context . ".filter.$name", '');
+            $value = $this->state->get("filter.$name", '');
             if ($value === '')
             {
                 continue;
@@ -257,7 +257,7 @@ abstract class THM_CoreModelList extends JModelList
     {
         foreach ($filterNames AS $name)
         {
-            $value = $this->state->get($this->context . ".filter.$name", '');
+            $value = $this->state->get("filter.$name", '');
             if ($value === '')
             {
                 continue;
@@ -292,7 +292,7 @@ abstract class THM_CoreModelList extends JModelList
         $tag = THM_CoreHelper::getLanguageShortTag();
         foreach ($filterNames AS $name)
         {
-            $value = $this->state->get($this->context . ".filter.$name", '');
+            $value = $this->state->get("filter.$name", '');
             if ($value === '')
             {
                 continue;
