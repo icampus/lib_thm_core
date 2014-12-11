@@ -83,8 +83,16 @@ class THM_CoreModelEdit extends JModelAdmin
      */
     public function getTable($name = '', $prefix = 'Table', $options = array())
     {
+        /**
+         * Joomla makes the mistake of handling front end and backend differently for include paths. Here we add the
+         * possible frontend and media locations for logical consistency.
+         */
+        $component = $this->get('option');
+        JTable::addIncludePath(JPATH_ROOT . "/media/$component/tables");
+        JTable::addIncludePath(JPATH_ROOT . "/components/$component/tables");
+
         $type = str_replace('_edit', '', $this->get('name')) . 's';
-        $prefix = str_replace('com_', '', $this->get('option')) . 'Table';
+        $prefix = str_replace('com_', '', $component) . 'Table';
         return JTable::getInstance($type, $prefix, $options);
     }
 }
