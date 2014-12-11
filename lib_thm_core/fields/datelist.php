@@ -42,7 +42,7 @@ class JFormFieldDateList extends JFormFieldList
         $query = $dbo->getQuery(true);
 
         $valueColumn = $this->getAttribute('valueColumn');
-        $textColumn = $this->resolveText($query);
+        $textColumn = $this->getAttribute('textColumn');
 
         $query->select("DISTINCT $valueColumn AS value, $textColumn AS text");
         $this->setFrom($query);
@@ -68,27 +68,6 @@ class JFormFieldDateList extends JFormFieldList
         {
             return parent::getOptions();
         }
-    }
-
-    /**
-     * Resolves the textColumns for concatenated values
-     *
-     * @param   object  &$query  the query object
-     *
-     * @return  string  the string to use for text selection
-     */
-    private function resolveText(&$query)
-    {
-        $textColumn = $this->getAttribute('textColumn');
-        $glue = $this->getAttribute('glue');
-
-        $textColumns = explode(',', $textColumn);
-        if (count($textColumns) === 1 OR empty($glue))
-        {
-            return $textColumn;
-        }
-
-        return '( ' . $query->concatenate($textColumns, $glue) . ' )';
     }
 
     /**

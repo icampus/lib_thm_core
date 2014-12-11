@@ -55,6 +55,18 @@ class JFormFieldGenericList extends JFormFieldList
             $options = array();
             foreach ($resources as $resource)
             {
+                // Removes glue from the end of entries
+                $glue = $this->getAttribute('glue', '');
+                if (!empty($glue))
+                {
+                    $glueSize = strlen($glue);
+                    $textSize = strlen($resource['text']);
+                    if (strpos($resource['text'], $glue) == $textSize - $glueSize)
+                    {
+                        $resource['text'] = str_replace($glue, '', $resource['text']);
+                    }
+                }
+
                 $options[$resource['text']] = JHtml::_('select.option', $resource['value'], $resource['text']);
             }
             $this->setValueParameters($options);
