@@ -48,9 +48,9 @@ class THM_CoreTemplateBasic
               name="adminForm"
               id="item-form"
               class="form-horizontal">
-            <div class="form-horizontal">
+            <fieldset class="adminform"">
                 <?php echo $view->form->renderFieldset('details'); ?>
-            </div>
+            </fieldset>
             <?php echo $view->form->getInput('id'); ?>
             <?php echo JHtml::_('form.token'); ?>
             <input type="hidden" name="task" value="" />
