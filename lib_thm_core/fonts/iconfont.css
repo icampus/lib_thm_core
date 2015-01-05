@@ -22,36 +22,55 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-addSpace:before {
-    content: "\e605";
+.icon-merge-all:before {
+    content: "\e602";
 }
+
 .icon-merge:before {
     content: "\e609";
 }
+
 .icon-schedules:before {
     content: "\e600";
 }
+
 .icon-categories:before {
     content: "\e601";
 }
+
 .icon-subjects:before {
     content: "\e603";
 }
+
 .icon-teachers:before {
     content: "\e604";
 }
+
 .icon-degrees:before {
     content: "\e606";
 }
+
 .icon-diff:before {
     content: "\e607";
 }
+
 .icon-import:before {
     content: "\e608";
 }
+
 .icon-rooms:before {
     content: "\e60a";
 }
+
 .icon-logo-organizer:before {
     content: "\e60b";
 }
+
+.icon-add-Space:before {
+    content: "\e605";
+}
+
+.icon-import-all:before {
+    content: "\e60c";
+}
+
