@@ -109,9 +109,6 @@ Next PEAR itself and its channel list needs to be updated, so that later updates
 	// Turns on Automatic Discovery\\
 	\texttt{pear config-set auto\_discover 1}\\
 	\\
-	// Discover and Add the pear.phpunit.de Channel (usually already present)\\
-	\texttt{pear channel-discover pear.phpunit.de}\\
-	\\
 	// Update the Channel list\\
 	\texttt{pear update-channels}\\
 	\\
@@ -134,6 +131,35 @@ Next PEAR itself and its channel list needs to be updated, so that later updates
 \noindent
 More about Code Sniffer and Mess Detector in Section \ref{sec:qatools}.
 
+\subsection{PHPUnit}
+In order to be able to execute tests we need to install PHPUnit.\footnote{For the original documentation see \url{https://phpunit.de/manual/current/en/installation.html}}
+
+\subsubsection{Via wget}
+\begin{tabular}{l}
+	\texttt{wget https://phar.phpunit.de/phpunit.phar}\\
+	\texttt{chmod +x phpunit.phar}\\
+	\texttt{sudo mv phpunit.phar /usr/local/bin/phpunit}\\
+\end{tabular}\\
+
+\subsubsection{For Windows}
+\begin{enumerate}
+	\item Create a directory for PHP binaries; e.g., C:\textbackslash bin
+	\item Append C:\textbackslash bin to your PATH environment variable
+	\item Download \url{https://phar.phpunit.de/phpunit.phar} and save the file as C:\textbackslash bin\textbackslash phpunit.phar
+	\item Open a command line (e.g., press Windows+R $ > $ type cmd $ > $ ENTER)
+	\item Create a wrapping batch script (results in C:\textbackslash bin\textbackslash phpunit.cmd):\\
+	
+		\begin{tabular}{l}
+			\texttt{C:\textbackslash Users\textbackslash username> cd C:\textbackslash bin}\\
+			\texttt{C:\textbackslash bin> echo @php "\%\raisebox{-0.9ex}{\textasciitilde}dp0phpunit.phar" \%* > phpunit.cmd}\\
+		\end{tabular}\\
+\end{enumerate}
+Open a new command line and confirm that you can execute PHPUnit from any path:\\
+
+		\begin{tabular}{l}
+			\texttt{> phpunit --version}\\
+			\texttt{> PHPUnit x.y.z by Sebastian Bergmann.}
+		\end{tabular}\\
 \newpage
 
 \section{Git}
