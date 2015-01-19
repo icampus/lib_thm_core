@@ -1,44 +1,50 @@
-\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
-\contentsline {chapter}{\numberline {2}The Development Environment}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Local Web Server Installation and Configuration}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}XAMPP}{4}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}PHP Configuration}{5}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}PEAR Configuration}{6}{subsection.2.1.3}
-\contentsline {subsubsection}{Directory Configuration}{6}{section*.2}
-\contentsline {subsubsection}{Channel Configuration}{7}{section*.3}
-\contentsline {section}{\numberline {2.2}Git}{8}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Installation}{8}{subsection.2.2.1}
-\contentsline {subsubsection}{Command Context}{8}{section*.4}
-\contentsline {subsubsection}{Line Endings}{8}{section*.5}
-\contentsline {subsection}{\numberline {2.2.2}User Configuration}{8}{subsection.2.2.2}
-\contentsline {subsubsection}{Global User Configuration}{8}{section*.6}
-\contentsline {subsubsection}{SSH-Key Creation}{9}{section*.7}
-\contentsline {section}{\numberline {2.3}PhpStorm}{9}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Installation}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Required Plugins}{11}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Gerrit Configuration}{13}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}THM Core Library}{14}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}Tool Window Activation}{15}{subsection.2.3.5}
-\contentsline {section}{\numberline {2.4}Code Sniffer and Mess Detector}{15}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Standards Directory Inclusion}{16}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}PhpStorm}{16}{subsection.2.4.2}
-\contentsline {subsubsection}{PhpStorm Inclusion}{16}{section*.8}
-\contentsline {subsubsection}{PhpStorm Configuration}{16}{section*.9}
-\contentsline {section}{\numberline {2.5}SASS}{18}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Installation}{19}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}PhpStorm Configuration}{19}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Joomla!}{23}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Database Creation}{23}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}MNI Site Development}{24}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Joomla! 3.x Development}{26}{subsection.2.6.3}
-\contentsline {chapter}{\numberline {3}Tool Guide}{29}{chapter.3}
-\contentsline {section}{\numberline {3.1}Git}{29}{section.3.1}
-\contentsline {subsubsection}{Revert to the previous commit}{29}{section*.10}
-\contentsline {subsubsection}{Create a new local branch}{29}{section*.11}
-\contentsline {subsubsection}{Add a local branch to remote}{29}{section*.12}
-\contentsline {section}{\numberline {3.2}Gerrit}{29}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Workflow}{30}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Cloning repository}{30}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Push to repository}{30}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Review change}{32}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Submit/Abandon change}{33}{subsection.3.2.5}
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
+\contentsline {chapter}{\numberline {2}The Development Environment}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Local Web Server Installation and Configuration}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}XAMPP}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}PHP Configuration}{6}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}PEAR Configuration}{7}{subsection.2.1.3}
+\contentsline {subsubsection}{Directory Configuration}{7}{section*.2}
+\contentsline {subsubsection}{Channel Configuration}{8}{section*.3}
+\contentsline {subsection}{\numberline {2.1.4}PHPUnit}{8}{subsection.2.1.4}
+\contentsline {subsubsection}{Via wget}{10}{section*.4}
+\contentsline {subsubsection}{For Windows}{10}{section*.5}
+\contentsline {section}{\numberline {2.2}Git}{13}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Installation}{13}{subsection.2.2.1}
+\contentsline {subsubsection}{Command Context}{13}{section*.6}
+\contentsline {subsubsection}{Line Endings}{13}{section*.7}
+\contentsline {subsection}{\numberline {2.2.2}User Configuration}{13}{subsection.2.2.2}
+\contentsline {subsubsection}{Global User Configuration}{13}{section*.8}
+\contentsline {subsubsection}{SSH-Key Creation}{14}{section*.9}
+\contentsline {section}{\numberline {2.3}PhpStorm}{14}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Installation}{15}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Required Plugins}{16}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Gerrit Configuration}{18}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}THM Core Library}{19}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Tool Window Activation}{20}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.4}Code Sniffer and Mess Detector}{20}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Standards Directory Inclusion}{21}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}PhpStorm}{21}{subsection.2.4.2}
+\contentsline {subsubsection}{PhpStorm Inclusion}{21}{section*.10}
+\contentsline {subsubsection}{PhpStorm Configuration}{21}{section*.11}
+\contentsline {section}{\numberline {2.5}SASS}{23}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Installation}{24}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}PhpStorm Configuration}{24}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Joomla!}{28}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Database Creation}{28}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}MNI Site Development}{29}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Joomla! 3.x Development}{31}{subsection.2.6.3}
+\contentsline {chapter}{\numberline {3}Tool Guide}{34}{chapter.3}
+\contentsline {section}{\numberline {3.1}Git}{34}{section.3.1}
+\contentsline {subsubsection}{Revert to the previous commit}{34}{section*.12}
+\contentsline {subsubsection}{Create a new local branch}{34}{section*.13}
+\contentsline {subsubsection}{Add a local branch to remote}{34}{section*.14}
+\contentsline {section}{\numberline {3.2}Gerrit}{34}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Workflow}{35}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Cloning repository}{35}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Push to repository}{35}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Review change}{37}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Submit/Abandon change}{38}{subsection.3.2.5}
+\contentsline {chapter}{\numberline {4}Development Guide}{39}{chapter.4}
+\contentsline {chapter}{\numberline {A}How-tos}{40}{appendix.A}
+\contentsline {section}{\numberline {A.1}How to change environment variables in Windows}{40}{section.A.1}
