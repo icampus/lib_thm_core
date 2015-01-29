@@ -3,12 +3,13 @@
 @import 'variables';
 
 /*Filter- und Search-Bereich anpassen */
-.searchArea a, thead a{
-  color: rgb(75, 92, 103);
+.searchArea a, thead a {
+  color: $thm-grau-color;
   &:hover {
-    color: rgb(126, 186, 39);
+    color: $thm-gruen-color;
   }
 }
+
 .table-striped{
   margin-top: 7px;
   border-collapse: separate;
@@ -17,26 +18,31 @@
 }
 
 thead {
+  color: $thm-grau-color;
   tr:nth-child(1) th {
-    @include linearGradient($gr-color-bottom-bg,$gr-color-top-bg);
+    @include linearGradient($gr-color-bottom-bg, $gr-color-top-bg);
     padding-top: 5px;
     padding-bottom: 2px;
     padding-left: 1px;
     &:first-child {
       @include border-radius(3px 0 0 0);
     }
+
     &:last-child {
       @include border-radius(0 3px 0 0);
     }
   }
+
   tr:nth-child(n+1) th {
     &:first-child {
       border-left: 1px solid #bbb;
     }
+
     &:last-child {
       border-right: 1px solid #bbb;
     }
   }
+
   tr:nth-last-child(1) th {
     @include linearGradient($gr-color-top-bg, $gr-color-bottom-bg);
     padding-top: 0px;
@@ -47,40 +53,43 @@ thead {
       border-bottom-left-radius: 3px;
       padding-left: 8px;
     }
+
     &:last-child {
       border-bottom-right-radius: 3px;
     }
   }
 }
 
-tbody tr:first-child td{
+tbody tr:first-child td {
   border-top-style: none;
 }
 
 /*Filterbreite anpassen, ohne: von chosen festgelegt */
 .js-stools-field-filter, .js-stools-field-list {
   max-width: 200px;
-  select{
+  select {
     width: auto;
   }
-  span{
-    overflow: hidden !important;  /* sonst von jquery.searchtools.css überschrieben */
+
+  span {
+    overflow: hidden !important; /* sonst von jquery.searchtools.css überschrieben */
   }
 }
 
 /* Style fuer Datei-Upload anpassen , nur in Chrome notwendig (Vergleich mit Firefox,IE)*/
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
   .controls input[type="file"] {
     line-height: 0px;
     padding-top: 3px;
   }
 }
 
-.nav-list li.active a, .dropdown-submenu:hover > a[href*="option=com_thm_organizer"], #menu-com-thm-organizer a:hover{
-  @include linearGradient($gr-color-top-item,$gr-color-bottom-item);
+.nav-list li.active a, .dropdown-submenu:hover > a[href*="option=com_thm_organizer"], #menu-com-thm-organizer a:hover {
+  @include linearGradient($gr-color-top-item, $gr-color-bottom-item);
 }
+
 /* Mapping anpassen */
-#mapping{
+#mapping, #mappings {
   @media (min-width: 768px) {
     .control-group:nth-of-type(1) {
       width: 50%;
@@ -89,6 +98,7 @@ tbody tr:first-child td{
         width: 95%;
       }
     }
+
     .control-group:nth-of-type(2) {
       width: 50%;
       float: right;
@@ -96,40 +106,47 @@ tbody tr:first-child td{
         width: 95%;
       }
     }
+
     .control-group:nth-of-type(3) {
       clear: both;
     }
   }
+
   .chzn-container-multi .chzn-choices li {
     float: none;
-    margin-right:5px;
-    margin-top:5px;
+    margin-right: 5px;
+    margin-top: 5px;
   }
-  .search-choice{
+
+  .search-choice {
     border: 1px solid #bbb;
     @include linearGradient(#ffffff, #f4f4f4);
     line-height: 14px;
   }
-  .chzn-choices{
+
+  .chzn-choices {
     @include linearGradient($gr-color-top-bg, $gr-color-bottom-bg);
     border: 1px solid #bbb;
     @include border-radius(3px);
+  }
 
+  .highlighted {
+    @include linearGradient($gr-color-top-item, $gr-color-bottom-item);
   }
-  .highlighted{
-    @include linearGradient($gr-color-top-item,$gr-color-bottom-item);
-  }
-  table{
+
+  table {
     width: auto;
   }
+
   thead {
     tr:nth-child(1) th {
       padding: 5px 0 5px 8px;
     }
-    .thm_organizer_pools_ordering{
+    .thm_organizer_pools_ordering {
       width: 170px;
     }
   }
+
   tbody {
     .child-order {
       .btn-small {
@@ -137,13 +154,15 @@ tbody tr:first-child td{
         font-size: 12px;
         line-height: 8px;
       }
+
       .text-area-order {
         padding: 1px 2px;
         text-align: center;
         height: 14px;
       }
     }
-    .child-name{
+
+    .child-name {
       padding-right: 30px;
     }
   }
