@@ -45,6 +45,7 @@ abstract class THM_CoreViewForm extends JViewLegacy
         $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
         $document -> addScript($this->baseurl . "../../libraries/thm_core/js/formbehaviorChosenHelper.js");
         $document -> addScript($this->baseurl . "../../libraries/thm_core/js/validators.js");
+        $document -> addScript($this->getScript());
 
 
         $this->params = JFactory::getApplication()->getParams();
@@ -57,5 +58,15 @@ abstract class THM_CoreViewForm extends JViewLegacy
             $this->addToolBar();
         }
         parent::display($tpl);
+    }
+
+    /**
+     * Method to get the script that have to be included on the form
+     *
+     * @return string	Script file
+     */
+    protected function getScript()
+    {
+        return $this->baseurl . "../../libraries/thm_core/js/submitButton.js";
     }
 }

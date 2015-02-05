@@ -46,6 +46,7 @@ abstract class THM_CoreViewList extends JViewLegacy
         $document = Jfactory::getDocument();
         $document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
         $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
+        $document -> addScript($this->getScript());
 
         JHtml::_('bootstrap.tooltip');
         JHtml::_('behavior.multiselect');
@@ -83,4 +84,15 @@ abstract class THM_CoreViewList extends JViewLegacy
      * @return  void  sets context variables
      */
     protected abstract function addToolBar();
+
+    /**
+     * Method to get the script that have to be included on the form
+     *
+     * @return string	Script file
+     */
+    protected function getScript()
+    {
+        // Use Joomla.submitbutton in core.js
+        return "";
+    }
 }
