@@ -45,6 +45,7 @@ abstract class THM_CoreViewEdit extends JViewLegacy
         $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
         $document -> addScript($this->baseurl . "../../libraries/thm_core/js/formbehaviorChosenHelper.js");
         $document -> addScript($this->baseurl . "../../libraries/thm_core/js/validators.js");
+        $document -> addScript($this->getScript());
 
         $this->item = $this->get('Item');
         $this->form = $this->get('Form');
@@ -58,4 +59,14 @@ abstract class THM_CoreViewEdit extends JViewLegacy
      * Concrete classes are supposed to use this method to add a toolbar.
      */
     protected abstract function addToolBar();
+    
+    /**
+     * Method to get the script that have to be included on the form
+     *
+     * @return string	Script file
+     */
+    protected function getScript()
+    {
+        return $this->baseurl . "../../libraries/thm_core/js/submitButton.js";
+    }
 }

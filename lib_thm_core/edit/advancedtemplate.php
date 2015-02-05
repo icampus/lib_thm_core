@@ -34,15 +34,7 @@ class THM_CoreTemplateAdvanced
         $option = JFactory::getApplication()->input->get('option');
         $resource = str_replace('_edit', '', $view->get('name'));
 ?>
-        <script type="text/javascript">
-            Joomla.submitbutton = function(task)
-            {
-                if (task == '<?php echo $resource; ?>.cancel' || document.formvalidator.isValid(document.id('item-form')))
-                {
-                    Joomla.submitform(task, document.getElementById('item-form'));
-                }
-            }
-        </script>
+       
         <form action="index.php?option=<?php echo $option; ?>"
               enctype="multipart/form-data"
               method="post"
