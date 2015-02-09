@@ -223,7 +223,7 @@ abstract class THM_CoreModelList extends JModelList
     {
         foreach ($filterNames AS $name)
         {
-            $value = $this->state->get("filter.$name", '');
+            $value = $this->state->get($name, '');
             if ($value === '')
             {
                 continue;
