@@ -42,16 +42,7 @@ abstract class THM_CoreViewList extends JViewLegacy
      */
     public function display($tpl = null)
     {
-        $option = JFactory::getApplication()->input->get('option');
-        $document = Jfactory::getDocument();
-        $document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
-        $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
-        $document -> addScript($this->getScript());
-
-        JHtml::_('bootstrap.tooltip');
-        JHtml::_('behavior.multiselect');
-        JHtml::_('formbehavior.chosen', 'select');
-        JHtml::_('searchtools.form', '#adminForm', array());
+        $this->modifyDocument();
 
         $this->state = $this->get('State');
         $this->items = $this->get('Items');
@@ -90,9 +81,16 @@ abstract class THM_CoreViewList extends JViewLegacy
      *
      * @return string	Script file
      */
-    protected function getScript()
+    protected function modifyDocument()
     {
-        // Use Joomla.submitbutton in core.js
-        return "";
+        $option = JFactory::getApplication()->input->get('option');
+        $document = Jfactory::getDocument();
+        $document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
+        $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
+
+        JHtml::_('bootstrap.tooltip');
+        JHtml::_('behavior.multiselect');
+        JHtml::_('formbehavior.chosen', 'select');
+        JHtml::_('searchtools.form', '#adminForm', array());
     }
 }
