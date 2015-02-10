@@ -34,18 +34,7 @@ abstract class THM_CoreViewEdit extends JViewLegacy
      */
     public function display($tpl = null)
     {
-        JHtml::_('bootstrap.tooltip');
-        JHtml::_('behavior.framework', true);
-        JHtml::_('behavior.formvalidation');
-        JHtml::_('formbehavior.chosen', 'select');
-
-        $option = JFactory::getApplication()->input->get('option');
-        $document = Jfactory::getDocument();
-        $document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
-        $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
-        $document -> addScript($this->baseurl . "../../libraries/thm_core/js/formbehaviorChosenHelper.js");
-        $document -> addScript($this->baseurl . "../../libraries/thm_core/js/validators.js");
-        $document -> addScript($this->getScript());
+        $this->modifyDocument();
 
         $this->item = $this->get('Item');
         $this->form = $this->get('Form');
@@ -59,14 +48,25 @@ abstract class THM_CoreViewEdit extends JViewLegacy
      * Concrete classes are supposed to use this method to add a toolbar.
      */
     protected abstract function addToolBar();
-    
+
     /**
-     * Method to get the script that have to be included on the form
+     * Adds styles and scripts to the document
      *
-     * @return string	Script file
+     * @return  void  modifies the document
      */
-    protected function getScript()
+    protected function modifyDocument()
     {
-        return $this->baseurl . "../../libraries/thm_core/js/submitButton.js";
+        JHtml::_('bootstrap.tooltip');
+        JHtml::_('behavior.framework', true);
+        JHtml::_('behavior.formvalidation');
+        JHtml::_('formbehavior.chosen', 'select');
+
+        $option = JFactory::getApplication()->input->get('option');
+        $document = Jfactory::getDocument();
+        $document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
+        $document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
+        $document -> addScript($this->baseurl . "../../libraries/thm_core/js/formbehaviorChosenHelper.js");
+        $document -> addScript($this->baseurl . "../../libraries/thm_core/js/validators.js");
+        $document -> addScript($this->baseurl . "../../libraries/thm_core/js/submitButton.js");
     }
 }

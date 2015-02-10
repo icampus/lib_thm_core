@@ -77,9 +77,9 @@ abstract class THM_CoreViewList extends JViewLegacy
     protected abstract function addToolBar();
 
     /**
-     * Method to get the script that have to be included on the form
+     * Adds styles and scripts to the document
      *
-     * @return string	Script file
+     * @return  void  modifies the document
      */
     protected function modifyDocument()
     {
