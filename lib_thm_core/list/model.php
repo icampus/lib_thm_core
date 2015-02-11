@@ -30,6 +30,23 @@ abstract class THM_CoreModelList extends JModelList
 
     protected $defaultStart = '0';
 
+    public $actions = null;
+
+    /**
+     * Constructor. Uses parent constructor, then sets model actions.
+     *
+     * @param   Array  $config  Configuration  (default: Array)
+     */
+    public function __construct($config = array())
+    {
+        parent::__construct($config);
+
+        $option = $this->get('option');
+        $path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
+        $helper = str_replace('com_', '', $option) . 'HelperComponent';
+        require_once $path;
+        $helper::addActions($this);
+    }
 
     /**
      * Method to get the data that should be injected in the form.

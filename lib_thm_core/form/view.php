@@ -36,8 +36,6 @@ abstract class THM_CoreViewForm extends JViewLegacy
     {
         $this->modifyDocument();
 
-        $this->params = JFactory::getApplication()->getParams();
-
         $this->form = $this->get('Form');
 
         // Allows for view specific toolbar handling

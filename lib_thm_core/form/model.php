@@ -33,6 +33,17 @@ class THM_CoreModelForm extends JModelForm
     public function getForm($data = array(), $loadData = false)
     {
         $option = $this->get('option');
+
+        $path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
+        $helper = str_replace('com_', '', $option) . 'HelperComponent';
+        require_once $path;
+        $helper::addActions($this);
+        $allowEdit = $helper::allowEdit($this);
+        if (!$allowEdit)
+        {
+            throw new Exception(JText::_('JERROR_ALERTNOAUTHOR'), 404);
+        }
+
         $name = $this->get('name');
         $form = $this->loadForm("$option.$name", $name, array('control' => 'jform', 'load_data' => $loadData));
 
