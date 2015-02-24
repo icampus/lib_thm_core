@@ -179,19 +179,77 @@ class THM_CoreTemplateList
      */
     private static function renderBody(&$items)
     {
-        $rowClass = 'row0';
+        $iteration = 0;
         echo '<tbody>';
         foreach ($items as $row)
         {
-            echo "<tr class='$rowClass'>";
-            foreach ($row as $column)
-            {
-                echo "<td>$column</td>";
-            }
-            echo '</tr>';
-            $rowClass = $rowClass == 'row0'? 'row1' : 'row0';
+            self::renderRow($row, $iteration);
         }
         echo '</thead>';
+    }
+
+    /**
+     * Renders a row
+     *
+     * @param   array  $row         the row to be displayed
+     * @param   int    &$iteration  the current iteration
+     *
+     * @return  void  outputs HTML
+     */
+    private static function renderRow($row, &$iteration)
+    {
+        $defaultClass = 'row' . $iteration % 2;
+
+        // Custom attributes
+        if (!empty($row['attributes']) AND is_array($row['attributes']))
+        {
+            $rowAttributes = '';
+            foreach ($row['attributes'] AS $rowAttribute => $rowAttributeValue)
+            {
+                $rowAttributes .= $rowAttribute . '="' . $rowAttributeValue . '" ';
+            }
+            echo "<tr $rowAttributes>";
+        }
+        else
+        {
+            // Joomla standard is row0 or row1 for even and odd rows
+            echo "<tr class='row" . $iteration % 2 . "'>";
+        }
+
+        foreach ($row as $index => $column)
+        {
+            // Attributes should not be presented as table data
+            if ($index == 'attribues')
+            {
+                continue;
+            }
+
+            // Custom attributes for table data
+            if (is_array($column))
+            {
+                if (!empty($column['attributes']) AND is_array($column['attributes']))
+                {
+                    $colAttributes = '';
+                    foreach ($column['attributes'] AS $colAttribute => $colAttributeValue)
+                    {
+                        $colAttributes .= $colAttribute . '="' . $colAttributeValue . '" ';
+                    }
+                    echo "<td $colAttributes>";
+                }
+                else
+                {
+                    echo "<td>";
+                }
+                echo $column['value'];
+            }
+            else
+            {
+                echo "<td>$column";
+            }
+            echo "</td>";
+        }
+        echo '</tr>';
+        $iteration++;
     }
 
     /**
