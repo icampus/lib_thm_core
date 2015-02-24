@@ -179,10 +179,28 @@ class THM_CoreTemplateList
      */
     private static function renderBody(&$items)
     {
-        $iteration = 0;
-        echo '<tbody>';
-        foreach ($items as $row)
+        if (!empty($items['attributes']) AND is_array($items['attributes']))
         {
+            $bodyAttributes = '';
+            foreach ($items['attributes'] AS $bodyAttribute => $bodyAttributeValue)
+            {
+                $bodyAttributes .= $bodyAttribute . '="' . $bodyAttributeValue . '" ';
+            }
+            echo "<tbody $bodyAttributes>";
+        }
+        else
+        {
+            echo '<tbody>';
+        }
+
+        $iteration = 0;
+        foreach ($items as $index => $row)
+        {
+            if ($index == 'attributes')
+            {
+                continue;
+            }
+
             self::renderRow($row, $iteration);
         }
         echo '</thead>';
@@ -219,7 +237,7 @@ class THM_CoreTemplateList
         foreach ($row as $index => $column)
         {
             // Attributes should not be presented as table data
-            if ($index == 'attribues')
+            if ($index == 'attributes')
             {
                 continue;
             }
