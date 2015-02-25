@@ -1,1 +1,1 @@
-MOOTOOLS_DOCUMENT_ID_VALUE = document.id;
+document.$id = document.id;
