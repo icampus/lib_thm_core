@@ -1,1 +1,15 @@
 \chapter{Development Guide}
+
+\section{Advanced PHP Tips}
+\subsection{String Equals Zero In PHP}
+\footnote{Original text from: \url{http://www.hashbangcode.com/blog/string-equals-zero-php}}Due to the weakly-typed nature of PHP you can do some odd things, some of which are good, and some of which will enable you to shoot yourself in the foot. Care if you compare string with integer values. Take the following little snippet.
+
+\fvset{frame=single}
+\begin{pyglist}[language=php,numbers=left,numbersep=5pt]
+<?php
+$index = 0;
+var_dump($index == 'attributes'); //>bool(true)
+\end{pyglist}
+\fvset{frame=none}
+
+Maybe you expect that the in-built function var\_dump() outputs bool(false) because 0 is not equal 'attributes' but instead the result is bool(true)! When you compare an integer and string, PHP converts the string to an integer. The integer of the string 'attributes' is 0. So var\_dump(0 == 0) outputs bool(true).

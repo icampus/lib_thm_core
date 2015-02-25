@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.4.16)  19 JAN 2015 14:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.4.16)  25 FEB 2015 16:57
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **"iCampus Development Guide.tex"
 (./iCampus Development Guide.tex
@@ -627,7 +627,63 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks28
 \@floatcapt=\box34
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 23.
+(c:/texlive/2013/texmf-dist/tex/latex/verbments/verbments.sty
+Package: verbments 2011/08/20 v1.2 Pygments/fancyvrb source code highlighting f
+or LaTeX
+
+(c:/texlive/2013/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count130
+\FV@InFile=\read1
+\FV@TabBox=\box35
+\c@FancyVerbLine=\count131
+\FV@StepNumber=\count132
+\FV@OutFile=\write3
+) (c:/texlive/2013/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip47
+\fb@frw=\dimen144
+\fb@frh=\dimen145
+\FrameRule=\dimen146
+\FrameSep=\dimen147
+)
+(c:/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(c:/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(c:/texlive/2013/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count133
+\calc@Bcount=\count134
+\calc@Adimen=\dimen148
+\calc@Bdimen=\dimen149
+\calc@Askip=\skip48
+\calc@Bskip=\skip49
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count135
+\calc@Cskip=\skip50
+)
+\@tmpwidth=\skip51
+\@tmpvskip=\skip52
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 24.
 
 (c:/texlive/2013/texmf-dist/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
@@ -641,23 +697,23 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (c:/texlive/2013/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen144
-\captionmargin@=\dimen145
-\captionwidth=\dimen146
-\caption@tempdima=\dimen147
-\caption@indent=\dimen148
-\caption@parindent=\dimen149
-\caption@hangindent=\dimen150
+\captionmargin=\dimen150
+\captionmargin@=\dimen151
+\captionwidth=\dimen152
+\caption@tempdima=\dimen153
+\caption@indent=\dimen154
+\caption@parindent=\dimen155
+\caption@hangindent=\dimen156
 )
-\c@ContinuedFloat=\count130
+\c@ContinuedFloat=\count136
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: hypcap package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
-\c@subfigure=\count131
-\c@subtable=\count132
+\c@subfigure=\count137
+\c@subtable=\count138
 )
 (./iCampus Development Guide.aux (./environment.aux
 
@@ -670,20 +726,20 @@ LaTeX Warning: Label `sub@fig:plugins' multiply defined.
 (./appendix.aux))
 \openout1 = `"iCampus Development Guide.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -721,65 +777,57 @@ LaTeX Font Info:    ... okay on input line 27.
 
 (c:/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count133
-\scratchdimen=\dimen151
-\scratchbox=\box35
-\nofMPsegments=\count134
-\nofMParguments=\count135
+\scratchcounter=\count139
+\scratchdimen=\dimen157
+\scratchbox=\box36
+\nofMPsegments=\count140
+\nofMParguments=\count141
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count136
-\MPscratchDim=\dimen152
-\MPnumerator=\count137
-\makeMPintoPDFobject=\count138
+\MPscratchCnt=\count142
+\MPscratchDim=\dimen158
+\MPnumerator=\count143
+\makeMPintoPDFobject=\count144
 \everyMPtoPDFconversion=\toks30
 )
-\c@lstlisting=\count139
-\AtBeginShipoutBox=\box36
- (c:/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
-
-(c:/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package color Info: Driver file: pdftex.def on input line 130.
-)
-Package hyperref Info: Link coloring ON on input line 27.
-
-(c:/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
+\c@lstlisting=\count145
+\AtBeginShipoutBox=\box37
+Package hyperref Info: Link coloring ON on input line 28.
+ (c:/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (c:/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count140
+\c@section@level=\count146
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 
 (./iCampus Development Guide.out) (./iCampus Development Guide.out)
-\@outlinefile=\write3
-\openout3 = `"iCampus Development Guide.out"'.
+\@outlinefile=\write4
+\openout4 = `"iCampus Development Guide.out"'.
 
+\c@pllisting=\count147
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-<./images/thm.png, id=152, 702.625pt x 150.5625pt>
+<./images/thm.png, id=160, 702.625pt x 150.5625pt>
 File: ./images/thm.png Graphic file (type png)
  <use ./images/thm.png>
-Package pdftex.def Info: ./images/thm.png used on input line 33.
+Package pdftex.def Info: ./images/thm.png used on input line 34.
 (pdftex.def)             Requested size: 398.33858pt x 85.35973pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 35.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
 
 (c:/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 35.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (c:/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (89.03043pt too wide) in paragraph at lines 35--35
+Overfull \hbox (89.03043pt too wide) in paragraph at lines 36--36
  [][] 
  []
 
@@ -788,8 +836,8 @@ png>] (./iCampus Development Guide.toc [2
 
 
 ])
-\tf@toc=\write4
-\openout4 = `"iCampus Development Guide.toc"'.
+\tf@toc=\write5
+\openout5 = `"iCampus Development Guide.toc"'.
 
  [3]
 Chapter 1.
@@ -805,7 +853,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--21
 
  []
 
-<./images/xampp.png, id=218, 388.45125pt x 325.215pt>
+<./images/xampp.png, id=228, 388.45125pt x 325.215pt>
 File: ./images/xampp.png Graphic file (type png)
  <use ./images/xampp.png>
 Package pdftex.def Info: ./images/xampp.png used on input line 24.
@@ -822,7 +870,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-<./images/openphpini.png, id=230, 606.01407pt x 359.84438pt>
+<./images/openphpini.png, id=240, 606.01407pt x 359.84438pt>
 File: ./images/openphpini.png Graphic file (type png)
 
 <use ./images/openphpini.png>
@@ -907,7 +955,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--177
 
  []
 
-<images/test folder structure.png, id=284, 459.96844pt x 603.0028pt>
+<images/test folder structure.png, id=294, 459.96844pt x 603.0028pt>
 File: images/test folder structure.png Graphic file (type png)
 
 <use images/test folder structure.png>
@@ -915,7 +963,7 @@ Package pdftex.def Info: images/test folder structure.png used on input line 18
 0.
 (pdftex.def)             Requested size: 367.97525pt x 482.4029pt.
 
-<images/test folder structure in joomla.png, id=286, 332.74312pt x 392.96812pt>
+<images/test folder structure in joomla.png, id=296, 332.74312pt x 392.96812pt>
 File: images/test folder structure in joomla.png Graphic file (type png)
 <use images/test folder structure in joomla.png>
 Package pdftex.def Info: images/test folder structure in joomla.png used on inp
@@ -927,7 +975,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-<./images/gitbash1.jpg, id=311, 512.91624pt x 397.485pt>
+<./images/gitbash1.jpg, id=321, 512.91624pt x 397.485pt>
 File: ./images/gitbash1.jpg Graphic file (type jpg)
 
 <use ./images/gitbash1.jpg>
@@ -938,7 +986,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
-<./images/gitbash2.jpg, id=312, 509.905pt x 399.4925pt>
+<./images/gitbash2.jpg, id=322, 509.905pt x 399.4925pt>
 File: ./images/gitbash2.jpg Graphic file (type jpg)
 
 <use ./images/gitbash2.jpg>
@@ -992,7 +1040,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--257
  []
 
 [14 <./images/gitbash2.jpg>]
-<./images/file-associations.png, id=329, 386.19281pt x 301.125pt>
+<./images/file-associations.png, id=339, 386.19281pt x 301.125pt>
 File: ./images/file-associations.png Graphic file (type png)
 
 <use ./images/file-associations.png>
@@ -1010,7 +1058,7 @@ Overfull \hbox (8.85417pt too wide) in paragraph at lines 268--272
 cmr/m/n/10 for the ``User or Com-pany Name"
  []
 
-<./images/phpstorm-activation.png, id=330, 311.66437pt x 321.45094pt>
+<./images/phpstorm-activation.png, id=340, 311.66437pt x 321.45094pt>
 File: ./images/phpstorm-activation.png Graphic file (type png)
 
 <use ./images/phpstorm-activation.png>
@@ -1027,7 +1075,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--287
 
  []
 
-<./images/configurePhpStorm.png, id=344, 612.03656pt x 464.4853pt>
+<./images/configurePhpStorm.png, id=354, 612.03656pt x 464.4853pt>
 File: ./images/configurePhpStorm.png Graphic file (type png)
 
 <use ./images/configurePhpStorm.png>
@@ -1035,14 +1083,14 @@ Package pdftex.def Info: ./images/configurePhpStorm.png used on input line 292.
 
 (pdftex.def)             Requested size: 85.9996pt x 65.26138pt.
 
-<./images/plugins.png, id=345, 612.03656pt x 464.4853pt>
+<./images/plugins.png, id=355, 612.03656pt x 464.4853pt>
 File: ./images/plugins.png Graphic file (type png)
 
 <use ./images/plugins.png>
 Package pdftex.def Info: ./images/plugins.png used on input line 298.
 (pdftex.def)             Requested size: 85.9996pt x 65.26138pt.
 
-<./images/phpStormProjectSettings.png, id=346, 188.95593pt x 240.9pt>
+<./images/phpStormProjectSettings.png, id=356, 188.95593pt x 240.9pt>
 File: ./images/phpStormProjectSettings.png Graphic file (type png)
 
 <use ./images/phpStormProjectSettings.png>
@@ -1050,7 +1098,7 @@ Package pdftex.def Info: ./images/phpStormProjectSettings.png used on input lin
 e 310.
 (pdftex.def)             Requested size: 85.9996pt x 109.63907pt.
 
-<./images/phpStormSettingsPlugins.png, id=347, 263.48438pt x 484.81125pt>
+<./images/phpStormSettingsPlugins.png, id=357, 263.48438pt x 484.81125pt>
 File: ./images/phpStormSettingsPlugins.png Graphic file (type png)
 
 <use ./images/phpStormSettingsPlugins.png>
@@ -1059,7 +1107,7 @@ e 316.
 (pdftex.def)             Requested size: 85.9996pt x 158.24236pt.
  [16 <./images/configurePhpStorm.png> <./images/plugins.png> <./images/phpStorm
 ProjectSettings.png> <./images/phpStormSettingsPlugins.png>]
-<./images/phpStormPluginStore.png, id=364, 559.33969pt x 292.09125pt>
+<./images/phpStormPluginStore.png, id=374, 559.33969pt x 292.09125pt>
 File: ./images/phpStormPluginStore.png Graphic file (type png)
 
 <use ./images/phpStormPluginStore.png>
@@ -1067,7 +1115,7 @@ Package pdftex.def Info: ./images/phpStormPluginStore.png used on input line 33
 1.
 (pdftex.def)             Requested size: 258.00539pt x 134.73798pt.
 
-<./images/downloadGerritPlugin.png, id=365, 632.3625pt x 525.46312pt>
+<./images/downloadGerritPlugin.png, id=375, 632.3625pt x 525.46312pt>
 File: ./images/downloadGerritPlugin.png Graphic file (type png)
 
 <use ./images/downloadGerritPlugin.png>
@@ -1075,14 +1123,14 @@ Package pdftex.def Info: ./images/downloadGerritPlugin.png used on input line 3
 41.
 (pdftex.def)             Requested size: 171.99922pt x 142.91927pt.
  [17 <./images/phpStormPluginStore.png> <./images/downloadGerritPlugin.png>]
-<./images/gerritSignIn.png, id=373, 871.75688pt x 255.95625pt>
+<./images/gerritSignIn.png, id=383, 871.75688pt x 255.95625pt>
 File: ./images/gerritSignIn.png Graphic file (type png)
 
 <use ./images/gerritSignIn.png>
 Package pdftex.def Info: ./images/gerritSignIn.png used on input line 357.
 (pdftex.def)             Requested size: 344.005pt x 101.00201pt.
 
-<./images/gerritServerHTTPPassword.png, id=374, 865.73438pt x 451.6875pt>
+<./images/gerritServerHTTPPassword.png, id=384, 865.73438pt x 451.6875pt>
 File: ./images/gerritServerHTTPPassword.png Graphic file (type png)
 
 <use ./images/gerritServerHTTPPassword.png>
@@ -1090,7 +1138,7 @@ Package pdftex.def Info: ./images/gerritServerHTTPPassword.png used on input li
 ne 367.
 (pdftex.def)             Requested size: 344.005pt x 179.47945pt.
 
-<./images/new-gerrit-project.png, id=375, 612.03656pt x 464.4853pt>
+<./images/new-gerrit-project.png, id=385, 612.03656pt x 464.4853pt>
 File: ./images/new-gerrit-project.png Graphic file (type png)
 
 <use ./images/new-gerrit-project.png>
@@ -1101,7 +1149,7 @@ Package pdftex.def Info: ./images/new-gerrit-project.png used on input line 377
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./images/phpstorm-gerrit-password.png, id=376, 877.02657pt x 463.7325pt>
+<./images/phpstorm-gerrit-password.png, id=386, 877.02657pt x 463.7325pt>
 File: ./images/phpstorm-gerrit-password.png Graphic file (type png)
 
 <use ./images/phpstorm-gerrit-password.png>
@@ -1113,7 +1161,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 396--399
 
  []
 
-<./images/clone-repository.png, id=383, 545.03625pt x 134.00063pt>
+<./images/clone-repository.png, id=393, 545.03625pt x 134.00063pt>
 File: ./images/clone-repository.png Graphic file (type png)
 
 <use ./images/clone-repository.png>
@@ -1121,7 +1169,7 @@ Package pdftex.def Info: ./images/clone-repository.png used on input line 403.
 (pdftex.def)             Requested size: 142.26378pt x 34.97632pt.
  [19 <./images/new-gerrit-project.png> <./images/phpstorm-gerrit-password.png> 
 <./images/clone-repository.png>]
-<./images/tool-window-activation.png, id=393, 363.60844pt x 250.68657pt>
+<./images/tool-window-activation.png, id=403, 363.60844pt x 250.68657pt>
 File: ./images/tool-window-activation.png Graphic file (type png)
 
 <use ./images/tool-window-activation.png>
@@ -1163,7 +1211,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
-<./images/codesnifferinclusion.png, id=405, 650.43pt x 370.38374pt>
+<./images/codesnifferinclusion.png, id=415, 650.43pt x 370.38374pt>
 File: ./images/codesnifferinclusion.png Graphic file (type png)
 
 <use ./images/codesnifferinclusion.png>
@@ -1178,7 +1226,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 471--478
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./images/codesnifferconfiguration.png, id=406, 681.29532pt x 421.575pt>
+<./images/codesnifferconfiguration.png, id=416, 681.29532pt x 421.575pt>
 File: ./images/codesnifferconfiguration.png Graphic file (type png)
 
 <use ./images/codesnifferconfiguration.png>
@@ -1214,7 +1262,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 521--526
  []
 
 [23 <./images/codesnifferconfiguration.png>]
-<./images/rubyinstallation.png, id=438, 575.90157pt x 447.17062pt>
+<./images/rubyinstallation.png, id=448, 575.90157pt x 447.17062pt>
 File: ./images/rubyinstallation.png Graphic file (type png)
 
 <use ./images/rubyinstallation.png>
@@ -1225,7 +1273,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 534--536
 
  []
 
-<./images/sassinstallation.png, id=440, 557.08125pt x 284.56313pt>
+<./images/sassinstallation.png, id=450, 557.08125pt x 284.56313pt>
 File: ./images/sassinstallation.png Graphic file (type png)
 
 <use ./images/sassinstallation.png>
@@ -1276,7 +1324,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 549--557
  []
 
 [24 <./images/rubyinstallation.png>]
-<./images/scsswatchernotification.png, id=449, 682.80093pt x 27.85406pt>
+<./images/scsswatchernotification.png, id=459, 682.80093pt x 27.85406pt>
 File: ./images/scsswatchernotification.png Graphic file (type png)
 
 <use ./images/scsswatchernotification.png>
@@ -1293,7 +1341,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 565--568
 
  []
 
-<./images/settingsfilewatchers.png, id=450, 543.53062pt x 414.04688pt>
+<./images/settingsfilewatchers.png, id=460, 543.53062pt x 414.04688pt>
 File: ./images/settingsfilewatchers.png Graphic file (type png)
 
 <use ./images/settingsfilewatchers.png>
@@ -1309,7 +1357,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 578--580
 
  []
 
-<./images/editwatcher-withoutMaps.png, id=458, 793.46437pt x 448.67625pt>
+<./images/editwatcher-withoutMaps.png, id=468, 793.46437pt x 448.67625pt>
 File: ./images/editwatcher-withoutMaps.png Graphic file (type png)
 
 <use ./images/editwatcher-withoutMaps.png>
@@ -1363,7 +1411,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 634--637
 
  []
 
-<./images/databasecreation.png, id=476, 466.74374pt x 203.25937pt>
+<./images/databasecreation.png, id=486, 466.74374pt x 203.25937pt>
 File: ./images/databasecreation.png Graphic file (type png)
 
 <use ./images/databasecreation.png>
@@ -1380,14 +1428,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 647--650
  []
 
 [28 <./images/databasecreation.png>]
-<./images/akeeba1.png, id=486, 677.53125pt x 639.89063pt>
+<./images/akeeba1.png, id=496, 677.53125pt x 639.89063pt>
 File: ./images/akeeba1.png Graphic file (type png)
 
 <use ./images/akeeba1.png>
 Package pdftex.def Info: ./images/akeeba1.png used on input line 653.
 (pdftex.def)             Requested size: 284.52756pt x 268.72293pt.
  [29 <./images/akeeba1.png>]
-<./images/akeeba2.png, id=494, 677.53125pt x 489.32813pt>
+<./images/akeeba2.png, id=504, 677.53125pt x 489.32813pt>
 File: ./images/akeeba2.png Graphic file (type png)
 
 <use ./images/akeeba2.png>
@@ -1399,7 +1447,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 670--681
  []
 
 [30 <./images/akeeba2.png>]
-<./images/akeeba3.png, id=501, 677.53125pt x 436.63126pt>
+<./images/akeeba3.png, id=511, 677.53125pt x 436.63126pt>
 File: ./images/akeeba3.png Graphic file (type png)
 
 <use ./images/akeeba3.png>
@@ -1416,7 +1464,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 701--704
  []
 
 [31 <./images/akeeba3.png>]
-<./images/j3mainconfiguration.png, id=511, 915.42pt x 707.64375pt>
+<./images/j3mainconfiguration.png, id=521, 915.42pt x 707.64375pt>
 File: ./images/j3mainconfiguration.png Graphic file (type png)
 
 <use ./images/j3mainconfiguration.png>
@@ -1428,7 +1476,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 714--716
 
  []
 
-<./images/j3databaseconfiguration.png, id=512, 621.07031pt x 481.8pt>
+<./images/j3databaseconfiguration.png, id=522, 621.07031pt x 481.8pt>
 File: ./images/j3databaseconfiguration.png Graphic file (type png)
 
 <use ./images/j3databaseconfiguration.png>
@@ -1441,7 +1489,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 724--734
  []
 
 [32 <./images/j3mainconfiguration.png> <./images/j3databaseconfiguration.png>]
-<./images/j3finalization.png, id=518, 621.07031pt x 316.18124pt>
+<./images/j3finalization.png, id=528, 621.07031pt x 316.18124pt>
 File: ./images/j3finalization.png Graphic file (type png)
 
 <use ./images/j3finalization.png>
@@ -1466,7 +1514,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--25
 
  []
 
-<./images/Git_gerrit_jenkins.png, id=524, 910.15031pt x 597.73312pt>
+<./images/Git_gerrit_jenkins.png, id=534, 910.15031pt x 597.73312pt>
 File: ./images/Git_gerrit_jenkins.png Graphic file (type png)
 
 <use ./images/Git_gerrit_jenkins.png>
@@ -1480,7 +1528,7 @@ Package pdftex.def Info: ./images/Git_gerrit_jenkins.png used on input line 37.
 
 
 ]
-<./images/gerrit-commit-directory.png, id=535, 700.6175pt x 583.17876pt>
+<./images/gerrit-commit-directory.png, id=545, 700.6175pt x 583.17876pt>
 File: ./images/gerrit-commit-directory.png Graphic file (type png)
 
 <use ./images/gerrit-commit-directory.png>
@@ -1488,7 +1536,7 @@ Package pdftex.def Info: ./images/gerrit-commit-directory.png used on input lin
 e 51.
 (pdftex.def)             Requested size: 199.16928pt x 165.78053pt.
  [35 <./images/Git_gerrit_jenkins.png>]
-<./images/gerrit-commit-directory-amend.png, id=543, 700.6175pt x 583.17876pt>
+<./images/gerrit-commit-directory-amend.png, id=554, 700.6175pt x 583.17876pt>
 File: ./images/gerrit-commit-directory-amend.png Graphic file (type png)
 
 <use ./images/gerrit-commit-directory-amend.png>
@@ -1496,7 +1544,7 @@ Package pdftex.def Info: ./images/gerrit-commit-directory-amend.png used on inp
 ut line 60.
 (pdftex.def)             Requested size: 199.16928pt x 165.78053pt.
 
-<./images/gerrit-push-new.png, id=544, 686.565pt x 474.77374pt>
+<./images/gerrit-push-new.png, id=555, 686.565pt x 474.77374pt>
 File: ./images/gerrit-push-new.png Graphic file (type png)
 
 <use ./images/gerrit-push-new.png>
@@ -1504,21 +1552,21 @@ Package pdftex.def Info: ./images/gerrit-push-new.png used on input line 69.
 (pdftex.def)             Requested size: 227.62204pt x 157.40025pt.
  [36 <./images/gerrit-commit-directory.png> <./images/gerrit-commit-directory-a
 mend.png>]
-<./images/gerrit-push-old.pdf, id=554, 678.535pt x 216.81pt>
+<./images/gerrit-push-old.pdf, id=564, 678.535pt x 216.81pt>
 File: ./images/gerrit-push-old.pdf Graphic file (type pdf)
 
 <use ./images/gerrit-push-old.pdf>
 Package pdftex.def Info: ./images/gerrit-push-old.pdf used on input line 78.
 (pdftex.def)             Requested size: 227.62204pt x 72.72856pt.
 
-<./images/gerrit-review.png, id=557, 601.24625pt x 313.17pt>
+<./images/gerrit-review.png, id=567, 601.24625pt x 313.17pt>
 File: ./images/gerrit-review.png Graphic file (type png)
 
 <use ./images/gerrit-review.png>
 Package pdftex.def Info: ./images/gerrit-review.png used on input line 90.
 (pdftex.def)             Requested size: 227.62204pt x 118.56142pt.
  [37 <./images/gerrit-push-new.png> <./images/gerrit-push-old.pdf>]
-<./images/gerrit-feature.png, id=579, 1034.86626pt x 363.3575pt>
+<./images/gerrit-feature.png, id=589, 1034.86626pt x 363.3575pt>
 File: ./images/gerrit-feature.png Graphic file (type png)
 
 <use ./images/gerrit-feature.png>
@@ -1529,7 +1577,16 @@ Package pdftex.def Info: ./images/gerrit-feature.png used on input line 102.
 
  (./development_guide.tex
 Chapter 4.
-) [39
+\openout3 = `"iCampus Development Guide.pyg.lst"'.
+
+runsystem(pygmentize -P encoding=latin1 -l php -F tokenmerge -f latex -o "iCamp
+us Development Guide".pyg.vrb "iCampus Development Guide".pyg.lst)...executed.
+
+runsystem(pygmentize -S default -f latex > "iCampus Development Guide".pyg.sty)
+...executed.
+
+(./iCampus Development Guide.pyg.sty) (./iCampus Development Guide.pyg.vrb))
+[39
 
 
 
@@ -1543,16 +1600,16 @@ Appendix A.
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
  (./iCampus Development Guide.aux (./environment.aux)
 (./extension_development.aux) (./tool_guide.aux) (./development_guide.aux)
 (./appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
 Package rerunfilecheck Info: File `"iCampus Development Guide".out' has not cha
 nged.
-(rerunfilecheck)             Checksum: 0993EBA978861A5164C6A399BA247082;2437.
+(rerunfilecheck)             Checksum: F3157DD359653672FF9EB6328AB39C35;2580.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1560,33 +1617,35 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 55.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
- 10560 strings out of 493308
- 159619 string characters out of 6141367
- 255520 words of memory out of 5000000
- 13634 multiletter control sequences out of 15000+600000
- 13696 words of font info for 53 fonts, out of 8000000 for 9000
+ 11624 strings out of 493308
+ 173733 string characters out of 6141367
+ 276100 words of memory out of 5000000
+ 14669 multiletter control sequences out of 15000+600000
+ 13864 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 59i,9n,94p,1653b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,9n,94p,1653b,581s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2013
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2013/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2013/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2013/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr6.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
-b><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2013/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2013/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmtt8.pfb>
-Output written on "iCampus Development Guide.pdf" (40 pages, 2339487 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/texlive/2013/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2013/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5
+.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2013/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2013/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmtt10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.p
+fb>
+Output written on "iCampus Development Guide.pdf" (40 pages, 2355580 bytes).
 PDF statistics:
- 688 PDF objects out of 1000 (max. 8388607)
- 569 compressed objects within 6 object streams
- 168 named destinations out of 1000 (max. 500000)
- 507 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 710 PDF objects out of 1000 (max. 8388607)
+ 589 compressed objects within 6 object streams
+ 171 named destinations out of 1000 (max. 500000)
+ 523 words of extra memory for PDF output out of 10000 (max. 10000000)
 

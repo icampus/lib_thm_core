@@ -33,5 +33,7 @@
 \BOOKMARK [2][-]{subsection.3.2.4}{Review change}{section.3.2}% 33
 \BOOKMARK [2][-]{subsection.3.2.5}{Submit/Abandon change}{section.3.2}% 34
 \BOOKMARK [0][-]{chapter.4}{Development Guide}{}% 35
-\BOOKMARK [0][-]{appendix.A}{How-tos}{}% 36
-\BOOKMARK [1][-]{section.A.1}{How to change environment variables in Windows}{appendix.A}% 37
+\BOOKMARK [1][-]{section.4.1}{Advanced PHP Tips}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.1.1}{String Equals Zero In PHP}{section.4.1}% 37
+\BOOKMARK [0][-]{appendix.A}{How-tos}{}% 38
+\BOOKMARK [1][-]{section.A.1}{How to change environment variables in Windows}{appendix.A}% 39
