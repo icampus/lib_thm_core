@@ -196,11 +196,10 @@ class THM_CoreTemplateList
         $iteration = 0;
         foreach ($items as $index => $row)
         {
-            if ($index == 'attributes')
+            if ($index === 'attributes')
             {
                 continue;
             }
-
             self::renderRow($row, $iteration);
         }
         echo '</thead>';
@@ -216,8 +215,6 @@ class THM_CoreTemplateList
      */
     private static function renderRow($row, &$iteration)
     {
-        $defaultClass = 'row' . $iteration % 2;
-
         // Custom attributes
         if (!empty($row['attributes']) AND is_array($row['attributes']))
         {
@@ -237,7 +234,7 @@ class THM_CoreTemplateList
         foreach ($row as $index => $column)
         {
             // Attributes should not be presented as table data
-            if ($index == 'attributes')
+            if ($index === 'attributes')
             {
                 continue;
             }
