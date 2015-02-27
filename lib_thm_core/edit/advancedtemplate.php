@@ -32,7 +32,6 @@ class THM_CoreTemplateAdvanced
     {
 
         $option = JFactory::getApplication()->input->get('option');
-        $resource = str_replace('_edit', '', $view->get('name'));
 ?>
        
         <form action="index.php?option=<?php echo $option; ?>"
@@ -47,9 +46,14 @@ echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'details'));
 $sets = $view->form->getFieldSets();
 foreach ($sets as $set)
 {
-    echo JHtml::_('bootstrap.addTab', 'myTab', $set->name, JText::_($set->label, true));
-    echo $view->form->renderFieldset($set->name);
-    echo JHtml::_('bootstrap.endTab');
+    $isInitialized = (bool) $view->form->getValue('id');
+    $displayInitial = isset($set->displayinitial)? $set->displayinitial : true;
+    if ($displayInitial OR $isInitialized)
+    {
+        echo JHtml::_('bootstrap.addTab', 'myTab', $set->name, JText::_($set->label, true));
+        echo $view->form->renderFieldset($set->name);
+        echo JHtml::_('bootstrap.endTab');
+    }
 }
 echo JHtml::_('bootstrap.endTabSet');
 ?>
