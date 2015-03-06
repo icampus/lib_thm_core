@@ -16,7 +16,6 @@
 \usepackage{listings}
 \usepackage{hyperref}
 \usepackage{float}
-\usepackage{verbments}
 \hypersetup{
 	colorlinks=true,
 	allcolors=blue,
@@ -24,6 +23,17 @@
 }
 \usepackage{hypcap}
 \usepackage{subcaption}
+
+% Add semantic reference commands
+\newcommand*{\figref}[1]{%
+	\hyperref[{#1}]{Figure~\ref*{#1}}%
+}%
+\newcommand*{\chapref}[1]{%
+	\hyperref[{#1}]{\nameref{#1},~Chapter~\ref*{#1}}%
+}%
+\newcommand*{\secref}[1]{%
+	\hyperref[{#1}]{\nameref{#1},~Section~\ref*{#1}}%
+}%
 
 \begin{document}
 
