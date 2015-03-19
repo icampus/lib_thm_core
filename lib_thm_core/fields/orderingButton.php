@@ -1,9 +1,11 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
+/**
+ * Class JFormFieldOrderingButton
+ */
 class JFormFieldOrderingButton extends JFormField
 {
-
     protected $type = 'OrderingButton';
 
     public function getInput()
