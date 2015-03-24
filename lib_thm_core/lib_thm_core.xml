@@ -22,6 +22,7 @@
         <folder>helpers</folder>&gt;
         <folder>form</folder>
         <folder>js</folder>
+        <folder>tables</folder>
         <folder>list</folder>
         <folder>log</folder>
         <folder>util</folder>
