@@ -30,6 +30,8 @@ abstract class THM_CoreModelList extends JModelList
 
     protected $defaultStart = '0';
 
+    protected $defaultFilters = array();
+
     public $actions = null;
 
     /**
@@ -62,6 +64,12 @@ abstract class THM_CoreModelList extends JModelList
         if (!property_exists($data, 'list'))
         {
             $data->list = array();
+
+        }
+
+        if (!property_exists($data, 'filter'))
+        {
+            $data->filter = array();
         }
 
         // Joomla doesn't fill these correctly but requires some of them
@@ -71,6 +79,11 @@ abstract class THM_CoreModelList extends JModelList
         $data->list['limit'] = $this->state->get('list.limit', $this->defaultLimit);
         $data->list['start'] = $this->state->get('list.start', $this->defaultStart);
 
+        // Set default values for filters
+        foreach ($this->defaultFilters as $name => $defaultValue)
+        {
+            $data->filter[$name] = $this->state->get('filter.' . $name, $defaultValue);
+        }
         return $data;
     }
 
@@ -91,6 +104,13 @@ abstract class THM_CoreModelList extends JModelList
             foreach ($filters as $name => $value)
             {
                 $this->setState('filter.' . $name, $value);
+            }
+        }
+        else
+        {
+            foreach ($this->defaultFilters as $name => $defaultValue)
+            {
+                $this->state->set('filter.' . $name, $defaultValue);
             }
         }
 
@@ -251,12 +271,13 @@ abstract class THM_CoreModelList extends JModelList
              * check against multiple 'empty' values. Here we check against empty string and null. Should this need to
              * be extended we could maybe add a parameter for it later.
              */
-            if($value == '-1')
+            if ($value == '-1')
             {
                 $query->where("$idColumn = '' OR $idColumn IS NULL");
             }
 
             // IDs are unique and therefore mutually exclusive => one is enough!
+
             $query->where("$idColumn = '$value'");
             return;
         }
@@ -285,7 +306,7 @@ abstract class THM_CoreModelList extends JModelList
              * check against multiple 'empty' values. Here we check against empty string and null. Should this need to
              * be extended we could maybe add a parameter for it later.
              */
-            if($value == '-1')
+            if ($value == '-1')
             {
                 $query->where("( $name = '' OR $name IS NULL )");
                 continue;
@@ -323,7 +344,7 @@ abstract class THM_CoreModelList extends JModelList
              * check against multiple 'empty' values. Here we check against empty string and null. Should this need to
              * be extended we could maybe add a parameter for it later.
              */
-            if($value == '-1')
+            if ($value == '-1')
             {
                 $query->where("( $name = '' OR $name IS NULL )");
                 continue;
