@@ -80,7 +80,7 @@ class THM_CoreTemplateList
      *
      * @return  void
      */
-    private static function renderSearch(&$filters)
+    protected static function renderSearch(&$filters)
     {
         $showSearch = !empty($filters['filter_search']);
         if (!$showSearch)
@@ -115,7 +115,7 @@ class THM_CoreTemplateList
      *
      * @return  void
      */
-    private static function renderHeader(&$headers)
+    protected static function renderHeader(&$headers)
     {
         echo '<tr>';
         foreach ($headers as $header)
@@ -133,7 +133,7 @@ class THM_CoreTemplateList
      *
      * @return  void
      */
-    private static function renderHeaderFilters(&$headers, &$filters)
+    protected static function renderHeaderFilters(&$headers, &$filters)
     {
         $noFilters = count($filters) === 0;
         $onlySearch = (count($filters) === 1 AND !empty($filters['filter_search']));
@@ -177,7 +177,7 @@ class THM_CoreTemplateList
      *
      * @return  void
      */
-    private static function renderBody(&$items)
+    protected static function renderBody(&$items)
     {
         if (!empty($items['attributes']) AND is_array($items['attributes']))
         {
@@ -213,7 +213,7 @@ class THM_CoreTemplateList
      *
      * @return  void  outputs HTML
      */
-    private static function renderRow($row, &$iteration)
+    protected static function renderRow($row, &$iteration)
     {
         // Custom attributes
         if (!empty($row['attributes']) AND is_array($row['attributes']))
@@ -274,7 +274,7 @@ class THM_CoreTemplateList
      *
      * @return  void
      */
-    private static function renderFooter(&$view)
+    protected static function renderFooter(&$view)
     {
         $columnCount = count($view->headers);
         echo '<tfoot><tr>';
