@@ -61,6 +61,7 @@ class THM_CoreTemplateList
                     echo '</thead>';
                     self::renderBody($view->items);
                     self::renderFooter($view);
+                    self::renderBatch($view);
 ?>
                 </table>
                 <input type="hidden" name="task" value="" />
@@ -281,5 +282,23 @@ class THM_CoreTemplateList
         echo "<td colspan='$columnCount'>";
         echo $view->pagination->getListFooter();
         echo '</td></tr></tfoot>';
+    }
+
+    /**
+     * Renders the batch window
+     *
+     * @param   object  &$view  the view context calling the function
+     *
+     * @return  void
+     */
+    protected static function renderBatch(&$view)
+    {
+        if (isset($view->batch) && !empty($view->batch))
+        {
+            if (file_exists($view->batch))
+            {
+                echo $view->loadTemplate('batch');
+            }
+        }
     }
 }
