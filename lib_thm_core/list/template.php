@@ -295,9 +295,12 @@ class THM_CoreTemplateList
     {
         if (isset($view->batch) && !empty($view->batch))
         {
-            if (file_exists($view->batch))
+            foreach ($view->batch as $name => $path)
             {
-                echo $view->loadTemplate('batch');
+                if (file_exists($path))
+                {
+                    echo $view->loadTemplate($name);
+                }
             }
         }
     }
