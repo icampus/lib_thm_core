@@ -33,6 +33,8 @@ abstract class THM_CoreViewList extends JViewLegacy
 
     public $headers = null;
 
+    public $hiddenFields = null;
+
     /**
      * Method to create a list output
      *
@@ -54,6 +56,7 @@ abstract class THM_CoreViewList extends JViewLegacy
 
         // Items common across list views
         $this->headers = $this->get('Headers');
+        $this->hiddenFields = $this->get('HiddenFields');
 
         $this->items = $this->get('Items');
 

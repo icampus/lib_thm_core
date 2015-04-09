@@ -360,4 +360,5 @@ abstract class THM_CoreModelList extends JModelList
      * @return array including headers
      */
     public abstract function getHeaders();
+
 }

@@ -68,6 +68,7 @@ class THM_CoreTemplateList
                 <input type="hidden" name="boxchecked" value="0" />
                 <input type="hidden" name="option" value="<?php echo JFactory::getApplication()->input->get('option'); ?>" />
                 <input type="hidden" name="view" value="<?php echo $view->get('name'); ?>" />
+                <?php self::renderHiddenFields($view) ?>
                 <?php echo JHtml::_('form.token');?>
             </form>
         </div>
@@ -301,6 +302,17 @@ class THM_CoreTemplateList
                 {
                     echo $view->loadTemplate($name);
                 }
+            }
+        }
+    }
+
+    protected static function renderHiddenFields(&$view)
+    {
+        if (isset($view->hiddenFields) && !empty($view->hiddenFields))
+        {
+            foreach ($view->hiddenFields as $field)
+            {
+                echo $field;
             }
         }
     }
