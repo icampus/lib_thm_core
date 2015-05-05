@@ -105,4 +105,37 @@ Submitting a change in Gerrit means that a attached change gets merged into mast
 
 If nothing is declared in the textbox topic, the change will be released as a patch.
 
+\newpage
+
+\subsection{FAQ and Help}
+\subsubsection{If you haven`t rebased and HEAD is lost}
+If you commited without rebasing, your local HEAD is x-commits behind the HEAD of the Server. To fix this, you need to open up the Terminal located in the taskbar on bottom left. ONce the terminal is open, type 'git reset HEAD$\sim$x' (where x means the number of commits you're behind the HEAD of the Server). In the following example, the local HEAD is 1 commit behind the server HEAD.
+
+\begin{figure}[H]
+	\centering
+	\vspace{1pt}
+	\includegraphics[width=7cm]{resetHEADphpstorm}
+	\caption{Terminal}
+\end{figure}
+
+\noindent Now you have to press the blue down arrow with VCS label on the top.
+
+\begin{figure}[H]
+	\centering
+	\vspace{1pt}
+	\includegraphics[width=7cm]{resetHEADphpstorm2}
+	\caption{Terminal}
+\end{figure}
+
+\noindent After that, choose 'Rebase' in the next window.
+
+\begin{figure}[H]
+	\centering
+	\vspace{1pt}
+	\includegraphics[width=7cm]{resetHEADphpstorm3}
+	\caption{Terminal}
+\end{figure}
+
+\noindent These steps should be done after every commit. Now that you've syncronized the HEAD, you can commit changes as described in \secref{sec:pushtorepo}.
+
 
