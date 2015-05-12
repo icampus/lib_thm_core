@@ -19,6 +19,9 @@
         <folder>exception</folder>
         <folder>fields</folder>
         <folder>fonts</folder>
+        <folder>fpdf</folder>
+        <folder>icalcreator</folder>
+        <folder>phpexcel</folder>
         <folder>helpers</folder>&gt;
         <folder>form</folder>
         <folder>js</folder>
