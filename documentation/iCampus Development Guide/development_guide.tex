@@ -66,3 +66,35 @@ If the code needs improvement it can either be rejected outright or fixed. Outri
 The other option is to correct or improve the commit. To do so, the reviewer opens the commit context menu and selects \texttt{Checkout}. This creates a new local branch with the same stand as the commit to be corrected or improved. In the bottom right hand corner of the PhpStorm interface the new branch is now displayed. Click on the branch name to open the branch-interface. Select master and in the context menu that opens select \texttt{Checkout}. This sets your repository to the stand of the current master branch. Next reopen the branch-interface and click on the newly created local branch. In the menu that now opens select \texttt{Merge}. This merges that changes from the new branch onto the stand of the master.\\
 \\
 Now that you have the commit's changes in your master branch proceed to correct and improve the changed files as appropriate. When you have completed your changes append them to the previous commit by placing the checkmark in the \texttt{Append Commit} box and performing the commit and push as you normally would.
+
+\newpage
+\section{Testing}
+\footnote{Source: Rost, Wolf (2014): Software Tests in Agile Web-CMS Development. TH-Mittelhessen.}The black box in Figure \ref{test_folder_structure} shows the repository structure with the extension and test folder structure. The tests are separated by unit and GUI tests. Integration tests are also stored in the unit-tests folder. Should it be necessary, they could also be in a separate folder. The green box in Figure \ref{test_folder_structure}  shows the unit-tests folder in more detail. This folder is structured into a general part (\textit{schema} and \textit{stubs}) and the two folders \textit{admin} and \textit{site}. The folder \textit{admin} contains the tests for the back-end of the extension. And also the test suite (phpunit.xml) and the bootstrap (component\_bootstrap.php) file. The \textit{site} folder is structured like the \textit{admin} but has the unit tests for the front-end of the extension in it. Both folders have to include a bootstrap file because some Joomla path constants are different for the back-end and the front-end. \newline
+The folder \textit{schema} includes the database schema file (ddl.sql). The database schema is written in SQLite syntax\footnote{See \url{http://www.sqlite.org/lang.html}, stand 31.08.2014}. This file is used by the tests to create the SQLite database tables. \newline
+Directly under the \textit{stubs} folder files are located that contain data for the tests. For instance, a long text or a JSON string is stored, to keep the tests readable. The folder \textit{database} contains files in which the database entries are stored. The entries are loaded by the tests and stored into the SQLite database tables. \newline
+The blue box in Figure \ref{test_folder_structure} shows the gui-tests folder in more detail. Like the unit-tests folder, the gui-tests folder is divided into a back-end (admin) and a front-end (site) part. The \textit{Pages} folder contains classes that implements the Page Object pattern. The bootstrap file (component\_bootstrap.php) is the same for the back-end and front-end. This file registers the classes in the \textit{Pages} folder so that the GUI tests can use them without explicitly include them.
+
+To be able to execute the tests, they must be copied to the \textit{tests} folder in an Joomla instance. Figure \ref{test_folder_structure_joomla} shows the file structure of the \textit{tests} folder in an Joomla instance. This folder also includes the basic TestCase classes (tests/core/case), Hard-Coded Mock Objects (tests/core/mock) for general Joomla objects (JApplication, JConfig, JDocument, JLanguage, etc.) and a reflection helper class (tests/core/reflection) to get private and protected values in a class by reflection\footnote{See \url{http://php.net/manual/de/book.reflection.php}, stand 31.08.2014}. \\ 
+In addition, the folder contains Page Objects classes (tests/Pages) for all GUI tests because they represent webpages, which all extensions can use, like the login page, the control panel in the back-end and more. Furthermore there are iCampus Page Objects classes (test/Pages/icampus) that provide methods for general tasks, like add/edit/delete an item in a manager view in the back-end. The last folder (tests/SeleniumClient) contains the PHP-SeleniumClient which allows to interact with the Selenium server. The file bootstrapJ3.php includes the Joomla framework and registers the TestCase classes. This file is again included by the component\_bootstrap.php file (tests/com\_thm\_organizer/unit-tests/admin \& site). The bootstrapSelenium.php file makes the general Page Object classes available for the GUI tests and includes the JoomlaWebdriverTestCase.php. This file is the superclass of the GUI test classes and initialises a WebDriver object (SeleniumClient) using the configuration in the seleniumConfig.php file. All the general folders in the tests folder except the com\_thm\_organizer folder are stored in the joomla\_ci repository (\footnote{joomla\_ci repository: \url{http://dev.mni.thm.de/gitblit/summary/ci!joomla_ci.git}}) in GITBlit. Jenkins and the developers just have to copy the general folders from the CI repository and the tests from the extensions repository to an instance of Joomla and can immediately execute the tests. The requirements to execute the tests are listed below. Almost always the requirements are met on the machines of developers. 
+\begin{itemize}
+\item PHPUnit 4.0 (minimum)\footnote{See \url{https://phpunit.de/manual/current/en/installation.html}, stand 19.01.2014}
+\item PHP 5.4 (Joomla also requires PHP)\footnote{See \url{http://www.joomla.org/technical-requirements.html}, stand 01.09.2014}
+\item An Joomla 3 instance with the installed extensions.
+\item SQLite3 (Is enabled by default.)
+\end{itemize}
+	
+\begin{figure}
+\centering
+\includegraphics[scale=0.80]{images/test folder structure}
+\caption[Caption for LOF]{Repository file structure of the THM Organizer component. The black box gives an overview of the file structure. The blue box shows the gui-tests folder in detail. The green box shows the unit-tests folder in detail.{\footnotesize (Source: Rost, Wolf (2014): Software Tests in Agile Web-CMS Development. TH-Mittelhessen.)}}
+
+\label{test_folder_structure}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{images/test folder structure in joomla}
+\caption[Caption for LOF]{Test folder structure of an Joomla instance.{\footnotesize (Source: Rost, Wolf (2014): Software Tests in Agile Web-CMS Development. TH-Mittelhessen.)}}
+\label{test_folder_structure_joomla}
+\end{figure}
