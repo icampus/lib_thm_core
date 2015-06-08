@@ -101,7 +101,7 @@ Next PEAR itself and its channel list needs to be updated, so that later updates
 
 \begin{tabular}{l}
 	// Ensures the latest PEAR version\\
-	\texttt{pear upgrade pear}\\
+	\texttt{pear channel-update pear.php.net}\\
 	\\
 	// Empties the PEAR Cache\\
 	\texttt{pear clear-cache}\\
@@ -135,17 +135,17 @@ More about Code Sniffer and Mess Detector in Section \ref{sec:qatools}.
 \subsection{PHPUnit}
 The following text describes the installation of PHPUnit.\footnote{For the original documentation see \url{https://phpunit.de/manual/current/en/installation.html}}
 
-\subsubsection{Via wget}
+\subsubsection{For Linux Users}
 \begin{tabular}{l}
 	\texttt{wget https://phar.phpunit.de/phpunit.phar}\\
 	\texttt{chmod +x phpunit.phar}\\
 	\texttt{sudo mv phpunit.phar /usr/local/bin/phpunit}\\
 \end{tabular}\\
 
-\subsubsection{For Windows}
+\subsubsection{For Windows Users}
 \begin{enumerate}
-	\item Create a directory for PHP binaries; e.g., C:\textbackslash bin
-	\item Append C:\textbackslash bin to your PATH environment variable (see appendix \ref{app:change_env_var})
+	\item Create a directory for PHP binaries; e.g., \texttt{C:\textbackslash bin}.
+	\item Add your PHP directory \texttt{C:\textbackslash xampp\textbackslash php} and the above created directory to your system's PATH environment variable. See appendix \ref{app:change_env_var}.
 	\item Download \url{https://phar.phpunit.de/phpunit.phar} and save the file as C:\textbackslash bin\textbackslash phpunit.phar
 	\item Open a command line (e.g., press Windows+R $ > $ type cmd $ > $ ENTER)
 	\item Create a wrapping batch script (results in C:\textbackslash bin\textbackslash phpunit.cmd):\\
@@ -238,7 +238,7 @@ During the installation process you will be asked which file extensions should b
 \noindent
 For the most part the rest of the installation requires nothing special, however at the end you will be asked to chose between several themes and coloring/font style options. As this interface offers no preview it is best to go with the default settings. These selections can later be changed while running the PhpStorm which will actually show you what effects your selection has on its appearance.\\
 \\
-After the installation starting PhpStorm will request the lisence information. Here use \texttt{Technische Hochschule Mittelhessen - University of Applied Sciences} for the ``User or Company Name" and the ``License key provided for you.
+After the installation starting PhpStorm will request the lisence information. Here use \texttt{Technische Hochschule Mittelhessen} for the ``User or Company Name" and the ``License key provided for you.
 
 \begin{figure}[h]
 	\centering
