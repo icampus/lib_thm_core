@@ -1,6 +1,6 @@
 /* global jQuery */
 
-function toggleContainer(containerID)
+function toggleGroupDisplay(containerID)
 {
     var container = jQuery(containerID);
     if (container.hasClass('shown'))
