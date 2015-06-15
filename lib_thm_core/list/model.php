@@ -115,7 +115,7 @@ abstract class THM_CoreModelList extends JModelList
         }
 
         $list = $app->getUserStateFromRequest($this->context . '.list', 'list', array(), 'array');
-        $this->setStateOrdering($list);
+        $this->setListState($list);
 
         $limit = empty($list['limit'])? $this->defaultLimit : $list['limit'];
         $this->setState('list.limit', $limit);
@@ -132,7 +132,7 @@ abstract class THM_CoreModelList extends JModelList
      *
      * @return  void  sets state variables
      */
-    private function setStateOrdering($list)
+    private function setListState($list)
     {
         $validRequestOrdering = (!empty($list['ordering']) AND strpos('null', $list['ordering']) !== null);
         $ordering = $validRequestOrdering? $list['ordering'] : $this->defaultOrdering;
@@ -165,6 +165,15 @@ abstract class THM_CoreModelList extends JModelList
         $this->setState('list.fullordering', "$ordering $direction");
         $this->setState('list.ordering', $ordering);
         $this->setState('list.direction', $direction);
+
+        $alreadyProcessed = array('ordering, direction, fullordering');
+        foreach ($list as $item => $value)
+        {
+            if (!in_array($item, $alreadyProcessed))
+            {
+                $this->setState("list.$item", $value);
+            }
+        }
     }
 
     /**
@@ -293,6 +302,30 @@ abstract class THM_CoreModelList extends JModelList
      */
     protected function setValueFilters(&$query, $filterNames)
     {
+        // The view level filters
+        foreach ($filterNames AS $name)
+        {
+            $value = $this->state->get("list.$name", '');
+            if ($value === '')
+            {
+                continue;
+            }
+
+            /**
+             * Special value reserved for empty filtering. Since an empty is dependent upon the column default, we must
+             * check against multiple 'empty' values. Here we check against empty string and null. Should this need to
+             * be extended we could maybe add a parameter for it later.
+             */
+            if ($value == '-1')
+            {
+                $query->where("( $name = '' OR $name IS NULL )");
+                continue;
+            }
+
+            $query->where("$name = '$value'");
+        }
+
+        // The column level filters
         foreach ($filterNames AS $name)
         {
             $value = $this->state->get("filter.$name", '');
