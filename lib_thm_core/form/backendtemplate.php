@@ -31,7 +31,6 @@ class THM_CoreTemplateBackend
     public static function render(&$view)
     {
         $option = JFactory::getApplication()->input->get('option');
-        $resource = str_replace('_edit', '', $view->get('name'));
 ?>
         <form action="index.php?option=<?php echo $option; ?>"
               enctype="multipart/form-data"
