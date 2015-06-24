@@ -37,7 +37,7 @@ class THM_CoreTemplateBackend
               enctype="multipart/form-data"
               method="post"
               name="adminForm"
-              id="form-form"
+              id="item-form"
               class="form-horizontal">
             <div class="form-horizontal">
                 <?php echo $view->form->renderFieldset('details'); ?>
