@@ -389,6 +389,85 @@ For quick access to the Gerrit and Jenkins plugins it is helpful to add their to
 \noindent
 This will add icons with text to the borders of the PhpStorm window. Clicking these opens the corresponding tool windows.
 
+\subsection{Deployment - Mapping}
+This section will describe how to configure deployments in PHPStorm. So the files and folder will be automatically synced between your project folder and Joomla instance.
+\begin{itemize}
+	\item \texttt{Step 1}: External Libraries $->$ right-click  $->$ Configure Php Include Paths
+	
+	Alternatively : F4 key
+	\begin{figure}[H] 
+		\centering
+		\includegraphics[width=4.3cm]{include_joomla}
+		\caption{Configure external libraries}
+	\end{figure}
+	\item \texttt{Step 2}: Click on the green plus icon.
+	\begin{figure}[H] 
+		\centering
+		\vspace{3pt}
+		\includegraphics[width=6.5cm]{include_joomla_2}
+		\caption{Add a Joomla instance}
+	\end{figure}
+	\item \texttt{Step 3}: Choose the path to your Joomla instance.
+	\begin{figure}[H] 
+		\centering
+		\vspace{3pt}
+		\includegraphics[width=6cm]{include_joomla_3}
+		\caption{Choose the path to your local Joomla instance}
+	\end{figure}
+	\item \texttt{Step 4}: File $->$ Settings
+	\begin{figure}[H] 
+		\centering
+		\vspace{3pt}
+		\includegraphics[width=4cm]{deployment}
+		\caption{Deployment}
+	\end{figure}
+	\item \texttt{Step 5}: Deployment $->$ "Add", choose "Local or mountend folder" as Type and give a meaningful name like "localhost"
+	\begin{figure}[H] 
+		\centering
+		\vspace{3pt}
+		\includegraphics[width=5cm]{deployment_2}
+		\caption{Open the PHPStorm settings}
+	\end{figure}
+	\item \texttt{Step 6}: Folder = Path to your Joomla instance
+						   Web-server root Url : self-explanatory
+	
+	\begin{figure}[H] 
+		\centering
+		\vspace{3pt}
+		\includegraphics[width=5cm]{deployment_3}
+		\caption{Add a new deployment}
+	\end{figure}
+	\item \texttt{Step 7}: Local Path : Path to your local folder
+	e.g.: home/user/PhpStormProjects/com\_<componentname>/site
+	
+	Deployment Path : Path to the specific folder in your Joomla instance
+    e.g.: /components/com\_<componentname>
+	
+	By clicking on "add another mapping" you can add more mappings.
+	Repeat the same steps for the other folders. ( Folder "admin" etc.).
+	
+	\textbf{Please notice}: You cannot upload the same folder (or subfolders) to different sites at once. A separate deployment configuration has to be created for each of them and uploaded to each site one by one.
+	\begin{figure}[H] 
+		\centering
+		\vspace{3pt}
+		\includegraphics[width=5cm]{deployment_4}
+		\caption{Add new mappings}
+	\end{figure}
+	\item \texttt{Step 8}: Set the newly created deployment as your default deployment.
+	\begin{figure}[H] 
+		\centering
+		\vspace{3pt}
+		\includegraphics[width=5cm]{deployment_5}
+		\caption{Set deployment as default}
+	\end{figure}
+	\item \texttt{Step 9}: Set the sync options.
+	\begin{figure}[H] 
+		\centering
+		\vspace{3pt}
+		\includegraphics[width=5cm]{deployment_6}
+		\caption{Set the sync options}
+	\end{figure}
+\end{itemize}
 
 \section{Code Sniffer and Mess Detector}
 \label{sec:qatools}
@@ -713,4 +792,3 @@ Use the following values to complete the form, then click ``$\Rightarrow$ Next" 
 
 \noindent
 Here you can choose whether or not you wish to install sample data. Leave ``None" selected and click ``$\Rightarrow$ Install" to complete the installation. The installation will then show the progress of the database construction. When this is finished you will be told that Joomla! is installed. You should now press the orange button ``Remove installation folder" to complete the installation. You can choose to visit the frontend or backend of the site by clicking the appropriate button.
-
