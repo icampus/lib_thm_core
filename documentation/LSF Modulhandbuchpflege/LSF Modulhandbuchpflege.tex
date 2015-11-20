@@ -1,0 +1,64 @@
+\documentclass[]{report}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[pdftex]{graphicx}
+\usepackage[space]{grffile}
+\usepackage{epstopdf}
+\usepackage{epsfig}
+\usepackage{bmpsize}
+\graphicspath{{./images/}}
+\usepackage[export]{adjustbox}
+\usepackage{wrapfig}
+\usepackage{appendix}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{float}
+\hypersetup{
+	colorlinks=true,
+	allcolors=blue,
+	pdfborderstyle={/S/U/W 1}
+}
+\usepackage{hypcap}
+\usepackage{subcaption}
+
+% Add semantic reference commands
+\newcommand*{\figref}[1]{%
+	\hyperref[{#1}]{Figure~\ref*{#1}}%
+}%
+\newcommand*{\chapref}[1]{%
+	\hyperref[{#1}]{\nameref{#1},~Chapter~\ref*{#1}}%
+}%
+\newcommand*{\secref}[1]{%
+	\hyperref[{#1}]{\nameref{#1},~Section~\ref*{#1}}%
+}%
+
+\begin{document}
+
+\title{LSF Modulhandbuchpflege}
+\author{James Antrim}
+
+\begin{figure}
+\centering
+\includegraphics[width=7cm]{THM_Logo_200px.png}
+\maketitle
+\end{figure}
+
+\newpage
+
+\chapter{LSF Modulhandbuchpflege}
+
+Dieses Dokument gibt einen Muster nach dem die Pflege der Modulhandbücher in LSF erfolgen könnte.
+
+\section{Modultitel}
+
+Die Modultitel ist der Name des Moduls. Dies ist selbst erklärend
+
+\section{Modulcode (alphanumerisch)}
+
+Eine Folge von Zeichen die das Modul kennzeichnen. Zur Zeit wird dieser Feld unterschiedlich und uneindeutig von allen Fachbereichen gepflegt.
+
+
+\end{document}
