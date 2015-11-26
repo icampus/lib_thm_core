@@ -1,46 +1,90 @@
-// ------------------------------------ //
-// body definitions                     //
-// ------------------------------------ //
-$font: Verdana, Arial;
-$fsize: 13px;
-$fcolor: rgb(74, 92, 102);
-$line-height: 1.3;
+//********************************************************************************************************************//
+// Colors                                                                                                             //
+//********************************************************************************************************************//
 
-// ***** alternative definitions *****  //
-// ------------------------------------ //
-// Borders                              //
-// ------------------------------------ //
+// Greens
+$green-100: #80ba24;
+$green-75: #a0cb5b;
+$green-50: #bfdc91;
+$green-25: #dfeec8;
 
-// border and color definition
-$border-color: 1px solid rgb(187, 187, 187);
+// Greys
+$grey-100: #4a5c66;
+$grey-75: #77858c;
+$grey-50: #a4adb2;
+$grey-25: #d2d6d9;
 
-// ------------------------------------ //
-// Colors                               //
-// ------------------------------------ //
+// Reds
+$red-100: #9c132e;
+$red-75: #b54e62;
+$red-50: #cd8996;
+$red-25: #e6c4cb;
 
-//thm-gruen
-$thm-gruen-color: #80ba24;
-//thm-grau
-$thm-grau-color: #4a5c66;
+// Yellows
+$yellow-100: #f4aa00;
+$yellow-75: #f7bf40;
+$yellow-50: #f9d47f;
+$yellow-25: #fceabf;
+
+// Blues
+$blue-100: #002878;
+$blue-75: #405e9a;
+$blue-50: #7f93bb;
+$blue-25: #bfc9dd;
+
+// General Colors ****************************************************************************************************//
+
+// THM Green
+$thm: $green-100;
+$thm-gruen-color: $green-100; // Deprecated
+
+// Background Colors *************************************************************************************************//
+
+$foreground: white;
+
+// Light Blue-Grey (general use)
+$background: #f2f5f6;
+$bg-color: $background; // Deprecated
+
+// Middle Blue-Grey (navigation elements / general use)
+$background-navigation: #dfe5e6;
+
+// 25 Green (active element highlighting / contact module)
+$background-green: $green-25;
+$background-contact: $green-25;
+$background-active: $green-25;
+
+// 50 Yellow (list/news modules)
+$background-yellow: $yellow-50;
+$background-list: $yellow-50;
+$background-news: $yellow-50;
+
+// 75 Red (list/menu modules)
+$background-red: $red-75;
+$background-menu: $red-75;
+
+// 75 Blue (event module)
+$background-blue: $blue-75;
+$background-events: $blue-75;
+
+// 100 Blue-Grey (footer, captions, buttons)
+$background-grey: $grey-100;
+$background-foot: $grey-100;
+$thm-grau-color: $background-grey; // Deprecated
+
+// Backend Developed Extension Colors ********************************************************************************//
 
 // box-shadow default definition
-$shadow-color: rgb(221, 221, 221);
+$shadow-color: #dddddd;
 
 // box-shadow definition for fieldset
-$shadow-color-fieldset: rgb(128, 186, 36);
+$shadow-color-fieldset: $thm;
 
 // background color for accordion
-$bg-color: #f2f5f6;
-$bg-color-panel: rgb(255, 255, 255);
+$bg-color-panel: #ffffff;
 
-// color for hover in widget accordion
-$bg-color-widget: rgb(74, 92, 102);
-
-// font color for light text
-$fcolor-light: rgb(238, 238, 238);
-
-// title color
-$fcolor-title: rgb(68, 92, 32);
+// color for hover in widget accordion?
+$bg-color-widget: $grey-100;
 
 //gradient colors for selected items in list (for backend)
 $gr-color-top-item:#62c462;
@@ -49,24 +93,44 @@ $gr-color-bottom-item:#51a351;
 // gradient colors for background (backend)
 $gr-color-top-bg:#B9D986;
 $gr-color-bottom-bg: #cce3a7;
-// ------------------------------------ //
-// Fonts                                //
-// ------------------------------------ //
-$fsize-em: 1.3em;
 
-// large size for title
-$fsize-title: 20px;
+//********************************************************************************************************************//
+// Text Attribues                                                                                                     //
+//********************************************************************************************************************//
 
-// default size for lists
-$fsize-list: 12px;
-
-// small size for items
-$fsize-small: 11px;
-
-// size for publish infos (author, date)
-$fsize-publish: 9px;
-
-// ------------------------------------ //
-// Positions                            //
-// ------------------------------------ //
+$font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+$font: $font-family; // Deprecated
+$font-size: 13px;
+$fsize: 13px; // Deprecated
+$font-size-em: 1.3em;
+$fsize-em: 1.3em; // Deprecated
+$font-size-title: 20px;
+$fsize-title: $font-size-title; // Deprecated
+$font-size-list: 12px;
+$fsize-list: $font-size-list; // Deprecated
+$font-size-small: 11px;
+$fsize-small: $font-size-small; // Deprecated
+$font-size-note: 9px;
+$fsize-publish: $font-size-note;
+$font-color: #394a59;
+$fcolor: $font-color; // Deprecated
+$font-color-link: $red-100;
+$font-color-light: #ffffff;
+$fcolor-light: $font-color-light; // Deprecated
+$font-color-title: $font-color;
+$fcolor-title: $font-color-title; // Deprecated
 $text-align-center: center;
+$line-height: 1.3;
+
+//********************************************************************************************************************//
+// Borders                                                                                                            //
+//********************************************************************************************************************//
+
+$border: 1px solid $grey-75;
+$border-color: $border; // Deprecated
+
+// For use against light (non-white) backgrounds
+$border-contrast-low: 2px solid  $grey-100;
+
+// For use against light (non-white) backgrounds
+$border-contrast-high: 2px solid  $foreground;

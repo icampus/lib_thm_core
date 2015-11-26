@@ -1,11 +1,11 @@
-// Filter bar definitions
+@import '../../lib_thm_core/scss/variables';
 %fieldset {
-  background-color: $bg-color;
-  border: $border-color;
+  background-color: $background;
+  border: $border;
   clear: both;
-  color: $fcolor;
-  font-family: $font;
-  font-size: $fsize;
+  color: $font-color;
+  font-family: $font-family;
+  font-size: $font-size;
   overflow: auto;
   padding: 8px 4px 4px 4px;
   z-index: 12;

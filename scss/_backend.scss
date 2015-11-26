@@ -4,9 +4,9 @@
 
 /*Filter- und Search-Bereich anpassen */
 .searchArea a, thead a {
-  color: $thm-grau-color;
+  color: $background-grey;
   &:hover {
-    color: $thm-gruen-color;
+    color: $thm;
   }
 }
 
@@ -18,7 +18,7 @@
 }
 
 thead {
-  color: $thm-grau-color;
+  color: $background-grey;
   tr:nth-child(1) th {
     @include linearGradient($gr-color-bottom-bg, $gr-color-top-bg);
     padding-top: 5px;
