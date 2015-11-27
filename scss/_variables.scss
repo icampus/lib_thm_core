@@ -128,9 +128,11 @@ $line-height: 1.3;
 
 $border: 1px solid $grey-75;
 $border-color: $border; // Deprecated
+$border-input: $border;
+$border-table: $border;
 
 // For use against light (non-white) backgrounds
-$border-contrast-low: 2px solid  $grey-100;
+$border-button-low-contrast: 2px solid  $grey-100;
 
 // For use against light (non-white) backgrounds
-$border-contrast-high: 2px solid  $foreground;
+$border-button-high-contrast: 2px solid  $foreground;
