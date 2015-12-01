@@ -24,7 +24,7 @@ class THM_CoreTemplateList
     /**
      * Method to create a list output
      *
-     * @param   object  &$view           the view context calling the function
+     * @param   object  &$view  the view context calling the function
      *
      * @return void
      */
@@ -102,13 +102,13 @@ class THM_CoreTemplateList
                 </div>
                 <div class="btn-wrapper">
                     <button type="button" class="btn hasTooltip js-stools-btn-clear"
-                            title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_CLEAR'); ?>" onclick="document.getElementById('filter_search').value='';">
+                            title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_CLEAR'); ?>"
+                            onclick="document.getElementById('filter_search').value='';">
                         <i class="icon-delete"></i>
                     </button>
                 </div>
 <?php
     }
-
 
     /**
      * Renders the table head
@@ -306,6 +306,13 @@ class THM_CoreTemplateList
         }
     }
 
+    /**
+     * Renders hidden fields
+     *
+     * @param   object  &$view  the view object
+     *
+     * @return  void  outputs hidden fields html
+     */
     protected static function renderHiddenFields(&$view)
     {
         if (isset($view->hiddenFields) && !empty($view->hiddenFields))

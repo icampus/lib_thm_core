@@ -14,8 +14,8 @@ jimport('joomla.database.table');
 /**
  * Class representing the assets table.
  *
- * @category    Joomla.Library.Site
- * @package     thm_organizer
+ * @category    Joomla.Library
+ * @package     THM_Core
  * @subpackage  com_thm_organizer.admin.tables
  */
 class THM_CoreTableAssets extends JTable
@@ -32,10 +32,10 @@ class THM_CoreTableAssets extends JTable
      */
     public function store($updateNulls = true)
     {
-        $k = $this->_tbl_keys;
+        $keys = $this->_tbl_keys;
 
         // Implement JObservableInterface: Pre-processing by observers
-        $this->_observers->update('onBeforeStore', array($updateNulls, $k));
+        $this->_observers->update('onBeforeStore', array($updateNulls, $keys));
 
         $currentAssetId = 0;
 

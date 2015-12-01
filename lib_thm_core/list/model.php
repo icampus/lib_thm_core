@@ -92,6 +92,10 @@ abstract class THM_CoreModelList extends JModelList
      *
      * @param   string  $ordering   the column by which the table is should be ordered
      * @param   string  $direction  the direction in which this column should be ordered
+     *
+     * @return  void  sets object state variables
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     protected function populateState($ordering = null, $direction = null)
     {
@@ -134,31 +138,16 @@ abstract class THM_CoreModelList extends JModelList
      */
     private function setListState($list)
     {
-        $validRequestOrdering = (!empty($list['ordering']) AND strpos('null', $list['ordering']) !== null);
-        $ordering = $validRequestOrdering? $list['ordering'] : $this->defaultOrdering;
+        $validReqOrdering = (!empty($list['ordering']) AND strpos('null', $list['ordering']) !== null);
+        $ordering = $validReqOrdering? $list['ordering'] : $this->defaultOrdering;
 
-        $validRequestDirection = (!empty($list['direction']) AND in_array(strtoupper($list['direction']), array('ASC', 'DESC', '')));
-        $direction = $validRequestDirection? $list['direction'] : $this->defaultDirection;
+        $validReqDirection = (!empty($list['direction']) AND in_array(strtoupper($list['direction']), array('ASC', 'DESC', '')));
+        $direction = $validReqDirection? $list['direction'] : $this->defaultDirection;
 
         $session = JFactory::getSession();
         if (!empty($list['fullordering']))
         {
-            // Joomla lost the ordering part through pagination use
-            if (strpos($list['fullordering'], 'null') !== false)
-            {
-                $list['fullordering'] = $sessionOrdering = $session->get($this->context . '.ordering', "$ordering $direction");
-            }
-            $orderingParts = explode(' ', $list['fullordering']);
-            if (count($orderingParts) == 2)
-            {
-                $plausibleOrdering = $orderingParts[0] != 'null';
-                $validDirection = in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', ''));
-                if ($plausibleOrdering AND $validDirection)
-                {
-                    $ordering = $orderingParts[0];
-                    $direction = $orderingParts[1];
-                }
-            }
+            $this->processFullOrdering($list);
         }
 
         $session->set($this->context . '.ordering', "$ordering $direction");
@@ -172,6 +161,36 @@ abstract class THM_CoreModelList extends JModelList
             if (!in_array($item, $alreadyProcessed))
             {
                 $this->setState("list.$item", $value);
+            }
+        }
+    }
+
+    /**
+     * Handles the full ordering list input if existent
+     *
+     * @param   array   &$list      the list section of the form request
+     * @param   object  &$session   the session object
+     * @param   string  $ordering   the attribute upon which the ordering is determined
+     * @param   string  $direction  the direction of the sort
+     *
+     * @return  void  alters the input parameters
+     */
+    private function processFullOrdering(&$list, &$session, &$ordering, &$direction)
+    {
+        // Joomla lost the ordering part through pagination use
+        if (strpos($list['fullordering'], 'null') !== false)
+        {
+            $list['fullordering'] = $session->get($this->context . '.ordering', "$ordering $direction");
+        }
+        $orderingParts = explode(' ', $list['fullordering']);
+        if (count($orderingParts) == 2)
+        {
+            $plausibleOrdering = $orderingParts[0] != 'null';
+            $validDirection = in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', ''));
+            if ($plausibleOrdering AND $validDirection)
+            {
+                $ordering = $orderingParts[0];
+                $direction = $orderingParts[1];
             }
         }
     }
@@ -194,7 +213,7 @@ abstract class THM_CoreModelList extends JModelList
 
         $attributes = array();
         $attributes['title'] = $tip;
-        $attributes['class'] = 'btn btn-micro hasTooltip' ;
+        $attributes['class'] = 'btn btn-micro hasTooltip';
         $attributes['class'] .= empty($value)? ' inactive' : '';
 
 
@@ -220,7 +239,7 @@ abstract class THM_CoreModelList extends JModelList
         $listOrdering = $this->state->get('list.fullordering', $defaultOrdering);
         if (strpos($listOrdering, 'null') !== false)
         {
-            $sessionOrdering = $session->get( 'ordering', '' );
+            $sessionOrdering = $session->get('ordering', '');
             if (empty($sessionOrdering))
             {
                 $session->set($this->context . '.ordering', $defaultOrdering);
@@ -241,7 +260,7 @@ abstract class THM_CoreModelList extends JModelList
      */
     protected function setSearchFilter(&$query, $columnNames)
     {
-        $userInput = $this->state->get( 'filter.search', '');
+        $userInput = $this->state->get('filter.search', '');
         if (empty($userInput))
         {
             return;

@@ -1,7 +1,7 @@
 <?php
 /**
- * @category    Joomla component
- * @package     THM_Organizer
+ * @category    Joomla library
+ * @package     THM_Core
  * @subpackage  lib_thm_core.site
  * @name        THM_CoreHelper
  * @author      James Antrim, <james.antrim@mni.thm.de>
@@ -14,7 +14,7 @@
 /**
  * Class providing functions usefull to multiple component files
  *
- * @category  Joomla.Component.Admin
+ * @category  Joomla.Library
  * @package   thm_core
  */
 class THM_CoreHelper

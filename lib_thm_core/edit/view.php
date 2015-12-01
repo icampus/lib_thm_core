@@ -46,6 +46,8 @@ abstract class THM_CoreViewEdit extends JViewLegacy
 
     /**
      * Concrete classes are supposed to use this method to add a toolbar.
+     *
+     * @return  void  adds toolbar items to the view
      */
     protected abstract function addToolBar();
 

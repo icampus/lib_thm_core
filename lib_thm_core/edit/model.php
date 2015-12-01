@@ -14,7 +14,7 @@ defined('_JEXEC') or die;
 /**
  * Class loads form data to edit an entry.
  *
- * @category    Joomla.Component.Admin
+ * @category    Joomla.Library
  * @package     thm_core
  * @subpackage  lib_thm_core.site
  */

@@ -1,7 +1,7 @@
 <?php
 /**
- * @category    Joomla component
- * @package     THM_Organizer
+ * @category    Joomla library
+ * @package     THM_Core
  * @subpackage  lib_thm_core.site
  * @name        JFormFieldFields
  * @author      James Antrim, <james.antrim@mni.thm.de>
@@ -15,7 +15,7 @@ JFormHelper::loadFieldClass('list');
 /**
  * Class loads a list of fields for selection
  *
- * @category    Joomla.Component.Admin
+ * @category    Joomla.Library
  * @package     thm_core
  * @subpackage  lib_thm_core.site
  */
@@ -54,7 +54,7 @@ class JFormFieldDateList extends JFormFieldList
             $resources = $dbo->loadAssocList();
             $options = array();
             $option = JFactory::getApplication()->input->get('option');
-            $params =JComponentHelper::getParams($option);
+            $params = JComponentHelper::getParams($option);
             $type = $this->getAttribute('format');
             $format = $type == 'time'? $params->get('timeFormat', 'H:i') : $params->get('dateFormat', 'd.m.Y');
             foreach ($resources as $resource)

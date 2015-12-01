@@ -1,7 +1,7 @@
 <?php
 /**
- * @category    Joomla component
- * @package     THM_Organizer
+ * @category    Joomla library
+ * @package     THM_Core
  * @subpackage  lib_thm_core.site
  * @name        JFormFieldFields
  * @author      James Antrim, <james.antrim@mni.thm.de>
@@ -15,7 +15,7 @@ JFormHelper::loadFieldClass('list');
 /**
  * Class loads a list of fields for selection
  *
- * @category    Joomla.Component.Admin
+ * @category    Joomla.Library
  * @package     thm_core
  * @subpackage  lib_thm_core.site
  */
@@ -128,6 +128,8 @@ class JFormFieldGenericList extends JFormFieldList
      * Sets value oriented parameters from component settings
      *
      * @param   array  &$options  the input options
+     *
+     * @return  void  sets option values
      */
     private function setValueParameters(&$options)
     {

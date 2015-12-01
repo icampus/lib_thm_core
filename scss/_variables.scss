@@ -130,9 +130,10 @@ $border: 1px solid $grey-75;
 $border-color: $border; // Deprecated
 $border-input: $border;
 $border-table: $border;
+$border-thick: 2px solid  $grey-100;
 
 // For use against light (non-white) backgrounds
-$border-button-low-contrast: 2px solid  $grey-100;
+$border-button-low-contrast: $border-thick;
 
 // For use against light (non-white) backgrounds
 $border-button-high-contrast: 2px solid  $foreground;
