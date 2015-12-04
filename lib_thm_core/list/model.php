@@ -88,6 +88,53 @@ abstract class THM_CoreModelList extends JModelList
     }
 
     /**
+     * Method to get the total number of items for the data set. Joomla erases critical fields for complex data sets.
+     * This method fixes the erroneous output of undesired duplicate entries.
+     *
+     * @param   string  $idColumn  the main id column of the list query
+     *
+     * @return  integer  The total number of items available in the data set.
+     */
+    public function getTotal($idColumn = null)
+    {
+        if (empty($idColumn))
+        {
+            return parent::getTotal();
+        }
+
+        // Get a storage key.
+        $store = $this->getStoreId('getTotal');
+
+        // Try to load the data from internal storage.
+        if (isset($this->cache[$store]))
+        {
+            return $this->cache[$store];
+        }
+
+        // Load the total.
+        $query = $this->_getListQuery();
+        $query->clear('select')->clear('limit')->clear('offset')->clear('order');
+        $query->select("COUNT(DISTINCT ($idColumn))");
+        $this->_db->setQuery((string) $query);
+
+        try
+        {
+            $total = (int) $this->_db->loadResult();
+        }
+        catch (RuntimeException $e)
+        {
+            $this->setError($e->getMessage());
+
+            return false;
+        }
+
+        // Add the total to the internal cache.
+        $this->cache[$store] = $total;
+
+        return $this->cache[$store];
+    }
+
+    /**
      * Overwrites the JModelList populateState function
      *
      * @param   string  $ordering   the column by which the table is should be ordered
@@ -147,7 +194,7 @@ abstract class THM_CoreModelList extends JModelList
         $session = JFactory::getSession();
         if (!empty($list['fullordering']))
         {
-            $this->processFullOrdering($list);
+            $this->processFullOrdering($list, $session, $ordering, $direction);
         }
 
         $session->set($this->context . '.ordering', "$ordering $direction");
@@ -412,5 +459,7 @@ abstract class THM_CoreModelList extends JModelList
      * @return array including headers
      */
     public abstract function getHeaders();
+
+
 
 }
