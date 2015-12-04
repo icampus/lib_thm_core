@@ -3,14 +3,14 @@
 	<libraryname>thm_core</libraryname>
 	<name>THM Core Library</name>
 	<author>THM iCampus</author>
-	<creationDate>November 2015</creationDate>
+	<creationDate>December 2015</creationDate>
 	<copyright>TH Mittelhessen 2015</copyright>
 	<licence>GNU GPL v.2</licence>
 	<authorEMail>Andrej.Sajenko@mni.thm.de</authorEMail>
     <authorEMail>Ilja.Michajlow@mni.thm.de</authorEMail>
     <authorEMail>james.antrim@mni.thm.de</authorEMail>
 	<authorUrl>www.mni.thm.de</authorUrl>
-	<version>0.0.26</version>
+	<version>0.0.27</version>
 	<description>Library for iCampus</description>
 	<files>
         <filename>index.html</filename>
