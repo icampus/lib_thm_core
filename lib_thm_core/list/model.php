@@ -112,7 +112,7 @@ abstract class THM_CoreModelList extends JModelList
         }
 
         // Load the total.
-        $query = $this->_getListQuery();
+        $query = $this->getListQuery();
         $query->clear('select')->clear('limit')->clear('offset')->clear('order');
         $query->select("COUNT(DISTINCT ($idColumn))");
         $this->_db->setQuery((string) $query);
@@ -168,7 +168,8 @@ abstract class THM_CoreModelList extends JModelList
         $list = $app->getUserStateFromRequest($this->context . '.list', 'list', array(), 'array');
         $this->setListState($list);
 
-        $limit = empty($list['limit'])? $this->defaultLimit : $list['limit'];
+        $validLimit = (isset($list['limit']) && is_numeric($list['limit']));
+        $limit = $validLimit? $list['limit']: $this->defaultLimit;
         $this->setState('list.limit', $limit);
 
         $value = $this->getUserStateFromRequest('limitstart', 'limitstart', 0);
