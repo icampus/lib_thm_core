@@ -75,7 +75,7 @@ $thm-grau-color: $background-grey; // Deprecated
 // Backend Developed Extension Colors ********************************************************************************//
 
 // box-shadow default definition
-$shadow-color: #dddddd;
+$shadow-color: $grey-50;
 
 // box-shadow definition for fieldset
 $shadow-color-fieldset: $thm;
@@ -101,9 +101,9 @@ $gr-color-bottom-bg: #cce3a7;
 $font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 $font: $font-family; // Deprecated
 $font-size: 13px;
-$fsize: 13px; // Deprecated
+$fsize: $font-size; // Deprecated
 $font-size-em: 1.3em;
-$fsize-em: 1.3em; // Deprecated
+$fsize-em: $font-size-em; // Deprecated
 $font-size-title: 20px;
 $fsize-title: $font-size-title; // Deprecated
 $font-size-list: 12px;

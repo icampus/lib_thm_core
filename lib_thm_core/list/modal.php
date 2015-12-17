@@ -61,6 +61,7 @@ class THM_CoreTemplateModalList
                 <input type="hidden" name="option" value="<?php echo JFactory::getApplication()->input->get('option'); ?>" />
                 <input type="hidden" name="view" value="<?php echo $view->get('name'); ?>" />
                 <input type="hidden" name="tmpl" value="component" />
+                <?php self::renderHiddenFields($view) ?>
                 <?php echo JHtml::_('form.token');?>
             </form>
         </div>
@@ -217,5 +218,23 @@ class THM_CoreTemplateModalList
         echo "<td colspan='$columnCount'>";
         echo $view->pagination->getListFooter();
         echo '</td></tr></tfoot>';
+    }
+
+    /**
+     * Renders hidden fields
+     *
+     * @param   object  &$view  the view object
+     *
+     * @return  void  outputs hidden fields html
+     */
+    protected static function renderHiddenFields(&$view)
+    {
+        if (isset($view->hiddenFields) && !empty($view->hiddenFields))
+        {
+            foreach ($view->hiddenFields as $field)
+            {
+                echo $field;
+            }
+        }
     }
 }
