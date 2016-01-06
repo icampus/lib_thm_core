@@ -59,8 +59,8 @@ class THM_CoreModelEdit extends JModelAdmin
         $path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
         $helper = str_replace('com_', '', $option) . 'HelperComponent';
         require_once $path;
-        $helper::addActions($this);
 
+        $helper::addActions($this);
         $item = parent::getItem($pk);
         $allowEdit = $helper::allowEdit($this, $item->id);
         if ($allowEdit)
