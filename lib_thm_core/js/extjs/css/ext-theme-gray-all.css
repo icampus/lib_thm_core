@@ -68,13 +68,6 @@ img {
     position: relative
 }
 
-.x-ie-shadow {
-    background-color: #777;
-    display: none;
-    position: absolute;
-    overflow: hidden
-}
-
 .x-unselectable {
     user-select: none;
     -o-user-select: none;
@@ -997,7 +990,7 @@ td.x-frame-mc {
 
 .x-form-text-wrap {
     display: table-cell;
-    overflow: hidden;
+    overflow: visible;
     height: 100%
 }
 
@@ -3619,30 +3612,6 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 .x-btn-split-right > .x-btn-text.x-btn-icon-right > .x-btn-icon-el-default-toolbar-small {
     margin-right: 4px
-}
-
-.x-btn-focus.x-btn-default-toolbar-small {
-    border-color: #9d9d9d;
-    background-image: none;
-    background-color: #f3f3f3;
-}
-
-.x-btn-over.x-btn-default-toolbar-small {
-    border-color: #9d9d9d;
-    background-image: none;
-    background-color: #f3f3f3;
-}
-
-.x-btn.x-btn-menu-active.x-btn-default-toolbar-small, .x-btn.x-btn-pressed.x-btn-default-toolbar-small {
-    border-color: #9d9d9d;
-    background-image: none;
-    background-color: #d6d6d6;
-}
-
-.x-btn.x-btn-disabled.x-btn-default-toolbar-small {
-    border-color: #d7d7d7;
-    background-image: none;
-    background-color: transparent
 }
 
 .x-btn.x-btn-disabled.x-btn-default-toolbar-small .x-btn-inner {
@@ -7161,7 +7130,6 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 .x-form-text-field-body-default {
     min-width: 150px;
-    max-width: 150px
 }
 
 .x-form-text-wrap-default {
@@ -7213,33 +7181,6 @@ ul.x-tagfield-list.x-tagfield-singleselect {
     background-image: url(images/grid/invalid_line.gif);
     background-repeat: repeat-x;
     background-position: bottom
-}
-
-.x-form-trigger-default {
-    background: transparent url(images/form/trigger.gif) no-repeat;
-    background-position: 0 0;
-    width: 17px;
-    border-width: 0 0 1px;
-    border-color: #b5b8c8;
-    border-style: solid
-}
-
-.x-form-trigger-default.x-form-trigger-over {
-    background-position: -17px 0;
-    border-color: #a1a1a1
-}
-
-.x-form-trigger-default.x-form-trigger-over.x-form-trigger-focus {
-    background-position: -68px 0
-}
-
-.x-form-trigger-default.x-form-trigger-focus {
-    background-position: -51px 0;
-    border-color: #a1a1a1
-}
-
-.x-form-trigger.x-form-trigger-default.x-form-trigger-click {
-    background-position: -34px 0
 }
 
 .x-textfield-default-cell > .x-grid-cell-inner {
@@ -10800,10 +10741,6 @@ body.x-border-layout-ct, div.x-border-layout-ct {
     content: "x-slicer:bg:url(images/datepicker/datepicker-footer-bg.gif), stretch:bottom"
 }
 
-.x-form-date-trigger {
-    background-image: url(images/form/date-trigger.gif)
-}
-
 .x-color-picker {
     width: 144px;
     height: 90px;
@@ -11370,18 +11307,6 @@ a.x-color-picker-item:hover {
 
 .x-btn-focus.x-btn-grid-cell-small {
     border-color: #d4d4d4;
-    background-image: none;
-    background-color: white;
-}
-
-.x-btn.x-btn-menu-active.x-btn-grid-cell-small, .x-btn.x-btn-pressed.x-btn-grid-cell-small {
-    border-color: #a2a2a2;
-    background-image: none;
-    background-color: #dfdfdf;
-}
-
-.x-btn.x-btn-disabled.x-btn-grid-cell-small {
-    border-color: white;
     background-image: none;
     background-color: white;
 }
