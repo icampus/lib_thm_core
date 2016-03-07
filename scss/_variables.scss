@@ -137,3 +137,10 @@ $border-button-low-contrast: $border-thick;
 
 // For use against light (non-white) backgrounds
 $border-button-high-contrast: 2px solid  $foreground;
+
+//********************************************************************************************************************//
+// Breakpoints for Media Queries
+//********************************************************************************************************************//
+
+$mq-phone: 480px;
+$mq-tablet:768px;
