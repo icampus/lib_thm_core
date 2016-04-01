@@ -23,6 +23,7 @@
 		<exclude name="Joomla.Commenting.ClassComment"/>
 		<exclude name="Joomla.Commenting.FileComment"/>
 		<exclude name="Joomla.Classes.MemberVarScope"/>
+		<exclude name="Joomla.ControlStructures.WhiteSpaceBefore.SpaceBefore"/>
 		<exclude name="PEAR.NamingConventions.ValidClassName.StartWithCaptial"/>
 
 		<!--
