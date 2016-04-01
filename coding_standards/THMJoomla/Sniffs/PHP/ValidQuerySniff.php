@@ -7,7 +7,7 @@
  * @category  PHP
  * @package   PHP_CodeSniffer
  * @author    Niklas Simonis <niklas.simonis@mni.thm.de>
- * @copyright 2104
+ * @copyright 2012
  * @license   http://matrix.squiz.net/developer/tools/php_cs/licence BSD Licence
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
@@ -18,7 +18,7 @@
  * @category  PHP
  * @package   PHP_CodeSniffer
  * @author    Niklas Simonis <niklas.simonis@mni.thm.de>
- * @copyright 2104
+ * @copyright 2012
  * @license   http://matrix.squiz.net/developer/tools/php_cs/licence BSD Licence
  * @version   Release: 1.0.0
  */

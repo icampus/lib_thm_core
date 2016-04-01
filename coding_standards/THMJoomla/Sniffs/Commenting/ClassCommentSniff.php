@@ -501,9 +501,9 @@ class THMJoomla_Sniffs_Commenting_ClassCommentSniff extends THMJoomla_Sniffs_Com
                 $error = 'Content missing for @link tag in file comment';
                 $this->currentFile->addError($error, $errorPos, 'EmptyLink');
             }
-            if($content != 'www.mni.thm.de')
+            if($content != 'www.mni.thm.de' && $content != 'www.thm.de')
             {
-                $error = 'Invalid link "%s" in file comment; consider "www.mni.thm.de" instead';
+                $error = 'Invalid link "%s" in file comment; consider "www.mni.thm.de" or "www.thm.de" instead';
                 $this->currentFile->addError($error, $errorPos, 'InvalidLink');
             }
         }

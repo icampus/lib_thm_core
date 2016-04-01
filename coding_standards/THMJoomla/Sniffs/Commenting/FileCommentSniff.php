@@ -667,9 +667,9 @@ class THMJoomla_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sn
                     $localMiddle = $local.'.\w';
                     if (strstr($content, ',') === false 
                         || preg_match('/^([^<]*)\s+<(['.$local.']['.$localMiddle.']*['.$local.']@[\da-zA-Z][-.\w]*[\da-zA-Z]\.[a-zA-Z]{2,7})>$/', $content) === 0 
-                    	|| strstr($content, '@mni.thm.de') === false)
+                    	|| strstr($content, 'thm.de') === false)
                     {
-                    	$error = 'Content of the @author tag must be in the form "Display Name, <firstname.secondname@mni.thm.de>"';
+                    	$error = 'Content of the @author tag must be in the form "Display Name, <firstname.secondname@[department].thm.de>"';
                     	$this->currentFile->addError($error, $errorPos, 'InvalidAuthors');
                     }
                 } else {
@@ -811,9 +811,9 @@ class THMJoomla_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sn
     			$error = 'Content missing for @link tag in file comment';
     			$this->currentFile->addError($error, $errorPos, 'EmptyLink');
     		}
-    		if($content != 'www.mni.thm.de')
+    		if($content != 'www.mni.thm.de' && $content != 'www.thm.de')
     		{
-    			$error = 'Invalid link "%s" in file comment; consider "www.mni.thm.de" instead';
+    			$error = 'Invalid link "%s" in file comment; consider "www.mni.thm.de" or "www.thm.de" instead';
     			$this->currentFile->addError($error, $errorPos, 'InvalidLink');
     		}
     	}
