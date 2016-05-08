@@ -88,12 +88,23 @@ class JFormFieldGenericList extends JFormFieldList
     private function resolveText(&$query)
     {
         $textColumn = $this->getAttribute('textColumn');
+        $textColumns = explode(',', $textColumn);
+
+        $localized = $this->getAttribute('localized', false);
+        if ($localized)
+        {
+            jimport('thm_core.helpers.corehelper');
+            $tag = THM_CoreHelper::getLanguageShortTag();
+            foreach ($textColumns as $key => $value)
+            {
+                $textColumns[$key] = $value . '_' . $tag;
+            }
+        }
         $glue = $this->getAttribute('glue');
 
-        $textColumns = explode(',', $textColumn);
         if (count($textColumns) === 1 OR empty($glue))
         {
-            return $textColumn;
+            return $textColumns[0];
         }
 
         return '( ' . $query->concatenate($textColumns, $glue) . ' )';

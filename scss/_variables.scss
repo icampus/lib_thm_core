@@ -43,8 +43,9 @@ $thm-gruen-color: $green-100; // Deprecated
 $foreground: white;
 
 // Light Blue-Grey (general use)
-$background: #f2f5f6;
-$bg-color: $background; // Deprecated
+$background-color: #f2f5f6;
+$bg-color: $background-color;
+$background: $background-color;
 
 // Middle Blue-Grey (navigation elements / general use)
 $background-navigation: #dfe5e6;
@@ -70,7 +71,7 @@ $background-events: $blue-75;
 // 100 Blue-Grey (footer, captions, buttons)
 $background-grey: $grey-100;
 $background-foot: $grey-100;
-$thm-grau-color: $background-grey; // Deprecated
+$thm-grau-color: $background-grey;
 
 // Backend Developed Extension Colors ********************************************************************************//
 
@@ -99,26 +100,27 @@ $gr-color-bottom-bg: #cce3a7;
 //********************************************************************************************************************//
 
 $font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-$font: $font-family; // Deprecated
+$font-family-header: 'THM-Medium', Arial, Helvetica, sans-serif;
+$font: $font-family;
 $font-size: 13px;
-$fsize: $font-size; // Deprecated
+$fsize: $font-size;
 $font-size-em: 1.3em;
-$fsize-em: $font-size-em; // Deprecated
+$fsize-em: $font-size-em;
 $font-size-title: 20px;
-$fsize-title: $font-size-title; // Deprecated
+$fsize-title: $font-size-title;
 $font-size-list: 12px;
-$fsize-list: $font-size-list; // Deprecated
+$fsize-list: $font-size-list;
 $font-size-small: 11px;
-$fsize-small: $font-size-small; // Deprecated
+$fsize-small: $font-size-small;
 $font-size-note: 9px;
 $fsize-publish: $font-size-note;
 $font-color: #394a59;
-$fcolor: $font-color; // Deprecated
+$fcolor: $font-color;
 $font-color-link: $red-100;
 $font-color-light: #ffffff;
-$fcolor-light: $font-color-light; // Deprecated
+$fcolor-light: $font-color-light;
 $font-color-title: $font-color;
-$fcolor-title: $font-color-title; // Deprecated
+$fcolor-title: $font-color-title;
 $text-align-center: center;
 $line-height: 1.3;
 
@@ -127,9 +129,10 @@ $line-height: 1.3;
 //********************************************************************************************************************//
 
 $border: 1px solid $grey-75;
-$border-color: $border; // Deprecated
+$border-color: $border;
 $border-input: $border;
 $border-table: $border;
+
 $border-thick: 2px solid  $grey-100;
 
 // For use against light (non-white) backgrounds
