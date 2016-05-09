@@ -184,7 +184,7 @@ abstract class THM_CoreModelList extends JModelList
      *
      * @return  void  sets state variables
      */
-    private function setListState($list)
+    protected function setListState($list)
     {
         $validReqOrdering = (!empty($list['ordering']) AND strpos('null', $list['ordering']) !== null);
         $ordering = $validReqOrdering? $list['ordering'] : $this->defaultOrdering;
@@ -223,7 +223,7 @@ abstract class THM_CoreModelList extends JModelList
      *
      * @return  void  alters the input parameters
      */
-    private function processFullOrdering(&$list, &$session, &$ordering, &$direction)
+    protected function processFullOrdering(&$list, &$session, &$ordering, &$direction)
     {
         // Joomla lost the ordering part through pagination use
         if (strpos($list['fullordering'], 'null') !== false)
