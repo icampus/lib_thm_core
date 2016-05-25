@@ -8,8 +8,8 @@
 \usepackage{graphicx}
 \geometry{verbose,a4paper,tmargin=15mm,bmargin=15mm,lmargin=15mm,rmargin=15mm}
 %opening
-\title{Web Programming Weeks SS15\\Teil I}
-\author{Dennis Priefer, Wolf Rost, James Antrim\\\textit{Vorname}.\textit{Nachname}@mni.thm.de}
+\title{Web Programming Weeks Projektwoche SS16\\Teil I}
+\author{Dennis Priefer, Wolf Rost\\\textit{Vorname}.\textit{Nachname}@mni.thm.de}
 
 \begin{document}
 
@@ -17,7 +17,7 @@
 
 \section{Entwicklungs-Infrastruktur}
 \subsection{Einrichten der Entwicklungsumgebung}
-Folgen Sie den Anweisungen des \textit{WPW-Workingsheets} (\url{http://www.mni.thm.de/index.php/startseite/alle-downloads} -$ > $ Forschung -$ > $ webMedia) der iCampus-Gruppe zum Einrichten Ihrer Entwicklungsumgebung.
+Folgen Sie den Anweisungen des \textit{WPW-Guides} (\url{https://www.mni.thm.de/forschung/institute-a-gruppen/fii/fii-veranstaltungen}) zum Einrichten Ihrer Entwicklungsumgebung.
 \subsection{Lokale PHP-Umgebung einrichten}
 Für Ihre lokale PHP-Umgebung laden Sie sich XAMPP unter \url{https://www.apachefriends.org/de/index.html} herunter und installieren es auf Ihrem Rechner. XAMPP beinhaltet neben dem Apache Server zur lokalen Übersetzung von PHP-Skripten einen MySQL-Server, welcher für die Verwendung von Joomla benötigt wird.\\
 \\
@@ -28,13 +28,17 @@ Um PHP-Skripte auszuführen müssen sich diese innerhalb des Ordners \textit{$<$
 
 \subsection{Versionsverwaltung mit Git}
 Git ermöglich es kollaborativ an Projekten zu arbeiten.
-Durch das Klonen eines Repositories (Projektes) wird eine exakte Kopie auf dem Rechner erstellt. Wenn Änderungen an den Dateien gemacht wurden, muss man diese \textit{committen}. Damit sind die Änderungen erstmal im lokalen Repository festgehalten. Damit die Änderungen für andere Entwickler sichtbar werden, muss man seine Commits in das zentrale Repository \textit{pushen}. Möchte man Änderungen von anderen synchronisieren, kann man sich diese \textit{pullen}. Dabei können so genannte \textit{Merge-Konflikte} auftreten. Bei der Lösung von Konflikten hilft einem die IDE.\\
+Durch das Klonen eines Repositories (Projektes) wird eine exakte Kopie auf dem Rechner erstellt. Wenn Änderungen an den Dateien gemacht wurden, muss man diese \textit{committen}. Damit sind die Änderungen erstmal im lokalen Repository festgehalten. Damit die Änderungen für andere Entwickler sichtbar werden, muss man seine Commits in das zentrale Repository \textit{pushen}. Möchte man Änderungen von anderen synchronisieren, kann man sich diese \textit{pullen}. Dabei können so genannte \textit{Merge-Konflikte} auftreten. Bei der Lösung von Konflikten hilft einem die IDE.\\\\
+\textbf{Zur Einarbeitung in die Versionsverwaltung mit Git, absolvieren Sie den nachfolgenden Onlinekurs:}
+\begin{list}{}{}
+\item \url{http://learngitbranching.js.org/}
+\end{list}
 
 \section{Joomla}
 Die Aufgabenstellungen in diesem Kapitel sollen als Einarbeitung in Joomla dienen.
 \subsection{Joomla 3}
 \begin{enumerate}
-\item \textbf{Joomla 3.4.3 herunterladen \& installieren} \newline Hinweis: Nutzen Sie dazu die Anleitung im WPW Skript (2.6.3 Joomla! 3.x Development)
+\item \textbf{Joomla 3.5.1 herunterladen \& installieren} \newline Hinweis: Nutzen Sie dazu die Anleitung im WPW Guide (2.5 Joomla!)
 \item \textbf{Legen Sie sich selbst als neuen Benutzer an und weisen Sie diesem die Gruppe "Registered" zu} \newline
 Hinweis: Backend-URL: localhost/$ < $Joomla-Verzeichnisname-im-htdocs-Ordner$ > $/administrator. \\
 Die Zuweisung zu einer Gruppe kann direkt beim Erstellen des Benutzer durchgeführt werden.
