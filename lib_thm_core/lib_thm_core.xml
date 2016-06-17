@@ -30,4 +30,7 @@
         <folder>log</folder>
         <folder>util</folder>
     </files>
+    <updateservers>
+        <server type="extension" priority="1" name="THM Core Library Update Site">http://jenkins-ci.mni.thm.de/view/THM%20Control/job/Releases/lastSuccessfulBuild/artifact/updates/lib_thm_core.xml</server>
+    </updateservers>
 </extension>
