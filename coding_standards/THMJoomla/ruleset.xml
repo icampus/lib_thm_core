@@ -8,18 +8,10 @@
 	<exclude-pattern>*.css</exclude-pattern>
 
 	<!--
-		Include Generic.WhiteSpace.DisallowTabIndent
-		to use only WhiteSpaces
-	-->
-	<rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
-
-	<!--
 		Include all Joomla Sniffs, exlude some specified
 		Sniffs.
 	-->
 	<rule ref="Joomla">
-		<exclude name="Joomla.WhiteSpace.DisallowSpaceIndent.SpaceUsed"/>
-		<exclude name="Joomla.WhiteSpace.SuperfluousWhitespace"/>
 		<exclude name="Joomla.Commenting.ClassComment"/>
 		<exclude name="Joomla.Commenting.FileComment"/>
 		<exclude name="Joomla.Classes.MemberVarScope"/>
