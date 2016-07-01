@@ -20,38 +20,38 @@ defined('_JEXEC') or die;
  */
 class THM_CoreModelForm extends JModelForm
 {
-    /**
-     * Method to get the form
-     *
-     * @param   Array    $data      Data         (default: Array)
-     * @param   Boolean  $loadData  Load data  (default: true)
-     *
-     * @return  mixed  JForm object on success, False on error.
-     *
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
-     */
-    public function getForm($data = array(), $loadData = false)
-    {
-        $option = $this->get('option');
+	/**
+	 * Method to get the form
+	 *
+	 * @param   Array    $data      Data         (default: Array)
+	 * @param   Boolean  $loadData  Load data  (default: true)
+	 *
+	 * @return  mixed  JForm object on success, False on error.
+	 *
+	 * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+	 */
+	public function getForm($data = array(), $loadData = false)
+	{
+		$option = $this->get('option');
 
-        $path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
-        $helper = str_replace('com_', '', $option) . 'HelperComponent';
-        require_once $path;
-        $helper::addActions($this);
-        $allowEdit = $helper::allowEdit($this);
-        if (!$allowEdit)
-        {
-            throw new Exception(JText::_('JERROR_ALERTNOAUTHOR'), 404);
-        }
+		$path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
+		$helper = str_replace('com_', '', $option) . 'HelperComponent';
+		require_once $path;
+		$helper::addActions($this);
+		$allowEdit = $helper::allowEdit($this);
+		if (!$allowEdit)
+		{
+			throw new Exception(JText::_('JERROR_ALERTNOAUTHOR'), 404);
+		}
 
-        $name = $this->get('name');
-        $form = $this->loadForm("$option.$name", $name, array('control' => 'jform', 'load_data' => $loadData));
+		$name = $this->get('name');
+		$form = $this->loadForm("$option.$name", $name, array('control' => 'jform', 'load_data' => $loadData));
 
-        if (empty($form))
-        {
-            return false;
-        }
+		if (empty($form))
+		{
+			return false;
+		}
 
-        return $form;
-    }
+		return $form;
+	}
 }

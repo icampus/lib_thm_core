@@ -17,17 +17,17 @@
  */
 class THMObject
 {
-    /**
-     * Retrieves an object property
-     *
-     * @param   object  $object    the object being accessed
-     * @param   string  $property  the property requested
-     * @param   mixed   $default   the default value for the given property
-     *
-     * @return  mixed  the value of the property if existent, otherwise the default value
-     */
-    public static function getOr($object, $property, $default = null)
-    {
-        return property_exists($object, $property) ? $object->$property : $default;
-    }
+	/**
+	 * Retrieves an object property
+	 *
+	 * @param   object  $object    the object being accessed
+	 * @param   string  $property  the property requested
+	 * @param   mixed   $default   the default value for the given property
+	 *
+	 * @return  mixed  the value of the property if existent, otherwise the default value
+	 */
+	public static function getOr($object, $property, $default = null)
+	{
+		return property_exists($object, $property) ? $object->$property : $default;
+	}
 }

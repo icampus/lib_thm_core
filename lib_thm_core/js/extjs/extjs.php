@@ -19,8 +19,8 @@ $doc = JFactory::getDocument();
 $scripts = array_keys($doc->_scripts);
 foreach ($extScripts as $script)
 {
-    if (!in_array($script, $scripts))
-    {
-        $doc->addScript($script);
-    }
+	if (!in_array($script, $scripts))
+	{
+		$doc->addScript($script);
+	}
 }

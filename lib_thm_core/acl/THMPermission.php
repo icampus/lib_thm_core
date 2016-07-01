@@ -16,21 +16,21 @@
  */
 final class THMPermission
 {
-    const GRANT = 1;
-    const DENY = 0;
-    const INHERIT = -1;
+	const GRANT = 1;
+	const DENY = 0;
+	const INHERIT = -1;
 
-    /**
-     * Check is a value a valid perm value.
-     *
-     * @param   THMPermission::value  $permValue  Perm value.
-     *
-     * @return bool true if a valid perm value.
-     */
-    public static function  isValidPermission($permValue)
-    {
-        return $permValue === self::DENY
-            || $permValue === self::GRANT
-            || $permValue === self::INHERIT;
-    }
+	/**
+	 * Check is a value a valid perm value.
+	 *
+	 * @param   THMPermission::value  $permValue  Perm value.
+	 *
+	 * @return bool true if a valid perm value.
+	 */
+	public static function  isValidPermission($permValue)
+	{
+		return $permValue === self::DENY
+			|| $permValue === self::GRANT
+			|| $permValue === self::INHERIT;
+	}
 }
