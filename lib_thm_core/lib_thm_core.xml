@@ -21,22 +21,20 @@
         <folder>fonts</folder>
         <folder>fpdf</folder>
         <folder>icalcreator</folder>
-        <folder>phpexcel</folder>
-        <folder>helpers</folder>&gt;
+        <folder>helpers</folder>
         <folder>form</folder>
         <folder>js</folder>
-        <folder>tables</folder>
         <folder>list</folder>
         <folder>log</folder>
+        <folder>phpexcel</folder>
+        <folder>tables</folder>
         <folder>util</folder>
     </files>
 
-    <administration>
-        <languages>
-            <language tag="en-GB">language/en-GB/en-GB.lib_thm_core.ini</language>
-            <language tag="de-DE">language/de-DE/de-DE.lib_thm_core.ini</language>
-        </languages>
-    </administration>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.lib_thm_core.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.lib_thm_core.ini</language>
+    </languages>
 
     <updateservers>
         <server type="extension" priority="1" name="THM Core Library Update Site">http://jenkins-ci.mni.thm.de/view/THM%20Control/job/Releases/lastSuccessfulBuild/artifact/updates/lib_thm_core.xml</server>

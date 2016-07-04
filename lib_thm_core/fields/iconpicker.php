@@ -49,7 +49,7 @@ class JFormFieldIconPicker extends JFormField
 	{
 		JFactory::getDocument()->addScript(JUri::root() . "libraries/thm_core/js/iconpicker.js");
 		$lang = JFactory::getLanguage();
-		$lang->load('lib_thm_core', JPATH_ADMINISTRATOR);
+		$lang->load('lib_thm_core', JPATH_SITE);
 
 		// Generate the content of the button.
 		// If an icon has been saved, it will be put at the button, otherwise "Select an Icon" will appear
@@ -57,7 +57,7 @@ class JFormFieldIconPicker extends JFormField
 			JText::_('LIB_THM_CORE_SELECT') :
 			'<span class="' . $this->value . '"></span><span class="iconName">' . str_replace("icon-", "", $this->value) . '</span>';
 
-		$path = JPATH_ROOT . '\media\jui\css\icomoon.css';
+		$path = JPATH_ROOT . '/media/jui/css/icomoon.css';
 		$file = fopen($path, 'r');
 
 		$select = '<div class="btn-group iconPicker">';
