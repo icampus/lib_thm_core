@@ -458,17 +458,20 @@ class Joomla_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_S
 
             }//end foreach
 
-			// Joomla modification to 2 spaces.
-            if ($spaceBeforeVar !== 2 && $spaceBeforeVar !== 10000 && $spaceBeforeComment !== 10000) {
-                $error = 'Expected 2 spaces after the longest type';
-                $this->currentFile->addError($error, $longestType, 'SpacingAfterLongType');
-            }
+			/**
+			 * iCampus modification to just 1 space! Original was 2 spaces.
+			 */
+			// Joomla modification to 1 spaces.
+			if ($spaceBeforeVar !== 1 && $spaceBeforeVar !== 10000 && $spaceBeforeComment !== 10000) {
+				$error = 'Expected 1 spaces after the longest type';
+				$this->currentFile->addError($error, $longestType, 'SpacingAfterLongType');
+			}
 
-			// Joomla modification to 2 spaces.
-            if ($spaceBeforeComment !== 2 && $spaceBeforeComment !== 10000) {
-                $error = 'Expected 2 spaces after the longest variable name';
-                $this->currentFile->addError($error, $longestVar, 'SpacingAfterLongName');
-            }
+			// Joomla modification to 1 spaces.
+			if ($spaceBeforeComment !== 1 && $spaceBeforeComment !== 10000) {
+				$error = 'Expected 1 spaces after the longest variable name';
+				$this->currentFile->addError($error, $longestVar, 'SpacingAfterLongName');
+			}
 
         }//end if
 
