@@ -8,5 +8,5 @@
 
 defined('_JEXEC') or die;
 
-require_once(JPATH_SITE."/libraries/thm_core/phpexcel/PHPExcel/PHPExcel.php");
+require_once(JPATH_SITE . "/libraries/thm_core/phpexcel/PHPExcel/PHPExcel.php");
 ?>

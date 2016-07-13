@@ -38,11 +38,11 @@ class JFormFieldDateList extends JFormFieldList
 	 */
 	protected function getOptions()
 	{
-		$dbo = JFactory::getDbo();
+		$dbo   = JFactory::getDbo();
 		$query = $dbo->getQuery(true);
 
 		$valueColumn = $this->getAttribute('valueColumn');
-		$textColumn = $this->getAttribute('textColumn');
+		$textColumn  = $this->getAttribute('textColumn');
 
 		$query->select("DISTINCT $valueColumn AS value, $textColumn AS text");
 		$this->setFrom($query);
@@ -52,14 +52,14 @@ class JFormFieldDateList extends JFormFieldList
 		try
 		{
 			$resources = $dbo->loadAssocList();
-			$options = array();
-			$option = JFactory::getApplication()->input->get('option');
-			$params = JComponentHelper::getParams($option);
-			$type = $this->getAttribute('format');
-			$format = $type == 'time'? $params->get('timeFormat', 'H:i') : $params->get('dateFormat', 'd.m.Y');
+			$options   = array();
+			$option    = JFactory::getApplication()->input->get('option');
+			$params    = JComponentHelper::getParams($option);
+			$type      = $this->getAttribute('format');
+			$format    = $type == 'time' ? $params->get('timeFormat', 'H:i') : $params->get('dateFormat', 'd.m.Y');
 			foreach ($resources as $resource)
 			{
-				$text = date($format, strtotime($resource['text']));
+				$text      = date($format, strtotime($resource['text']));
 				$options[] = JHtml::_('select.option', $resource['value'], $text);
 			}
 
@@ -74,14 +74,14 @@ class JFormFieldDateList extends JFormFieldList
 	/**
 	 * Resolves the textColumns for concatenated values
 	 *
-	 * @param   object  &$query  the query object
+	 * @param   object &$query the query object
 	 *
 	 * @return  string  the string to use for text selection
 	 */
 	private function setFrom(&$query)
 	{
 		$tableParameters = $this->getAttribute('table');
-		$tables = explode(',', $tableParameters);
+		$tables          = explode(',', $tableParameters);
 
 		$query->from("#__{$tables[0]}");
 		$count = count($tables);

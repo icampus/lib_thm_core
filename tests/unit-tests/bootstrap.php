@@ -9,11 +9,11 @@ if (!defined('JPATH_BASE'))
 }
 if (!defined('JPATH_PLATFORM'))
 {
-    define('JPATH_PLATFORM', JPATH_BASE . '/libraries');
+	define('JPATH_PLATFORM', JPATH_BASE . '/libraries');
 }
 if (!defined('JPATH_LIBRARIES'))
 {
-    define('JPATH_LIBRARIES', JPATH_BASE . '/libraries');
+	define('JPATH_LIBRARIES', JPATH_BASE . '/libraries');
 }
 
 // Import the Joomla bootstrap.

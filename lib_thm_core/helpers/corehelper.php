@@ -26,8 +26,9 @@ class THM_CoreHelper
 	 */
 	public static function getLanguageShortTag()
 	{
-		$fullTag = JFactory::getLanguage()->getTag();
+		$fullTag  = JFactory::getLanguage()->getTag();
 		$tagParts = explode('-', $fullTag);
+
 		return $tagParts[0];
 	}
 }

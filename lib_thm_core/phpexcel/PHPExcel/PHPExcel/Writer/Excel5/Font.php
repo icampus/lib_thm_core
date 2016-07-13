@@ -65,8 +65,8 @@ class PHPExcel_Writer_Excel5_Font
 	public function __construct(PHPExcel_Style_Font $font = null)
 	{
 		$this->_BIFFVersion = 0x0600;
-		$this->_colorIndex = 0x7FFF;
-		$this->_font = $font;
+		$this->_colorIndex  = 0x7FFF;
+		$this->_font        = $font;
 	}
 
 	/**
@@ -87,36 +87,49 @@ class PHPExcel_Writer_Excel5_Font
 	public function writeFont()
 	{
 		$font_outline = 0;
-		$font_shadow = 0;
+		$font_shadow  = 0;
 
 		$icv = $this->_colorIndex; // Index to color palette
-		if ($this->_font->getSuperScript()) {
+		if ($this->_font->getSuperScript())
+		{
 			$sss = 1;
-		} else if ($this->_font->getSubScript()) {
-			$sss = 2;
-		} else {
-			$sss = 0;
 		}
-		$bFamily = 0; // Font family
+		else
+		{
+			if ($this->_font->getSubScript())
+			{
+				$sss = 2;
+			}
+			else
+			{
+				$sss = 0;
+			}
+		}
+		$bFamily  = 0; // Font family
 		$bCharSet = PHPExcel_Shared_Font::getCharsetFromFontName($this->_font->getName()); // Character set
 
-		$record = 0x31; // Record identifier
+		$record   = 0x31; // Record identifier
 		$reserved = 0x00; // Reserved
-		$grbit = 0x00; // Font attributes
-		if ($this->_font->getItalic()) {
+		$grbit    = 0x00; // Font attributes
+		if ($this->_font->getItalic())
+		{
 			$grbit |= 0x02;
 		}
-		if ($this->_font->getStrikethrough()) {
+		if ($this->_font->getStrikethrough())
+		{
 			$grbit |= 0x08;
 		}
-		if ($font_outline) {
+		if ($font_outline)
+		{
 			$grbit |= 0x10;
 		}
-		if ($font_shadow) {
+		if ($font_shadow)
+		{
 			$grbit |= 0x20;
 		}
 
-		if ($this->_BIFFVersion == 0x0500) {
+		if ($this->_BIFFVersion == 0x0500)
+		{
 			$data = pack("vvvvvCCCCC",
 				$this->_font->getSize() * 20,
 				$grbit,
@@ -130,7 +143,9 @@ class PHPExcel_Writer_Excel5_Font
 				strlen($this->_font->getName())
 			);
 			$data .= $this->_font->getName();
-		} elseif ($this->_BIFFVersion == 0x0600) {
+		}
+		elseif ($this->_BIFFVersion == 0x0600)
+		{
 			$data = pack("vvvvvCCCC",
 				$this->_font->getSize() * 20,
 				$grbit,
@@ -148,7 +163,7 @@ class PHPExcel_Writer_Excel5_Font
 		$length = strlen($data);
 		$header = pack("vv", $record, $length);
 
-		return($header . $data);
+		return ($header . $data);
 	}
 
 	/**
@@ -165,12 +180,16 @@ class PHPExcel_Writer_Excel5_Font
 	 * Map to BIFF5-BIFF8 codes for bold
 	 *
 	 * @param boolean $bold
+	 *
 	 * @return int
 	 */
-	private function _mapBold($bold) {
-		if ($bold) {
+	private function _mapBold($bold)
+	{
+		if ($bold)
+		{
 			return 0x2BC;
 		}
+
 		return 0x190;
 	}
 
@@ -178,16 +197,25 @@ class PHPExcel_Writer_Excel5_Font
 	 * Map underline
 	 *
 	 * @param string
+	 *
 	 * @return int
 	 */
-	private function _mapUnderline($underline) {
-		switch ($underline) {
-			case PHPExcel_Style_Font::UNDERLINE_NONE:				return 0x00;
-			case PHPExcel_Style_Font::UNDERLINE_SINGLE:				return 0x01;
-			case PHPExcel_Style_Font::UNDERLINE_DOUBLE:				return 0x02;
-			case PHPExcel_Style_Font::UNDERLINE_SINGLEACCOUNTING:	return 0x21;
-			case PHPExcel_Style_Font::UNDERLINE_DOUBLEACCOUNTING:	return 0x22;
-			default:												return 0x00;
+	private function _mapUnderline($underline)
+	{
+		switch ($underline)
+		{
+			case PHPExcel_Style_Font::UNDERLINE_NONE:
+				return 0x00;
+			case PHPExcel_Style_Font::UNDERLINE_SINGLE:
+				return 0x01;
+			case PHPExcel_Style_Font::UNDERLINE_DOUBLE:
+				return 0x02;
+			case PHPExcel_Style_Font::UNDERLINE_SINGLEACCOUNTING:
+				return 0x21;
+			case PHPExcel_Style_Font::UNDERLINE_DOUBLEACCOUNTING:
+				return 0x22;
+			default:
+				return 0x00;
 		}
 	}
 

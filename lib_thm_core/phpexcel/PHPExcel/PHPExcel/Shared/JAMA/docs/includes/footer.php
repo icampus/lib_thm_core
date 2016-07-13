@@ -1,5 +1,5 @@
 <?php
 // @codingStandardsIgnoreFile
 ?>
-	</body>
+</body>
 </html>

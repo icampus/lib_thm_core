@@ -23,8 +23,8 @@ class THM_CoreModelForm extends JModelForm
 	/**
 	 * Method to get the form
 	 *
-	 * @param   Array    $data      Data         (default: Array)
-	 * @param   Boolean  $loadData  Load data  (default: true)
+	 * @param   Array   $data     Data         (default: Array)
+	 * @param   Boolean $loadData Load data  (default: true)
 	 *
 	 * @return  mixed  JForm object on success, False on error.
 	 *
@@ -34,7 +34,7 @@ class THM_CoreModelForm extends JModelForm
 	{
 		$option = $this->get('option');
 
-		$path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
+		$path   = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
 		$helper = str_replace('com_', '', $option) . 'HelperComponent';
 		require_once $path;
 		$helper::addActions($this);

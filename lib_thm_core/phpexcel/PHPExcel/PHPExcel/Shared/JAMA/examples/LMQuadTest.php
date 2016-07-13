@@ -5,15 +5,23 @@
  * solve for o, S
  * S is a single scale factor
  */
-class LMQuadTest {
+class LMQuadTest
+{
 
 	/**
 	 * @param array[] $x
 	 * @param array[] $a
 	 */
-	function val($x, $a) {
-		if (count($a) != 3) die ("Wrong number of elements in array a");
-		if (count($x) != 2) die ("Wrong number of elements in array x");
+	function val($x, $a)
+	{
+		if (count($a) != 3)
+		{
+			die ("Wrong number of elements in array a");
+		}
+		if (count($x) != 2)
+		{
+			die ("Wrong number of elements in array x");
+		}
 
 		$ox = $a[0];
 		$oy = $a[1];
@@ -23,7 +31,7 @@ class LMQuadTest {
 		$sdy = $s * ($x[1] - $oy);
 
 		return ($sdx * $sdx) + ($sdy * $sdy);
-   }	//	function val()
+	}    //	function val()
 
 
 	/**
@@ -39,13 +47,23 @@ class LMQuadTest {
 	 *
 	 * @param array[] $x
 	 * @param array[] $a
-	 * @param int $a_k
+	 * @param int     $a_k
 	 * @param array[] $a
 	 */
-	function grad($x, $a, $a_k) {
-		if (count($a) != 3) die ("Wrong number of elements in array a");
-		if (count($x) != 2) die ("Wrong number of elements in array x");
-		if ($a_k < 3) die ("a_k=".$a_k);
+	function grad($x, $a, $a_k)
+	{
+		if (count($a) != 3)
+		{
+			die ("Wrong number of elements in array a");
+		}
+		if (count($x) != 2)
+		{
+			die ("Wrong number of elements in array x");
+		}
+		if ($a_k < 3)
+		{
+			die ("a_k=" . $a_k);
+		}
 
 		$ox = $a[0];
 		$oy = $a[1];
@@ -55,30 +73,38 @@ class LMQuadTest {
 		$dy = ($x[1] - $oy);
 
 		if ($a_k == 0)
-			return -2.*$s*$s*$dx;
+		{
+			return -2. * $s * $s * $dx;
+		}
 		elseif ($a_k == 1)
-			return -2.*$s*$s*$dy;
+		{
+			return -2. * $s * $s * $dy;
+		}
 		else
-			return 2.*$s*($dx*$dx + $dy*$dy);
-	}	//	function grad()
+		{
+			return 2. * $s * ($dx * $dx + $dy * $dy);
+		}
+	}    //	function grad()
 
 
 	/**
 	 * @return array[] $a
 	 */
-	function initial() {
+	function initial()
+	{
 		$a[0] = 0.05;
 		$a[1] = 0.1;
 		$a[2] = 1.0;
 
 		return $a;
-	}	//	function initial()
+	}    //	function initial()
 
 
 	/**
 	 * @return Object[] $a
 	 */
-	function testdata() {
+	function testdata()
+	{
 		$npts = 25;
 
 		$a[0] = 0.;
@@ -87,12 +113,14 @@ class LMQuadTest {
 
 		$i = 0;
 
-		for ($r = -2; $r <= 2; ++$r) {
-			for ($c = -2; $c <= 2; ++$c) {
+		for ($r = -2; $r <= 2; ++$r)
+		{
+			for ($c = -2; $c <= 2; ++$c)
+			{
 				$x[$i][0] = $c;
 				$x[$i][1] = $r;
-				$y[$i] = $this->val($x[$i], $a);
-				print("Quad ".$c.",".$r." -> ".$y[$i]."<br />");
+				$y[$i]    = $this->val($x[$i], $a);
+				print("Quad " . $c . "," . $r . " -> " . $y[$i] . "<br />");
 				$s[$i] = 1.;
 				++$i;
 			}
@@ -112,6 +140,6 @@ class LMQuadTest {
 		$o[3] = $s;
 
 		return $o;
-	}	//	function testdata()
+	}    //	function testdata()
 
-}	//	class LMQuadTest
+}    //	class LMQuadTest

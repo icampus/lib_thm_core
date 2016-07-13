@@ -20,9 +20,9 @@ class IllegalImplementationException extends Exception
 	/**
 	 * Constructor.
 	 *
-	 * @param   String     $message   The exception message
-	 * @param   int        $code      The http status code
-	 * @param   Exception  $previous  The previous exception
+	 * @param   String    $message  The exception message
+	 * @param   int       $code     The http status code
+	 * @param   Exception $previous The previous exception
 	 */
 	public function __construct($message = "", $code = 0, Exception $previous = null)
 	{

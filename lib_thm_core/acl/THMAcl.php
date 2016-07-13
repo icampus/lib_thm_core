@@ -28,7 +28,7 @@ class THMAcl
 	/**
 	 * Create empty rules or create it from a Joomla Asset Rules JSON String.
 	 *
-	 * @param   String  $jsonRules  Asset JSON Rules (Optional)
+	 * @param   String $jsonRules Asset JSON Rules (Optional)
 	 */
 	public function __construct($jsonRules = null)
 	{
@@ -37,7 +37,7 @@ class THMAcl
 		{
 			$this->_jsonRule = array(
 				self::$_coreCreate => array(),
-				self::$_coreEdit => array(),
+				self::$_coreEdit   => array(),
 				self::$_coreDelete => array());
 		}
 		else
@@ -85,7 +85,7 @@ class THMAcl
 
 			$this->_jsonRule = array(
 				self::$_coreCreate => $crt,
-				self::$_coreEdit => $edt,
+				self::$_coreEdit   => $edt,
 				self::$_coreDelete => $del
 			);
 		}
@@ -94,7 +94,7 @@ class THMAcl
 	/**
 	 * Removes all inherit values from Joomla rules array.
 	 *
-	 * @param   array[][]  $rules  Joomla rules.
+	 * @param   array[][] $rules Joomla rules.
 	 *
 	 * @return array[][] The cleared array.
 	 */
@@ -117,7 +117,7 @@ class THMAcl
 	/**
 	 * Set a Permission in this ACL.
 	 *
-	 * @param   THMRight  $right  Permission to set. Will override Permission for the same group.
+	 * @param   THMRight $right Permission to set. Will override Permission for the same group.
 	 *
 	 * @throws InvalidArgumentException If argument have the wrong type.
 	 *
@@ -131,14 +131,14 @@ class THMAcl
 		}
 
 		$this->_jsonRule[self::$_coreCreate][$right->getGroup()->getId()] = self::getAccessCode($right->getCreatePerm());
-		$this->_jsonRule[self::$_coreEdit][$right->getGroup()->getId()] = self::getAccessCode($right->getEditPerm());
+		$this->_jsonRule[self::$_coreEdit][$right->getGroup()->getId()]   = self::getAccessCode($right->getEditPerm());
 		$this->_jsonRule[self::$_coreDelete][$right->getGroup()->getId()] = self::getAccessCode($right->getDeletePerm());
 	}
 
 	/**
 	 * Get the configured Permission for a group.
 	 *
-	 * @param   int  $groupId  The identifier for a group.
+	 * @param   int $groupId The identifier for a group.
 	 *
 	 * @post If a group with groupId exists -> will return right even if you not
 	 * set the right. Right's with are not set are always inherited.
@@ -155,7 +155,7 @@ class THMAcl
 		}
 
 		$createPerm = self::permissionValue($groupId, self::$_coreCreate, $this->_jsonRule);
-		$editPerm = self::permissionValue($groupId, self::$_coreEdit, $this->_jsonRule);
+		$editPerm   = self::permissionValue($groupId, self::$_coreEdit, $this->_jsonRule);
 		$deletePerm = self::permissionValue($groupId, self::$_coreDelete, $this->_jsonRule);
 
 		return new THMRight(new THMGroup($groupId), $createPerm, $editPerm, $deletePerm);
@@ -164,9 +164,9 @@ class THMAcl
 	/**
 	 * Get the value from joomla asset rules and translate it to a permission code.
 	 *
-	 * @param   int     $groupId   The group id
-	 * @param   String  $action    The Action to get.
-	 * @param   array   $jsonRule  The array of joomla asset rules
+	 * @param   int    $groupId  The group id
+	 * @param   String $action   The Action to get.
+	 * @param   array  $jsonRule The array of joomla asset rules
 	 *
 	 * @return THMPermission::value
 	 */
@@ -179,7 +179,7 @@ class THMAcl
 	/**
 	 * Remove a Right by group id.
 	 *
-	 * @param   int  $groupId  The group Id.
+	 * @param   int $groupId The group Id.
 	 *
 	 * @post After remove a right. All permission will be changed
 	 * to inherited for the Group you removed.
@@ -206,7 +206,7 @@ class THMAcl
 	/**
 	 * Translate permission code to joomla rule value.
 	 *
-	 * @param   Perm::value  $permValue  The permission code.
+	 * @param   Perm ::value  $permValue  The permission code.
 	 *
 	 * @return String|null The translated permission code.
 	 */
@@ -232,7 +232,7 @@ class THMAcl
 	/**
 	 * Translate the joomla rules access code to the Perm constant value.
 	 *
-	 * @param   String  $accessCode  The rules access code
+	 * @param   String $accessCode The rules access code
 	 *
 	 * @return THMPermission::value
 	 */

@@ -13,21 +13,24 @@ require_once 'Stats.php';
 /**
  * Example of use of Matrix Class, featuring magic squares.
  */
-class Benchmark {
+class Benchmark
+{
 	public $stat;
 
 
 	/**
 	 * Simple function to replicate PHP 5 behaviour
 	 */
-	function microtime_float() {
+	function microtime_float()
+	{
 		list($usec, $sec) = explode(" ", microtime());
 
-		return ((float)$usec + (float)$sec);
-	}	//	function microtime_float()
+		return ((float) $usec + (float) $sec);
+	}    //	function microtime_float()
 
 
-	function displayStats($times = null) {
+	function displayStats($times = null)
+	{
 		$this->stat->setData($times);
 		$stats = $this->stat->calcFull();
 
@@ -42,87 +45,98 @@ class Benchmark {
 		echo '</table>';
 
 		return $stats;
-	}	//	function displayStats()
+	}    //	function displayStats()
 
 
-	function runEig($n = 4, $t = 100) {
+	function runEig($n = 4, $t = 100)
+	{
 		$times = array();
 
-		for ($i = 0; $i < $t; ++$i) {
-			$M = Matrix::random($n, $n);
+		for ($i = 0; $i < $t; ++$i)
+		{
+			$M          = Matrix::random($n, $n);
 			$start_time = $this->microtime_float();
-			$E = new EigenvalueDecomposition($M);
-			$stop_time = $this->microtime_float();
-			$times[] = $stop_time - $start_time;
+			$E          = new EigenvalueDecomposition($M);
+			$stop_time  = $this->microtime_float();
+			$times[]    = $stop_time - $start_time;
 		}
 
 		return $times;
-	}	//	function runEig()
+	}    //	function runEig()
 
 
-	function runLU($n = 4, $t = 100) {
+	function runLU($n = 4, $t = 100)
+	{
 		$times = array();
 
-		for ($i = 0; $i < $t; ++$i) {
-			$M = Matrix::random($n, $n);
+		for ($i = 0; $i < $t; ++$i)
+		{
+			$M          = Matrix::random($n, $n);
 			$start_time = $this->microtime_float();
-			$E = new LUDecomposition($M);
-			$stop_time = $this->microtime_float();
-			$times[] = $stop_time - $start_time;
+			$E          = new LUDecomposition($M);
+			$stop_time  = $this->microtime_float();
+			$times[]    = $stop_time - $start_time;
 		}
 
 		return $times;
-	}	//	function runLU()
+	}    //	function runLU()
 
 
-	function runQR($n = 4, $t = 100) {
+	function runQR($n = 4, $t = 100)
+	{
 		$times = array();
 
-		for ($i = 0; $i < $t; ++$i) {
-			$M = Matrix::random($n, $n);
+		for ($i = 0; $i < $t; ++$i)
+		{
+			$M          = Matrix::random($n, $n);
 			$start_time = $this->microtime_float();
-			$E = new QRDecomposition($M);
-			$stop_time = $this->microtime_float();
-			$times[] = $stop_time - $start_time;
+			$E          = new QRDecomposition($M);
+			$stop_time  = $this->microtime_float();
+			$times[]    = $stop_time - $start_time;
 		}
 
 		return $times;
-	}	//	function runQR()
+	}    //	function runQR()
 
 
-	function runCholesky($n = 4, $t = 100) {
+	function runCholesky($n = 4, $t = 100)
+	{
 		$times = array();
 
-		for ($i = 0; $i < $t; ++$i) {
-			$M = Matrix::random($n, $n);
+		for ($i = 0; $i < $t; ++$i)
+		{
+			$M          = Matrix::random($n, $n);
 			$start_time = $this->microtime_float();
-			$E = new CholeskyDecomposition($M);
-			$stop_time = $this->microtime_float();
-			$times[] = $stop_time - $start_time;
+			$E          = new CholeskyDecomposition($M);
+			$stop_time  = $this->microtime_float();
+			$times[]    = $stop_time - $start_time;
 		}
 
 		return $times;
-	}	//	function runCholesky()
+	}    //	function runCholesky()
 
 
-	function runSVD($n = 4, $t = 100) {
+	function runSVD($n = 4, $t = 100)
+	{
 		$times = array();
 
-		for ($i = 0; $i < $t; ++$i) {
-			$M = Matrix::random($n, $n);
+		for ($i = 0; $i < $t; ++$i)
+		{
+			$M          = Matrix::random($n, $n);
 			$start_time = $this->microtime_float();
-			$E = new SingularValueDecomposition($M);
-			$stop_time = $this->microtime_float();
-			$times[] = $stop_time - $start_time;
+			$E          = new SingularValueDecomposition($M);
+			$stop_time  = $this->microtime_float();
+			$times[]    = $stop_time - $start_time;
 		}
 
 		return $times;
-	}	//	function runSVD()
+	}    //	function runSVD()
 
 
-	function run() {
-		$n = 8;
-		$t = 16;
+	function run()
+	{
+		$n   = 8;
+		$t   = 16;
 		$sum = 0;
 		echo "<b>Cholesky decomposition: $t random {$n}x{$n} matrices</b><br />";
 		$r = $this->displayStats($this->runCholesky($n, $t));
@@ -153,91 +167,103 @@ class Benchmark {
 		$sum += $r['mean'] * $n;
 
 		return $sum;
-	}	//	function run()
+	}    //	function run()
 
 
-	public function __construct() {
+	public function __construct()
+	{
 		$this->stat = new Base();
-	}	//	function Benchmark()
+	}    //	function Benchmark()
 
 }  // class Benchmark		(end MagicSquareExample)
 
 
 $benchmark = new Benchmark();
 
-switch($_REQUEST['decomposition']) {
+switch ($_REQUEST['decomposition'])
+{
 	case 'cholesky':
 		$m = array();
-		for ($i = 2; $i <= 8; $i *= 2) {
+		for ($i = 2; $i <= 8; $i *= 2)
+		{
 			$t = 32 / $i;
 			echo "<b>Cholesky decomposition: $t random {$i}x{$i} matrices</b><br />";
-			$s = $benchmark->displayStats($benchmark->runCholesky($i, $t));
+			$s     = $benchmark->displayStats($benchmark->runCholesky($i, $t));
 			$m[$i] = $s['mean'];
 			echo "<br />";
 		}
 		echo '<pre>';
-		foreach($m as $x => $y) {
-			echo "$x\t" . 1000*$y . "\n";
+		foreach ($m as $x => $y)
+		{
+			echo "$x\t" . 1000 * $y . "\n";
 		}
 		echo '</pre>';
 		break;
 	case 'eigenvalue':
 		$m = array();
-		for ($i = 2; $i <= 8; $i *= 2) {
+		for ($i = 2; $i <= 8; $i *= 2)
+		{
 			$t = 32 / $i;
 			echo "<b>Eigenvalue decomposition: $t random {$i}x{$i} matrices</b><br />";
-			$s = $benchmark->displayStats($benchmark->runEig($i, $t));
+			$s     = $benchmark->displayStats($benchmark->runEig($i, $t));
 			$m[$i] = $s['mean'];
 			echo "<br />";
 		}
 		echo '<pre>';
-		foreach($m as $x => $y) {
-			echo "$x\t" . 1000*$y . "\n";
+		foreach ($m as $x => $y)
+		{
+			echo "$x\t" . 1000 * $y . "\n";
 		}
 		echo '</pre>';
 		break;
 	case 'lu':
 		$m = array();
-		for ($i = 2; $i <= 8; $i *= 2) {
+		for ($i = 2; $i <= 8; $i *= 2)
+		{
 			$t = 32 / $i;
 			echo "<b>LU decomposition: $t random {$i}x{$i} matrices</b><br />";
-			$s = $benchmark->displayStats($benchmark->runLU($i, $t));
+			$s     = $benchmark->displayStats($benchmark->runLU($i, $t));
 			$m[$i] = $s['mean'];
 			echo "<br />";
 		}
 		echo '<pre>';
-		foreach($m as $x => $y) {
-			echo "$x\t" . 1000*$y . "\n";
+		foreach ($m as $x => $y)
+		{
+			echo "$x\t" . 1000 * $y . "\n";
 		}
 		echo '</pre>';
 		break;
 	case 'qr':
 		$m = array();
-		for ($i = 2; $i <= 8; $i *= 2) {
+		for ($i = 2; $i <= 8; $i *= 2)
+		{
 			$t = 32 / $i;
 			echo "<b>QR decomposition: $t random {$i}x{$i} matrices</b><br />";
-			$s = $benchmark->displayStats($benchmark->runQR($i, $t));
+			$s     = $benchmark->displayStats($benchmark->runQR($i, $t));
 			$m[$i] = $s['mean'];
 			echo "<br />";
 		}
 		echo '<pre>';
-		foreach($m as $x => $y) {
-			echo "$x\t" . 1000*$y . "\n";
+		foreach ($m as $x => $y)
+		{
+			echo "$x\t" . 1000 * $y . "\n";
 		}
 		echo '</pre>';
 		break;
 	case 'svd':
 		$m = array();
-		for($i = 2; $i <= 8; $i *= 2) {
+		for ($i = 2; $i <= 8; $i *= 2)
+		{
 			$t = 32 / $i;
 			echo "<b>Singular value decomposition: $t random {$i}x{$i} matrices</b><br />";
-			$s = $benchmark->displayStats($benchmark->runSVD($i, $t));
+			$s     = $benchmark->displayStats($benchmark->runSVD($i, $t));
 			$m[$i] = $s['mean'];
 			echo "<br />";
 		}
 		echo '<pre>';
-		foreach($m as $x => $y) {
-			echo "$x\t" . 1000*$y . "\n";
+		foreach ($m as $x => $y)
+		{
+			echo "$x\t" . 1000 * $y . "\n";
 		}
 		echo '</pre>';
 		break;

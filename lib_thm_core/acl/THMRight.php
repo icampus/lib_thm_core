@@ -30,19 +30,20 @@ class THMRight
 	/**
 	 * Create a Right.
 	 *
-	 * @param   THMGroup              $group   The Group that should have the permission's
-	 * @param   THMPermission::value  $create  The Create Permission
-	 * @param   THMPermission::value  $edit    The Edit Permission
-	 * @param   THMPermission::value  $delete  The Delete Permission
+	 * @param   THMGroup $group        The Group that should have the permission's
+	 * @param            THMPermission ::value  $create  The Create Permission
+	 * @param            THMPermission ::value  $edit    The Edit Permission
+	 * @param            THMPermission ::value  $delete  The Delete Permission
 	 *
 	 * @throws InvalidArgumentException If argument's have a wrong type.
 	 */
 	public function __construct($group, $create, $edit, $delete)
 	{
-		if ( !($group instanceof THMGroup)
-		 || !THMPermission::isValidPermission($create)
-		 || !THMPermission::isValidPermission($edit)
-		 || !THMPermission::isValidPermission($delete) )
+		if (!($group instanceof THMGroup)
+			|| !THMPermission::isValidPermission($create)
+			|| !THMPermission::isValidPermission($edit)
+			|| !THMPermission::isValidPermission($delete)
+		)
 		{
 			throw new  InvalidArgumentException('One or more argument/s have a wrong type');
 		}
@@ -66,7 +67,7 @@ class THMRight
 	/**
 	 * Set the create permission.
 	 *
-	 * @param   THMPermission::value  $permValue  The Permission value.
+	 * @param   THMPermission ::value  $permValue  The Permission value.
 	 *
 	 * @throws InvalidArgumentException If is not a valid permission.
 	 *
@@ -85,7 +86,7 @@ class THMRight
 	/**
 	 * Set the edit permission.
 	 *
-	 * @param   THMPermission::value  $permValue  The Permission value.
+	 * @param   THMPermission ::value  $permValue  The Permission value.
 	 *
 	 * @throws InvalidArgumentException If is not a valid permission.
 	 *
@@ -104,7 +105,7 @@ class THMRight
 	/**
 	 * Set the delete permission.
 	 *
-	 * @param   THMPermission::value  $permValue  The Permission value.
+	 * @param   THMPermission ::value  $permValue  The Permission value.
 	 *
 	 * @throws InvalidArgumentException If is not a valid permission.
 	 *

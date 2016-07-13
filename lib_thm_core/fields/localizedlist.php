@@ -39,12 +39,12 @@ class JFormFieldLocalizedList extends JFormFieldList
 	 */
 	protected function getOptions()
 	{
-		$dbo = JFactory::getDbo();
+		$dbo   = JFactory::getDbo();
 		$query = $dbo->getQuery(true);
 
-		$tag = THM_CoreHelper::getLanguageShortTag();
+		$tag         = THM_CoreHelper::getLanguageShortTag();
 		$valueColumn = $this->getAttribute('valueColumn') . "_$tag";
-		$textColumn = $this->getAttribute('textColumn') . "_$tag";
+		$textColumn  = $this->getAttribute('textColumn') . "_$tag";
 
 		$query->select("DISTINCT $valueColumn AS value, $textColumn AS text");
 		$this->setFrom($query);
@@ -54,7 +54,7 @@ class JFormFieldLocalizedList extends JFormFieldList
 		try
 		{
 			$resources = $dbo->loadAssocList();
-			$options = array();
+			$options   = array();
 			foreach ($resources as $resource)
 			{
 				$options[] = JHtml::_('select.option', $resource['value'], $resource['text']);
@@ -65,6 +65,7 @@ class JFormFieldLocalizedList extends JFormFieldList
 		catch (Exception $exc)
 		{
 			JFactory::getApplication()->enqueueMessage($exc->getMessage(), 'error');
+
 			return parent::getOptions();
 		}
 	}
@@ -72,18 +73,19 @@ class JFormFieldLocalizedList extends JFormFieldList
 	/**
 	 * Resolves the textColumns for concatenated values
 	 *
-	 * @param   object  &$query  the query object
+	 * @param   object &$query the query object
 	 *
 	 * @return  string  the string to use for text selection
 	 */
 	private function setFrom(&$query)
 	{
 		$tableParameter = $this->getAttribute('table');
-		$tables = explode(',', $tableParameter);
-		$count = count($tables);
+		$tables         = explode(',', $tableParameter);
+		$count          = count($tables);
 		if ($count === 1)
 		{
 			$query->from("#__$tableParameter");
+
 			return;
 		}
 

@@ -34,97 +34,110 @@
  * @package    PHPExcel_CachedObjectStorage
  * @copyright  Copyright (c) 2006 - 2011 PHPExcel (http://www.codeplex.com/PHPExcel)
  */
-class PHPExcel_CachedObjectStorage_PHPTemp extends PHPExcel_CachedObjectStorage_CacheBase implements PHPExcel_CachedObjectStorage_ICache {
+class PHPExcel_CachedObjectStorage_PHPTemp extends PHPExcel_CachedObjectStorage_CacheBase implements PHPExcel_CachedObjectStorage_ICache
+{
 
 	private $_fileHandle = null;
 
 
 	private $_memoryCacheSize = null;
 
-	private function _storeData() {
+	private function _storeData()
+	{
 		$this->_currentObject->detach();
 
-		fseek($this->_fileHandle,0,SEEK_END);
+		fseek($this->_fileHandle, 0, SEEK_END);
 		$offset = ftell($this->_fileHandle);
 		fwrite($this->_fileHandle, serialize($this->_currentObject));
-		$this->_cellCache[$this->_currentObjectID]	= array('ptr' => $offset,
-															'sz'  => ftell($this->_fileHandle) - $offset
-														   );
-		$this->_currentObjectID = $this->_currentObject = null;
-	}	//	function _storeData()
+		$this->_cellCache[$this->_currentObjectID] = array('ptr' => $offset,
+		                                                   'sz'  => ftell($this->_fileHandle) - $offset
+		);
+		$this->_currentObjectID                    = $this->_currentObject = null;
+	}    //	function _storeData()
 
 
-    /**
-     *	Add or Update a cell in cache identified by coordinate address
-     *
-     *	@param	string			$pCoord		Coordinate address of the cell to update
-     *	@param	PHPExcel_Cell	$cell		Cell to update
-	 *	@return	void
-     *	@throws	Exception
-     */
-	public function addCacheData($pCoord, PHPExcel_Cell $cell) {
-		if (($pCoord !== $this->_currentObjectID) && ($this->_currentObjectID !== null)) {
+	/**
+	 *    Add or Update a cell in cache identified by coordinate address
+	 *
+	 * @param    string        $pCoord Coordinate address of the cell to update
+	 * @param    PHPExcel_Cell $cell   Cell to update
+	 *
+	 * @return    void
+	 * @throws    Exception
+	 */
+	public function addCacheData($pCoord, PHPExcel_Cell $cell)
+	{
+		if (($pCoord !== $this->_currentObjectID) && ($this->_currentObjectID !== null))
+		{
 			$this->_storeData();
 		}
 
 		$this->_currentObjectID = $pCoord;
-		$this->_currentObject = $cell;
+		$this->_currentObject   = $cell;
 
 		return $cell;
-	}	//	function addCacheData()
+	}    //	function addCacheData()
 
 
-    /**
-     * Get cell at a specific coordinate
-     *
-     * @param 	string 			$pCoord		Coordinate of the cell
-     * @throws 	Exception
-     * @return 	PHPExcel_Cell 	Cell that was found, or null if not found
-     */
-	public function getCacheData($pCoord) {
-		if ($pCoord === $this->_currentObjectID) {
+	/**
+	 * Get cell at a specific coordinate
+	 *
+	 * @param    string $pCoord Coordinate of the cell
+	 *
+	 * @throws    Exception
+	 * @return    PHPExcel_Cell    Cell that was found, or null if not found
+	 */
+	public function getCacheData($pCoord)
+	{
+		if ($pCoord === $this->_currentObjectID)
+		{
 			return $this->_currentObject;
 		}
 		$this->_storeData();
 
 		//	Check if the entry that has been requested actually exists
-		if (!isset($this->_cellCache[$pCoord])) {
+		if (!isset($this->_cellCache[$pCoord]))
+		{
 			//	Return null if requested entry doesn't exist in cache
 			return null;
 		}
 
 		//	Set current entry to the requested entry
 		$this->_currentObjectID = $pCoord;
-		fseek($this->_fileHandle,$this->_cellCache[$pCoord]['ptr']);
-		$this->_currentObject = unserialize(fread($this->_fileHandle,$this->_cellCache[$pCoord]['sz']));
+		fseek($this->_fileHandle, $this->_cellCache[$pCoord]['ptr']);
+		$this->_currentObject = unserialize(fread($this->_fileHandle, $this->_cellCache[$pCoord]['sz']));
 		//	Re-attach the parent worksheet
 		$this->_currentObject->attach($this->_parent);
 
 		//	Return requested entry
 		return $this->_currentObject;
-	}	//	function getCacheData()
+	}    //	function getCacheData()
 
 
 	/**
-	 *	Clone the cell collection
+	 *    Clone the cell collection
 	 *
-	 *	@return	void
+	 * @return    void
 	 */
-	public function copyCellCollection(PHPExcel_Worksheet $parent) {
+	public function copyCellCollection(PHPExcel_Worksheet $parent)
+	{
 		parent::copyCellCollection($parent);
 		//	Open a new stream for the cell cache data
-		$newFileHandle = fopen('php://temp/maxmemory:'.$this->_memoryCacheSize,'a+');
+		$newFileHandle = fopen('php://temp/maxmemory:' . $this->_memoryCacheSize, 'a+');
 		//	Copy the existing cell cache data to the new stream
-		fseek($this->_fileHandle,0);
-		while (!feof($this->_fileHandle)) {
-			fwrite($newFileHandle,fread($this->_fileHandle, 1024));
+		fseek($this->_fileHandle, 0);
+		while (!feof($this->_fileHandle))
+		{
+			fwrite($newFileHandle, fread($this->_fileHandle, 1024));
 		}
 		$this->_fileHandle = $newFileHandle;
-	}	//	function copyCellCollection()
+	}    //	function copyCellCollection()
 
 
-	public function unsetWorksheetCells() {
-		if(!is_null($this->_currentObject)) {
+	public function unsetWorksheetCells()
+	{
+		if (!is_null($this->_currentObject))
+		{
 			$this->_currentObject->detach();
 			$this->_currentObject = $this->_currentObjectID = null;
 		}
@@ -135,24 +148,28 @@ class PHPExcel_CachedObjectStorage_PHPTemp extends PHPExcel_CachedObjectStorage_
 
 		//	Close down the php://temp file
 		$this->__destruct();
-	}	//	function unsetWorksheetCells()
+	}    //	function unsetWorksheetCells()
 
 
-	public function __construct(PHPExcel_Worksheet $parent, $memoryCacheSize = '1MB') {
-		$this->_memoryCacheSize	= (isset($arguments['memoryCacheSize']))	? $arguments['memoryCacheSize']	: '1MB';
+	public function __construct(PHPExcel_Worksheet $parent, $memoryCacheSize = '1MB')
+	{
+		$this->_memoryCacheSize = (isset($arguments['memoryCacheSize'])) ? $arguments['memoryCacheSize'] : '1MB';
 
 		parent::__construct($parent);
-		if (is_null($this->_fileHandle)) {
-			$this->_fileHandle = fopen('php://temp/maxmemory:'.$this->_memoryCacheSize,'a+');
+		if (is_null($this->_fileHandle))
+		{
+			$this->_fileHandle = fopen('php://temp/maxmemory:' . $this->_memoryCacheSize, 'a+');
 		}
-	}	//	function __construct()
+	}    //	function __construct()
 
 
-	public function __destruct() {
-		if (!is_null($this->_fileHandle)) {
+	public function __destruct()
+	{
+		if (!is_null($this->_fileHandle))
+		{
 			fclose($this->_fileHandle);
 		}
 		$this->_fileHandle = null;
-	}	//	function __destruct()
+	}    //	function __destruct()
 
 }

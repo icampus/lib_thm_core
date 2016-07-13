@@ -38,11 +38,11 @@ class JFormFieldGenericList extends JFormFieldList
 	 */
 	protected function getOptions()
 	{
-		$dbo = JFactory::getDbo();
+		$dbo   = JFactory::getDbo();
 		$query = $dbo->getQuery(true);
 
 		$valueColumn = $this->getAttribute('valueColumn');
-		$textColumn = $this->resolveText($query);
+		$textColumn  = $this->resolveText($query);
 
 		$query->select("DISTINCT $valueColumn AS value, $textColumn AS text");
 		$this->setFrom($query);
@@ -52,7 +52,7 @@ class JFormFieldGenericList extends JFormFieldList
 		try
 		{
 			$resources = $dbo->loadAssocList();
-			$options = array();
+			$options   = array();
 			foreach ($resources as $resource)
 			{
 				// Removes glue from the end of entries
@@ -71,6 +71,7 @@ class JFormFieldGenericList extends JFormFieldList
 			}
 
 			$this->setValueParameters($options);
+
 			return array_merge(parent::getOptions(), $options);
 		}
 		catch (Exception $exc)
@@ -82,13 +83,13 @@ class JFormFieldGenericList extends JFormFieldList
 	/**
 	 * Resolves the textColumns for concatenated values
 	 *
-	 * @param   object  &$query  the query object
+	 * @param   object &$query the query object
 	 *
 	 * @return  string  the string to use for text selection
 	 */
 	private function resolveText(&$query)
 	{
-		$textColumn = $this->getAttribute('textColumn');
+		$textColumn  = $this->getAttribute('textColumn');
 		$textColumns = explode(',', $textColumn);
 
 		$localized = $this->getAttribute('localized', false);
@@ -115,14 +116,14 @@ class JFormFieldGenericList extends JFormFieldList
 	/**
 	 * Resolves the textColumns for concatenated values
 	 *
-	 * @param   object  &$query  the query object
+	 * @param   object &$query the query object
 	 *
 	 * @return  string  the string to use for text selection
 	 */
 	private function setFrom(&$query)
 	{
 		$tableParameters = $this->getAttribute('table');
-		$tables = explode(',', $tableParameters);
+		$tables          = explode(',', $tableParameters);
 
 		$query->from("#__{$tables[0]}");
 		$count = count($tables);
@@ -140,7 +141,7 @@ class JFormFieldGenericList extends JFormFieldList
 	/**
 	 * Sets value oriented parameters from component settings
 	 *
-	 * @param   array  &$options  the input options
+	 * @param   array &$options the input options
 	 *
 	 * @return  void  sets option values
 	 */
@@ -152,7 +153,7 @@ class JFormFieldGenericList extends JFormFieldList
 			return;
 		}
 
-		$valueParameters = explode(',', $valueParameter);
+		$valueParameters     = explode(',', $valueParameter);
 		$componentParameters = JComponentHelper::getParams(JFactory::getApplication()->input->get('option'));
 		foreach ($valueParameters AS $parameter)
 		{

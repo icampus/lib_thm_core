@@ -26,7 +26,7 @@ class THMGroup
 	/**
 	 * Load a group by id.
 	 *
-	 * @param   int  $groupId  The group identifier.
+	 * @param   int $groupId The group identifier.
 	 *
 	 * @throws InvalidArgumentException if group id not of type int
 	 * @throws Exception If group can not be loaded.
@@ -78,7 +78,7 @@ class THMGroup
 	/**
 	 * Load a group state by id.
 	 *
-	 * @param   int  $groupId  The group identifier.
+	 * @param   int $groupId The group identifier.
 	 *
 	 * @return void.
 	 *
@@ -87,20 +87,20 @@ class THMGroup
 	 */
 	private function loadState($groupId)
 	{
-		$db = JFactory::getDbo();
+		$db    = JFactory::getDbo();
 		$query = $db->getQuery(true);
 		$query
 			->select('g.id, g.title')
 			->from('#__usergroups g')
 			->where("g.id = {$groupId}");
 		$result = $db->setQuery($query)->loadAssoc();
-		
+
 		if (empty($result))
 		{
 			throw new RuntimeException("Can not load Group with id: $groupId");
 		}
 
-		$this->_id = (int) $result['id'];
+		$this->_id   = (int) $result['id'];
 		$this->_name = $result['title'];
 	}
 }

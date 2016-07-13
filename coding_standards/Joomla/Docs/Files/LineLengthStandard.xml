@@ -1,6 +1,6 @@
 <documentation title="Line Length">
     <standard>
-    <![CDATA[
+        <![CDATA[
     It is recommended to keep lines at approximately 130 characters long for better code readability.
     ]]>
     </standard>

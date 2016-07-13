@@ -39,45 +39,55 @@ require_once(PHPEXCEL_ROOT . 'PHPExcel/Shared/trend/bestFitClass.php');
  */
 class PHPExcel_Logarithmic_Best_Fit extends PHPExcel_Best_Fit
 {
-	protected $_bestFitType		= 'logarithmic';
+	protected $_bestFitType = 'logarithmic';
 
 
-	public function getValueOfYForX($xValue) {
+	public function getValueOfYForX($xValue)
+	{
 		return $this->getIntersect() + $this->getSlope() * log($xValue - $this->_Xoffset);
-	}	//	function getValueOfYForX()
+	}    //	function getValueOfYForX()
 
 
-	public function getValueOfXForY($yValue) {
+	public function getValueOfXForY($yValue)
+	{
 		return exp(($yValue - $this->getIntersect()) / $this->getSlope());
-	}	//	function getValueOfXForY()
+	}    //	function getValueOfXForY()
 
 
-	public function getEquation($dp=0) {
-		$slope = $this->getSlope($dp);
+	public function getEquation($dp = 0)
+	{
+		$slope     = $this->getSlope($dp);
 		$intersect = $this->getIntersect($dp);
 
-		return 'Y = '.$intersect.' + '.$slope.' * log(X)';
-	}	//	function getEquation()
+		return 'Y = ' . $intersect . ' + ' . $slope . ' * log(X)';
+	}    //	function getEquation()
 
 
-	private function _logarithmic_regression($yValues, $xValues, $const) {
-		foreach($xValues as &$value) {
-			if ($value < 0.0) {
+	private function _logarithmic_regression($yValues, $xValues, $const)
+	{
+		foreach ($xValues as &$value)
+		{
+			if ($value < 0.0)
+			{
 				$value = 0 - log(abs($value));
-			} elseif ($value > 0.0) {
+			}
+			elseif ($value > 0.0)
+			{
 				$value = log($value);
 			}
 		}
 		unset($value);
 
 		$this->_leastSquareFit($yValues, $xValues, $const);
-	}	//	function _logarithmic_regression()
+	}    //	function _logarithmic_regression()
 
 
-	function __construct($yValues, $xValues=array(), $const=True) {
-		if (parent::__construct($yValues, $xValues) !== False) {
+	function __construct($yValues, $xValues = array(), $const = true)
+	{
+		if (parent::__construct($yValues, $xValues) !== false)
+		{
 			$this->_logarithmic_regression($yValues, $xValues, $const);
 		}
-	}	//	function __construct()
+	}    //	function __construct()
 
-}	//	class logarithmicBestFit
+}    //	class logarithmicBestFit

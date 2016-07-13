@@ -8,6 +8,6 @@
 
 defined('_JEXEC') or die;
 
-define('FPDF_FONTPATH', JPATH_SITE."/libraries/thm_core/fpdf/fpdf/font/");
-require_once(JPATH_SITE."/libraries/thm_core/fpdf/fpdf/table/class.fpdf_table.php");
+define('FPDF_FONTPATH', JPATH_SITE . "/libraries/thm_core/fpdf/fpdf/font/");
+require_once(JPATH_SITE . "/libraries/thm_core/fpdf/fpdf/table/class.fpdf_table.php");
 ?>

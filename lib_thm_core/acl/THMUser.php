@@ -26,7 +26,7 @@ class THMUser
 	/**
 	 * Load a user by id.
 	 *
-	 * @param   int  $userId  The user identifier.
+	 * @param   int $userId The user identifier.
 	 *
 	 * @throws InvalidArgumentException if user id not of type int
 	 * @throws Exception If user can not be loaded.
@@ -76,8 +76,8 @@ class THMUser
 	 * Method to check JUser object authorisation against an access control
 	 * object and optionally an access extension object
 	 *
-	 * @param   String  $action     The name of the action to check for permission.
-	 * @param   String  $assetName  The name of the asset on which to perform the action.
+	 * @param   String $action    The name of the action to check for permission.
+	 * @param   String $assetName The name of the asset on which to perform the action.
 	 *
 	 * @return  boolean  True if authorised
 	 */
@@ -102,7 +102,7 @@ class THMUser
 	/**
 	 * Load a user state by id.
 	 *
-	 * @param   int  $userId  The user identifier.
+	 * @param   int $userId The user identifier.
 	 *
 	 * @return void
 	 *

@@ -70,6 +70,7 @@
     }
   }
 }
+
 // hide all columns and display just the chosen ones.
 // If just one column-number is passed, then the padding is added to this column for the left- and right-side
 // If two column-number are passed, then padding-left is added to the first chosen column
@@ -101,8 +102,8 @@
 //********************************************************************************************************************//
 @mixin hideColumns($column) {
   thead th, tbody td {
-    &:nth-child(n+#{$column}){
-      display:none;
+    &:nth-child(n+#{$column}) {
+      display: none;
     }
   }
 }

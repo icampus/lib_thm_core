@@ -38,11 +38,11 @@ class JFormFieldDisjunctList extends JFormFieldList
 	 */
 	protected function getOptions()
 	{
-		$dbo = JFactory::getDbo();
+		$dbo   = JFactory::getDbo();
 		$query = $dbo->getQuery(true);
 
 		$valueColumn = $this->getAttribute('valueColumn');
-		$textColumn = $this->resolveText($query);
+		$textColumn  = $this->resolveText($query);
 
 		$query->select("DISTINCT $valueColumn AS value, $textColumn AS text");
 		$this->setFrom($query);
@@ -53,7 +53,7 @@ class JFormFieldDisjunctList extends JFormFieldList
 		try
 		{
 			$resources = $dbo->loadAssocList();
-			$options = array();
+			$options   = array();
 			foreach ($resources as $resource)
 			{
 				// Removes glue from the end of entries
@@ -82,14 +82,14 @@ class JFormFieldDisjunctList extends JFormFieldList
 	/**
 	 * Resolves the textColumns for concatenated values
 	 *
-	 * @param   object  &$query  the query object
+	 * @param   object &$query the query object
 	 *
 	 * @return  string  the string to use for text selection
 	 */
 	private function resolveText(&$query)
 	{
 		$textColumn = $this->getAttribute('textColumn');
-		$glue = $this->getAttribute('glue');
+		$glue       = $this->getAttribute('glue');
 
 		$textColumns = explode(',', $textColumn);
 		if (count($textColumns) === 1 OR empty($glue))
@@ -103,7 +103,7 @@ class JFormFieldDisjunctList extends JFormFieldList
 	/**
 	 * Resolves the textColumns for concatenated values
 	 *
-	 * @param   object  &$query  the query object
+	 * @param   object &$query the query object
 	 *
 	 * @return  void  sets query object values
 	 */
@@ -111,12 +111,13 @@ class JFormFieldDisjunctList extends JFormFieldList
 	{
 		$tableParameter = $this->getAttribute('table');
 		$aliasParameter = $this->getAttribute('alias');
-		$tables = explode(',', $tableParameter);
-		$aliases = explode(',', $aliasParameter);
-		$count = count($tables);
+		$tables         = explode(',', $tableParameter);
+		$aliases        = explode(',', $aliasParameter);
+		$count          = count($tables);
 		if ($count === 1 OR $count != count($aliases))
 		{
 			$query->from("#__$tableParameter");
+
 			return;
 		}
 
@@ -130,13 +131,13 @@ class JFormFieldDisjunctList extends JFormFieldList
 	/**
 	 * Sets the disjunct conditions for the query
 	 *
-	 * @param   object  &$query  the query object
+	 * @param   object &$query the query object
 	 *
 	 * @return  void  sets query object values
 	 */
 	private function setDisjuncture(&$query)
 	{
-		$notInColumn = $this->getAttribute('notInColumn');
+		$notInColumn   = $this->getAttribute('notInColumn');
 		$disjunctValue = $this->getAttribute('disjunctValue');
 		$disjunctTable = $this->getAttribute('disjunctTable');
 

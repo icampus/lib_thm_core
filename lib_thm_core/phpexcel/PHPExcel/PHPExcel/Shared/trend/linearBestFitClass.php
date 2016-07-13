@@ -39,36 +39,42 @@ require_once(PHPEXCEL_ROOT . 'PHPExcel/Shared/trend/bestFitClass.php');
  */
 class PHPExcel_Linear_Best_Fit extends PHPExcel_Best_Fit
 {
-	protected $_bestFitType		= 'linear';
+	protected $_bestFitType = 'linear';
 
 
-	public function getValueOfYForX($xValue) {
+	public function getValueOfYForX($xValue)
+	{
 		return $this->getIntersect() + $this->getSlope() * $xValue;
-	}	//	function getValueOfYForX()
+	}    //	function getValueOfYForX()
 
 
-	public function getValueOfXForY($yValue) {
+	public function getValueOfXForY($yValue)
+	{
 		return ($yValue - $this->getIntersect()) / $this->getSlope();
-	}	//	function getValueOfXForY()
+	}    //	function getValueOfXForY()
 
 
-	public function getEquation($dp=0) {
-		$slope = $this->getSlope($dp);
+	public function getEquation($dp = 0)
+	{
+		$slope     = $this->getSlope($dp);
 		$intersect = $this->getIntersect($dp);
 
-		return 'Y = '.$intersect.' + '.$slope.' * X';
-	}	//	function getEquation()
+		return 'Y = ' . $intersect . ' + ' . $slope . ' * X';
+	}    //	function getEquation()
 
 
-	private function _linear_regression($yValues, $xValues, $const) {
-		$this->_leastSquareFit($yValues, $xValues,$const);
-	}	//	function _linear_regression()
+	private function _linear_regression($yValues, $xValues, $const)
+	{
+		$this->_leastSquareFit($yValues, $xValues, $const);
+	}    //	function _linear_regression()
 
 
-	function __construct($yValues, $xValues=array(), $const=True) {
-		if (parent::__construct($yValues, $xValues) !== False) {
+	function __construct($yValues, $xValues = array(), $const = true)
+	{
+		if (parent::__construct($yValues, $xValues) !== false)
+		{
 			$this->_linear_regression($yValues, $xValues, $const);
 		}
-	}	//	function __construct()
+	}    //	function __construct()
 
-}	//	class linearBestFit
+}    //	class linearBestFit

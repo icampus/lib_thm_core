@@ -55,7 +55,7 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 	 *
 	 * @var PHPExcel_Writer_Excel2007_WriterPart[]
 	 */
-	private $_writerParts	= array();
+	private $_writerParts = array();
 
 	/**
 	 * Private PHPExcel
@@ -69,7 +69,7 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 	 *
 	 * @var string[]
 	 */
-	private $_stringTable	= array();
+	private $_stringTable = array();
 
 	/**
 	 * Private unique PHPExcel_Style_Conditional HashTable
@@ -97,7 +97,7 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 	 *
 	 * @var PHPExcel_HashTable
 	 */
-	private $_bordersHashTable ;
+	private $_bordersHashTable;
 
 	/**
 	 * Private unique PHPExcel_Style_NumberFormat HashTable
@@ -125,56 +125,63 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 	 *
 	 * @var string
 	 */
-	private $_diskCachingDirectory	= './';
+	private $_diskCachingDirectory = './';
 
-    /**
-     * Create a new PHPExcel_Writer_Excel2007
-     *
-	 * @param 	PHPExcel	$pPHPExcel
-     */
-    public function __construct(PHPExcel $pPHPExcel = null)
-    {
-    	// Assign PHPExcel
+	/**
+	 * Create a new PHPExcel_Writer_Excel2007
+	 *
+	 * @param    PHPExcel $pPHPExcel
+	 */
+	public function __construct(PHPExcel $pPHPExcel = null)
+	{
+		// Assign PHPExcel
 		$this->setPHPExcel($pPHPExcel);
 
-    	$writerPartsArray = array(	'stringtable'	=> 'PHPExcel_Writer_Excel2007_StringTable',
-									'contenttypes'	=> 'PHPExcel_Writer_Excel2007_ContentTypes',
-									'docprops' 		=> 'PHPExcel_Writer_Excel2007_DocProps',
-									'rels'			=> 'PHPExcel_Writer_Excel2007_Rels',
-									'theme' 		=> 'PHPExcel_Writer_Excel2007_Theme',
-									'style' 		=> 'PHPExcel_Writer_Excel2007_Style',
-									'workbook' 		=> 'PHPExcel_Writer_Excel2007_Workbook',
-									'worksheet' 	=> 'PHPExcel_Writer_Excel2007_Worksheet',
-									'drawing' 		=> 'PHPExcel_Writer_Excel2007_Drawing',
-									'comments' 		=> 'PHPExcel_Writer_Excel2007_Comments'
-								 );
+		$writerPartsArray = array('stringtable'  => 'PHPExcel_Writer_Excel2007_StringTable',
+		                          'contenttypes' => 'PHPExcel_Writer_Excel2007_ContentTypes',
+		                          'docprops'     => 'PHPExcel_Writer_Excel2007_DocProps',
+		                          'rels'         => 'PHPExcel_Writer_Excel2007_Rels',
+		                          'theme'        => 'PHPExcel_Writer_Excel2007_Theme',
+		                          'style'        => 'PHPExcel_Writer_Excel2007_Style',
+		                          'workbook'     => 'PHPExcel_Writer_Excel2007_Workbook',
+		                          'worksheet'    => 'PHPExcel_Writer_Excel2007_Worksheet',
+		                          'drawing'      => 'PHPExcel_Writer_Excel2007_Drawing',
+		                          'comments'     => 'PHPExcel_Writer_Excel2007_Comments'
+		);
 
-    	//	Initialise writer parts
+		//	Initialise writer parts
 		//		and Assign their parent IWriters
-		foreach ($writerPartsArray as $writer => $class) {
+		foreach ($writerPartsArray as $writer => $class)
+		{
 			$this->_writerParts[$writer] = new $class($this);
 		}
 
-    	$hashTablesArray = array( '_stylesConditionalHashTable',	'_fillHashTable',		'_fontHashTable',
-								  '_bordersHashTable',				'_numFmtHashTable',		'_drawingHashTable'
-							    );
+		$hashTablesArray = array('_stylesConditionalHashTable', '_fillHashTable', '_fontHashTable',
+		                         '_bordersHashTable', '_numFmtHashTable', '_drawingHashTable'
+		);
 
 		// Set HashTable variables
-		foreach ($hashTablesArray as $tableName) {
-			$this->$tableName 	= new PHPExcel_HashTable();
+		foreach ($hashTablesArray as $tableName)
+		{
+			$this->$tableName = new PHPExcel_HashTable();
 		}
-    }
+	}
 
 	/**
 	 * Get writer part
 	 *
-	 * @param 	string 	$pPartName		Writer part name
-	 * @return 	PHPExcel_Writer_Excel2007_WriterPart
+	 * @param    string $pPartName Writer part name
+	 *
+	 * @return    PHPExcel_Writer_Excel2007_WriterPart
 	 */
-	public function getWriterPart($pPartName = '') {
-		if ($pPartName != '' && isset($this->_writerParts[strtolower($pPartName)])) {
+	public function getWriterPart($pPartName = '')
+	{
+		if ($pPartName != '' && isset($this->_writerParts[strtolower($pPartName)]))
+		{
 			return $this->_writerParts[strtolower($pPartName)];
-		} else {
+		}
+		else
+		{
 			return null;
 		}
 	}
@@ -182,99 +189,111 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 	/**
 	 * Save PHPExcel to file
 	 *
-	 * @param 	string 		$pFileName
-	 * @throws 	Exception
+	 * @param    string $pFileName
+	 *
+	 * @throws    Exception
 	 */
 	public function save($pFilename = null)
 	{
-		if ($this->_spreadSheet !== NULL) {
+		if ($this->_spreadSheet !== null)
+		{
 			// garbage collect
 			$this->_spreadSheet->garbageCollect();
 
 			// If $pFilename is php://output or php://stdout, make it a temporary file...
 			$originalFilename = $pFilename;
-			if (strtolower($pFilename) == 'php://output' || strtolower($pFilename) == 'php://stdout') {
+			if (strtolower($pFilename) == 'php://output' || strtolower($pFilename) == 'php://stdout')
+			{
 				$pFilename = @tempnam('./', 'phpxltmp');
-				if ($pFilename == '') {
+				if ($pFilename == '')
+				{
 					$pFilename = $originalFilename;
 				}
 			}
 
-			$saveDebugLog = PHPExcel_Calculation::getInstance()->writeDebugLog;
+			$saveDebugLog                                      = PHPExcel_Calculation::getInstance()->writeDebugLog;
 			PHPExcel_Calculation::getInstance()->writeDebugLog = false;
-			$saveDateReturnType = PHPExcel_Calculation_Functions::getReturnDateType();
+			$saveDateReturnType                                = PHPExcel_Calculation_Functions::getReturnDateType();
 			PHPExcel_Calculation_Functions::setReturnDateType(PHPExcel_Calculation_Functions::RETURNDATE_EXCEL);
 
 			// Create string lookup table
 			$this->_stringTable = array();
-			for ($i = 0; $i < $this->_spreadSheet->getSheetCount(); ++$i) {
+			for ($i = 0; $i < $this->_spreadSheet->getSheetCount(); ++$i)
+			{
 				$this->_stringTable = $this->getWriterPart('StringTable')->createStringTable($this->_spreadSheet->getSheet($i), $this->_stringTable);
 			}
 
 			// Create styles dictionaries
-			$this->_stylesConditionalHashTable->addFromSource( 	$this->getWriterPart('Style')->allConditionalStyles($this->_spreadSheet) 			);
-			$this->_fillHashTable->addFromSource( 				$this->getWriterPart('Style')->allFills($this->_spreadSheet) 			);
-			$this->_fontHashTable->addFromSource( 				$this->getWriterPart('Style')->allFonts($this->_spreadSheet) 			);
-			$this->_bordersHashTable->addFromSource( 			$this->getWriterPart('Style')->allBorders($this->_spreadSheet) 			);
-			$this->_numFmtHashTable->addFromSource( 			$this->getWriterPart('Style')->allNumberFormats($this->_spreadSheet) 	);
+			$this->_stylesConditionalHashTable->addFromSource($this->getWriterPart('Style')->allConditionalStyles($this->_spreadSheet));
+			$this->_fillHashTable->addFromSource($this->getWriterPart('Style')->allFills($this->_spreadSheet));
+			$this->_fontHashTable->addFromSource($this->getWriterPart('Style')->allFonts($this->_spreadSheet));
+			$this->_bordersHashTable->addFromSource($this->getWriterPart('Style')->allBorders($this->_spreadSheet));
+			$this->_numFmtHashTable->addFromSource($this->getWriterPart('Style')->allNumberFormats($this->_spreadSheet));
 
 			// Create drawing dictionary
-			$this->_drawingHashTable->addFromSource( 			$this->getWriterPart('Drawing')->allDrawings($this->_spreadSheet) 		);
+			$this->_drawingHashTable->addFromSource($this->getWriterPart('Drawing')->allDrawings($this->_spreadSheet));
 
 			// Create new ZIP file and open it for writing
 			$zipClass = PHPExcel_Settings::getZipClass();
-			$objZip = new $zipClass();
+			$objZip   = new $zipClass();
 
-			if (file_exists($pFilename)) {
+			if (file_exists($pFilename))
+			{
 				unlink($pFilename);
 			}
 			// Try opening the ZIP file
-			if ($objZip->open($pFilename, ZIPARCHIVE::OVERWRITE) !== true) {
-				if ($objZip->open($pFilename, ZIPARCHIVE::CREATE) !== true) {
+			if ($objZip->open($pFilename, ZIPARCHIVE::OVERWRITE) !== true)
+			{
+				if ($objZip->open($pFilename, ZIPARCHIVE::CREATE) !== true)
+				{
 					throw new Exception("Could not open " . $pFilename . " for writing.");
 				}
 			}
 
 			// Add [Content_Types].xml to ZIP file
-			$objZip->addFromString('[Content_Types].xml', 			$this->getWriterPart('ContentTypes')->writeContentTypes($this->_spreadSheet));
+			$objZip->addFromString('[Content_Types].xml', $this->getWriterPart('ContentTypes')->writeContentTypes($this->_spreadSheet));
 
 			// Add relationships to ZIP file
-			$objZip->addFromString('_rels/.rels', 					$this->getWriterPart('Rels')->writeRelationships($this->_spreadSheet));
-			$objZip->addFromString('xl/_rels/workbook.xml.rels', 	$this->getWriterPart('Rels')->writeWorkbookRelationships($this->_spreadSheet));
+			$objZip->addFromString('_rels/.rels', $this->getWriterPart('Rels')->writeRelationships($this->_spreadSheet));
+			$objZip->addFromString('xl/_rels/workbook.xml.rels', $this->getWriterPart('Rels')->writeWorkbookRelationships($this->_spreadSheet));
 
 			// Add document properties to ZIP file
-			$objZip->addFromString('docProps/app.xml', 				$this->getWriterPart('DocProps')->writeDocPropsApp($this->_spreadSheet));
-			$objZip->addFromString('docProps/core.xml', 			$this->getWriterPart('DocProps')->writeDocPropsCore($this->_spreadSheet));
+			$objZip->addFromString('docProps/app.xml', $this->getWriterPart('DocProps')->writeDocPropsApp($this->_spreadSheet));
+			$objZip->addFromString('docProps/core.xml', $this->getWriterPart('DocProps')->writeDocPropsCore($this->_spreadSheet));
 			$customPropertiesPart = $this->getWriterPart('DocProps')->writeDocPropsCustom($this->_spreadSheet);
-			if ($customPropertiesPart !== NULL) {
-				$objZip->addFromString('docProps/custom.xml', 		$customPropertiesPart);
+			if ($customPropertiesPart !== null)
+			{
+				$objZip->addFromString('docProps/custom.xml', $customPropertiesPart);
 			}
 
 			// Add theme to ZIP file
-			$objZip->addFromString('xl/theme/theme1.xml', 			$this->getWriterPart('Theme')->writeTheme($this->_spreadSheet));
+			$objZip->addFromString('xl/theme/theme1.xml', $this->getWriterPart('Theme')->writeTheme($this->_spreadSheet));
 
 			// Add string table to ZIP file
-			$objZip->addFromString('xl/sharedStrings.xml', 			$this->getWriterPart('StringTable')->writeStringTable($this->_stringTable));
+			$objZip->addFromString('xl/sharedStrings.xml', $this->getWriterPart('StringTable')->writeStringTable($this->_stringTable));
 
 			// Add styles to ZIP file
-			$objZip->addFromString('xl/styles.xml', 				$this->getWriterPart('Style')->writeStyles($this->_spreadSheet));
+			$objZip->addFromString('xl/styles.xml', $this->getWriterPart('Style')->writeStyles($this->_spreadSheet));
 
 			// Add workbook to ZIP file
-			$objZip->addFromString('xl/workbook.xml', 				$this->getWriterPart('Workbook')->writeWorkbook($this->_spreadSheet));
+			$objZip->addFromString('xl/workbook.xml', $this->getWriterPart('Workbook')->writeWorkbook($this->_spreadSheet));
 
 			// Add worksheets
-			for ($i = 0; $i < $this->_spreadSheet->getSheetCount(); ++$i) {
+			for ($i = 0; $i < $this->_spreadSheet->getSheetCount(); ++$i)
+			{
 				$objZip->addFromString('xl/worksheets/sheet' . ($i + 1) . '.xml', $this->getWriterPart('Worksheet')->writeWorksheet($this->_spreadSheet->getSheet($i), $this->_stringTable));
 			}
 
 			// Add worksheet relationships (drawings, ...)
-			for ($i = 0; $i < $this->_spreadSheet->getSheetCount(); ++$i) {
+			for ($i = 0; $i < $this->_spreadSheet->getSheetCount(); ++$i)
+			{
 
 				// Add relationships
-				$objZip->addFromString('xl/worksheets/_rels/sheet' . ($i + 1) . '.xml.rels', 	$this->getWriterPart('Rels')->writeWorksheetRelationships($this->_spreadSheet->getSheet($i), ($i + 1)));
+				$objZip->addFromString('xl/worksheets/_rels/sheet' . ($i + 1) . '.xml.rels', $this->getWriterPart('Rels')->writeWorksheetRelationships($this->_spreadSheet->getSheet($i), ($i + 1)));
 
 				// Add drawing relationship parts
-				if ($this->_spreadSheet->getSheet($i)->getDrawingCollection()->count() > 0) {
+				if ($this->_spreadSheet->getSheet($i)->getDrawingCollection()->count() > 0)
+				{
 					// Drawing relationships
 					$objZip->addFromString('xl/drawings/_rels/drawing' . ($i + 1) . '.xml.rels', $this->getWriterPart('Rels')->writeDrawingRelationships($this->_spreadSheet->getSheet($i)));
 
@@ -283,7 +302,8 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 				}
 
 				// Add comment relationship parts
-				if (count($this->_spreadSheet->getSheet($i)->getComments()) > 0) {
+				if (count($this->_spreadSheet->getSheet($i)->getComments()) > 0)
+				{
 					// VML Comments
 					$objZip->addFromString('xl/drawings/vmlDrawing' . ($i + 1) . '.vml', $this->getWriterPart('Comments')->writeVMLComments($this->_spreadSheet->getSheet($i)));
 
@@ -292,7 +312,8 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 				}
 
 				// Add header/footer relationship parts
-				if (count($this->_spreadSheet->getSheet($i)->getHeaderFooter()->getImages()) > 0) {
+				if (count($this->_spreadSheet->getSheet($i)->getHeaderFooter()->getImages()) > 0)
+				{
 					// VML Drawings
 					$objZip->addFromString('xl/drawings/vmlDrawingHF' . ($i + 1) . '.vml', $this->getWriterPart('Drawing')->writeVMLHeaderFooterImages($this->_spreadSheet->getSheet($i)));
 
@@ -300,20 +321,24 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 					$objZip->addFromString('xl/drawings/_rels/vmlDrawingHF' . ($i + 1) . '.vml.rels', $this->getWriterPart('Rels')->writeHeaderFooterDrawingRelationships($this->_spreadSheet->getSheet($i)));
 
 					// Media
-					foreach ($this->_spreadSheet->getSheet($i)->getHeaderFooter()->getImages() as $image) {
+					foreach ($this->_spreadSheet->getSheet($i)->getHeaderFooter()->getImages() as $image)
+					{
 						$objZip->addFromString('xl/media/' . $image->getIndexedFilename(), file_get_contents($image->getPath()));
 					}
 				}
 			}
 
 			// Add media
-			for ($i = 0; $i < $this->getDrawingHashTable()->count(); ++$i) {
-				if ($this->getDrawingHashTable()->getByIndex($i) instanceof PHPExcel_Worksheet_Drawing) {
+			for ($i = 0; $i < $this->getDrawingHashTable()->count(); ++$i)
+			{
+				if ($this->getDrawingHashTable()->getByIndex($i) instanceof PHPExcel_Worksheet_Drawing)
+				{
 					$imageContents = null;
-					$imagePath = $this->getDrawingHashTable()->getByIndex($i)->getPath();
+					$imagePath     = $this->getDrawingHashTable()->getByIndex($i)->getPath();
 
-					if (strpos($imagePath, 'zip://') !== false) {
-						$imagePath = substr($imagePath, 6);
+					if (strpos($imagePath, 'zip://') !== false)
+					{
+						$imagePath         = substr($imagePath, 6);
 						$imagePathSplitted = explode('#', $imagePath);
 
 						$imageZip = new ZipArchive();
@@ -321,21 +346,28 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 						$imageContents = $imageZip->getFromName($imagePathSplitted[1]);
 						$imageZip->close();
 						unset($imageZip);
-					} else {
+					}
+					else
+					{
 						$imageContents = file_get_contents($imagePath);
 					}
 
 					$objZip->addFromString('xl/media/' . str_replace(' ', '_', $this->getDrawingHashTable()->getByIndex($i)->getIndexedFilename()), $imageContents);
-				} else if ($this->getDrawingHashTable()->getByIndex($i) instanceof PHPExcel_Worksheet_MemoryDrawing) {
-					ob_start();
-					call_user_func(
-						$this->getDrawingHashTable()->getByIndex($i)->getRenderingFunction(),
-						$this->getDrawingHashTable()->getByIndex($i)->getImageResource()
-					);
-					$imageContents = ob_get_contents();
-					ob_end_clean();
+				}
+				else
+				{
+					if ($this->getDrawingHashTable()->getByIndex($i) instanceof PHPExcel_Worksheet_MemoryDrawing)
+					{
+						ob_start();
+						call_user_func(
+							$this->getDrawingHashTable()->getByIndex($i)->getRenderingFunction(),
+							$this->getDrawingHashTable()->getByIndex($i)->getImageResource()
+						);
+						$imageContents = ob_get_contents();
+						ob_end_clean();
 
-					$objZip->addFromString('xl/media/' . str_replace(' ', '_', $this->getDrawingHashTable()->getByIndex($i)->getIndexedFilename()), $imageContents);
+						$objZip->addFromString('xl/media/' . str_replace(' ', '_', $this->getDrawingHashTable()->getByIndex($i)->getIndexedFilename()), $imageContents);
+					}
 				}
 			}
 
@@ -343,18 +375,23 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 			PHPExcel_Calculation::getInstance()->writeDebugLog = $saveDebugLog;
 
 			// Close file
-			if ($objZip->close() === false) {
+			if ($objZip->close() === false)
+			{
 				throw new Exception("Could not close zip file $pFilename.");
 			}
 
 			// If a temporary file was used, copy it to the correct file stream
-			if ($originalFilename != $pFilename) {
-				if (copy($pFilename, $originalFilename) === false) {
+			if ($originalFilename != $pFilename)
+			{
+				if (copy($pFilename, $originalFilename) === false)
+				{
 					throw new Exception("Could not copy temporary zip file $pFilename to $originalFilename.");
 				}
 				@unlink($pFilename);
 			}
-		} else {
+		}
+		else
+		{
 			throw new Exception("PHPExcel object unassigned.");
 		}
 	}
@@ -365,10 +402,14 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 	 * @return PHPExcel
 	 * @throws Exception
 	 */
-	public function getPHPExcel() {
-		if ($this->_spreadSheet !== null) {
+	public function getPHPExcel()
+	{
+		if ($this->_spreadSheet !== null)
+		{
 			return $this->_spreadSheet;
-		} else {
+		}
+		else
+		{
 			throw new Exception("No PHPExcel assigned.");
 		}
 	}
@@ -376,143 +417,167 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 	/**
 	 * Set PHPExcel object
 	 *
-	 * @param 	PHPExcel 	$pPHPExcel	PHPExcel object
-	 * @throws	Exception
+	 * @param    PHPExcel $pPHPExcel PHPExcel object
+	 *
+	 * @throws    Exception
 	 * @return PHPExcel_Writer_Excel2007
 	 */
-	public function setPHPExcel(PHPExcel $pPHPExcel = null) {
+	public function setPHPExcel(PHPExcel $pPHPExcel = null)
+	{
 		$this->_spreadSheet = $pPHPExcel;
+
 		return $this;
 	}
 
-    /**
-     * Get string table
-     *
-     * @return string[]
-     */
-    public function getStringTable() {
-    	return $this->_stringTable;
-    }
+	/**
+	 * Get string table
+	 *
+	 * @return string[]
+	 */
+	public function getStringTable()
+	{
+		return $this->_stringTable;
+	}
 
-    /**
-     * Get PHPExcel_Style_Conditional HashTable
-     *
-     * @return PHPExcel_HashTable
-     */
-    public function getStylesConditionalHashTable() {
-    	return $this->_stylesConditionalHashTable;
-    }
+	/**
+	 * Get PHPExcel_Style_Conditional HashTable
+	 *
+	 * @return PHPExcel_HashTable
+	 */
+	public function getStylesConditionalHashTable()
+	{
+		return $this->_stylesConditionalHashTable;
+	}
 
-    /**
-     * Get PHPExcel_Style_Fill HashTable
-     *
-     * @return PHPExcel_HashTable
-     */
-    public function getFillHashTable() {
-    	return $this->_fillHashTable;
-    }
+	/**
+	 * Get PHPExcel_Style_Fill HashTable
+	 *
+	 * @return PHPExcel_HashTable
+	 */
+	public function getFillHashTable()
+	{
+		return $this->_fillHashTable;
+	}
 
-    /**
-     * Get PHPExcel_Style_Font HashTable
-     *
-     * @return PHPExcel_HashTable
-     */
-    public function getFontHashTable() {
-    	return $this->_fontHashTable;
-    }
+	/**
+	 * Get PHPExcel_Style_Font HashTable
+	 *
+	 * @return PHPExcel_HashTable
+	 */
+	public function getFontHashTable()
+	{
+		return $this->_fontHashTable;
+	}
 
-    /**
-     * Get PHPExcel_Style_Borders HashTable
-     *
-     * @return PHPExcel_HashTable
-     */
-    public function getBordersHashTable() {
-    	return $this->_bordersHashTable;
-    }
+	/**
+	 * Get PHPExcel_Style_Borders HashTable
+	 *
+	 * @return PHPExcel_HashTable
+	 */
+	public function getBordersHashTable()
+	{
+		return $this->_bordersHashTable;
+	}
 
-    /**
-     * Get PHPExcel_Style_NumberFormat HashTable
-     *
-     * @return PHPExcel_HashTable
-     */
-    public function getNumFmtHashTable() {
-    	return $this->_numFmtHashTable;
-    }
+	/**
+	 * Get PHPExcel_Style_NumberFormat HashTable
+	 *
+	 * @return PHPExcel_HashTable
+	 */
+	public function getNumFmtHashTable()
+	{
+		return $this->_numFmtHashTable;
+	}
 
-    /**
-     * Get PHPExcel_Worksheet_BaseDrawing HashTable
-     *
-     * @return PHPExcel_HashTable
-     */
-    public function getDrawingHashTable() {
-    	return $this->_drawingHashTable;
-    }
+	/**
+	 * Get PHPExcel_Worksheet_BaseDrawing HashTable
+	 *
+	 * @return PHPExcel_HashTable
+	 */
+	public function getDrawingHashTable()
+	{
+		return $this->_drawingHashTable;
+	}
 
-    /**
-     * Get Pre-Calculate Formulas
-     *
-     * @return boolean
-     */
-    public function getPreCalculateFormulas() {
-    	return $this->_preCalculateFormulas;
-    }
+	/**
+	 * Get Pre-Calculate Formulas
+	 *
+	 * @return boolean
+	 */
+	public function getPreCalculateFormulas()
+	{
+		return $this->_preCalculateFormulas;
+	}
 
-    /**
-     * Set Pre-Calculate Formulas
-     *
-     * @param boolean $pValue	Pre-Calculate Formulas?
-     */
-    public function setPreCalculateFormulas($pValue = true) {
-    	$this->_preCalculateFormulas = $pValue;
-    }
+	/**
+	 * Set Pre-Calculate Formulas
+	 *
+	 * @param boolean $pValue Pre-Calculate Formulas?
+	 */
+	public function setPreCalculateFormulas($pValue = true)
+	{
+		$this->_preCalculateFormulas = $pValue;
+	}
 
-    /**
-     * Get Office2003 compatibility
-     *
-     * @return boolean
-     */
-    public function getOffice2003Compatibility() {
-    	return $this->_office2003compatibility;
-    }
+	/**
+	 * Get Office2003 compatibility
+	 *
+	 * @return boolean
+	 */
+	public function getOffice2003Compatibility()
+	{
+		return $this->_office2003compatibility;
+	}
 
-    /**
-     * Set Pre-Calculate Formulas
-     *
-     * @param boolean $pValue	Office2003 compatibility?
-     * @return PHPExcel_Writer_Excel2007
-     */
-    public function setOffice2003Compatibility($pValue = false) {
-    	$this->_office2003compatibility = $pValue;
-    	return $this;
-    }
+	/**
+	 * Set Pre-Calculate Formulas
+	 *
+	 * @param boolean $pValue Office2003 compatibility?
+	 *
+	 * @return PHPExcel_Writer_Excel2007
+	 */
+	public function setOffice2003Compatibility($pValue = false)
+	{
+		$this->_office2003compatibility = $pValue;
+
+		return $this;
+	}
 
 	/**
 	 * Get use disk caching where possible?
 	 *
 	 * @return boolean
 	 */
-	public function getUseDiskCaching() {
+	public function getUseDiskCaching()
+	{
 		return $this->_useDiskCaching;
 	}
 
 	/**
 	 * Set use disk caching where possible?
 	 *
-	 * @param 	boolean 	$pValue
-	 * @param	string		$pDirectory		Disk caching directory
-	 * @throws	Exception	Exception when directory does not exist
+	 * @param    boolean $pValue
+	 * @param    string  $pDirectory Disk caching directory
+	 *
+	 * @throws    Exception    Exception when directory does not exist
 	 * @return PHPExcel_Writer_Excel2007
 	 */
-	public function setUseDiskCaching($pValue = false, $pDirectory = null) {
+	public function setUseDiskCaching($pValue = false, $pDirectory = null)
+	{
 		$this->_useDiskCaching = $pValue;
 
-		if ($pDirectory !== NULL) {
-    		if (is_dir($pDirectory)) {
-    			$this->_diskCachingDirectory = $pDirectory;
-    		} else {
-    			throw new Exception("Directory does not exist: $pDirectory");
-    		}
+		if ($pDirectory !== null)
+		{
+			if (is_dir($pDirectory))
+			{
+				$this->_diskCachingDirectory = $pDirectory;
+			}
+			else
+			{
+				throw new Exception("Directory does not exist: $pDirectory");
+			}
 		}
+
 		return $this;
 	}
 
@@ -521,7 +586,8 @@ class PHPExcel_Writer_Excel2007 implements PHPExcel_Writer_IWriter
 	 *
 	 * @return string
 	 */
-	public function getDiskCachingDirectory() {
+	public function getDiskCachingDirectory()
+	{
 		return $this->_diskCachingDirectory;
 	}
 }

@@ -24,7 +24,7 @@ class BogusLoad
 	 *
 	 * @return void
 	 */
-	public function someMethod ()
+	public function someMethod()
 	{
 		$this->someMethodCalled = true;
 	}

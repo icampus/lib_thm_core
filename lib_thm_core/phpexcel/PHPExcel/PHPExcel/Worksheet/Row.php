@@ -55,19 +55,21 @@ class PHPExcel_Worksheet_Row
 	/**
 	 * Create a new row
 	 *
-	 * @param PHPExcel_Worksheet 		$parent
-	 * @param int						$rowIndex
+	 * @param PHPExcel_Worksheet $parent
+	 * @param int                $rowIndex
 	 */
-	public function __construct(PHPExcel_Worksheet $parent = null, $rowIndex = 1) {
+	public function __construct(PHPExcel_Worksheet $parent = null, $rowIndex = 1)
+	{
 		// Set parent and row index
-		$this->_parent 		= $parent;
-		$this->_rowIndex 	= $rowIndex;
+		$this->_parent   = $parent;
+		$this->_rowIndex = $rowIndex;
 	}
 
 	/**
 	 * Destructor
 	 */
-	public function __destruct() {
+	public function __destruct()
+	{
 		unset($this->_parent);
 	}
 
@@ -76,7 +78,8 @@ class PHPExcel_Worksheet_Row
 	 *
 	 * @return int
 	 */
-	public function getRowIndex() {
+	public function getRowIndex()
+	{
 		return $this->_rowIndex;
 	}
 
@@ -85,7 +88,8 @@ class PHPExcel_Worksheet_Row
 	 *
 	 * @return PHPExcel_Worksheet_CellIterator
 	 */
-	public function getCellIterator() {
+	public function getCellIterator()
+	{
 		return new PHPExcel_Worksheet_CellIterator($this->_parent, $this->_rowIndex);
 	}
 }

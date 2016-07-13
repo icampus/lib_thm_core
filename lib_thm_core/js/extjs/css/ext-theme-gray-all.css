@@ -1619,7 +1619,6 @@ ul.x-tagfield-list.x-tagfield-singleselect {
     background-position: 0 11px
 }
 
-
 .x-field:not(.x-item-disabled) .x-tagfield-item-close:active {
     background-position: 11px 0
 }
@@ -2089,7 +2088,6 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 .x-tool-expand-right, .x-tool-collapse-right {
     background-position: 0 -165px
 }
-
 
 .x-tool-over .x-tool-plus {
     background-position: -15px -240px
@@ -11861,8 +11859,8 @@ a.x-color-picker-item:hover {
 }
 
 .x-grid-row-editor .x-panel-body {
-    border-top: 1px solid #d0d0d0 ;
-    border-bottom: 1px solid #d0d0d0 ;
+    border-top: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
     padding: 4px 0 4px 0;
     background-color: #ebe6e6
 }

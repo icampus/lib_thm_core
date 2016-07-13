@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="library" version="3.3" method="upgrade">
-	<libraryname>thm_core</libraryname>
-	<name>THM Core Library</name>
-	<author>THM iCampus</author>
-	<creationDate>June 2016</creationDate>
-	<copyright>TH Mittelhessen 2016</copyright>
-	<licence>GNU GPL v.2</licence>
-	<authorEMail>Andrej.Sajenko@mni.thm.de</authorEMail>
+    <libraryname>thm_core</libraryname>
+    <name>THM Core Library</name>
+    <author>THM iCampus</author>
+    <creationDate>June 2016</creationDate>
+    <copyright>TH Mittelhessen 2016</copyright>
+    <licence>GNU GPL v.2</licence>
+    <authorEMail>Andrej.Sajenko@mni.thm.de</authorEMail>
     <authorEMail>Ilja.Michajlow@mni.thm.de</authorEMail>
     <authorEMail>james.antrim@mni.thm.de</authorEMail>
-	<authorUrl>www.mni.thm.de</authorUrl>
-	<version>0.0.32</version>
-	<description>Library for iCampus</description>
-	<files>
+    <authorUrl>www.mni.thm.de</authorUrl>
+    <version>0.0.32</version>
+    <description>Library for iCampus</description>
+    <files>
         <filename>index.html</filename>
         <folder>acl</folder>
         <folder>edit</folder>
         <folder>exception</folder>
         <folder>fields</folder>
         <folder>fonts</folder>
-        <folder>fpdf</folder>
-        <folder>icalcreator</folder>
-        <folder>helpers</folder>
         <folder>form</folder>
+        <folder>fpdf</folder>
+        <folder>helpers</folder>
+        <folder>icalcreator</folder>
         <folder>js</folder>
         <folder>list</folder>
         <folder>log</folder>
@@ -37,6 +37,8 @@
     </languages>
 
     <updateservers>
-        <server type="extension" priority="1" name="THM Core Library Update Site">http://jenkins-ci.mni.thm.de/view/THM%20Control/job/Releases/lastSuccessfulBuild/artifact/updates/lib_thm_core.xml</server>
+        <server type="extension" priority="1" name="THM Core Library Update Site">
+            http://jenkins-ci.mni.thm.de/view/THM%20Control/job/Releases/lastSuccessfulBuild/artifact/updates/lib_thm_core.xml
+        </server>
     </updateservers>
 </extension>

@@ -24,18 +24,18 @@ class THM_CoreTemplateModalList
 	/**
 	 * Method to create a list output
 	 *
-	 * @param   object  &$view  the view context calling the function
+	 * @param   object &$view the view context calling the function
 	 *
 	 * @return void
 	 */
 	public static function render(&$view)
 	{
-		$data = array('view' => $view, 'options' => array());
+		$data    = array('view' => $view, 'options' => array());
 		$filters = $view->filterForm->getGroup('filter');
-?>
+		?>
 		<div id="j-main-container">
-			<form action="index.php?" id="adminForm"  method="post"
-				  name="adminForm" xmlns="http://www.w3.org/1999/html">
+			<form action="index.php?" id="adminForm" method="post"
+			      name="adminForm" xmlns="http://www.w3.org/1999/html">
 				<div class="js-stools clearfix">
 					<div class="clearfix">
 						<div class="js-stools-container-bar">
@@ -45,33 +45,34 @@ class THM_CoreTemplateModalList
 						</div>
 					</div>
 				</div>
-				<div class="clr"> </div>
+				<div class="clr"></div>
 				<table class="table table-striped" id="<?php echo $view->get('name'); ?>-list">
-<?php
+					<?php
 					echo '<thead>';
 					self::renderHeader($view->headers);
 					self::renderHeaderFilters($view->headers, $filters);
 					echo '</thead>';
 					self::renderBody($view->items);
 					self::renderFooter($view);
-?>
+					?>
 				</table>
-				<input type="hidden" name="task" value="" />
-				<input type="hidden" name="boxchecked" value="0" />
-				<input type="hidden" name="option" value="<?php echo JFactory::getApplication()->input->get('option'); ?>" />
-				<input type="hidden" name="view" value="<?php echo $view->get('name'); ?>" />
-				<input type="hidden" name="tmpl" value="component" />
+				<input type="hidden" name="task" value=""/>
+				<input type="hidden" name="boxchecked" value="0"/>
+				<input type="hidden" name="option"
+				       value="<?php echo JFactory::getApplication()->input->get('option'); ?>"/>
+				<input type="hidden" name="view" value="<?php echo $view->get('name'); ?>"/>
+				<input type="hidden" name="tmpl" value="component"/>
 				<?php self::renderHiddenFields($view) ?>
-				<?php echo JHtml::_('form.token');?>
+				<?php echo JHtml::_('form.token'); ?>
 			</form>
 		</div>
-<?php
+		<?php
 	}
 
 	/**
 	 * Renders the search input group if set in the filter xml
 	 *
-	 * @param   array  &$filters  the filters set for the view
+	 * @param   array &$filters the filters set for the view
 	 *
 	 * @return  void
 	 */
@@ -82,25 +83,25 @@ class THM_CoreTemplateModalList
 		{
 			return;
 		}
-?>
-				<label for="filter_search" class="element-invisible">
-					<?php echo JText::_('JSEARCH_FILTER'); ?>
-				</label>
-				<div class="btn-wrapper input-append">
-					<?php echo $filters['filter_search']->input; ?>
-					<button type="submit" class="btn hasTooltip"
-							title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_SUBMIT'); ?>">
-						<i class="icon-search"></i>
-					</button>
-				</div>
-				<div class="btn-wrapper">
-					<button type="button" class="btn hasTooltip js-stools-btn-clear"
-							title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_CLEAR'); ?>">
-						<i class="icon-refresh"></i>
-						<?php echo JText::_('JSEARCH_RESET'); ?>
-					</button>
-				</div>
-<?php
+		?>
+		<label for="filter_search" class="element-invisible">
+			<?php echo JText::_('JSEARCH_FILTER'); ?>
+		</label>
+		<div class="btn-wrapper input-append">
+			<?php echo $filters['filter_search']->input; ?>
+			<button type="submit" class="btn hasTooltip"
+			        title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_SUBMIT'); ?>">
+				<i class="icon-search"></i>
+			</button>
+		</div>
+		<div class="btn-wrapper">
+			<button type="button" class="btn hasTooltip js-stools-btn-clear"
+			        title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_CLEAR'); ?>">
+				<i class="icon-refresh"></i>
+				<?php echo JText::_('JSEARCH_RESET'); ?>
+			</button>
+		</div>
+		<?php
 	}
 
 	/**
@@ -122,7 +123,7 @@ class THM_CoreTemplateModalList
 	/**
 	 * Renders the table head
 	 *
-	 * @param   array  &$headers  an array containing the table headers
+	 * @param   array &$headers an array containing the table headers
 	 *
 	 * @return  void
 	 */
@@ -140,15 +141,15 @@ class THM_CoreTemplateModalList
 	/**
 	 * Renders the table head
 	 *
-	 * @param   array  &$headers  an array containing the table headers
-	 * @param   array  &$filters  the filters set for the view
+	 * @param   array &$headers an array containing the table headers
+	 * @param   array &$filters the filters set for the view
 	 *
 	 * @return  void
 	 */
 	private static function renderHeaderFilters(&$headers, &$filters)
 	{
-		$noFilters = count($filters) === 0;
-		$onlySearch = (count($filters) === 1 AND !empty($filters['filter_search']));
+		$noFilters   = count($filters) === 0;
+		$onlySearch  = (count($filters) === 1 AND !empty($filters['filter_search']));
 		$dontDisplay = ($noFilters OR $onlySearch);
 		if ($dontDisplay)
 		{
@@ -159,7 +160,7 @@ class THM_CoreTemplateModalList
 		echo '<tr>';
 		foreach ($headerNames as $name)
 		{
-			$found = false;
+			$found      = false;
 			$searchName = "filter_$name";
 			foreach ($filters as $fieldName => $field)
 			{
@@ -187,7 +188,7 @@ class THM_CoreTemplateModalList
 	/**
 	 * Renders the table head
 	 *
-	 * @param   array  &$items  an array containing the table headers
+	 * @param   array &$items an array containing the table headers
 	 *
 	 * @return  void
 	 */
@@ -204,7 +205,7 @@ class THM_CoreTemplateModalList
 			}
 
 			echo '</tr>';
-			$rowClass = $rowClass == 'row0'? 'row1' : 'row0';
+			$rowClass = $rowClass == 'row0' ? 'row1' : 'row0';
 		}
 
 		echo '</thead>';
@@ -213,7 +214,7 @@ class THM_CoreTemplateModalList
 	/**
 	 * Renders the table foot
 	 *
-	 * @param   object  &$view  the view context calling the function
+	 * @param   object &$view the view context calling the function
 	 *
 	 * @return  void
 	 */
@@ -229,7 +230,7 @@ class THM_CoreTemplateModalList
 	/**
 	 * Renders hidden fields
 	 *
-	 * @param   object  &$view  the view object
+	 * @param   object &$view the view object
 	 *
 	 * @return  void  outputs hidden fields html
 	 */

@@ -37,14 +37,14 @@ abstract class THM_CoreModelList extends JModelList
 	/**
 	 * Constructor. Uses parent constructor, then sets model actions.
 	 *
-	 * @param   Array  $config  Configuration  (default: Array)
+	 * @param   Array $config Configuration  (default: Array)
 	 */
 	public function __construct($config = array())
 	{
 		parent::__construct($config);
 
 		$option = $this->get('option');
-		$path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
+		$path   = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
 		$helper = str_replace('com_', '', $option) . 'HelperComponent';
 		require_once $path;
 		$helper::addActions($this);
@@ -74,16 +74,17 @@ abstract class THM_CoreModelList extends JModelList
 
 		// Joomla doesn't fill these correctly but requires some of them
 		$data->list['fullordering'] = $this->state->get('list.fullordering', "$this->defaultOrdering $this->defaultDirection");
-		$data->list['ordering'] = $this->state->get('list.ordering', $this->defaultOrdering);
-		$data->list['direction'] = $this->state->get('list.direction', $this->defaultDirection);
-		$data->list['limit'] = $this->state->get('list.limit', $this->defaultLimit);
-		$data->list['start'] = $this->state->get('list.start', $this->defaultStart);
+		$data->list['ordering']     = $this->state->get('list.ordering', $this->defaultOrdering);
+		$data->list['direction']    = $this->state->get('list.direction', $this->defaultDirection);
+		$data->list['limit']        = $this->state->get('list.limit', $this->defaultLimit);
+		$data->list['start']        = $this->state->get('list.start', $this->defaultStart);
 
 		// Set default values for filters
 		foreach ($this->defaultFilters as $name => $defaultValue)
 		{
 			$data->filter[$name] = $this->state->get('filter.' . $name, $defaultValue);
 		}
+
 		return $data;
 	}
 
@@ -91,7 +92,7 @@ abstract class THM_CoreModelList extends JModelList
 	 * Method to get the total number of items for the data set. Joomla erases critical fields for complex data sets.
 	 * This method fixes the erroneous output of undesired duplicate entries.
 	 *
-	 * @param   string  $idColumn  the main id column of the list query
+	 * @param   string $idColumn the main id column of the list query
 	 *
 	 * @return  integer  The total number of items available in the data set.
 	 */
@@ -137,8 +138,8 @@ abstract class THM_CoreModelList extends JModelList
 	/**
 	 * Overwrites the JModelList populateState function
 	 *
-	 * @param   string  $ordering   the column by which the table is should be ordered
-	 * @param   string  $direction  the direction in which this column should be ordered
+	 * @param   string $ordering  the column by which the table is should be ordered
+	 * @param   string $direction the direction in which this column should be ordered
 	 *
 	 * @return  void  sets object state variables
 	 *
@@ -169,7 +170,7 @@ abstract class THM_CoreModelList extends JModelList
 		$this->setListState($list);
 
 		$validLimit = (isset($list['limit']) && is_numeric($list['limit']));
-		$limit = $validLimit? $list['limit']: $this->defaultLimit;
+		$limit      = $validLimit ? $list['limit'] : $this->defaultLimit;
 		$this->setState('list.limit', $limit);
 
 		$value = $this->getUserStateFromRequest('limitstart', 'limitstart', 0);
@@ -180,17 +181,17 @@ abstract class THM_CoreModelList extends JModelList
 	/**
 	 * Sets the ordering and direction filters should a valid full ordering request be made
 	 *
-	 * @param   object  $list  an array of list variables
+	 * @param   object $list an array of list variables
 	 *
 	 * @return  void  sets state variables
 	 */
 	protected function setListState($list)
 	{
 		$validReqOrdering = (!empty($list['ordering']) AND strpos('null', $list['ordering']) !== null);
-		$ordering = $validReqOrdering? $list['ordering'] : $this->defaultOrdering;
+		$ordering         = $validReqOrdering ? $list['ordering'] : $this->defaultOrdering;
 
 		$validReqDirection = (!empty($list['direction']) AND in_array(strtoupper($list['direction']), array('ASC', 'DESC', '')));
-		$direction = $validReqDirection? $list['direction'] : $this->defaultDirection;
+		$direction         = $validReqDirection ? $list['direction'] : $this->defaultDirection;
 
 		$session = JFactory::getSession();
 		if (!empty($list['fullordering']))
@@ -216,10 +217,10 @@ abstract class THM_CoreModelList extends JModelList
 	/**
 	 * Handles the full ordering list input if existent
 	 *
-	 * @param   array   &$list       the list section of the form request
-	 * @param   object  &$session    the session object
-	 * @param   string  &$ordering   the attribute upon which the ordering is determined
-	 * @param   string  &$direction  the direction of the sort
+	 * @param   array  &$list      the list section of the form request
+	 * @param   object &$session   the session object
+	 * @param   string &$ordering  the attribute upon which the ordering is determined
+	 * @param   string &$direction the direction of the sort
 	 *
 	 * @return  void  alters the input parameters
 	 */
@@ -235,10 +236,10 @@ abstract class THM_CoreModelList extends JModelList
 		if (count($orderingParts) == 2)
 		{
 			$plausibleOrdering = $orderingParts[0] != 'null';
-			$validDirection = in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', ''));
+			$validDirection    = in_array(strtoupper($orderingParts[1]), array('ASC', 'DESC', ''));
 			if ($plausibleOrdering AND $validDirection)
 			{
-				$ordering = $orderingParts[0];
+				$ordering  = $orderingParts[0];
 				$direction = $orderingParts[1];
 			}
 		}
@@ -247,28 +248,28 @@ abstract class THM_CoreModelList extends JModelList
 	/**
 	 * Generates a toggle for the attribute in question
 	 *
-	 * @param   int     $id          the id of the database entry
-	 * @param   bool    $value       the value currently set for the attribute (saves asking it later)
-	 * @param   string  $controller  the name of the data management controller
-	 * @param   string  $tip         the tooltip
-	 * @param   string  $attribute   the resource attribute to be changed (useful if multiple entries can be toggled)
+	 * @param   int    $id         the id of the database entry
+	 * @param   bool   $value      the value currently set for the attribute (saves asking it later)
+	 * @param   string $controller the name of the data management controller
+	 * @param   string $tip        the tooltip
+	 * @param   string $attribute  the resource attribute to be changed (useful if multiple entries can be toggled)
 	 *
 	 * @return  string  a HTML string
 	 */
 	protected function getToggle($id, $value, $controller, $tip, $attribute = null)
 	{
-		$iconClass = empty($value)? 'unpublish' : 'publish';
-		$icon = '<i class="icon-' . $iconClass . '"></i>';
+		$iconClass = empty($value) ? 'unpublish' : 'publish';
+		$icon      = '<i class="icon-' . $iconClass . '"></i>';
 
-		$attributes = array();
+		$attributes          = array();
 		$attributes['title'] = $tip;
 		$attributes['class'] = 'btn btn-micro hasTooltip';
-		$attributes['class'] .= empty($value)? ' inactive' : '';
+		$attributes['class'] .= empty($value) ? ' inactive' : '';
 
 
 		$option = $this->get('option');
-		$url = "index.php?option=$option&task=" . $controller . ".toggle&id=" . $id . "&value=" . $value;
-		$url .= empty($attribute)? '' : "&attribute=$attribute";
+		$url    = "index.php?option=$option&task=" . $controller . ".toggle&id=" . $id . "&value=" . $value;
+		$url .= empty($attribute) ? '' : "&attribute=$attribute";
 		$link = JHtml::_('link', $url, $icon, $attributes);
 
 		return '<div class="button-grp">' . $link . '</div>';
@@ -277,15 +278,15 @@ abstract class THM_CoreModelList extends JModelList
 	/**
 	 * Provides a default method for setting the list ordering
 	 *
-	 * @param   object  &$query  the query object
+	 * @param   object &$query the query object
 	 *
 	 * @return  void
 	 */
 	protected function setOrdering(&$query)
 	{
 		$defaultOrdering = "{$this->defaultOrdering} {$this->defaultDirection}";
-		$session = JFactory::getSession();
-		$listOrdering = $this->state->get('list.fullordering', $defaultOrdering);
+		$session         = JFactory::getSession();
+		$listOrdering    = $this->state->get('list.fullordering', $defaultOrdering);
 		if (strpos($listOrdering, 'null') !== false)
 		{
 			$sessionOrdering = $session->get('ordering', '');
@@ -293,6 +294,7 @@ abstract class THM_CoreModelList extends JModelList
 			{
 				$session->set($this->context . '.ordering', $defaultOrdering);
 				$query->order($defaultOrdering);
+
 				return;
 			}
 		}
@@ -303,8 +305,8 @@ abstract class THM_CoreModelList extends JModelList
 	/**
 	 * Sets the search filter for the query
 	 *
-	 * @param   object  &$query       the query to modify
-	 * @param   array   $columnNames  the column names to use in the search
+	 * @param   object &$query      the query to modify
+	 * @param   array  $columnNames the column names to use in the search
 	 *
 	 * @return  void
 	 */
@@ -316,7 +318,7 @@ abstract class THM_CoreModelList extends JModelList
 			return;
 		}
 
-		$search = '%' . $this->_db->escape($userInput, true) . '%';
+		$search  = '%' . $this->_db->escape($userInput, true) . '%';
 		$wherray = array();
 		foreach ($columnNames as $name)
 		{
@@ -330,9 +332,9 @@ abstract class THM_CoreModelList extends JModelList
 	/**
 	 * Provides a default method for setting filters based on id/unique values
 	 *
-	 * @param   object  &$query       the query object
-	 * @param   string  $idColumn     the id column in the table
-	 * @param   array   $filterNames  the filter names which filter against ids
+	 * @param   object &$query      the query object
+	 * @param   string $idColumn    the id column in the table
+	 * @param   array  $filterNames the filter names which filter against ids
 	 *
 	 * @return  void
 	 */
@@ -359,6 +361,7 @@ abstract class THM_CoreModelList extends JModelList
 			// IDs are unique and therefore mutually exclusive => one is enough!
 
 			$query->where("$idColumn = '$value'");
+
 			return;
 		}
 	}
@@ -366,8 +369,8 @@ abstract class THM_CoreModelList extends JModelList
 	/**
 	 * Provides a default method for setting filters for non-unique values
 	 *
-	 * @param   object  &$query       the query object
-	 * @param   array   $filterNames  the filter names. names should be synonymous with db column names.
+	 * @param   object &$query      the query object
+	 * @param   array  $filterNames the filter names. names should be synonymous with db column names.
 	 *
 	 * @return  void
 	 */
@@ -423,8 +426,8 @@ abstract class THM_CoreModelList extends JModelList
 	/**
 	 * Provides a default method for setting filters for non-unique values
 	 *
-	 * @param   object  &$query       the query object
-	 * @param   array   $filterNames  the filter names. names should be synonymous with db column names.
+	 * @param   object &$query      the query object
+	 * @param   array  $filterNames the filter names. names should be synonymous with db column names.
 	 *
 	 * @return  void
 	 */

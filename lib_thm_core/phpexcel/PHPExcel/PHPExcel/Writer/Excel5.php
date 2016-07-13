@@ -22,8 +22,8 @@
  * @category   PHPExcel
  * @package    PHPExcel_Writer_Excel5
  * @copyright  Copyright (c) 2006 - 2011 PHPExcel (http://www.codeplex.com/PHPExcel)
- * @license	http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
- * @version	1.7.6, 2011-02-27
+ * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
+ * @version    1.7.6, 2011-02-27
  */
 
 
@@ -41,7 +41,7 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 	 *
 	 * @var boolean
 	 */
-	private $_preCalculateFormulas	= true;
+	private $_preCalculateFormulas = true;
 
 	/**
 	 * PHPExcel object
@@ -55,28 +55,28 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 	 *
 	 * @var integer
 	 */
-	private $_BIFF_version	= 0x0600;
+	private $_BIFF_version = 0x0600;
 
 	/**
 	 * Total number of shared strings in workbook
 	 *
 	 * @var int
 	 */
-	private $_str_total		= 0;
+	private $_str_total = 0;
 
 	/**
 	 * Number of unique shared strings in workbook
 	 *
 	 * @var int
 	 */
-	private $_str_unique	= 0;
+	private $_str_unique = 0;
 
 	/**
 	 * Array of unique shared strings in workbook
 	 *
 	 * @var array
 	 */
-	private $_str_table		= array();
+	private $_str_table = array();
 
 	/**
 	 * Color cache. Mapping between RGB value and color index.
@@ -103,46 +103,50 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 	/**
 	 * Create a new PHPExcel_Writer_Excel5
 	 *
-	 * @param	PHPExcel	$phpExcel	PHPExcel object
+	 * @param    PHPExcel $phpExcel PHPExcel object
 	 */
-	public function __construct(PHPExcel $phpExcel) {
-		$this->_phpExcel		= $phpExcel;
+	public function __construct(PHPExcel $phpExcel)
+	{
+		$this->_phpExcel = $phpExcel;
 
-		$this->_parser			= new PHPExcel_Writer_Excel5_Parser($this->_BIFF_version);
+		$this->_parser = new PHPExcel_Writer_Excel5_Parser($this->_BIFF_version);
 	}
 
 	/**
 	 * Save PHPExcel to file
 	 *
-	 * @param	string		$pFileName
-	 * @throws	Exception
+	 * @param    string $pFileName
+	 *
+	 * @throws    Exception
 	 */
-	public function save($pFilename = null) {
+	public function save($pFilename = null)
+	{
 
 		// garbage collect
 		$this->_phpExcel->garbageCollect();
 
-		$saveDebugLog = PHPExcel_Calculation::getInstance()->writeDebugLog;
+		$saveDebugLog                                      = PHPExcel_Calculation::getInstance()->writeDebugLog;
 		PHPExcel_Calculation::getInstance()->writeDebugLog = false;
-		$saveDateReturnType = PHPExcel_Calculation_Functions::getReturnDateType();
+		$saveDateReturnType                                = PHPExcel_Calculation_Functions::getReturnDateType();
 		PHPExcel_Calculation_Functions::setReturnDateType(PHPExcel_Calculation_Functions::RETURNDATE_EXCEL);
 
 		// initialize colors array
-		$this->_colors          = array();
+		$this->_colors = array();
 
 		// Initialise workbook writer
 		$this->_writerWorkbook = new PHPExcel_Writer_Excel5_Workbook($this->_phpExcel, $this->_BIFF_version,
-					$this->_str_total, $this->_str_unique, $this->_str_table, $this->_colors, $this->_parser);
+			$this->_str_total, $this->_str_unique, $this->_str_table, $this->_colors, $this->_parser);
 
 		// Initialise worksheet writers
 		$countSheets = $this->_phpExcel->getSheetCount();
-		for ($i = 0; $i < $countSheets; ++$i) {
+		for ($i = 0; $i < $countSheets; ++$i)
+		{
 			$this->_writerWorksheets[$i] = new PHPExcel_Writer_Excel5_Worksheet($this->_BIFF_version,
-									   $this->_str_total, $this->_str_unique,
-									   $this->_str_table, $this->_colors,
-									   $this->_parser,
-									   $this->_preCalculateFormulas,
-									   $this->_phpExcel->getSheet($i));
+				$this->_str_total, $this->_str_unique,
+				$this->_str_table, $this->_colors,
+				$this->_parser,
+				$this->_preCalculateFormulas,
+				$this->_phpExcel->getSheet($i));
 		}
 
 		// build Escher objects. Escher objects for workbooks needs to be build before Escher object for workbook.
@@ -152,32 +156,36 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 		// add 15 identical cell style Xfs
 		// for now, we use the first cellXf instead of cellStyleXf
 		$cellXfCollection = $this->_phpExcel->getCellXfCollection();
-		for ($i = 0; $i < 15; ++$i) {
+		for ($i = 0; $i < 15; ++$i)
+		{
 			$this->_writerWorkbook->addXfWriter($cellXfCollection[0], true);
 		}
 
 		// add all the cell Xfs
-		foreach ($this->_phpExcel->getCellXfCollection() as $style) {
+		foreach ($this->_phpExcel->getCellXfCollection() as $style)
+		{
 			$this->_writerWorkbook->addXfWriter($style, false);
 		}
 
 		// initialize OLE file
 		$workbookStreamName = ($this->_BIFF_version == 0x0600) ? 'Workbook' : 'Book';
-		$OLE = new PHPExcel_Shared_OLE_PPS_File(PHPExcel_Shared_OLE::Asc2Ucs($workbookStreamName));
+		$OLE                = new PHPExcel_Shared_OLE_PPS_File(PHPExcel_Shared_OLE::Asc2Ucs($workbookStreamName));
 
 		// Write the worksheet streams before the global workbook stream,
 		// because the byte sizes of these are needed in the global workbook stream
 		$worksheetSizes = array();
-		for ($i = 0; $i < $countSheets; ++$i) {
+		for ($i = 0; $i < $countSheets; ++$i)
+		{
 			$this->_writerWorksheets[$i]->close();
 			$worksheetSizes[] = $this->_writerWorksheets[$i]->_datasize;
 		}
 
 		// add binary data for global workbook stream
-		$OLE->append( $this->_writerWorkbook->writeWorkbook($worksheetSizes) );
+		$OLE->append($this->_writerWorkbook->writeWorkbook($worksheetSizes));
 
 		// add binary data for sheet streams
-		for ($i = 0; $i < $countSheets; ++$i) {
+		for ($i = 0; $i < $countSheets; ++$i)
+		{
 			$OLE->append($this->_writerWorksheets[$i]->getData());
 		}
 
@@ -193,11 +201,14 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 	 * Set temporary storage directory
 	 *
 	 * @deprecated
-	 * @param	string	$pValue		Temporary storage directory
-	 * @throws	Exception	Exception when directory does not exist
+	 *
+	 * @param    string $pValue Temporary storage directory
+	 *
+	 * @throws    Exception    Exception when directory does not exist
 	 * @return PHPExcel_Writer_Excel5
 	 */
-	public function setTempDir($pValue = '') {
+	public function setTempDir($pValue = '')
+	{
 		return $this;
 	}
 
@@ -206,16 +217,18 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 	 *
 	 * @return boolean
 	 */
-	public function getPreCalculateFormulas() {
+	public function getPreCalculateFormulas()
+	{
 		return $this->_preCalculateFormulas;
 	}
 
 	/**
 	 * Set Pre-Calculate Formulas
 	 *
-	 * @param boolean $pValue	Pre-Calculate Formulas?
+	 * @param boolean $pValue Pre-Calculate Formulas?
 	 */
-	public function setPreCalculateFormulas($pValue = true) {
+	public function setPreCalculateFormulas($pValue = true)
+	{
 		$this->_preCalculateFormulas = $pValue;
 	}
 
@@ -224,14 +237,16 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 		// 1-based index to BstoreContainer
 		$blipIndex = 0;
 
-		foreach ($this->_phpExcel->getAllsheets() as $sheet) {
+		foreach ($this->_phpExcel->getAllsheets() as $sheet)
+		{
 			// sheet index
 			$sheetIndex = $sheet->getParent()->getIndex($sheet);
 
 			$escher = null;
 
 			// check if there are any shapes for this sheet
-			if (count($sheet->getDrawingCollection()) == 0) {
+			if (count($sheet->getDrawingCollection()) == 0)
+			{
 				continue;
 			}
 
@@ -261,7 +276,8 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 
 			$countShapes[$sheetIndex] = 0; // count number of shapes (minus group shape), in sheet
 
-			foreach ($sheet->getDrawingCollection() as $drawing) {
+			foreach ($sheet->getDrawingCollection() as $drawing)
+			{
 				++$blipIndex;
 
 				++$countShapes[$sheetIndex];
@@ -274,7 +290,7 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 
 				// set the shape index (we combine 1-based sheet index and $countShapes to create unique shape index)
 				$reducedSpId = $countShapes[$sheetIndex];
-				$spId = $reducedSpId
+				$spId        = $reducedSpId
 					| ($sheet->getParent()->getIndex($sheet) + 1) << 10;
 				$spContainer->setSpId($spId);
 
@@ -289,10 +305,10 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 
 				// set coordinates and offsets, client anchor
 				$coordinates = $drawing->getCoordinates();
-				$offsetX = $drawing->getOffsetX();
-				$offsetY = $drawing->getOffsetY();
-				$width = $drawing->getWidth();
-				$height = $drawing->getHeight();
+				$offsetX     = $drawing->getOffsetX();
+				$offsetY     = $drawing->getOffsetY();
+				$width       = $drawing->getWidth();
+				$height      = $drawing->getHeight();
 
 				$twoAnchor = PHPExcel_Shared_Excel5::oneAnchor2twoAnchor($sheet, $coordinates, $offsetX, $offsetY, $width, $height);
 
@@ -326,14 +342,17 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 
 		// any drawings in this workbook?
 		$found = false;
-		foreach ($this->_phpExcel->getAllSheets() as $sheet) {
-			if (count($sheet->getDrawingCollection()) > 0) {
+		foreach ($this->_phpExcel->getAllSheets() as $sheet)
+		{
+			if (count($sheet->getDrawingCollection()) > 0)
+			{
 				$found = true;
 			}
 		}
 
 		// nothing to do if there are no drawings
-		if (!$found) {
+		if (!$found)
+		{
 			return;
 		}
 
@@ -348,21 +367,24 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 		$dggContainer->setIDCLs($this->_IDCLs);
 
 		// this loop is for determining maximum shape identifier of all drawing
-		$spIdMax = 0;
+		$spIdMax          = 0;
 		$totalCountShapes = 0;
-		$countDrawings = 0;
+		$countDrawings    = 0;
 
-		foreach ($this->_phpExcel->getAllsheets() as $sheet) {
+		foreach ($this->_phpExcel->getAllsheets() as $sheet)
+		{
 			$sheetCountShapes = 0; // count number of shapes (minus group shape), in sheet
 
-			if (count($sheet->getDrawingCollection()) > 0) {
+			if (count($sheet->getDrawingCollection()) > 0)
+			{
 				++$countDrawings;
 
-				foreach ($sheet->getDrawingCollection() as $drawing) {
+				foreach ($sheet->getDrawingCollection() as $drawing)
+				{
 					++$sheetCountShapes;
 					++$totalCountShapes;
 
-					$spId = $sheetCountShapes
+					$spId    = $sheetCountShapes
 						| ($this->_phpExcel->getIndex($sheet) + 1) << 10;
 					$spIdMax = max($spId, $spIdMax);
 				}
@@ -378,43 +400,48 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 		$dggContainer->setBstoreContainer($bstoreContainer);
 
 		// the BSE's (all the images)
-		foreach ($this->_phpExcel->getAllsheets() as $sheet) {
-			foreach ($sheet->getDrawingCollection() as $drawing) {
-				if ($drawing instanceof PHPExcel_Worksheet_Drawing) {
+		foreach ($this->_phpExcel->getAllsheets() as $sheet)
+		{
+			foreach ($sheet->getDrawingCollection() as $drawing)
+			{
+				if ($drawing instanceof PHPExcel_Worksheet_Drawing)
+				{
 
 					$filename = $drawing->getPath();
 
 					list($imagesx, $imagesy, $imageFormat) = getimagesize($filename);
 
-					switch ($imageFormat) {
+					switch ($imageFormat)
+					{
 
-					case 1: // GIF, not supported by BIFF8, we convert to PNG
-						$blipType = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_PNG;
-						ob_start();
-						imagepng(imagecreatefromgif($filename));
-						$blipData = ob_get_contents();
-						ob_end_clean();
-						break;
+						case 1: // GIF, not supported by BIFF8, we convert to PNG
+							$blipType = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_PNG;
+							ob_start();
+							imagepng(imagecreatefromgif($filename));
+							$blipData = ob_get_contents();
+							ob_end_clean();
+							break;
 
-					case 2: // JPEG
-						$blipType = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_JPEG;
-						$blipData = file_get_contents($filename);
-						break;
+						case 2: // JPEG
+							$blipType = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_JPEG;
+							$blipData = file_get_contents($filename);
+							break;
 
-					case 3: // PNG
-						$blipType = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_PNG;
-						$blipData = file_get_contents($filename);
-						break;
+						case 3: // PNG
+							$blipType = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_PNG;
+							$blipData = file_get_contents($filename);
+							break;
 
-					case 6: // Windows DIB (BMP), we convert to PNG
-						$blipType = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_PNG;
-						ob_start();
-						imagepng(PHPExcel_Shared_Drawing::imagecreatefrombmp($filename));
-						$blipData = ob_get_contents();
-						ob_end_clean();
-						break;
+						case 6: // Windows DIB (BMP), we convert to PNG
+							$blipType = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_PNG;
+							ob_start();
+							imagepng(PHPExcel_Shared_Drawing::imagecreatefrombmp($filename));
+							$blipData = ob_get_contents();
+							ob_end_clean();
+							break;
 
-					default: continue 2;
+						default:
+							continue 2;
 
 					}
 
@@ -427,37 +454,43 @@ class PHPExcel_Writer_Excel5 implements PHPExcel_Writer_IWriter
 
 					$bstoreContainer->addBSE($BSE);
 
-				} else if ($drawing instanceof PHPExcel_Worksheet_MemoryDrawing) {
+				}
+				else
+				{
+					if ($drawing instanceof PHPExcel_Worksheet_MemoryDrawing)
+					{
 
-					switch ($drawing->getRenderingFunction()) {
+						switch ($drawing->getRenderingFunction())
+						{
 
-					case PHPExcel_Worksheet_MemoryDrawing::RENDERING_JPEG:
-						$blipType = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_JPEG;
-						$renderingFunction = 'imagejpeg';
-						break;
+							case PHPExcel_Worksheet_MemoryDrawing::RENDERING_JPEG:
+								$blipType          = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_JPEG;
+								$renderingFunction = 'imagejpeg';
+								break;
 
-					case PHPExcel_Worksheet_MemoryDrawing::RENDERING_GIF:
-					case PHPExcel_Worksheet_MemoryDrawing::RENDERING_PNG:
-					case PHPExcel_Worksheet_MemoryDrawing::RENDERING_DEFAULT:
-						$blipType = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_PNG;
-						$renderingFunction = 'imagepng';
-						break;
+							case PHPExcel_Worksheet_MemoryDrawing::RENDERING_GIF:
+							case PHPExcel_Worksheet_MemoryDrawing::RENDERING_PNG:
+							case PHPExcel_Worksheet_MemoryDrawing::RENDERING_DEFAULT:
+								$blipType          = PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE::BLIPTYPE_PNG;
+								$renderingFunction = 'imagepng';
+								break;
 
+						}
+
+						ob_start();
+						call_user_func($renderingFunction, $drawing->getImageResource());
+						$blipData = ob_get_contents();
+						ob_end_clean();
+
+						$blip = new PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE_Blip();
+						$blip->setData($blipData);
+
+						$BSE = new PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE();
+						$BSE->setBlipType($blipType);
+						$BSE->setBlip($blip);
+
+						$bstoreContainer->addBSE($BSE);
 					}
-
-					ob_start();
-					call_user_func($renderingFunction, $drawing->getImageResource());
-					$blipData = ob_get_contents();
-					ob_end_clean();
-
-					$blip = new PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE_Blip();
-					$blip->setData($blipData);
-
-					$BSE = new PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE();
-					$BSE->setBlipType($blipType);
-					$BSE->setBlip($blip);
-
-					$bstoreContainer->addBSE($BSE);
 				}
 			}
 		}

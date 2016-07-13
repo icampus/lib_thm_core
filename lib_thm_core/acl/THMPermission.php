@@ -8,6 +8,7 @@
  * @license     GNU GPL v.2
  * @link        www.mni.thm.de
  */
+
 /**
  * Actions.
  *
@@ -23,14 +24,14 @@ final class THMPermission
 	/**
 	 * Check is a value a valid perm value.
 	 *
-	 * @param   THMPermission::value  $permValue  Perm value.
+	 * @param   THMPermission ::value  $permValue  Perm value.
 	 *
 	 * @return bool true if a valid perm value.
 	 */
-	public static function  isValidPermission($permValue)
+	public static function isValidPermission($permValue)
 	{
 		return $permValue === self::DENY
-			|| $permValue === self::GRANT
-			|| $permValue === self::INHERIT;
+		|| $permValue === self::GRANT
+		|| $permValue === self::INHERIT;
 	}
 }

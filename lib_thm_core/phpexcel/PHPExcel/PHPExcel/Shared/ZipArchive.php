@@ -73,19 +73,20 @@ class PHPExcel_Shared_ZipArchive
 	{
 		$filenameParts = pathinfo($localname);
 
-		$handle = fopen($this->_tempDir.'/'.$filenameParts["basename"], "wb");
+		$handle = fopen($this->_tempDir . '/' . $filenameParts["basename"], "wb");
 		fwrite($handle, $contents);
 		fclose($handle);
 
-		$res = $this->_zip->add($this->_tempDir.'/'.$filenameParts["basename"],
-								PCLZIP_OPT_REMOVE_PATH, $this->_tempDir,
-								PCLZIP_OPT_ADD_PATH, $filenameParts["dirname"]
-							   );
-		if ($res == 0) {
+		$res = $this->_zip->add($this->_tempDir . '/' . $filenameParts["basename"],
+			PCLZIP_OPT_REMOVE_PATH, $this->_tempDir,
+			PCLZIP_OPT_ADD_PATH, $filenameParts["dirname"]
+		);
+		if ($res == 0)
+		{
 			throw new Exception("Error zipping files : " . $this->_zip->errorInfo(true));
 		}
 
-		unlink($this->_tempDir.'/'.$filenameParts["basename"]);
+		unlink($this->_tempDir . '/' . $filenameParts["basename"]);
 	}
 
 }

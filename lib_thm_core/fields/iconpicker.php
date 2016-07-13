@@ -32,7 +32,7 @@ class JFormFieldIconPicker extends JFormField
 	/**
 	 * Method to instantiate the form field object.
 	 *
-	 * @param   JForm  $form  The form to attach to the form field object.
+	 * @param   JForm $form The form to attach to the form field object.
 	 */
 	public function __construct()
 	{
@@ -53,7 +53,7 @@ class JFormFieldIconPicker extends JFormField
 
 		// Generate the content of the button.
 		// If an icon has been saved, it will be put at the button, otherwise "Select an Icon" will appear
-		$labelContent = empty($this->value)?
+		$labelContent = empty($this->value) ?
 			JText::_('LIB_THM_CORE_SELECT') :
 			'<span class="' . $this->value . '"></span><span class="iconName">' . str_replace("icon-", "", $this->value) . '</span>';
 
@@ -72,11 +72,11 @@ class JFormFieldIconPicker extends JFormField
 		{
 			if (strpos($line, '.icon-') !== false)
 			{
-				$suchMuster = array("/(\.)/" , "/(:before\s*{?,?)\s*/");
-				$iconClassName = preg_replace($suchMuster, "", $line);
+				$suchMuster        = array("/(\.)/", "/(:before\s*{?,?)\s*/");
+				$iconClassName     = preg_replace($suchMuster, "", $line);
 				$displayedIconName = str_replace("icon-", "", $iconClassName);
-				$selected = (!empty($this->value) AND ($this->value === $iconClassName));
-				$active = $selected? 'class="selected"' : '';
+				$selected          = (!empty($this->value) AND ($this->value === $iconClassName));
+				$active            = $selected ? 'class="selected"' : '';
 
 				$select .= '<li>';
 				$select .= '<a onclick="selectIcon(event)"' . $active . '>';

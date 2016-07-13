@@ -23,8 +23,8 @@ class THM_CoreModelEdit extends JModelAdmin
 	/**
 	 * Method to get the form
 	 *
-	 * @param   Array    $data      Data         (default: Array)
-	 * @param   Boolean  $loadData  Load data  (default: true)
+	 * @param   Array   $data     Data         (default: Array)
+	 * @param   Boolean $loadData Load data  (default: true)
 	 *
 	 * @return  mixed  JForm object on success, False on error.
 	 *
@@ -33,8 +33,8 @@ class THM_CoreModelEdit extends JModelAdmin
 	public function getForm($data = array(), $loadData = true)
 	{
 		$option = $this->get('option');
-		$name = $this->get('name');
-		$form = $this->loadForm("$option.$name", $name, array('control' => 'jform', 'load_data' => $loadData));
+		$name   = $this->get('name');
+		$form   = $this->loadForm("$option.$name", $name, array('control' => 'jform', 'load_data' => $loadData));
 
 		if (empty($form))
 		{
@@ -47,7 +47,7 @@ class THM_CoreModelEdit extends JModelAdmin
 	/**
 	 * Method to get a single record.
 	 *
-	 * @param   integer  $pk  The id of the primary key.
+	 * @param   integer $pk The id of the primary key.
 	 *
 	 * @return  mixed    Object on success, false on failure.
 	 *
@@ -56,12 +56,12 @@ class THM_CoreModelEdit extends JModelAdmin
 	public function getItem($pk = null)
 	{
 		$option = $this->get('option');
-		$path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
+		$path   = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
 		$helper = str_replace('com_', '', $option) . 'HelperComponent';
 		require_once $path;
 
 		$helper::addActions($this);
-		$item = parent::getItem($pk);
+		$item      = parent::getItem($pk);
 		$allowEdit = $helper::allowEdit($this, $item->id);
 		if ($allowEdit)
 		{
@@ -74,9 +74,9 @@ class THM_CoreModelEdit extends JModelAdmin
 	/**
 	 * Method to get a table object, load it if necessary.
 	 *
-	 * @param   string  $name     The table name. Optional.
-	 * @param   string  $prefix   The class prefix. Optional.
-	 * @param   array   $options  Configuration array for model. Optional.
+	 * @param   string $name    The table name. Optional.
+	 * @param   string $prefix  The class prefix. Optional.
+	 * @param   array  $options Configuration array for model. Optional.
 	 *
 	 * @return  JTable  A JTable object
 	 */
@@ -90,8 +90,9 @@ class THM_CoreModelEdit extends JModelAdmin
 		JTable::addIncludePath(JPATH_ROOT . "/media/$component/tables");
 		JTable::addIncludePath(JPATH_ROOT . "/components/$component/tables");
 
-		$type = str_replace('_edit', '', $this->get('name')) . 's';
+		$type   = str_replace('_edit', '', $this->get('name')) . 's';
 		$prefix = str_replace('com_', '', $component) . 'Table';
+
 		return JTable::getInstance($type, $prefix, $options);
 	}
 
@@ -102,14 +103,14 @@ class THM_CoreModelEdit extends JModelAdmin
 	 */
 	protected function loadFormData()
 	{
-		$input = JFactory::getApplication()->input;
-		$name = $this->get('name');
-		$resource = str_replace('_edit', '', $name);
-		$task = $input->getCmd('task', "$resource.add");
+		$input      = JFactory::getApplication()->input;
+		$name       = $this->get('name');
+		$resource   = str_replace('_edit', '', $name);
+		$task       = $input->getCmd('task', "$resource.add");
 		$resourceID = $input->getInt('id', 0);
 
 		// Edit can only be explicitly called from the list view or implicitly with an id over a URL
-		$edit = (($task == "$resource.edit")  OR $resourceID > 0);
+		$edit = (($task == "$resource.edit") OR $resourceID > 0);
 		if ($edit)
 		{
 			if (!empty($resourceID))
@@ -117,7 +118,8 @@ class THM_CoreModelEdit extends JModelAdmin
 				return $this->getItem($resourceID);
 			}
 
-			$resourceIDs = $input->get('cid',  null, 'array');
+			$resourceIDs = $input->get('cid', null, 'array');
+
 			return $this->getItem($resourceIDs[0]);
 		}
 

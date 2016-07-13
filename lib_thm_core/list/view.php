@@ -38,7 +38,7 @@ abstract class THM_CoreViewList extends JViewLegacy
 	/**
 	 * Method to create a list output
 	 *
-	 * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
+	 * @param   string $tpl The name of the template file to parse; automatically searches through the template paths.
 	 *
 	 * @return void
 	 */
@@ -46,23 +46,23 @@ abstract class THM_CoreViewList extends JViewLegacy
 	{
 		$this->modifyDocument();
 
-		$this->state = $this->get('State');
-		$this->items = $this->get('Items');
+		$this->state      = $this->get('State');
+		$this->items      = $this->get('Items');
 		$this->pagination = $this->get('Pagination');
 
 		// Don't know which of these filters does what if anything active had no effect on the active highlighting
-		$this->filterForm = $this->get('FilterForm');
+		$this->filterForm    = $this->get('FilterForm');
 		$this->activeFilters = $this->get('ActiveFilters');
 
 		// Items common across list views
-		$this->headers = $this->get('Headers');
+		$this->headers      = $this->get('Headers');
 		$this->hiddenFields = $this->get('HiddenFields');
 
 		$this->items = $this->get('Items');
 
 		// Allows for component specific menu handling
 		$option = JFactory::getApplication()->input->get('option', '');
-		$path = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
+		$path   = JPATH_ROOT . "/media/$option/helpers/componentHelper.php";
 		$helper = str_replace('com_', '', $option) . 'HelperComponent';
 		require_once $path;
 		$helper::addSubmenu($this);
@@ -86,10 +86,10 @@ abstract class THM_CoreViewList extends JViewLegacy
 	 */
 	protected function modifyDocument()
 	{
-		$option = JFactory::getApplication()->input->get('option');
+		$option   = JFactory::getApplication()->input->get('option');
 		$document = Jfactory::getDocument();
-		$document -> addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
-		$document -> addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
+		$document->addStyleSheet($this->baseurl . "../../libraries/thm_core/fonts/iconfont.css");
+		$document->addStyleSheet($this->baseurl . "../../media/$option/css/backend.css");
 
 		JHtml::_('bootstrap.tooltip');
 		JHtml::_('behavior.multiselect');

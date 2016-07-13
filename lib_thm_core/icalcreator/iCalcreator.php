@@ -8,5 +8,5 @@
 
 defined('_JEXEC') or die;
 
-require_once(JPATH_SITE."/libraries/thm_core/icalcreator/iCalcreator/iCalcreator.class.php");
+require_once(JPATH_SITE . "/libraries/thm_core/icalcreator/iCalcreator/iCalcreator.class.php");
 ?>

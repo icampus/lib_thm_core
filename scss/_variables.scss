@@ -91,11 +91,11 @@ $bg-color-panel: #ffffff;
 $bg-color-widget: $grey-100;
 
 //gradient colors for selected items in list (for backend)
-$gr-color-top-item:#62c462;
-$gr-color-bottom-item:#51a351;
+$gr-color-top-item: #62c462;
+$gr-color-bottom-item: #51a351;
 
 // gradient colors for background (backend)
-$gr-color-top-bg:#B9D986;
+$gr-color-top-bg: #B9D986;
 $gr-color-bottom-bg: #cce3a7;
 
 //********************************************************************************************************************//
@@ -136,17 +136,17 @@ $border-color: $border;
 $border-input: $border;
 $border-table: $border;
 
-$border-thick: 2px solid  $grey-100;
+$border-thick: 2px solid $grey-100;
 
 // For use against light (non-white) backgrounds
 $border-button-low-contrast: $border-thick;
 
 // For use against light (non-white) backgrounds
-$border-button-high-contrast: 2px solid  $foreground;
+$border-button-high-contrast: 2px solid $foreground;
 
 //********************************************************************************************************************//
 // Breakpoints for Media Queries
 //********************************************************************************************************************//
 
 $mq-phone: 480px;
-$mq-tablet:768px;
+$mq-tablet: 768px;

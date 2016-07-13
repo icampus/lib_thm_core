@@ -27,7 +27,8 @@
  */
 
 /** PHPExcel root directory */
-if (!defined('PHPEXCEL_ROOT')) {
+if (!defined('PHPEXCEL_ROOT'))
+{
 	/**
 	 * @ignore
 	 */
@@ -38,57 +39,68 @@ if (!defined('PHPEXCEL_ROOT')) {
 
 class PHPExcel_Settings
 {
-	/**	constants */
-	const PCLZIP		= 'PHPExcel_Shared_ZipArchive';
-	const ZIPARCHIVE	= 'ZipArchive';
+	/**    constants */
+	const PCLZIP = 'PHPExcel_Shared_ZipArchive';
+	const ZIPARCHIVE = 'ZipArchive';
 
 
-	private static $_zipClass	= self::ZIPARCHIVE;
+	private static $_zipClass = self::ZIPARCHIVE;
 
 
 	/**
 	 * Set the Zip Class to use (PCLZip or ZipArchive)
 	 *
-	 * @param	 string	$zipClass			PHPExcel_Settings::PCLZip or PHPExcel_Settings::ZipArchive
-	 * @return	 boolean					Success or failure
+	 * @param     string $zipClass PHPExcel_Settings::PCLZip or PHPExcel_Settings::ZipArchive
+	 *
+	 * @return     boolean                    Success or failure
 	 */
-	public static function setZipClass($zipClass) {
+	public static function setZipClass($zipClass)
+	{
 		if (($zipClass == self::PCLZIP) ||
-			($zipClass == self::ZIPARCHIVE)) {
+			($zipClass == self::ZIPARCHIVE)
+		)
+		{
 			self::$_zipClass = $zipClass;
-			return True;
+
+			return true;
 		}
-		return False;
-	}	//	function setZipClass()
+
+		return false;
+	}    //	function setZipClass()
 
 
 	/**
 	 * Return the Zip Class to use (PCLZip or ZipArchive)
 	 *
-	 * @return	 string						Zip Class to use	- PHPExcel_Settings::PCLZip or PHPExcel_Settings::ZipArchive
+	 * @return     string                        Zip Class to use    - PHPExcel_Settings::PCLZip or PHPExcel_Settings::ZipArchive
 	 */
-	public static function getZipClass() {
+	public static function getZipClass()
+	{
 		return self::$_zipClass;
-	}	//	function getZipClass()
+	}    //	function getZipClass()
 
 
-	public static function getCacheStorageMethod() {
+	public static function getCacheStorageMethod()
+	{
 		return PHPExcel_CachedObjectStorageFactory::$_cacheStorageMethod;
-	}	//	function getCacheStorageMethod()
+	}    //	function getCacheStorageMethod()
 
 
-	public static function getCacheStorageClass() {
+	public static function getCacheStorageClass()
+	{
 		return PHPExcel_CachedObjectStorageFactory::$_cacheStorageClass;
-	}	//	function getCacheStorageClass()
+	}    //	function getCacheStorageClass()
 
 
-	public static function setCacheStorageMethod($method = PHPExcel_CachedObjectStorageFactory::cache_in_memory, $arguments = array()) {
-		return PHPExcel_CachedObjectStorageFactory::initialize($method,$arguments);
-	}	//	function setCacheStorageMethod()
+	public static function setCacheStorageMethod($method = PHPExcel_CachedObjectStorageFactory::cache_in_memory, $arguments = array())
+	{
+		return PHPExcel_CachedObjectStorageFactory::initialize($method, $arguments);
+	}    //	function setCacheStorageMethod()
 
 
-	public static function setLocale($locale){
+	public static function setLocale($locale)
+	{
 		return PHPExcel_Calculation::getInstance()->setLocale($locale);
-	}	//	function setLocale()
+	}    //	function setLocale()
 
 }

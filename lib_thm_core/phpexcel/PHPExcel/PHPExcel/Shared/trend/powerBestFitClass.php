@@ -39,61 +39,78 @@ require_once PHPEXCEL_ROOT . 'PHPExcel/Shared/trend/bestFitClass.php';
  */
 class PHPExcel_Power_Best_Fit extends PHPExcel_Best_Fit
 {
-	protected $_bestFitType		= 'power';
+	protected $_bestFitType = 'power';
 
 
-	public function getValueOfYForX($xValue) {
-		return $this->getIntersect() * pow(($xValue - $this->_Xoffset),$this->getSlope());
-	}	//	function getValueOfYForX()
+	public function getValueOfYForX($xValue)
+	{
+		return $this->getIntersect() * pow(($xValue - $this->_Xoffset), $this->getSlope());
+	}    //	function getValueOfYForX()
 
 
-	public function getValueOfXForY($yValue) {
-		return pow((($yValue + $this->_Yoffset) / $this->getIntersect()),(1 / $this->getSlope()));
-	}	//	function getValueOfXForY()
+	public function getValueOfXForY($yValue)
+	{
+		return pow((($yValue + $this->_Yoffset) / $this->getIntersect()), (1 / $this->getSlope()));
+	}    //	function getValueOfXForY()
 
 
-	public function getEquation($dp=0) {
-		$slope = $this->getSlope($dp);
+	public function getEquation($dp = 0)
+	{
+		$slope     = $this->getSlope($dp);
 		$intersect = $this->getIntersect($dp);
 
-		return 'Y = '.$intersect.' * X^'.$slope;
-	}	//	function getEquation()
+		return 'Y = ' . $intersect . ' * X^' . $slope;
+	}    //	function getEquation()
 
 
-	public function getIntersect($dp=0) {
-		if ($dp != 0) {
-			return round(exp($this->_intersect),$dp);
+	public function getIntersect($dp = 0)
+	{
+		if ($dp != 0)
+		{
+			return round(exp($this->_intersect), $dp);
 		}
+
 		return exp($this->_intersect);
-	}	//	function getIntersect()
+	}    //	function getIntersect()
 
 
-	private function _power_regression($yValues, $xValues, $const) {
-		foreach($xValues as &$value) {
-			if ($value < 0.0) {
+	private function _power_regression($yValues, $xValues, $const)
+	{
+		foreach ($xValues as &$value)
+		{
+			if ($value < 0.0)
+			{
 				$value = 0 - log(abs($value));
-			} elseif ($value > 0.0) {
+			}
+			elseif ($value > 0.0)
+			{
 				$value = log($value);
 			}
 		}
 		unset($value);
-		foreach($yValues as &$value) {
-			if ($value < 0.0) {
+		foreach ($yValues as &$value)
+		{
+			if ($value < 0.0)
+			{
 				$value = 0 - log(abs($value));
-			} elseif ($value > 0.0) {
+			}
+			elseif ($value > 0.0)
+			{
 				$value = log($value);
 			}
 		}
 		unset($value);
 
 		$this->_leastSquareFit($yValues, $xValues, $const);
-	}	//	function _power_regression()
+	}    //	function _power_regression()
 
 
-	function __construct($yValues, $xValues=array(), $const=True) {
-		if (parent::__construct($yValues, $xValues) !== False) {
+	function __construct($yValues, $xValues = array(), $const = true)
+	{
+		if (parent::__construct($yValues, $xValues) !== false)
+		{
 			$this->_power_regression($yValues, $xValues, $const);
 		}
-	}	//	function __construct()
+	}    //	function __construct()
 
-}	//	class powerBestFit
+}    //	class powerBestFit

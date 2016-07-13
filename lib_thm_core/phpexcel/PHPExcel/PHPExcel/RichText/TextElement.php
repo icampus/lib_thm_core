@@ -41,34 +41,38 @@ class PHPExcel_RichText_TextElement implements PHPExcel_RichText_ITextElement
 	 */
 	private $_text;
 
-    /**
-     * Create a new PHPExcel_RichText_TextElement instance
-     *
-     * @param 	string		$pText		Text
-     */
-    public function __construct($pText = '')
-    {
-    	// Initialise variables
-    	$this->_text = $pText;
-    }
+	/**
+	 * Create a new PHPExcel_RichText_TextElement instance
+	 *
+	 * @param    string $pText Text
+	 */
+	public function __construct($pText = '')
+	{
+		// Initialise variables
+		$this->_text = $pText;
+	}
 
 	/**
 	 * Get text
 	 *
-	 * @return string	Text
+	 * @return string    Text
 	 */
-	public function getText() {
+	public function getText()
+	{
 		return $this->_text;
 	}
 
 	/**
 	 * Set text
 	 *
-	 * @param 	$pText string	Text
+	 * @param    $pText string    Text
+	 *
 	 * @return PHPExcel_RichText_ITextElement
 	 */
-	public function setText($pText = '') {
+	public function setText($pText = '')
+	{
 		$this->_text = $pText;
+
 		return $this;
 	}
 
@@ -77,31 +81,38 @@ class PHPExcel_RichText_TextElement implements PHPExcel_RichText_ITextElement
 	 *
 	 * @return PHPExcel_Style_Font
 	 */
-	public function getFont() {
+	public function getFont()
+	{
 		return null;
 	}
 
 	/**
 	 * Get hash code
 	 *
-	 * @return string	Hash code
+	 * @return string    Hash code
 	 */
-	public function getHashCode() {
-    	return md5(
-    		  $this->_text
-    		. __CLASS__
-    	);
-    }
+	public function getHashCode()
+	{
+		return md5(
+			$this->_text
+			. __CLASS__
+		);
+	}
 
 	/**
 	 * Implement PHP __clone to create a deep clone, not just a shallow copy.
 	 */
-	public function __clone() {
+	public function __clone()
+	{
 		$vars = get_object_vars($this);
-		foreach ($vars as $key => $value) {
-			if (is_object($value)) {
+		foreach ($vars as $key => $value)
+		{
+			if (is_object($value))
+			{
 				$this->$key = clone $value;
-			} else {
+			}
+			else
+			{
 				$this->$key = $value;
 			}
 		}

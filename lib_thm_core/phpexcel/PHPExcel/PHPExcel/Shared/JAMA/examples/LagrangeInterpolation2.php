@@ -11,26 +11,30 @@ require_once "../Matrix.php";
  * the results [2.5, -8.5, 10] which means that the points are on the
  * curve y = 2.5x² - 8.5x + 10.
  *
- * @see http://geosoft.no/software/lagrange/LagrangeInterpolation.java.html
- * @see http://source.freehep.org/jcvsweb/ilc/LCSIM/wdview/lcsim/src/org/lcsim/fit/polynomial/PolynomialFitter.java
+ * @see    http://geosoft.no/software/lagrange/LagrangeInterpolation.java.html
+ * @see    http://source.freehep.org/jcvsweb/ilc/LCSIM/wdview/lcsim/src/org/lcsim/fit/polynomial/PolynomialFitter.java
  * @author Jacob Dreyer
  * @author Paul Meagher (port to PHP and minor changes)
  *
  * @param x[] float
  * @param y[] float
  */
-class LagrangeInterpolation {
+class LagrangeInterpolation
+{
 
-	public function findPolynomialFactors($x, $y) {
+	public function findPolynomialFactors($x, $y)
+	{
 		$n = count($x);
 
 		$data = array();  // double[n][n];
 		$rhs  = array();  // double[n];
 
-		for ($i = 0; $i < $n; ++$i) {
+		for ($i = 0; $i < $n; ++$i)
+		{
 			$v = 1;
-			for ($j = 0; $j < $n; ++$j) {
-				$data[$i][$n-$j-1] = $v;
+			for ($j = 0; $j < $n; ++$j)
+			{
+				$data[$i][$n - $j - 1] = $v;
 				$v *= $x[$i];
 			}
 			$rhs[$i] = $y[$i];
@@ -43,17 +47,18 @@ class LagrangeInterpolation {
 		$s = $m->solve($b);
 
 		return $s->getRowPackedCopy();
-	}	//	function findPolynomialFactors()
+	}    //	function findPolynomialFactors()
 
-}	//	class LagrangeInterpolation
+}    //	class LagrangeInterpolation
 
 
 $x = array(2.0, 1.0, 3.0);
 $y = array(3.0, 4.0, 7.0);
 
 $li = new LagrangeInterpolation;
-$f = $li->findPolynomialFactors($x, $y);
+$f  = $li->findPolynomialFactors($x, $y);
 
-for ($i = 0; $i < 3; ++$i) {
-	echo $f[$i]."<br />";
+for ($i = 0; $i < 3; ++$i)
+{
+	echo $f[$i] . "<br />";
 }

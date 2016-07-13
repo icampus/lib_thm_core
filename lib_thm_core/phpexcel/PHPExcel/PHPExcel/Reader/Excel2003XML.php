@@ -28,7 +28,8 @@
 
 
 /** PHPExcel root directory */
-if (!defined('PHPEXCEL_ROOT')) {
+if (!defined('PHPEXCEL_ROOT'))
+{
 	/**
 	 * @ignore
 	 */
@@ -79,7 +80,8 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 	 *
 	 * @return boolean
 	 */
-	public function getReadDataOnly() {
+	public function getReadDataOnly()
+	{
 		return $this->_readDataOnly;
 	}
 
@@ -87,10 +89,13 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 	 * Set read data only
 	 *
 	 * @param boolean $pValue
+	 *
 	 * @return PHPExcel_Reader_Excel2003XML
 	 */
-	public function setReadDataOnly($pValue = false) {
+	public function setReadDataOnly($pValue = false)
+	{
 		$this->_readDataOnly = $pValue;
+
 		return $this;
 	}
 
@@ -108,12 +113,14 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 	 * Set which sheets to load
 	 *
 	 * @param mixed $value
+	 *
 	 * @return PHPExcel_Reader_Excel2003XML
 	 */
 	public function setLoadSheetsOnly($value = null)
 	{
 		$this->_loadSheetsOnly = is_array($value) ?
 			$value : array($value);
+
 		return $this;
 	}
 
@@ -125,6 +132,7 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 	public function setLoadAllSheets()
 	{
 		$this->_loadSheetsOnly = null;
+
 		return $this;
 	}
 
@@ -133,7 +141,8 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 	 *
 	 * @return PHPExcel_Reader_IReadFilter
 	 */
-	public function getReadFilter() {
+	public function getReadFilter()
+	{
 		return $this->_readFilter;
 	}
 
@@ -141,25 +150,30 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 	 * Set read filter
 	 *
 	 * @param PHPExcel_Reader_IReadFilter $pValue
+	 *
 	 * @return PHPExcel_Reader_Excel2003XML
 	 */
-	public function setReadFilter(PHPExcel_Reader_IReadFilter $pValue) {
+	public function setReadFilter(PHPExcel_Reader_IReadFilter $pValue)
+	{
 		$this->_readFilter = $pValue;
+
 		return $this;
 	}
 
 	/**
 	 * Create a new PHPExcel_Reader_Excel2003XML
 	 */
-	public function __construct() {
-		$this->_readFilter 	= new PHPExcel_Reader_DefaultReadFilter();
+	public function __construct()
+	{
+		$this->_readFilter = new PHPExcel_Reader_DefaultReadFilter();
 	}
 
 	/**
 	 * Can the current PHPExcel_Reader_IReader read the file?
 	 *
-	 * @param 	string 		$pFileName
-	 * @return 	boolean
+	 * @param    string $pFileName
+	 *
+	 * @return    boolean
 	 */
 	public function canRead($pFilename)
 	{
@@ -175,24 +189,27 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 //
 
 		$signature = array(
-				'<?xml version="1.0"',
-				'<?mso-application progid="Excel.Sheet"?>'
-			);
+			'<?xml version="1.0"',
+			'<?mso-application progid="Excel.Sheet"?>'
+		);
 
 		// Check if file exists
-		if (!file_exists($pFilename)) {
+		if (!file_exists($pFilename))
+		{
 			throw new Exception("Could not open " . $pFilename . " for reading! File does not exist.");
 		}
 
 		// Read sample data (first 2 KB will do)
-		$fh = fopen($pFilename, 'r');
+		$fh   = fopen($pFilename, 'r');
 		$data = fread($fh, 2048);
 		fclose($fh);
 
 		$valid = true;
-		foreach($signature as $match) {
+		foreach ($signature as $match)
+		{
 			// every part of the signature must be present
-			if (strpos($data, $match) === false) {
+			if (strpos($data, $match) === false)
+			{
 				$valid = false;
 				break;
 			}
@@ -204,24 +221,27 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 	/**
 	 * Reads names of the worksheets from a file, without parsing the whole file to a PHPExcel object
 	 *
-	 * @param 	string 		$pFilename
-	 * @throws 	Exception
+	 * @param    string $pFilename
+	 *
+	 * @throws    Exception
 	 */
 	public function listWorksheetNames($pFilename)
 	{
 		// Check if file exists
-		if (!file_exists($pFilename)) {
+		if (!file_exists($pFilename))
+		{
 			throw new Exception("Could not open " . $pFilename . " for reading! File does not exist.");
 		}
 
 		$worksheetNames = array();
 
-		$xml = simplexml_load_file($pFilename);
+		$xml        = simplexml_load_file($pFilename);
 		$namespaces = $xml->getNamespaces(true);
 
 		$xml_ss = $xml->children($namespaces['ss']);
-		foreach($xml_ss->Worksheet as $worksheet) {
-			$worksheet_ss = $worksheet->attributes($namespaces['ss']);
+		foreach ($xml_ss->Worksheet as $worksheet)
+		{
+			$worksheet_ss     = $worksheet->attributes($namespaces['ss']);
 			$worksheetNames[] = $worksheet_ss['Name'];
 		}
 
@@ -232,9 +252,10 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 	/**
 	 * Loads PHPExcel from file
 	 *
-	 * @param 	string 		$pFilename
-	 * @return 	PHPExcel
-	 * @throws 	Exception
+	 * @param    string $pFilename
+	 *
+	 * @return    PHPExcel
+	 * @throws    Exception
 	 */
 	public function load($pFilename)
 	{
@@ -245,288 +266,334 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 		return $this->loadIntoExisting($pFilename, $objPHPExcel);
 	}
 
-	private static function identifyFixedStyleValue($styleList,&$styleAttributeValue) {
+	private static function identifyFixedStyleValue($styleList, &$styleAttributeValue)
+	{
 		$styleAttributeValue = strtolower($styleAttributeValue);
-		foreach($styleList as $style) {
-			if ($styleAttributeValue == strtolower($style)) {
+		foreach ($styleList as $style)
+		{
+			if ($styleAttributeValue == strtolower($style))
+			{
 				$styleAttributeValue = $style;
+
 				return true;
 			}
 		}
+
 		return false;
 	}
 
- 	/**
- 	 * pixel units to excel width units(units of 1/256th of a character width)
- 	 * @param pxs
- 	 * @return
- 	 */
- 	private static function _pixel2WidthUnits($pxs) {
+	/**
+	 * pixel units to excel width units(units of 1/256th of a character width)
+	 *
+	 * @param pxs
+	 *
+	 * @return
+	 */
+	private static function _pixel2WidthUnits($pxs)
+	{
 		$UNIT_OFFSET_MAP = array(0, 36, 73, 109, 146, 182, 219);
 
 		$widthUnits = 256 * ($pxs / 7);
 		$widthUnits += $UNIT_OFFSET_MAP[($pxs % 7)];
+
 		return $widthUnits;
 	}
 
 	/**
 	 * excel width units(units of 1/256th of a character width) to pixel units
+	 *
 	 * @param widthUnits
+	 *
 	 * @return
 	 */
-	private static function _widthUnits2Pixel($widthUnits) {
-		$pixels = ($widthUnits / 256) * 7;
+	private static function _widthUnits2Pixel($widthUnits)
+	{
+		$pixels           = ($widthUnits / 256) * 7;
 		$offsetWidthUnits = $widthUnits % 256;
 		$pixels += round($offsetWidthUnits / (256 / 7));
+
 		return $pixels;
 	}
 
 
-	private static function _hex2str($hex) {
+	private static function _hex2str($hex)
+	{
 		return chr(hexdec($hex[1]));
 	}
 
 	/**
 	 * Loads PHPExcel from file into PHPExcel instance
 	 *
-	 * @param 	string 		$pFilename
-	 * @param	PHPExcel	$objPHPExcel
-	 * @return 	PHPExcel
-	 * @throws 	Exception
+	 * @param    string   $pFilename
+	 * @param    PHPExcel $objPHPExcel
+	 *
+	 * @return    PHPExcel
+	 * @throws    Exception
 	 */
 	public function loadIntoExisting($pFilename, PHPExcel $objPHPExcel)
 	{
-		$fromFormats	= array('\-',	'\ ');
-		$toFormats		= array('-',	' ');
+		$fromFormats = array('\-', '\ ');
+		$toFormats   = array('-', ' ');
 
-		$underlineStyles = array (
-				PHPExcel_Style_Font::UNDERLINE_NONE,
-				PHPExcel_Style_Font::UNDERLINE_DOUBLE,
-				PHPExcel_Style_Font::UNDERLINE_DOUBLEACCOUNTING,
-				PHPExcel_Style_Font::UNDERLINE_SINGLE,
-				PHPExcel_Style_Font::UNDERLINE_SINGLEACCOUNTING
-			);
-		$verticalAlignmentStyles = array (
-				PHPExcel_Style_Alignment::VERTICAL_BOTTOM,
-				PHPExcel_Style_Alignment::VERTICAL_TOP,
-				PHPExcel_Style_Alignment::VERTICAL_CENTER,
-				PHPExcel_Style_Alignment::VERTICAL_JUSTIFY
-			);
-		$horizontalAlignmentStyles = array (
-				PHPExcel_Style_Alignment::HORIZONTAL_GENERAL,
-				PHPExcel_Style_Alignment::HORIZONTAL_LEFT,
-				PHPExcel_Style_Alignment::HORIZONTAL_RIGHT,
-				PHPExcel_Style_Alignment::HORIZONTAL_CENTER,
-				PHPExcel_Style_Alignment::HORIZONTAL_CENTER_CONTINUOUS,
-				PHPExcel_Style_Alignment::HORIZONTAL_JUSTIFY
-			);
+		$underlineStyles           = array(
+			PHPExcel_Style_Font::UNDERLINE_NONE,
+			PHPExcel_Style_Font::UNDERLINE_DOUBLE,
+			PHPExcel_Style_Font::UNDERLINE_DOUBLEACCOUNTING,
+			PHPExcel_Style_Font::UNDERLINE_SINGLE,
+			PHPExcel_Style_Font::UNDERLINE_SINGLEACCOUNTING
+		);
+		$verticalAlignmentStyles   = array(
+			PHPExcel_Style_Alignment::VERTICAL_BOTTOM,
+			PHPExcel_Style_Alignment::VERTICAL_TOP,
+			PHPExcel_Style_Alignment::VERTICAL_CENTER,
+			PHPExcel_Style_Alignment::VERTICAL_JUSTIFY
+		);
+		$horizontalAlignmentStyles = array(
+			PHPExcel_Style_Alignment::HORIZONTAL_GENERAL,
+			PHPExcel_Style_Alignment::HORIZONTAL_LEFT,
+			PHPExcel_Style_Alignment::HORIZONTAL_RIGHT,
+			PHPExcel_Style_Alignment::HORIZONTAL_CENTER,
+			PHPExcel_Style_Alignment::HORIZONTAL_CENTER_CONTINUOUS,
+			PHPExcel_Style_Alignment::HORIZONTAL_JUSTIFY
+		);
 
 		$timezoneObj = new DateTimeZone('Europe/London');
-		$GMT = new DateTimeZone('UTC');
+		$GMT         = new DateTimeZone('UTC');
 
 
 		// Check if file exists
-		if (!file_exists($pFilename)) {
+		if (!file_exists($pFilename))
+		{
 			throw new Exception("Could not open " . $pFilename . " for reading! File does not exist.");
 		}
 
-		$xml = simplexml_load_file($pFilename);
+		$xml        = simplexml_load_file($pFilename);
 		$namespaces = $xml->getNamespaces(true);
 
 		$docProps = $objPHPExcel->getProperties();
-		if (isset($xml->DocumentProperties[0])) {
-			foreach($xml->DocumentProperties[0] as $propertyName => $propertyValue) {
-				switch ($propertyName) {
+		if (isset($xml->DocumentProperties[0]))
+		{
+			foreach ($xml->DocumentProperties[0] as $propertyName => $propertyValue)
+			{
+				switch ($propertyName)
+				{
 					case 'Title' :
-							$docProps->setTitle($propertyValue);
-							break;
+						$docProps->setTitle($propertyValue);
+						break;
 					case 'Subject' :
-							$docProps->setSubject($propertyValue);
-							break;
+						$docProps->setSubject($propertyValue);
+						break;
 					case 'Author' :
-							$docProps->setCreator($propertyValue);
-							break;
+						$docProps->setCreator($propertyValue);
+						break;
 					case 'Created' :
-							$creationDate = strtotime($propertyValue);
-							$docProps->setCreated($creationDate);
-							break;
+						$creationDate = strtotime($propertyValue);
+						$docProps->setCreated($creationDate);
+						break;
 					case 'LastAuthor' :
-							$docProps->setLastModifiedBy($propertyValue);
-							break;
+						$docProps->setLastModifiedBy($propertyValue);
+						break;
 					case 'LastSaved' :
-							$lastSaveDate = strtotime($propertyValue);
-							$docProps->setModified($lastSaveDate);
-							break;
+						$lastSaveDate = strtotime($propertyValue);
+						$docProps->setModified($lastSaveDate);
+						break;
 					case 'Company' :
-							$docProps->setCompany($propertyValue);
-							break;
+						$docProps->setCompany($propertyValue);
+						break;
 					case 'Category' :
-							$docProps->setCategory($propertyValue);
-							break;
+						$docProps->setCategory($propertyValue);
+						break;
 					case 'Manager' :
-							$docProps->setManager($propertyValue);
-							break;
+						$docProps->setManager($propertyValue);
+						break;
 					case 'Keywords' :
-							$docProps->setKeywords($propertyValue);
-							break;
+						$docProps->setKeywords($propertyValue);
+						break;
 					case 'Description' :
-							$docProps->setDescription($propertyValue);
-							break;
+						$docProps->setDescription($propertyValue);
+						break;
 				}
 			}
 		}
-		if (isset($xml->CustomDocumentProperties)) {
-			foreach($xml->CustomDocumentProperties[0] as $propertyName => $propertyValue) {
+		if (isset($xml->CustomDocumentProperties))
+		{
+			foreach ($xml->CustomDocumentProperties[0] as $propertyName => $propertyValue)
+			{
 				$propertyAttributes = $propertyValue->attributes($namespaces['dt']);
-				$propertyName = preg_replace_callback('/_x([0-9a-z]{4})_/','PHPExcel_Reader_Excel2003XML::_hex2str',$propertyName);
-				$propertyType = PHPExcel_DocumentProperties::PROPERTY_TYPE_UNKNOWN;
-				switch((string) $propertyAttributes) {
+				$propertyName       = preg_replace_callback('/_x([0-9a-z]{4})_/', 'PHPExcel_Reader_Excel2003XML::_hex2str', $propertyName);
+				$propertyType       = PHPExcel_DocumentProperties::PROPERTY_TYPE_UNKNOWN;
+				switch ((string) $propertyAttributes)
+				{
 					case 'string' :
-						$propertyType = PHPExcel_DocumentProperties::PROPERTY_TYPE_STRING;
+						$propertyType  = PHPExcel_DocumentProperties::PROPERTY_TYPE_STRING;
 						$propertyValue = trim($propertyValue);
 						break;
 					case 'boolean' :
-						$propertyType = PHPExcel_DocumentProperties::PROPERTY_TYPE_BOOLEAN;
+						$propertyType  = PHPExcel_DocumentProperties::PROPERTY_TYPE_BOOLEAN;
 						$propertyValue = (bool) $propertyValue;
 						break;
 					case 'integer' :
-						$propertyType = PHPExcel_DocumentProperties::PROPERTY_TYPE_INTEGER;
+						$propertyType  = PHPExcel_DocumentProperties::PROPERTY_TYPE_INTEGER;
 						$propertyValue = intval($propertyValue);
 						break;
 					case 'float' :
-						$propertyType = PHPExcel_DocumentProperties::PROPERTY_TYPE_FLOAT;
+						$propertyType  = PHPExcel_DocumentProperties::PROPERTY_TYPE_FLOAT;
 						$propertyValue = floatval($propertyValue);
 						break;
 					case 'dateTime.tz' :
-						$propertyType = PHPExcel_DocumentProperties::PROPERTY_TYPE_DATE;
+						$propertyType  = PHPExcel_DocumentProperties::PROPERTY_TYPE_DATE;
 						$propertyValue = strtotime(trim($propertyValue));
 						break;
 				}
-				$docProps->setCustomProperty($propertyName,$propertyValue,$propertyType);
+				$docProps->setCustomProperty($propertyName, $propertyValue, $propertyType);
 			}
 		}
 
-		foreach($xml->Styles[0] as $style) {
+		foreach ($xml->Styles[0] as $style)
+		{
 			$style_ss = $style->attributes($namespaces['ss']);
-			$styleID = (string) $style_ss['ID'];
+			$styleID  = (string) $style_ss['ID'];
 //			echo 'Style ID = '.$styleID.'<br />';
-			if ($styleID == 'Default') {
+			if ($styleID == 'Default')
+			{
 				$this->_styles['Default'] = array();
-			} else {
+			}
+			else
+			{
 				$this->_styles[$styleID] = $this->_styles['Default'];
 			}
-			foreach ($style as $styleType => $styleData) {
+			foreach ($style as $styleType => $styleData)
+			{
 				$styleAttributes = $styleData->attributes($namespaces['ss']);
 //				echo $styleType.'<br />';
-				switch ($styleType) {
+				switch ($styleType)
+				{
 					case 'Alignment' :
-							foreach($styleAttributes as $styleAttributeKey => $styleAttributeValue) {
+						foreach ($styleAttributes as $styleAttributeKey => $styleAttributeValue)
+						{
 //								echo $styleAttributeKey.' = '.$styleAttributeValue.'<br />';
-								$styleAttributeValue = (string) $styleAttributeValue;
-								switch ($styleAttributeKey) {
-									case 'Vertical' :
-											if (self::identifyFixedStyleValue($verticalAlignmentStyles,$styleAttributeValue)) {
-												$this->_styles[$styleID]['alignment']['vertical'] = $styleAttributeValue;
-											}
-											break;
-									case 'Horizontal' :
-											if (self::identifyFixedStyleValue($horizontalAlignmentStyles,$styleAttributeValue)) {
-												$this->_styles[$styleID]['alignment']['horizontal'] = $styleAttributeValue;
-											}
-											break;
-									case 'WrapText' :
-											$this->_styles[$styleID]['alignment']['wrap'] = true;
-											break;
-								}
+							$styleAttributeValue = (string) $styleAttributeValue;
+							switch ($styleAttributeKey)
+							{
+								case 'Vertical' :
+									if (self::identifyFixedStyleValue($verticalAlignmentStyles, $styleAttributeValue))
+									{
+										$this->_styles[$styleID]['alignment']['vertical'] = $styleAttributeValue;
+									}
+									break;
+								case 'Horizontal' :
+									if (self::identifyFixedStyleValue($horizontalAlignmentStyles, $styleAttributeValue))
+									{
+										$this->_styles[$styleID]['alignment']['horizontal'] = $styleAttributeValue;
+									}
+									break;
+								case 'WrapText' :
+									$this->_styles[$styleID]['alignment']['wrap'] = true;
+									break;
 							}
-							break;
+						}
+						break;
 					case 'Borders' :
-							foreach($styleData->Border as $borderStyle) {
-								$borderAttributes = $borderStyle->attributes($namespaces['ss']);
-								$thisBorder = array();
-								foreach($borderAttributes as $borderStyleKey => $borderStyleValue) {
+						foreach ($styleData->Border as $borderStyle)
+						{
+							$borderAttributes = $borderStyle->attributes($namespaces['ss']);
+							$thisBorder       = array();
+							foreach ($borderAttributes as $borderStyleKey => $borderStyleValue)
+							{
 //									echo $borderStyleKey.' = '.$borderStyleValue.'<br />';
-									switch ($borderStyleKey) {
-										case 'LineStyle' :
-												$thisBorder['style'] = PHPExcel_Style_Border::BORDER_MEDIUM;
+								switch ($borderStyleKey)
+								{
+									case 'LineStyle' :
+										$thisBorder['style'] = PHPExcel_Style_Border::BORDER_MEDIUM;
 //												$thisBorder['style'] = $borderStyleValue;
-												break;
-										case 'Weight' :
+										break;
+									case 'Weight' :
 //												$thisBorder['style'] = $borderStyleValue;
-												break;
-										case 'Position' :
-												$borderPosition = strtolower($borderStyleValue);
-												break;
-										case 'Color' :
-												$borderColour = substr($borderStyleValue,1);
-												$thisBorder['color']['rgb'] = $borderColour;
-												break;
-									}
-								}
-								if (count($thisBorder) > 0) {
-									if (($borderPosition == 'left') || ($borderPosition == 'right') || ($borderPosition == 'top') || ($borderPosition == 'bottom')) {
-										$this->_styles[$styleID]['borders'][$borderPosition] = $thisBorder;
-									}
+										break;
+									case 'Position' :
+										$borderPosition = strtolower($borderStyleValue);
+										break;
+									case 'Color' :
+										$borderColour               = substr($borderStyleValue, 1);
+										$thisBorder['color']['rgb'] = $borderColour;
+										break;
 								}
 							}
-							break;
+							if (count($thisBorder) > 0)
+							{
+								if (($borderPosition == 'left') || ($borderPosition == 'right') || ($borderPosition == 'top') || ($borderPosition == 'bottom'))
+								{
+									$this->_styles[$styleID]['borders'][$borderPosition] = $thisBorder;
+								}
+							}
+						}
+						break;
 					case 'Font' :
-							foreach($styleAttributes as $styleAttributeKey => $styleAttributeValue) {
+						foreach ($styleAttributes as $styleAttributeKey => $styleAttributeValue)
+						{
 //								echo $styleAttributeKey.' = '.$styleAttributeValue.'<br />';
-								$styleAttributeValue = (string) $styleAttributeValue;
-								switch ($styleAttributeKey) {
-									case 'FontName' :
-											$this->_styles[$styleID]['font']['name'] = $styleAttributeValue;
-											break;
-									case 'Size' :
-											$this->_styles[$styleID]['font']['size'] = $styleAttributeValue;
-											break;
-									case 'Color' :
-											$this->_styles[$styleID]['font']['color']['rgb'] = substr($styleAttributeValue,1);
-											break;
-									case 'Bold' :
-											$this->_styles[$styleID]['font']['bold'] = true;
-											break;
-									case 'Italic' :
-											$this->_styles[$styleID]['font']['italic'] = true;
-											break;
-									case 'Underline' :
-											if (self::identifyFixedStyleValue($underlineStyles,$styleAttributeValue)) {
-												$this->_styles[$styleID]['font']['underline'] = $styleAttributeValue;
-											}
-											break;
-								}
+							$styleAttributeValue = (string) $styleAttributeValue;
+							switch ($styleAttributeKey)
+							{
+								case 'FontName' :
+									$this->_styles[$styleID]['font']['name'] = $styleAttributeValue;
+									break;
+								case 'Size' :
+									$this->_styles[$styleID]['font']['size'] = $styleAttributeValue;
+									break;
+								case 'Color' :
+									$this->_styles[$styleID]['font']['color']['rgb'] = substr($styleAttributeValue, 1);
+									break;
+								case 'Bold' :
+									$this->_styles[$styleID]['font']['bold'] = true;
+									break;
+								case 'Italic' :
+									$this->_styles[$styleID]['font']['italic'] = true;
+									break;
+								case 'Underline' :
+									if (self::identifyFixedStyleValue($underlineStyles, $styleAttributeValue))
+									{
+										$this->_styles[$styleID]['font']['underline'] = $styleAttributeValue;
+									}
+									break;
 							}
-							break;
+						}
+						break;
 					case 'Interior' :
-							foreach($styleAttributes as $styleAttributeKey => $styleAttributeValue) {
+						foreach ($styleAttributes as $styleAttributeKey => $styleAttributeValue)
+						{
 //								echo $styleAttributeKey.' = '.$styleAttributeValue.'<br />';
-								switch ($styleAttributeKey) {
-									case 'Color' :
-											$this->_styles[$styleID]['fill']['color']['rgb'] = substr($styleAttributeValue,1);
-											break;
-								}
+							switch ($styleAttributeKey)
+							{
+								case 'Color' :
+									$this->_styles[$styleID]['fill']['color']['rgb'] = substr($styleAttributeValue, 1);
+									break;
 							}
-							break;
+						}
+						break;
 					case 'NumberFormat' :
-							foreach($styleAttributes as $styleAttributeKey => $styleAttributeValue) {
+						foreach ($styleAttributes as $styleAttributeKey => $styleAttributeValue)
+						{
 //								echo $styleAttributeKey.' = '.$styleAttributeValue.'<br />';
-								$styleAttributeValue = str_replace($fromFormats,$toFormats,$styleAttributeValue);
-								switch ($styleAttributeValue) {
-									case 'Short Date' :
-											$styleAttributeValue = 'dd/mm/yyyy';
-											break;
-								}
-								if ($styleAttributeValue > '') {
-									$this->_styles[$styleID]['numberformat']['code'] = $styleAttributeValue;
-								}
+							$styleAttributeValue = str_replace($fromFormats, $toFormats, $styleAttributeValue);
+							switch ($styleAttributeValue)
+							{
+								case 'Short Date' :
+									$styleAttributeValue = 'dd/mm/yyyy';
+									break;
 							}
-							break;
+							if ($styleAttributeValue > '')
+							{
+								$this->_styles[$styleID]['numberformat']['code'] = $styleAttributeValue;
+							}
+						}
+						break;
 					case 'Protection' :
-							foreach($styleAttributes as $styleAttributeKey => $styleAttributeValue) {
+						foreach ($styleAttributes as $styleAttributeKey => $styleAttributeValue)
+						{
 //								echo $styleAttributeKey.' = '.$styleAttributeValue.'<br />';
-							}
-							break;
+						}
+						break;
 				}
 			}
 //			print_r($this->_styles[$styleID]);
@@ -535,12 +602,15 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 //		echo '<hr />';
 
 		$worksheetID = 0;
-		$xml_ss = $xml->children($namespaces['ss']);
-		foreach($xml_ss->Worksheet as $worksheet) {
+		$xml_ss      = $xml->children($namespaces['ss']);
+		foreach ($xml_ss->Worksheet as $worksheet)
+		{
 			$worksheet_ss = $worksheet->attributes($namespaces['ss']);
 
 			if ((isset($this->_loadSheetsOnly)) && (isset($worksheet_ss['Name'])) &&
-				(!in_array($worksheet_ss['Name'], $this->_loadSheetsOnly))) {
+				(!in_array($worksheet_ss['Name'], $this->_loadSheetsOnly))
+			)
+			{
 				continue;
 			}
 
@@ -549,19 +619,24 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 			// Create new Worksheet
 			$objPHPExcel->createSheet();
 			$objPHPExcel->setActiveSheetIndex($worksheetID);
-			if (isset($worksheet_ss['Name'])) {
+			if (isset($worksheet_ss['Name']))
+			{
 				$worksheetName = (string) $worksheet_ss['Name'];
 				$objPHPExcel->getActiveSheet()->setTitle($worksheetName);
 			}
 
 			$columnID = 'A';
-			if (isset($worksheet->Table->Column)) {
-				foreach($worksheet->Table->Column as $columnData) {
+			if (isset($worksheet->Table->Column))
+			{
+				foreach ($worksheet->Table->Column as $columnData)
+				{
 					$columnData_ss = $columnData->attributes($namespaces['ss']);
-					if (isset($columnData_ss['Index'])) {
-						$columnID = PHPExcel_Cell::stringFromColumnIndex($columnData_ss['Index']-1);
+					if (isset($columnData_ss['Index']))
+					{
+						$columnID = PHPExcel_Cell::stringFromColumnIndex($columnData_ss['Index'] - 1);
 					}
-					if (isset($columnData_ss['Width'])) {
+					if (isset($columnData_ss['Width']))
+					{
 						$columnWidth = $columnData_ss['Width'];
 //						echo '<b>Setting column width for '.$columnID.' to '.$columnWidth.'</b><br />';
 						$objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setWidth($columnWidth / 5.4);
@@ -571,61 +646,76 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 			}
 
 			$rowID = 1;
-			if (isset($worksheet->Table->Row)) {
-				foreach($worksheet->Table->Row as $rowData) {
+			if (isset($worksheet->Table->Row))
+			{
+				foreach ($worksheet->Table->Row as $rowData)
+				{
 					$rowHasData = false;
-					$row_ss = $rowData->attributes($namespaces['ss']);
-					if (isset($row_ss['Index'])) {
+					$row_ss     = $rowData->attributes($namespaces['ss']);
+					if (isset($row_ss['Index']))
+					{
 						$rowID = (integer) $row_ss['Index'];
 					}
 //					echo '<b>Row '.$rowID.'</b><br />';
 
 					$columnID = 'A';
-					foreach($rowData->Cell as $cell) {
+					foreach ($rowData->Cell as $cell)
+					{
 
 						$cell_ss = $cell->attributes($namespaces['ss']);
-						if (isset($cell_ss['Index'])) {
-							$columnID = PHPExcel_Cell::stringFromColumnIndex($cell_ss['Index']-1);
+						if (isset($cell_ss['Index']))
+						{
+							$columnID = PHPExcel_Cell::stringFromColumnIndex($cell_ss['Index'] - 1);
 						}
-						$cellRange = $columnID.$rowID;
+						$cellRange = $columnID . $rowID;
 
-						if (!is_null($this->getReadFilter())) {
-							if (!$this->getReadFilter()->readCell($columnID, $rowID, $worksheetName)) {
+						if (!is_null($this->getReadFilter()))
+						{
+							if (!$this->getReadFilter()->readCell($columnID, $rowID, $worksheetName))
+							{
 								continue;
 							}
 						}
 
-						if ((isset($cell_ss['MergeAcross'])) || (isset($cell_ss['MergeDown']))) {
+						if ((isset($cell_ss['MergeAcross'])) || (isset($cell_ss['MergeDown'])))
+						{
 							$columnTo = $columnID;
-							if (isset($cell_ss['MergeAcross'])) {
-								$columnTo = PHPExcel_Cell::stringFromColumnIndex(PHPExcel_Cell::columnIndexFromString($columnID) + $cell_ss['MergeAcross'] -1);
+							if (isset($cell_ss['MergeAcross']))
+							{
+								$columnTo = PHPExcel_Cell::stringFromColumnIndex(PHPExcel_Cell::columnIndexFromString($columnID) + $cell_ss['MergeAcross'] - 1);
 							}
 							$rowTo = $rowID;
-							if (isset($cell_ss['MergeDown'])) {
+							if (isset($cell_ss['MergeDown']))
+							{
 								$rowTo = $rowTo + $cell_ss['MergeDown'];
 							}
-							$cellRange .= ':'.$columnTo.$rowTo;
+							$cellRange .= ':' . $columnTo . $rowTo;
 							$objPHPExcel->getActiveSheet()->mergeCells($cellRange);
 						}
 
-						$cellIsSet = $hasCalculatedValue = false;
+						$cellIsSet       = $hasCalculatedValue = false;
 						$cellDataFormula = '';
-						if (isset($cell_ss['Formula'])) {
+						if (isset($cell_ss['Formula']))
+						{
 							$cellDataFormula = $cell_ss['Formula'];
 							// added this as a check for array formulas
-							if (isset($cell_ss['ArrayRange'])) {
+							if (isset($cell_ss['ArrayRange']))
+							{
 								$cellDataCSEFormula = $cell_ss['ArrayRange'];
 //								echo "found an array formula at ".$columnID.$rowID."<br />";
 							}
 							$hasCalculatedValue = true;
 						}
-						if (isset($cell->Data)) {
-							$cellValue = $cellData = $cell->Data;
-							$type = PHPExcel_Cell_DataType::TYPE_NULL;
+						if (isset($cell->Data))
+						{
+							$cellValue   = $cellData = $cell->Data;
+							$type        = PHPExcel_Cell_DataType::TYPE_NULL;
 							$cellData_ss = $cellData->attributes($namespaces['ss']);
-							if (isset($cellData_ss['Type'])) {
+							if (isset($cellData_ss['Type']))
+							{
 								$cellDataType = $cellData_ss['Type'];
-								switch ($cellDataType) {
+								switch ($cellDataType)
+								{
 									/*
 									const TYPE_STRING		= 's';
 									const TYPE_FORMULA		= 'f';
@@ -636,98 +726,123 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 									const TYPE_ERROR		= 'e';
 									*/
 									case 'String' :
-											$type = PHPExcel_Cell_DataType::TYPE_STRING;
-											break;
+										$type = PHPExcel_Cell_DataType::TYPE_STRING;
+										break;
 									case 'Number' :
-											$type = PHPExcel_Cell_DataType::TYPE_NUMERIC;
-											$cellValue = (float) $cellValue;
-											if (floor($cellValue) == $cellValue) {
-												$cellValue = (integer) $cellValue;
-											}
-											break;
+										$type      = PHPExcel_Cell_DataType::TYPE_NUMERIC;
+										$cellValue = (float) $cellValue;
+										if (floor($cellValue) == $cellValue)
+										{
+											$cellValue = (integer) $cellValue;
+										}
+										break;
 									case 'Boolean' :
-											$type = PHPExcel_Cell_DataType::TYPE_BOOL;
-											$cellValue = ($cellValue != 0);
-											break;
+										$type      = PHPExcel_Cell_DataType::TYPE_BOOL;
+										$cellValue = ($cellValue != 0);
+										break;
 									case 'DateTime' :
-											$type = PHPExcel_Cell_DataType::TYPE_NUMERIC;
-											$cellValue = PHPExcel_Shared_Date::PHPToExcel(strtotime($cellValue));
-											break;
+										$type      = PHPExcel_Cell_DataType::TYPE_NUMERIC;
+										$cellValue = PHPExcel_Shared_Date::PHPToExcel(strtotime($cellValue));
+										break;
 									case 'Error' :
-											$type = PHPExcel_Cell_DataType::TYPE_ERROR;
-											break;
+										$type = PHPExcel_Cell_DataType::TYPE_ERROR;
+										break;
 								}
 							}
 
-							if ($hasCalculatedValue) {
+							if ($hasCalculatedValue)
+							{
 //								echo 'FORMULA<br />';
-								$type = PHPExcel_Cell_DataType::TYPE_FORMULA;
+								$type         = PHPExcel_Cell_DataType::TYPE_FORMULA;
 								$columnNumber = PHPExcel_Cell::columnIndexFromString($columnID);
-								if (substr($cellDataFormula,0,3) == 'of:') {
-									$cellDataFormula = substr($cellDataFormula,3);
+								if (substr($cellDataFormula, 0, 3) == 'of:')
+								{
+									$cellDataFormula = substr($cellDataFormula, 3);
 //									echo 'Before: ',$cellDataFormula,'<br />';
-									$temp = explode('"',$cellDataFormula);
-									$key = false;
-									foreach($temp as &$value) {
+									$temp = explode('"', $cellDataFormula);
+									$key  = false;
+									foreach ($temp as &$value)
+									{
 										//	Only replace in alternate array entries (i.e. non-quoted blocks)
-										if ($key = !$key) {
-											$value = str_replace(array('[.','.',']'),'',$value);
+										if ($key = !$key)
+										{
+											$value = str_replace(array('[.', '.', ']'), '', $value);
 										}
 									}
-								} else {
+								}
+								else
+								{
 									//	Convert R1C1 style references to A1 style references (but only when not quoted)
 //									echo 'Before: ',$cellDataFormula,'<br />';
-									$temp = explode('"',$cellDataFormula);
-									$key = false;
-									foreach($temp as &$value) {
+									$temp = explode('"', $cellDataFormula);
+									$key  = false;
+									foreach ($temp as &$value)
+									{
 										//	Only replace in alternate array entries (i.e. non-quoted blocks)
-										if ($key = !$key) {
-											preg_match_all('/(R(\[?-?\d*\]?))(C(\[?-?\d*\]?))/',$value, $cellReferences,PREG_SET_ORDER+PREG_OFFSET_CAPTURE);
+										if ($key = !$key)
+										{
+											preg_match_all('/(R(\[?-?\d*\]?))(C(\[?-?\d*\]?))/', $value, $cellReferences, PREG_SET_ORDER + PREG_OFFSET_CAPTURE);
 											//	Reverse the matches array, otherwise all our offsets will become incorrect if we modify our way
 											//		through the formula from left to right. Reversing means that we work right to left.through
 											//		the formula
 											$cellReferences = array_reverse($cellReferences);
 											//	Loop through each R1C1 style reference in turn, converting it to its A1 style equivalent,
 											//		then modify the formula to use that new reference
-											foreach($cellReferences as $cellReference) {
+											foreach ($cellReferences as $cellReference)
+											{
 												$rowReference = $cellReference[2][0];
 												//	Empty R reference is the current row
-												if ($rowReference == '') $rowReference = $rowID;
+												if ($rowReference == '')
+												{
+													$rowReference = $rowID;
+												}
 												//	Bracketed R references are relative to the current row
-												if ($rowReference{0} == '[') $rowReference = $rowID + trim($rowReference,'[]');
+												if ($rowReference{0} == '[')
+												{
+													$rowReference = $rowID + trim($rowReference, '[]');
+												}
 												$columnReference = $cellReference[4][0];
 												//	Empty C reference is the current column
-												if ($columnReference == '') $columnReference = $columnNumber;
+												if ($columnReference == '')
+												{
+													$columnReference = $columnNumber;
+												}
 												//	Bracketed C references are relative to the current column
-												if ($columnReference{0} == '[') $columnReference = $columnNumber + trim($columnReference,'[]');
-												$A1CellReference = PHPExcel_Cell::stringFromColumnIndex($columnReference-1).$rowReference;
-													$value = substr_replace($value,$A1CellReference,$cellReference[0][1],strlen($cellReference[0][0]));
+												if ($columnReference{0} == '[')
+												{
+													$columnReference = $columnNumber + trim($columnReference, '[]');
+												}
+												$A1CellReference = PHPExcel_Cell::stringFromColumnIndex($columnReference - 1) . $rowReference;
+												$value           = substr_replace($value, $A1CellReference, $cellReference[0][1], strlen($cellReference[0][0]));
 											}
 										}
 									}
 								}
 								unset($value);
 								//	Then rebuild the formula string
-								$cellDataFormula = implode('"',$temp);
+								$cellDataFormula = implode('"', $temp);
 //								echo 'After: ',$cellDataFormula,'<br />';
 							}
 
 //							echo 'Cell '.$columnID.$rowID.' is a '.$type.' with a value of '.(($hasCalculatedValue) ? $cellDataFormula : $cellValue).'<br />';
 //
-							$objPHPExcel->getActiveSheet()->getCell($columnID.$rowID)->setValueExplicit((($hasCalculatedValue) ? $cellDataFormula : $cellValue),$type);
-							if ($hasCalculatedValue) {
+							$objPHPExcel->getActiveSheet()->getCell($columnID . $rowID)->setValueExplicit((($hasCalculatedValue) ? $cellDataFormula : $cellValue), $type);
+							if ($hasCalculatedValue)
+							{
 //								echo 'Formula result is '.$cellValue.'<br />';
-								$objPHPExcel->getActiveSheet()->getCell($columnID.$rowID)->setCalculatedValue($cellValue);
+								$objPHPExcel->getActiveSheet()->getCell($columnID . $rowID)->setCalculatedValue($cellValue);
 							}
 							$cellIsSet = $rowHasData = true;
 						}
 
-						if (isset($cell->Comment)) {
+						if (isset($cell->Comment))
+						{
 //							echo '<b>comment found</b><br />';
 							$commentAttributes = $cell->Comment->attributes($namespaces['ss']);
-							$author = 'unknown';
-							if (isset($commentAttributes->Author)) {
-								$author = (string)$commentAttributes->Author;
+							$author            = 'unknown';
+							if (isset($commentAttributes->Author))
+							{
+								$author = (string) $commentAttributes->Author;
 //								echo 'Author: ',$author,'<br />';
 							}
 							$node = $cell->Comment->Data->asXML();
@@ -735,20 +850,23 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 //							echo $annotation,'<br />';
 							$annotation = strip_tags($node);
 //							echo 'Annotation: ',$annotation,'<br />';
-							$objPHPExcel->getActiveSheet()->getComment( $columnID.$rowID )
-															->setAuthor( $author )
-															->setText($this->_parseRichText($annotation) );
+							$objPHPExcel->getActiveSheet()->getComment($columnID . $rowID)
+								->setAuthor($author)
+								->setText($this->_parseRichText($annotation));
 						}
 
-						if (($cellIsSet) && (isset($cell_ss['StyleID']))) {
+						if (($cellIsSet) && (isset($cell_ss['StyleID'])))
+						{
 							$style = (string) $cell_ss['StyleID'];
 //							echo 'Cell style for '.$columnID.$rowID.' is '.$style.'<br />';
-							if ((isset($this->_styles[$style])) && (count($this->_styles[$style]) > 0)) {
+							if ((isset($this->_styles[$style])) && (count($this->_styles[$style]) > 0))
+							{
 //								echo 'Cell '.$columnID.$rowID.'<br />';
 //								print_r($this->_styles[$style]);
 //								echo '<br />';
-								if (!$objPHPExcel->getActiveSheet()->cellExists($columnID.$rowID)) {
-									$objPHPExcel->getActiveSheet()->getCell($columnID.$rowID)->setValue(NULL);
+								if (!$objPHPExcel->getActiveSheet()->cellExists($columnID . $rowID))
+								{
+									$objPHPExcel->getActiveSheet()->getCell($columnID . $rowID)->setValue(null);
 								}
 								$objPHPExcel->getActiveSheet()->getStyle($cellRange)->applyFromArray($this->_styles[$style]);
 							}
@@ -756,11 +874,14 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 						++$columnID;
 					}
 
-					if ($rowHasData) {
-						if (isset($row_ss['StyleID'])) {
+					if ($rowHasData)
+					{
+						if (isset($row_ss['StyleID']))
+						{
 							$rowStyle = $row_ss['StyleID'];
 						}
-						if (isset($row_ss['Height'])) {
+						if (isset($row_ss['Height']))
+						{
 							$rowHeight = $row_ss['Height'];
 //							echo '<b>Setting row height to '.$rowHeight.'</b><br />';
 							$objPHPExcel->getActiveSheet()->getRowDimension($rowID)->setRowHeight($rowHeight);
@@ -777,7 +898,8 @@ class PHPExcel_Reader_Excel2003XML implements PHPExcel_Reader_IReader
 		return $objPHPExcel;
 	}
 
-	private function _parseRichText($is = '') {
+	private function _parseRichText($is = '')
+	{
 		$value = new PHPExcel_RichText();
 
 		$value->createText($is);

@@ -99,218 +99,257 @@ class PHPExcel_Comment implements PHPExcel_IComparable
 	 */
 	private $_alignment;
 
-    /**
-     * Create a new PHPExcel_Comment
-     *
-     * @throws	Exception
-     */
-    public function __construct()
-    {
-    	// Initialise variables
-    	$this->_author		= 'Author';
-    	$this->_text		= new PHPExcel_RichText();
-    	$this->_fillColor	= new PHPExcel_Style_Color('FFFFFFE1');
-		$this->_alignment	= PHPExcel_Style_Alignment::HORIZONTAL_GENERAL;
-    }
+	/**
+	 * Create a new PHPExcel_Comment
+	 *
+	 * @throws    Exception
+	 */
+	public function __construct()
+	{
+		// Initialise variables
+		$this->_author    = 'Author';
+		$this->_text      = new PHPExcel_RichText();
+		$this->_fillColor = new PHPExcel_Style_Color('FFFFFFE1');
+		$this->_alignment = PHPExcel_Style_Alignment::HORIZONTAL_GENERAL;
+	}
 
-    /**
-     * Get Author
-     *
-     * @return string
-     */
-    public function getAuthor() {
-    	return $this->_author;
-    }
+	/**
+	 * Get Author
+	 *
+	 * @return string
+	 */
+	public function getAuthor()
+	{
+		return $this->_author;
+	}
 
-    /**
-     * Set Author
-     *
-     * @param string $pValue
-     * @return PHPExcel_Comment
-     */
-	public function setAuthor($pValue = '') {
+	/**
+	 * Set Author
+	 *
+	 * @param string $pValue
+	 *
+	 * @return PHPExcel_Comment
+	 */
+	public function setAuthor($pValue = '')
+	{
 		$this->_author = $pValue;
+
 		return $this;
 	}
 
-    /**
-     * Get Rich text comment
-     *
-     * @return PHPExcel_RichText
-     */
-    public function getText() {
-    	return $this->_text;
-    }
+	/**
+	 * Get Rich text comment
+	 *
+	 * @return PHPExcel_RichText
+	 */
+	public function getText()
+	{
+		return $this->_text;
+	}
 
-    /**
-     * Set Rich text comment
-     *
-     * @param PHPExcel_RichText $pValue
-     * @return PHPExcel_Comment
-     */
-    public function setText(PHPExcel_RichText $pValue) {
-    	$this->_text = $pValue;
-    	return $this;
-    }
+	/**
+	 * Set Rich text comment
+	 *
+	 * @param PHPExcel_RichText $pValue
+	 *
+	 * @return PHPExcel_Comment
+	 */
+	public function setText(PHPExcel_RichText $pValue)
+	{
+		$this->_text = $pValue;
 
-    /**
-     * Get comment width (CSS style, i.e. XXpx or YYpt)
-     *
-     * @return string
-     */
-    public function getWidth() {
-        return $this->_width;
-    }
-
-    /**
-     * Set comment width (CSS style, i.e. XXpx or YYpt)
-     *
-     * @param string $value
-     * @return PHPExcel_Comment
-     */
-    public function setWidth($value = '96pt') {
-        $this->_width = $value;
-        return $this;
-    }
-
-    /**
-     * Get comment height (CSS style, i.e. XXpx or YYpt)
-     *
-     * @return string
-     */
-    public function getHeight() {
-        return $this->_height;
-    }
-
-    /**
-     * Set comment height (CSS style, i.e. XXpx or YYpt)
-     *
-     * @param string $value
-     * @return PHPExcel_Comment
-     */
-    public function setHeight($value = '55.5pt') {
-        $this->_height = $value;
-        return $this;
-    }
-
-    /**
-     * Get left margin (CSS style, i.e. XXpx or YYpt)
-     *
-     * @return string
-     */
-    public function getMarginLeft() {
-        return $this->_marginLeft;
-    }
-
-    /**
-     * Set left margin (CSS style, i.e. XXpx or YYpt)
-     *
-     * @param string $value
-     * @return PHPExcel_Comment
-     */
-    public function setMarginLeft($value = '59.25pt') {
-        $this->_marginLeft = $value;
-        return $this;
-    }
-
-    /**
-     * Get top margin (CSS style, i.e. XXpx or YYpt)
-     *
-     * @return string
-     */
-    public function getMarginTop() {
-        return $this->_marginTop;
-    }
-
-    /**
-     * Set top margin (CSS style, i.e. XXpx or YYpt)
-     *
-     * @param string $value
-     * @return PHPExcel_Comment
-     */
-    public function setMarginTop($value = '1.5pt') {
-        $this->_marginTop = $value;
-        return $this;
-    }
-
-    /**
-     * Is the comment visible by default?
-     *
-     * @return boolean
-     */
-    public function getVisible() {
-        return $this->_visible;
-    }
-
-    /**
-     * Set comment default visibility
-     *
-     * @param boolean $value
-     * @return PHPExcel_Comment
-     */
-    public function setVisible($value = false) {
-        $this->_visible = $value;
-        return $this;
-    }
-
-    /**
-     * Get fill color
-     *
-     * @return PHPExcel_Style_Color
-     */
-    public function getFillColor() {
-        return $this->_fillColor;
-    }
-
-    /**
-     * Set Alignment
-     *
-     * @param string $pValue
-     * @return PHPExcel_Comment
-     */
-    public function setAlignment($pValue = PHPExcel_Style_Alignment::HORIZONTAL_GENERAL) {
-		$this->_alignment = $pValue;
 		return $this;
-    }
+	}
 
-    /**
-     * Get Alignment
-     *
-     * @return string
-     */
-    public function getAlignment() {
+	/**
+	 * Get comment width (CSS style, i.e. XXpx or YYpt)
+	 *
+	 * @return string
+	 */
+	public function getWidth()
+	{
+		return $this->_width;
+	}
+
+	/**
+	 * Set comment width (CSS style, i.e. XXpx or YYpt)
+	 *
+	 * @param string $value
+	 *
+	 * @return PHPExcel_Comment
+	 */
+	public function setWidth($value = '96pt')
+	{
+		$this->_width = $value;
+
+		return $this;
+	}
+
+	/**
+	 * Get comment height (CSS style, i.e. XXpx or YYpt)
+	 *
+	 * @return string
+	 */
+	public function getHeight()
+	{
+		return $this->_height;
+	}
+
+	/**
+	 * Set comment height (CSS style, i.e. XXpx or YYpt)
+	 *
+	 * @param string $value
+	 *
+	 * @return PHPExcel_Comment
+	 */
+	public function setHeight($value = '55.5pt')
+	{
+		$this->_height = $value;
+
+		return $this;
+	}
+
+	/**
+	 * Get left margin (CSS style, i.e. XXpx or YYpt)
+	 *
+	 * @return string
+	 */
+	public function getMarginLeft()
+	{
+		return $this->_marginLeft;
+	}
+
+	/**
+	 * Set left margin (CSS style, i.e. XXpx or YYpt)
+	 *
+	 * @param string $value
+	 *
+	 * @return PHPExcel_Comment
+	 */
+	public function setMarginLeft($value = '59.25pt')
+	{
+		$this->_marginLeft = $value;
+
+		return $this;
+	}
+
+	/**
+	 * Get top margin (CSS style, i.e. XXpx or YYpt)
+	 *
+	 * @return string
+	 */
+	public function getMarginTop()
+	{
+		return $this->_marginTop;
+	}
+
+	/**
+	 * Set top margin (CSS style, i.e. XXpx or YYpt)
+	 *
+	 * @param string $value
+	 *
+	 * @return PHPExcel_Comment
+	 */
+	public function setMarginTop($value = '1.5pt')
+	{
+		$this->_marginTop = $value;
+
+		return $this;
+	}
+
+	/**
+	 * Is the comment visible by default?
+	 *
+	 * @return boolean
+	 */
+	public function getVisible()
+	{
+		return $this->_visible;
+	}
+
+	/**
+	 * Set comment default visibility
+	 *
+	 * @param boolean $value
+	 *
+	 * @return PHPExcel_Comment
+	 */
+	public function setVisible($value = false)
+	{
+		$this->_visible = $value;
+
+		return $this;
+	}
+
+	/**
+	 * Get fill color
+	 *
+	 * @return PHPExcel_Style_Color
+	 */
+	public function getFillColor()
+	{
+		return $this->_fillColor;
+	}
+
+	/**
+	 * Set Alignment
+	 *
+	 * @param string $pValue
+	 *
+	 * @return PHPExcel_Comment
+	 */
+	public function setAlignment($pValue = PHPExcel_Style_Alignment::HORIZONTAL_GENERAL)
+	{
+		$this->_alignment = $pValue;
+
+		return $this;
+	}
+
+	/**
+	 * Get Alignment
+	 *
+	 * @return string
+	 */
+	public function getAlignment()
+	{
 		return $this->_alignment;
-    }
+	}
 
 	/**
 	 * Get hash code
 	 *
-	 * @return string	Hash code
+	 * @return string    Hash code
 	 */
-	public function getHashCode() {
-    	return md5(
-    		  $this->_author
-    		. $this->_text->getHashCode()
-    		. $this->_width
-    		. $this->_height
-    		. $this->_marginLeft
-    		. $this->_marginTop
-    		. ($this->_visible ? 1 : 0)
-    		. $this->_fillColor->getHashCode()
-    		. $this->_alignment
-    		. __CLASS__
-    	);
-    }
+	public function getHashCode()
+	{
+		return md5(
+			$this->_author
+			. $this->_text->getHashCode()
+			. $this->_width
+			. $this->_height
+			. $this->_marginLeft
+			. $this->_marginTop
+			. ($this->_visible ? 1 : 0)
+			. $this->_fillColor->getHashCode()
+			. $this->_alignment
+			. __CLASS__
+		);
+	}
 
 	/**
 	 * Implement PHP __clone to create a deep clone, not just a shallow copy.
 	 */
-	public function __clone() {
+	public function __clone()
+	{
 		$vars = get_object_vars($this);
-		foreach ($vars as $key => $value) {
-			if (is_object($value)) {
+		foreach ($vars as $key => $value)
+		{
+			if (is_object($value))
+			{
 				$this->$key = clone $value;
-			} else {
+			}
+			else
+			{
 				$this->$key = $value;
 			}
 		}

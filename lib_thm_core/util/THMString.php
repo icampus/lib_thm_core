@@ -20,8 +20,8 @@ class THMString
 	/**
 	 * Check if one text contains a other.
 	 *
-	 * @param   String  $haystack  The text where to look.
-	 * @param   String  $needle    The text to look for.
+	 * @param   String $haystack The text where to look.
+	 * @param   String $needle   The text to look for.
 	 *
 	 * @return bool True if $heystack containing $needle, false else.
 	 */
@@ -33,8 +33,8 @@ class THMString
 	/**
 	 * Check if one text contains a other one which stored in an array.
 	 *
-	 * @param   String  $haystack     The text where to look.
-	 * @param   array   $needleArray  The text to look for.
+	 * @param   String $haystack    The text where to look.
+	 * @param   array  $needleArray The text to look for.
 	 *
 	 * @return bool True if $heystack containing any $needle, false else.
 	 * Will return true if one $needle was found.

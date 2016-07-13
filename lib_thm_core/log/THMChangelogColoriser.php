@@ -33,14 +33,14 @@ class THMChangelogColoriser
 	 *  # - fixed
 	 *    - (without prefix) Will displayed normal.
 	 *
-	 * @param   String  $file      Path to changelog.
-	 * @param   bool    $onlyLast  Trigger to display only last changelog entry
+	 * @param   String $file     Path to changelog.
+	 * @param   bool   $onlyLast Trigger to display only last changelog entry
 	 *
 	 * @return string The colorised HTML String
 	 */
 	public static function colorise($file, $onlyLast = false)
 	{
-		$ret = '';
+		$ret   = '';
 		$lines = file($file);
 
 		if (empty($lines))
@@ -63,7 +63,7 @@ class THMChangelogColoriser
 			switch ($type)
 			{
 				case '=':
-				continue;
+					continue;
 				case '+':
 					$ret .= "\t" . '<li class="THM-iCampus-added"><span></span>' . htmlentities(trim(substr($line, 2))) . "</li>\n";
 					break;

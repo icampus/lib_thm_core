@@ -1,9 +1,9 @@
 'use strict';
 
-jQuery(document).ready(function()
+jQuery(document).ready(function ()
 {
     // adjust width of the iconPicker Button to the width of its dropdown-menu
-    if(jQuery(".iconPicker").length)
+    if (jQuery(".iconPicker").length)
     {
         var dropdownWidth = jQuery(".iconPicker .dropdown-menu").outerWidth();
         jQuery(".iconPicker .dropdown-toggle").outerWidth(dropdownWidth);

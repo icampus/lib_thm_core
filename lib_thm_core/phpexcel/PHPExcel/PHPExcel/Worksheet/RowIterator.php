@@ -55,9 +55,10 @@ class PHPExcel_Worksheet_RowIterator extends CachingIterator
 	/**
 	 * Create a new row iterator
 	 *
-	 * @param PHPExcel_Worksheet 		$subject
+	 * @param PHPExcel_Worksheet $subject
 	 */
-	public function __construct(PHPExcel_Worksheet $subject = null) {
+	public function __construct(PHPExcel_Worksheet $subject = null)
+	{
 		// Set subject
 		$this->_subject = $subject;
 	}
@@ -65,48 +66,54 @@ class PHPExcel_Worksheet_RowIterator extends CachingIterator
 	/**
 	 * Destructor
 	 */
-	public function __destruct() {
+	public function __destruct()
+	{
 		unset($this->_subject);
 	}
 
 	/**
 	 * Rewind iterator
 	 */
-    public function rewind() {
-        $this->_position = 1;
-    }
+	public function rewind()
+	{
+		$this->_position = 1;
+	}
 
-    /**
-     * Current PHPExcel_Worksheet_Row
-     *
-     * @return PHPExcel_Worksheet_Row
-     */
-    public function current() {
-    	return new PHPExcel_Worksheet_Row($this->_subject, $this->_position);
-    }
+	/**
+	 * Current PHPExcel_Worksheet_Row
+	 *
+	 * @return PHPExcel_Worksheet_Row
+	 */
+	public function current()
+	{
+		return new PHPExcel_Worksheet_Row($this->_subject, $this->_position);
+	}
 
-    /**
-     * Current key
-     *
-     * @return int
-     */
-    public function key() {
-        return $this->_position;
-    }
+	/**
+	 * Current key
+	 *
+	 * @return int
+	 */
+	public function key()
+	{
+		return $this->_position;
+	}
 
-    /**
-     * Next value
-     */
-    public function next() {
-        ++$this->_position;
-    }
+	/**
+	 * Next value
+	 */
+	public function next()
+	{
+		++$this->_position;
+	}
 
-    /**
-     * More PHPExcel_Worksheet_Row instances available?
-     *
-     * @return boolean
-     */
-    public function valid() {
-        return $this->_position <= $this->_subject->getHighestRow();
-    }
+	/**
+	 * More PHPExcel_Worksheet_Row instances available?
+	 *
+	 * @return boolean
+	 */
+	public function valid()
+	{
+		return $this->_position <= $this->_subject->getHighestRow();
+	}
 }

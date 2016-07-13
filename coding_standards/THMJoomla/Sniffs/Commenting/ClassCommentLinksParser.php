@@ -15,7 +15,8 @@
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
 
-if (class_exists('PHP_CodeSniffer_CommentParser_AbstractParser', true) === false) {
+if (class_exists('PHP_CodeSniffer_CommentParser_AbstractParser', true) === false)
+{
 	$error = 'Class PHP_CodeSniffer_CommentParser_AbstractParser not found';
 	throw new PHP_CodeSniffer_Exception($error);
 }
@@ -44,35 +45,34 @@ if (class_exists('PHP_CodeSniffer_CommentParser_AbstractParser', true) === false
  * @license   http://matrix.squiz.net/developer/tools/php_cs/licence BSD Licence
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-
 class THMPHP_CodeSniffer_CommentParser_ClassCommentLinksParser extends PHP_CodeSniffer_CommentParser_AbstractParser
 {
 	private $_link = null;
-	
+
 	protected function getAllowedTags()
 	{
 		return array(
-				'link'		 => true,
+			'link' => true,
 		);
-	
+
 	}//end getAllowedTags()
-	
+
 	protected function parseLink($tokens)
 	{
 		$this->_link = new PHP_CodeSniffer_CommentParser_PairElement(
-				$this->previousElement,
-				$tokens,
-				'link',
-				$this->phpcsFile
+			$this->previousElement,
+			$tokens,
+			'link',
+			$this->phpcsFile
 		);
-	
+
 		return $this->_link;
-	
+
 	}//end parseLicense()
-	
+
 	public function getLink()
 	{
 		return $this->_link;
-	
+
 	}//end getVersion()
 }

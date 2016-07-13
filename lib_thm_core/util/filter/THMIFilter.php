@@ -20,7 +20,7 @@ interface THMIFilter
 	/**
 	 * Method to filter a element.
 	 *
-	 * @param   Object  $obj  The object which should be accepted.
+	 * @param   Object $obj The object which should be accepted.
 	 *
 	 * @return bool true if object is accepted by this filter. false if not.
 	 */

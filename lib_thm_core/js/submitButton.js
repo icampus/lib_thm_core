@@ -1,7 +1,7 @@
 /**
  * Contains the normal form function that is executed when a form is submitted
  */
-jQuery( document ).ready(function()
+jQuery(document).ready(function ()
 {
     Joomla.submitbutton = function (task)
     {
