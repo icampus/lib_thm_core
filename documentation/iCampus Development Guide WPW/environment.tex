@@ -217,13 +217,9 @@ After the user configuration is completed, an SSH-Key can be created using the f
 \\
 The first question determines where the generated key will be saved and what its name will be. Per default this will be \textbf{\texttt{C:/Users/$<$Windows Account Name$>$/.ssh/id\_rsa}}. This directory is important for the next steps, as well as later when repositories are cloned. Press enter to confirm the default.
 The next two questions will be to enter and confirm your password. You can also elect to have no password by pressing enter in answer to both questions.
-
+\newpage
 \section{PhpStorm}
 \label{sec:PHP-Storm}
-
-PhpStorm is the IDE used in iCampus. While others are allowed the use of a single IDE in the working group allows for the exchange of information and tips on how to get the most out of a single IDE. This makes everyone more productive and allows for a collaborative effort to solve any problems which may be IDE related.\\
-\\
-PhpStorm was chosen for its ease of use and integration of many tools which simplify development, including CodeSniffer, database connection tools, SASS support, Git support, and many others. PhpStorm can be downloaded from the \href{http://www.jetbrains.com/phpstorm/}{JetBrains Website}.
 
 \subsection{Installation}
 During the installation process you will be asked which file extensions should be associated with PhpStorm. As we use PhpStorm for the development with all given extensions, all can be selected. As of PhpStorm 8 this also allows for the editing of single files without the creation of a project.
@@ -251,11 +247,7 @@ After the installation starting PhpStorm will request the lisence information. P
 \section{Code Sniffer and Mess Detector}
 \label{sec:qatools}
 
-Now that we have checked out \texttt{lib\_thm\_core}, we can use the coding standards within it to set up PHP CodeSniffer.
-
-\begin{quote}
-	PHP\_CodeSniffer is a PHP5 script that tokenises and ``sniffs" PHP, JavaScript and CSS files to detect violations of a defined coding standard. It is an essential development tool that ensures your code remains clean and consistent. It can also help prevent some common semantic errors made by developers.\footnote{\url{http://pear.php.net/manual/en/package.php.php-codesniffer.intro.php} Stand September 22, 2014}
-\end{quote}
+PHP\_CodeSniffer is a PHP5 script that tokenises and ``sniffs" PHP, JavaScript and CSS files to detect violations of a defined coding standard. It is an essential development tool that ensures your code remains clean and consistent. It can also help prevent some common semantic errors made by developers.\footnote{\url{http://pear.php.net/manual/en/package.php.php-codesniffer.intro.php} Stand September 22, 2014}
 
 \noindent
 PHP Mess Detector on the other hand searches for problems more abstract and more serious such as\footnote{\url{http://phpmd.org/} Stand September 27, 2014}:
@@ -267,28 +259,9 @@ PHP Mess Detector on the other hand searches for problems more abstract and more
 	\item Unused parameters, methods, properties
 \end{itemize}
 
-\newpage
-
 \subsection{Standards Directory Inclusion}
-
-First we will create symbolic links from the Joomla and THMJoomla folders to the folder which holds the existing standards. Open the windows shell as administrator and enter the following in the form \texttt{Command Link Target}.\\
-\\
-\textbf{Joomla Standard}
-\begin{description}
-	\itemsep-10pt
-	\item[Command] \texttt{mklink /d}\\
-	\item[Link] \texttt{C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash PHP\textbackslash CodeSniffer\textbackslash Standards\textbackslash Joomla}\\
-	\item[Target] \texttt{C:\textbackslash $<$System Specific Path$>$\textbackslash lib\_thm\_core\textbackslash coding\_standards\textbackslash Joomla}\\
-\end{description}
-
-\noindent
-\textbf{iCampus Standard}
-\begin{description}
-	\itemsep-10pt
-	\item[Command] \texttt{mklink /d}\\
-	\item[Link] \texttt{C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash PHP\textbackslash CodeSniffer\textbackslash Standards\textbackslash THMJoomla}\\
-	\item[Target] \texttt{C:\textbackslash $<$System Specific Path$>$\textbackslash lib\_thm\_core\textbackslash coding\_standards\textbackslash THMJoomla}\\
-\end{description}
+In order to use the Joomla standard you need to copy all data from \url{https://github.com/joomla/coding-standards} to the CodeSniffer standards folder: \newline
+\texttt{C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash PHP\textbackslash CodeSniffer\textbackslash Standards\textbackslash Joomla} (Windows)
 
 \subsection{PhpStorm}
 
