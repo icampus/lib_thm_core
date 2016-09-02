@@ -26,7 +26,6 @@
         <folder>js</folder>
         <folder>list</folder>
         <folder>log</folder>
-        <folder>phpexcel</folder>
         <folder>tables</folder>
         <folder>util</folder>
     </files>
@@ -41,4 +40,5 @@
             http://jenkins-ci.mni.thm.de/view/THM%20Control/job/Releases/lastSuccessfulBuild/artifact/updates/lib_thm_core.xml
         </server>
     </updateservers>
+
 </extension>
