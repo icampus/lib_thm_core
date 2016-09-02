@@ -94,7 +94,7 @@ class THMJoomla_Sniffs_NamingConvention_ValidClassNameSniff implements PHP_CodeS
 			}
 
 			// Check MVC
-			$this->checkMVC($name, $phpcsFile, $fileName, $errorData, $stackPtr, $stackPtr);
+			$this->checkMVC($name, $phpcsFile, $fileName, $errorData, $stackPtr);
 		}
 
 		// Check that each new word starts with a capital as well, but don't
@@ -148,7 +148,7 @@ class THMJoomla_Sniffs_NamingConvention_ValidClassNameSniff implements PHP_CodeS
 	 *
 	 * @return void
 	 */
-	public function checkMVC($name, $phpcsFile, $fileName, $errorData, $stackPtr, $stackPtr)
+	public function checkMVC($name, $phpcsFile, $fileName, $errorData, $stackPtr)
 	{
 
 		// Check ENV
