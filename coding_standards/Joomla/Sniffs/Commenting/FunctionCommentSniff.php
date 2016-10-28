@@ -395,7 +395,8 @@ class Joomla_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_S
 
 				// Make sure that there is only one space before the var type.
 				// Joomla change: 3 spaces to make it line up with the @return tag with a 2 space gap.
-				if ($param->getWhitespaceBeforeType() !== '   ')
+				// iCampus change: We expect 1 space.
+				if ($param->getWhitespaceBeforeType() !== ' ')
 				{
 					$error = 'Expected 3 spaces before variable type';
 					$this->currentFile->addError($error, $errorPos, 'BeforeParamType');
