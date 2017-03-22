@@ -232,6 +232,22 @@ class THMJoomla_Sniffs_PHP_ValidLanguageSniff implements PHP_CodeSniffer_Sniff
 												// Auf Doppeleintrag prüfen
 												$ini_content = file_get_contents($filepath);
 												$ini_content = str_replace(" ", "", $ini_content);
+
+												// Check for forgotten opening and closing quotation marks
+												$ini_content_splitted = explode("\n", $ini_content);
+												foreach($ini_content_splitted as $key=>$splittedLine)
+												{
+													if(strpos($splittedLine, '="') !== false)
+													{
+														if(substr($splittedLine, -1) != '"')
+														{
+															// Fehlerbehandlung
+															$error = "Uneven number of opening and closing quotation marks in file " .$files4[$z] . "line " . ($key + 1);
+															$phpcsFile->addError($error, $stackPtr - 4, 'UnevenQuotationMarks', $errorData);
+														}
+													}
+												}
+
 												// Parsen der .ini File
 												$ini_array = parse_ini_file($filepath);
 
