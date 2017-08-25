@@ -49,6 +49,7 @@ The following modifications should then be made to the file:\\
 	\texttt{output\_buffering = Off} \\\\
 \end{tabular}
 
+\label{xdebug_config}
 \begin{tabular}{l}
 	// Debugger Settings (may only need to be commented in)\\
 	\texttt{[XDebug]} \\
@@ -61,75 +62,10 @@ The following modifications should then be made to the file:\\
 	\texttt{xdebug.profiler\_output\_dir="C:\textbackslash xampp\textbackslash tmp"}\\\\
 \end{tabular}
 
+If you have trouble to get XDebug to work, this page (\url{https://xdebug.org/wizard.php}) might help you. You have to copy your whole phpinfo()-page (\url{http://localhost/dashboard/phpinfo.php}) and paste it into the textarea on the xdebug-wizard page. Follow the instructions and you should be ready to use xdebug.
+
 \noindent
 The interface shown in Figure \ref{fig:xamppcontrolpanel} above will also later used to start and stop the server service itself, Apache, as well as the the supporting database management service, MySQL, by pressing the corresponding ``Start"/``Stop" button.
-
-\subsection{PEAR Configuration}
-
-In order to eliminate possible error sources, PEAR must next be configured. To this end run cmd.exe as an administrator and execute the following commands.\\
-
-\begin{tabular}{l}
-	// Navigate to the PHP Directory\\
-	\texttt{cd C:\textbackslash xampp\textbackslash php}\\
-	\\
-	// Display the PEAR Configuration\\
-	\texttt{pear config-show} \\
-	\\
-\end{tabular} 
-
-\subsubsection{Directory Configuration}
-
-The following settings which may refer to C:\textbackslash php\textbackslash pear need to be changed to point to C:\textbackslash xampp\textbackslash php\textbackslash pear should they not already do so.\\
-
-\begin{tabular}{l}
-	\texttt{pear config-set doc\_dir C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash docs} \\
-	\texttt{pear config-set cfg\_dir C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash cfg} \\
-	\texttt{pear config-set data\_dir C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash data} \\
-	\texttt{pear config-set cache\_dir C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash cache} \\
-	\texttt{pear config-set download\_dir C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash download} \\
-	\texttt{pear config-set temp\_dir C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash temp} \\
-	\texttt{pear config-set test\_dir C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash tests} \\
-	\texttt{pear config-set www\_dir C:\textbackslash xampp\textbackslash php\textbackslash pear\textbackslash www} \\
-	\texttt{pear config-set php\_ini C:\textbackslash xampp\textbackslash php\textbackslash php.ini}
-\end{tabular}
-
-\newpage
-\subsubsection{Channel Configuration}
-
-Next PEAR itself and its channel list needs to be updated, so that later updates for extensions can be automatically pulled from their respective channels. Thereafter the auto\_discover variable is set to on, this allows new channels to be discovered and dependencies to be resolved automatically.\\
-
-
-\begin{tabular}{l}
-	// Ensures the latest PEAR version\\
-	\texttt{pear channel-update pear.php.net}\\
-	\\
-	// Empties the PEAR Cache\\
-	\texttt{pear clear-cache}\\
-	\\
-	// Turns on Automatic Discovery\\
-	\texttt{pear config-set auto\_discover 1}\\
-	\\
-	// Update the Channel list\\
-	\texttt{pear update-channels}\\
-	\\
-	// Uninstalls CodeSniffer in Case a Deprecated Version is Present\\
-	\texttt{pear uninstall PHP\_CodeSniffer}\\
-	\\
-	// Installs PHP CodeSniffer\\
-	\texttt{pear install PHP\_CodeSniffer-1.5.6}\\
-	\\
-	// Discovers the PHP Mess Detector channel\\
-	\texttt{pear channel-discover pear.phpmd.org}\\
-	\\
-	// Lists available packages\\
-	\texttt{pear remote-list -c phpmd}\\
-	\\
-	// Installs PHP Mess Detector Package 1.5.0, actual as of 27 Sept, 2014\\
-	\texttt{pear install phpmd/PHP\_PMD-1.5.0}\\ \\
-\end{tabular}
-
-\noindent
-More about Code Sniffer and Mess Detector in Section \ref{sec:qatools}.
 
 \newpage
 \subsection{PHPUnit}
@@ -487,6 +423,10 @@ PHP Mess Detector on the other hand searches for problems more abstract and more
 	\item Overcomplicated expressions
 	\item Unused parameters, methods, properties
 \end{itemize}
+
+\subsubsection{Code Sniffer Installation}
+To install Code Sniffer for Joomla, follow the instructions on this page
+\url{https://docs.joomla.org/Joomla_CodeSniffer}.
 
 \newpage
 

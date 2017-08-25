@@ -105,3 +105,12 @@ In addition, the folder contains Page Objects classes (tests/Pages) for all GUI 
 \caption[Caption for LOF]{Test folder structure of an Joomla instance.{\footnotesize (Source: Rost, Wolf (2014): Software Tests in Agile Web-CMS Development. TH-Mittelhessen.)}}
 \label{test_folder_structure_joomla}
 \end{figure}
+
+\section{Debugging}
+To debug Joomla and PHP in general you need three things:
+\begin{itemize}
+\item xdebug configuration in the php.ini (see \ref{xdebug_config})
+\item PHPStorm installed (see \ref{sec:PHP-Storm})
+\item If you use Firefox you have to install the addon ''The easiest Xdebug''. If you use Google Chrome you have to install the addon ''Xdebug helper''.
+\end{itemize}
+If you have all these requirements you can activate the addon in your browser, set a break point in your php file and start listening for php debug connections in PHPStorm.
