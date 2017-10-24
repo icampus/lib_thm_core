@@ -23,131 +23,127 @@
  */
 class THMRight
 {
-	private $_group;
+    private $_group;
 
-	private $_create, $_edit, $_delete;
+    private $_create, $_edit, $_delete;
 
-	/**
-	 * Create a Right.
-	 *
-	 * @param   THMGroup $group        The Group that should have the permission's
-	 * @param            THMPermission ::value  $create  The Create Permission
-	 * @param            THMPermission ::value  $edit    The Edit Permission
-	 * @param            THMPermission ::value  $delete  The Delete Permission
-	 *
-	 * @throws InvalidArgumentException If argument's have a wrong type.
-	 */
-	public function __construct($group, $create, $edit, $delete)
-	{
-		if (!($group instanceof THMGroup)
-			|| !THMPermission::isValidPermission($create)
-			|| !THMPermission::isValidPermission($edit)
-			|| !THMPermission::isValidPermission($delete)
-		)
-		{
-			throw new  InvalidArgumentException('One or more argument/s have a wrong type');
-		}
+    /**
+     * Create a Right.
+     *
+     * @param   THMGroup $group The Group that should have the permission's
+     * @param            THMPermission ::value  $create  The Create Permission
+     * @param            THMPermission ::value  $edit    The Edit Permission
+     * @param            THMPermission ::value  $delete  The Delete Permission
+     *
+     * @throws InvalidArgumentException If argument's have a wrong type.
+     */
+    public function __construct($group, $create, $edit, $delete)
+    {
+        if ( ! ($group instanceof THMGroup)
+            || ! THMPermission::isValidPermission($create)
+            || ! THMPermission::isValidPermission($edit)
+            || ! THMPermission::isValidPermission($delete)
+        ) {
+            throw new  InvalidArgumentException('One or more argument/s have a wrong type');
+        }
 
-		$this->_group  = $group;
-		$this->_create = $create;
-		$this->_edit   = $edit;
-		$this->_delete = $delete;
-	}
+        $this->_group = $group;
+        $this->_create = $create;
+        $this->_edit = $edit;
+        $this->_delete = $delete;
+    }
 
-	/**
-	 * Return the Group.
-	 *
-	 * @return THMGroup The group object.
-	 */
-	public function getGroup()
-	{
-		return $this->_group;
-	}
+    /**
+     * Return the Group.
+     *
+     * @return THMGroup The group object.
+     */
+    public function getGroup()
+    {
+        return $this->_group;
+    }
 
-	/**
-	 * Set the create permission.
-	 *
-	 * @param   THMPermission ::value  $permValue  The Permission value.
-	 *
-	 * @throws InvalidArgumentException If is not a valid permission.
-	 *
-	 * @return void
-	 */
-	public function setCreatePerm($permValue)
-	{
-		if (!THMPermission::isValidPermission($permValue))
-		{
-			throw new InvalidArgumentException('Invalid Permission value!');
-		}
+    /**
+     * Set the create permission.
+     *
+     * @param   THMPermission ::value  $permValue  The Permission value.
+     *
+     * @throws InvalidArgumentException If is not a valid permission.
+     *
+     * @return void
+     */
+    public function setCreatePerm($permValue)
+    {
+        if ( ! THMPermission::isValidPermission($permValue)) {
+            throw new InvalidArgumentException('Invalid Permission value!');
+        }
 
-		$this->_create = $permValue;
-	}
+        $this->_create = $permValue;
+    }
 
-	/**
-	 * Set the edit permission.
-	 *
-	 * @param   THMPermission ::value  $permValue  The Permission value.
-	 *
-	 * @throws InvalidArgumentException If is not a valid permission.
-	 *
-	 * @return void
-	 */
-	public function setEditPerm($permValue)
-	{
-		if (!THMPermission::isValidPermission($permValue))
-		{
-			throw new InvalidArgumentException('Invalid Permission value!');
-		}
+    /**
+     * Set the edit permission.
+     *
+     * @param   THMPermission ::value  $permValue  The Permission value.
+     *
+     * @throws InvalidArgumentException If is not a valid permission.
+     *
+     * @return void
+     */
+    public function setEditPerm($permValue)
+    {
+        if ( ! THMPermission::isValidPermission($permValue)) {
+            throw new InvalidArgumentException('Invalid Permission value!');
+        }
 
-		$this->_edit = $permValue;
-	}
+        $this->_edit = $permValue;
+    }
 
-	/**
-	 * Set the delete permission.
-	 *
-	 * @param   THMPermission ::value  $permValue  The Permission value.
-	 *
-	 * @throws InvalidArgumentException If is not a valid permission.
-	 *
-	 * @return void
-	 */
-	public function setDeletePerm($permValue)
-	{
-		if (!THMPermission::isValidPermission($permValue))
-		{
-			throw new InvalidArgumentException('Invalid Permission value!');
-		}
+    /**
+     * Set the delete permission.
+     *
+     * @param   THMPermission ::value  $permValue  The Permission value.
+     *
+     * @throws InvalidArgumentException If is not a valid permission.
+     *
+     * @return void
+     */
+    public function setDeletePerm($permValue)
+    {
+        if ( ! THMPermission::isValidPermission($permValue)) {
+            throw new InvalidArgumentException('Invalid Permission value!');
+        }
 
-		$this->_delete = $permValue;
-	}
+        $this->_delete = $permValue;
+    }
 
-	/**
-	 * The create permission.
-	 *
-	 * @return THMPermission::value
-	 */
-	public function getCreatePerm()
-	{
-		return $this->_create;
-	}
+    /**
+     * The create permission.
+     *
+     * @return THMPermission::value
+     */
+    public function getCreatePerm()
+    {
+        return $this->_create;
+    }
 
-	/**
-	 * The edit permission.
-	 *
-	 * @return THMPermission::value
-	 */
-	public function getEditPerm()
-	{
-		return $this->_edit;
-	}
+    /**
+     * The edit permission.
+     *
+     * @return THMPermission::value
+     */
+    public function getEditPerm()
+    {
+        return $this->_edit;
+    }
 
-	/**
-	 * The delete permission.
-	 *
-	 * @return THMPermission::value
-	 */
-	public function getDeletePerm()
-	{
-		return $this->_delete;
-	}
+    /**
+     * The delete permission.
+     *
+     * @return THMPermission::value
+     */
+    public function getDeletePerm()
+    {
+        return $this->_delete;
+    }
 }

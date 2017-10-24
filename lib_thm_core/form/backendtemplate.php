@@ -21,29 +21,29 @@
  */
 class THM_CoreTemplateBackend
 {
-	/**
-	 * Method to create a list output
-	 *
-	 * @param   object &$view the view context calling the function
-	 *
-	 * @return void
-	 */
-	public static function render(&$view)
-	{
-		$option = JFactory::getApplication()->input->get('option');
-		?>
-		<form action="index.php?option=<?php echo $option; ?>"
-		      enctype="multipart/form-data"
-		      method="post"
-		      name="adminForm"
-		      id="item-form"
-		      class="form-horizontal">
-			<div class="form-horizontal">
-				<?php echo $view->form->renderFieldset('details'); ?>
-			</div>
-			<?php echo JHtml::_('form.token'); ?>
-			<input type="hidden" name="task" value=""/>
-		</form>
-		<?php
-	}
+    /**
+     * Method to create a list output
+     *
+     * @param   object &$view the view context calling the function
+     *
+     * @return void
+     */
+    public static function render(&$view)
+    {
+        $option = JFactory::getApplication()->input->get('option');
+        ?>
+        <form action="index.php?option=<?php echo $option; ?>"
+              enctype="multipart/form-data"
+              method="post"
+              name="adminForm"
+              id="item-form"
+              class="form-horizontal">
+            <div class="form-horizontal">
+                <?php echo $view->form->renderFieldset('details'); ?>
+            </div>
+            <?php echo JHtml::_('form.token'); ?>
+            <input type="hidden" name="task" value=""/>
+        </form>
+        <?php
+    }
 }

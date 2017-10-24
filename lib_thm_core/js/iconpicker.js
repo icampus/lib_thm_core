@@ -1,18 +1,15 @@
 'use strict';
 
-jQuery(document).ready(function ()
-{
+jQuery(document).ready(function () {
     // adjust width of the iconPicker Button to the width of its dropdown-menu
-    if (jQuery(".iconPicker").length)
-    {
+    if (jQuery(".iconPicker").length) {
         var dropdownWidth = jQuery(".iconPicker .dropdown-menu").outerWidth();
         jQuery(".iconPicker .dropdown-toggle").outerWidth(dropdownWidth);
     }
 });
 
 //is called by onclick-event in thm_core -> iconpicker.php
-function selectIcon(event)
-{
+function selectIcon(event) {
     var selectedItem = jQuery(event.currentTarget),
         selectedItemHtml = jQuery(selectedItem).html(),
         classNameOfIcon = jQuery(selectedItemHtml).first().attr('class');

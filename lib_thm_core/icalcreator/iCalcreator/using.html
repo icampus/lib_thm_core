@@ -2015,7 +2015,7 @@ date).
     foreach( $month_arr as $day =&gt; $day_arr ) {
     foreach( $day_arr as $event ) {
     $currddate = $event->getProperty( &quot;x-current-dtstart&quot; );
-        <span class="comment">// if member of a recurrence set, returns
+    <span class="comment">// if member of a recurrence set, returns
        // array(&quot; x-current-dtstart&quot;,
        // &lt;(string) date(&quot;Y-m-d&nbsp;[H:i:s][timezone/UTC&nbsp;offset]&quot;)&gt;)</span>
     $startDate = $event->getProperty( &quot;dtstart&quot; );
@@ -3629,7 +3629,7 @@ Parameters, if any, will be ordered as prescribed in rcf2445.
 <p class="label">Example 2</p>
 <p class="example">$vfreebusy->setProperty( &quot;dtend&quot;
     , 2006, 8, 11, 16, 30, 0, &quot;-040000&quot; );
-  <span class="ref">// 11 august 2006 16.30.00 -040000 :
+    <span class="ref">// 11 august 2006 16.30.00 -040000 :
      local date + UTC offset =&gt; <a class="ref" href="#DATE_WITH_UTC_TIME">UTC</a> DATE-TIME</span></p>
 <p class="label">Example 3</p>
 <p class="example">$vevent->setProperty( &quot;dtend&quot;
@@ -3810,7 +3810,7 @@ Parameters, if any, will be ordered as prescribed in rcf2445.
 <p class="label">Example 2</p>
 <p class="example">$vevent->setProperty( &quot;dstart&quot;
     , 2006, 8, 11, 16, 30, 0, &quot;-040000&quot; );
-  <span class="comment">// 11 august 2006 16.30.00 -040000,
+    <span class="comment">// 11 august 2006 16.30.00 -040000,
   // local date + UTC offset =&gt; <a class="ref" href="#DATE_WITH_UTC_TIME">UTC</a> DATE-TIME</span></p>
 <p class="label">Example 3</p>
 <p class="example">$vevent->setProperty( &quot;dtstart&quot;
@@ -3902,7 +3902,7 @@ Parameters, if any, will be ordered as prescribed in rcf2445.
 <p class="label">Example 2</p>
 <p class="example">$vtodo->setProperty( &quot;due&quot;
     , 2006, 8, 11, 16, 30, 0, &quot;-040000&quot; );
-  <span class="comment">// 11 august 2006 16.30.00 -040000
+    <span class="comment">// 11 august 2006 16.30.00 -040000
   // local date + UTC offset sets <a class="ref" href="#DATE_WITH_UTC_TIME">UTC</a>DATE-TIME</span></p>
 <p class="label">Example 3</p>
 <p class="example">$vtodo->setProperty( &quot;due&quot;
@@ -5220,7 +5220,7 @@ Insert property value.
     <span class="comment">// set sequence number to 2</span></p>
 <p class="label">Example 2</p>
 <p class="example">$vevent->setProperty( &quot;sequence&quot; );
-  <span class="comment">// force sequence number to be set to 1
+    <span class="comment">// force sequence number to be set to 1
   // or, if sequence exists, incremented by 1</span></p>
 <br>
 <a href="#INDEX">[index]</a> <a href="#top">[top]</a> <a

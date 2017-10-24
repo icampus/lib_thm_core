@@ -1,5 +1,4 @@
-Ext.onReady(function ()
-{
+Ext.onReady(function () {
     document.id = document.$id;
     delete document.$id;
 });

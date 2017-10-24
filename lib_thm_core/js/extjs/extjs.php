@@ -15,12 +15,10 @@ $extScripts[] = JURI::root() . "libraries/thm_core/js/extjs/setMootoolsDoc.js";
 $extScripts[] = JURI::root() . "libraries/thm_core/js/extjs/ext-all-debug.js";
 $extScripts[] = JURI::root() . "libraries/thm_core/js/extjs/resolveDocument.js";
 
-$doc     = JFactory::getDocument();
+$doc = JFactory::getDocument();
 $scripts = array_keys($doc->_scripts);
-foreach ($extScripts as $script)
-{
-	if (!in_array($script, $scripts))
-	{
-		$doc->addScript($script);
-	}
+foreach ($extScripts as $script) {
+    if (!in_array($script, $scripts)) {
+        $doc->addScript($script);
+    }
 }

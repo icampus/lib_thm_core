@@ -14,21 +14,16 @@ var Ext = Ext || {};
  * @class Ext.Boot
  * @singleton
  */
-Ext.Boot = (function (emptyFn)
-{
+Ext.Boot = (function (emptyFn) {
 
     var doc = document,
-        apply = function (dest, src, defaults)
-        {
-            if (defaults)
-            {
+        apply = function (dest, src, defaults) {
+            if (defaults) {
                 apply(dest, defaults);
             }
 
-            if (dest && src && typeof src == 'object')
-            {
-                for (var key in src)
-                {
+            if (dest && src && typeof src == 'object') {
+                for (var key in src) {
                     dest[key] = src[key];
                 }
             }
@@ -42,7 +37,7 @@ Ext.Boot = (function (emptyFn)
              * to the page's URL will set this to `false`.
              */
             disableCaching: (/[?&](?:cache|disableCacheBuster)\b/i.test(location.search) || !(/http[s]?\:/i.test(location.href)) ||
-            /(^|[ ;])ext-cache=1/.test(doc.cookie)) ? false :
+                /(^|[ ;])ext-cache=1/.test(doc.cookie)) ? false :
                 true,
 
             /*
@@ -83,33 +78,28 @@ Ext.Boot = (function (emptyFn)
         },
         _tags = {},
 
-    //<debug>
-        _debug = function (message)
-        {
+        //<debug>
+        _debug = function (message) {
             //console.log(message);
         },
-    //</debug>
-        _apply = function (object, config, defaults)
-        {
-            if (defaults)
-            {
+        //</debug>
+        _apply = function (object, config, defaults) {
+            if (defaults) {
                 _apply(object, defaults);
             }
-            if (object && config && typeof config === 'object')
-            {
-                for (var i in config)
-                {
+            if (object && config && typeof config === 'object') {
+                for (var i in config) {
                     object[i] = config[i];
                 }
             }
             return object;
         },
-    /*
-     * The Boot loader class manages Request objects that contain one or 
-     * more individual urls that need to be loaded.  Requests can be performed
-     * synchronously or asynchronously, but will always evaluate urls in the
-     * order specified on the request object.
-     */
+        /*
+         * The Boot loader class manages Request objects that contain one or 
+         * more individual urls that need to be loaded.  Requests can be performed
+         * synchronously or asynchronously, but will always evaluate urls in the
+         * order specified on the request object.
+         */
         Boot = {
             loading: 0,
             loaded: 0,
@@ -162,8 +152,7 @@ Ext.Boot = (function (emptyFn)
              * in the platform map accrodingly.  Examples are iOS, android, tablet, etc.
              * @param tags the set of tags to populate
              */
-            detectPlatformTags: function ()
-            {
+            detectPlatformTags: function () {
                 var ua = navigator.userAgent,
                     isMobile = _tags.isMobile = /Mobile(\/|\s)/.test(ua),
                     isPhone, isDesktop, isTablet, touchSupported, isIE10, isBlackberry,
@@ -186,25 +175,20 @@ Ext.Boot = (function (emptyFn)
                         'Safari',
                         'Windows Phone'
                     ],
-                    isEventSupported = function (name, tag)
-                    {
-                        if (tag === undefined)
-                        {
+                    isEventSupported = function (name, tag) {
+                        if (tag === undefined) {
                             tag = window;
                         }
 
                         var eventName = 'on' + name.toLowerCase(),
                             isSupported = (eventName in element);
 
-                        if (!isSupported)
-                        {
-                            if (element.setAttribute && element.removeAttribute)
-                            {
+                        if (!isSupported) {
+                            if (element.setAttribute && element.removeAttribute) {
                                 element.setAttribute(eventName, '');
                                 isSupported = typeof element[eventName] === 'function';
 
-                                if (typeof element[eventName] !== 'undefined')
-                                {
+                                if (typeof element[eventName] !== 'undefined') {
                                     element[eventName] = undefined;
                                 }
 
@@ -217,8 +201,7 @@ Ext.Boot = (function (emptyFn)
                     uaTags = {},
                     len = uaTagChecks.length, check, c;
 
-                for (c = 0; c < len; c++)
-                {
+                for (c = 0; c < len; c++) {
                     check = uaTagChecks[c];
                     uaTags[check] = new RegExp(check).test(ua);
                 }
@@ -283,8 +266,7 @@ Ext.Boot = (function (emptyFn)
              *
              * @returns {Object} the platform tags supplied by the query string
              */
-            loadPlatformsParam: function ()
-            {
+            loadPlatformsParam: function () {
                 // Check if the ?platform parameter is set in the URL
                 var paramsString = window.location.search.substr(1),
                     paramsArray = paramsString.split("&"),
@@ -292,28 +274,22 @@ Ext.Boot = (function (emptyFn)
                     platforms = {},
                     tmpArray, tmplen, platform, name, enabled;
 
-                for (i = 0; i < paramsArray.length; i++)
-                {
+                for (i = 0; i < paramsArray.length; i++) {
                     tmpArray = paramsArray[i].split("=");
                     params[tmpArray[0]] = tmpArray[1];
                 }
 
-                if (params.platformTags)
-                {
+                if (params.platformTags) {
                     tmpArray = params.platform.split(/\W/);
-                    for (tmplen = tmpArray.length, i = 0; i < tmplen; i++)
-                    {
+                    for (tmplen = tmpArray.length, i = 0; i < tmplen; i++) {
                         platform = tmpArray[i].split(":");
                         name = platform[0];
-                        if (platform.length > 1)
-                        {
+                        if (platform.length > 1) {
                             enabled = platform[1];
-                            if (enabled === 'false' || enabled === '0')
-                            {
+                            if (enabled === 'false' || enabled === '0') {
                                 enabled = false;
                             }
-                            else
-                            {
+                            else {
                                 enabled = true;
                             }
                         }
@@ -323,30 +299,25 @@ Ext.Boot = (function (emptyFn)
                 return platform;
             },
 
-            getPlatformTags: function ()
-            {
+            getPlatformTags: function () {
                 return Boot.platformTags;
             },
 
-            filterPlatform: function (platform)
-            {
+            filterPlatform: function (platform) {
                 platform = [].concat(platform);
                 var tags = Boot.getPlatformTags(),
                     len, p, tag;
 
-                for (len = platform.length, p = 0; p < len; p++)
-                {
+                for (len = platform.length, p = 0; p < len; p++) {
                     tag = platform[p];
-                    if (tags.hasOwnProperty(tag))
-                    {
+                    if (tags.hasOwnProperty(tag)) {
                         return !!tags[tag];
                     }
                 }
                 return false;
             },
 
-            init: function ()
-            {
+            init: function () {
                 var me = this,
                     scriptEls = doc.getElementsByTagName('script'),
                     len = scriptEls.length,
@@ -356,28 +327,23 @@ Ext.Boot = (function (emptyFn)
                 // Since we are loading after other scripts, and we needed to gather them
                 // anyway, we track them in _scripts so we don't have to ask for them all
                 // repeatedly.
-                for (n = 0; n < len; n++)
-                {
+                for (n = 0; n < len; n++) {
                     src = (script = scriptEls[n]).src;
-                    if (!src)
-                    {
+                    if (!src) {
                         continue;
                     }
                     state = script.readyState || null;
 
                     // If we find a script file called "ext-*.js", then the base path is that file's base path.
-                    if (!baseUrl)
-                    {
-                        if (re.test(src))
-                        {
+                    if (!baseUrl) {
+                        if (re.test(src)) {
                             me.hasReadyState = ("readyState" in script);
                             me.hasAsync = ("async" in script) || !me.hasReadyState;
                             baseUrl = src;
                         }
                     }
 
-                    if (!me.scripts[key = me.canonicalUrl(src)])
-                    {
+                    if (!me.scripts[key = me.canonicalUrl(src)]) {
                         //<debug>
                         _debug("creating entry " + key + " in Boot.init");
                         //</debug>
@@ -392,8 +358,7 @@ Ext.Boot = (function (emptyFn)
                     }
                 }
 
-                if (!baseUrl)
-                {
+                if (!baseUrl) {
                     script = scriptEls[scriptEls.length - 1];
                     baseUrl = script.src;
                     me.hasReadyState = ('readyState' in script);
@@ -426,8 +391,7 @@ Ext.Boot = (function (emptyFn)
              *
              * @private
              */
-            canonicalUrl: function (url)
-            {
+            canonicalUrl: function (url) {
                 // @TODO - see if we need this fallback logic
                 // http://stackoverflow.com/questions/470832/getting-an-absolute-url-from-a-relative-one-ie6-issue
                 resolverEl.href = url;
@@ -439,12 +403,10 @@ Ext.Boot = (function (emptyFn)
 
                 // If we have a _dc query parameter we need to remove it from the canonical
                 // URL.
-                if (pos > 0 && ((c = ret.charAt(pos - 1)) === '?' || c === '&'))
-                {
+                if (pos > 0 && ((c = ret.charAt(pos - 1)) === '?' || c === '&')) {
                     end = ret.indexOf('&', pos);
                     end = (end < 0) ? '' : ret.substring(end);
-                    if (end && c === '?')
-                    {
+                    if (end && c === '?') {
                         ++pos; // keep the '?'
                         end = end.substring(1); // remove the '&'
                     }
@@ -459,8 +421,7 @@ Ext.Boot = (function (emptyFn)
              * @param {String} name The config property name
              * @return {Object}
              */
-            getConfig: function (name)
-            {
+            getConfig: function (name) {
                 return name ? this.config[name] : this.config;
             },
 
@@ -469,70 +430,58 @@ Ext.Boot = (function (emptyFn)
              * @param {Object} config The config object to override the default values.
              * @return {Ext.Boot} this
              */
-            setConfig: function (name, value)
-            {
-                if (typeof name === 'string')
-                {
+            setConfig: function (name, value) {
+                if (typeof name === 'string') {
                     this.config[name] = value;
                 }
-                else
-                {
-                    for (var s in name)
-                    {
+                else {
+                    for (var s in name) {
                         this.setConfig(s, name[s]);
                     }
                 }
                 return this;
             },
 
-            getHead: function ()
-            {
+            getHead: function () {
                 return this.docHead ||
                     (this.docHead = doc.head ||
                         doc.getElementsByTagName('head')[0]);
             },
 
-            create: function (url, key, cfg)
-            {
+            create: function (url, key, cfg) {
                 var config = cfg || {};
                 config.url = url;
                 config.key = key;
                 return this.scripts[key] = new Entry(config);
             },
 
-            getEntry: function (url, cfg)
-            {
+            getEntry: function (url, cfg) {
                 var key = this.canonicalUrl(url),
                     entry = this.scripts[key];
-                if (!entry)
-                {
+                if (!entry) {
                     entry = this.create(url, key, cfg);
                 }
                 return entry;
             },
 
-            processRequest: function (request, sync)
-            {
+            processRequest: function (request, sync) {
                 request.loadEntries(sync);
             },
 
-            load: function (request)
-            {
+            load: function (request) {
                 //<debug>
                 _debug("Boot.load called");
                 //</debug>
                 var me = this,
                     request = new Request(request);
 
-                if (request.sync || me.syncMode)
-                {
+                if (request.sync || me.syncMode) {
                     return me.loadSync(request);
                 }
 
                 // If there is a request in progress, we must
                 // queue this new request to be fired  when the current request completes.
-                if (me.currentRequest)
-                {
+                if (me.currentRequest) {
                     //<debug>
                     _debug("current active request, suspending this request");
                     //</debug>
@@ -542,16 +491,14 @@ Ext.Boot = (function (emptyFn)
                     request.getEntries();
                     me.suspendedQueue.push(request);
                 }
-                else
-                {
+                else {
                     me.currentRequest = request;
                     me.processRequest(request, false);
                 }
                 return me;
             },
 
-            loadSync: function (request)
-            {
+            loadSync: function (request) {
                 //<debug>
                 _debug("Boot.loadSync called");
                 //</debug>
@@ -564,32 +511,26 @@ Ext.Boot = (function (emptyFn)
                 return me;
             },
 
-            loadBasePrefix: function (request)
-            {
+            loadBasePrefix: function (request) {
                 request = new Request(request);
                 request.prependBaseUrl = true;
                 return this.load(request);
             },
 
-            loadSyncBasePrefix: function (request)
-            {
+            loadSyncBasePrefix: function (request) {
                 request = new Request(request);
                 request.prependBaseUrl = true;
                 return this.loadSync(request);
             },
 
-            requestComplete: function (request)
-            {
+            requestComplete: function (request) {
                 var me = this,
                     next;
-                if (me.currentRequest === request)
-                {
+                if (me.currentRequest === request) {
                     me.currentRequest = null;
-                    while (me.suspendedQueue.length > 0)
-                    {
+                    while (me.suspendedQueue.length > 0) {
                         next = me.suspendedQueue.shift();
-                        if (!next.done)
-                        {
+                        if (!next.done) {
                             //<debug>
                             _debug("resuming suspended request");
                             //</debug>
@@ -598,34 +539,27 @@ Ext.Boot = (function (emptyFn)
                         }
                     }
                 }
-                if (!me.currentRequest && me.suspendedQueue.length == 0)
-                {
+                if (!me.currentRequest && me.suspendedQueue.length == 0) {
                     me.fireListeners();
                 }
             },
 
-            isLoading: function ()
-            {
+            isLoading: function () {
                 return !this.currentRequest && this.suspendedQueue.length == 0;
             },
 
-            fireListeners: function ()
-            {
+            fireListeners: function () {
                 var listener;
-                while (this.isLoading() && (listener = this.listeners.shift()))
-                {
+                while (this.isLoading() && (listener = this.listeners.shift())) {
                     listener();
                 }
             },
 
-            onBootReady: function (listener)
-            {
-                if (!this.isLoading())
-                {
+            onBootReady: function (listener) {
+                if (!this.isLoading()) {
                     listener();
                 }
-                else
-                {
+                else {
                     this.listeners.push(listener);
                 }
             },
@@ -634,36 +568,31 @@ Ext.Boot = (function (emptyFn)
              * this is a helper function used by Ext.Loader to flush out
              * 'uses' arrays for classes
              */
-            getPathsFromIndexes: function (indexMap, loadOrder)
-            {
+            getPathsFromIndexes: function (indexMap, loadOrder) {
                 return Request.prototype.getPathsFromIndexes(indexMap, loadOrder);
             },
 
-            createLoadOrderMap: function (loadOrder)
-            {
+            createLoadOrderMap: function (loadOrder) {
                 return Request.prototype.createLoadOrderMap(loadOrder);
             },
 
-            fetchSync: function (url)
-            {
+            fetchSync: function (url) {
                 var exception, xhr, status, content;
 
                 exception = false;
                 xhr = new XMLHttpRequest();
 
-                try
-                {
+                try {
                     xhr.open('GET', url, false);
                     xhr.send(null);
                 }
-                catch (e)
-                {
+                catch (e) {
                     exception = true;
                 }
 
                 status = (xhr.status === 1223) ? 204 :
                     (xhr.status === 0 && ((self.location || {}).protocol === 'file:' ||
-                    (self.location || {}).protocol === 'ionp:')) ? 200 : xhr.status;
+                        (self.location || {}).protocol === 'ionp:')) ? 200 : xhr.status;
                 content = xhr.responseText;
 
                 xhr = null; // Prevent potential IE memory leak
@@ -675,8 +604,7 @@ Ext.Boot = (function (emptyFn)
                 };
             },
 
-            notifyAll: function (entry)
-            {
+            notifyAll: function (entry) {
                 entry.notifyRequests();
             }
         };
@@ -686,10 +614,8 @@ Ext.Boot = (function (emptyFn)
      * and provides notification around the completion of all Entries
      * in this request.
      */
-    function Request(cfg)
-    {
-        if (cfg.$isRequest)
-        {
+    function Request(cfg) {
+        if (cfg.$isRequest) {
             return cfg;
         }
 
@@ -716,14 +642,12 @@ Ext.Boot = (function (emptyFn)
          * @param manifest
          * @returns {*}
          */
-        createLoadOrderMap: function (loadOrder)
-        {
+        createLoadOrderMap: function (loadOrder) {
             var len = loadOrder.length,
                 loadOrderMap = {},
                 i, element;
 
-            for (i = 0; i < len; i++)
-            {
+            for (i = 0; i < len; i++) {
                 element = loadOrder[i];
                 loadOrderMap[element.path] = element;
             }
@@ -737,13 +661,11 @@ Ext.Boot = (function (emptyFn)
          * @param indexMap
          * @returns {{}}
          */
-        getLoadIndexes: function (index, indexMap, loadOrder, includeUses, skipLoaded)
-        {
+        getLoadIndexes: function (index, indexMap, loadOrder, includeUses, skipLoaded) {
             var item = loadOrder[index],
                 len, i, reqs, entry, stop, added, idx, ridx, url;
 
-            if (indexMap[index])
-            {
+            if (indexMap[index]) {
                 // prevent cycles
                 return indexMap;
             }
@@ -751,39 +673,31 @@ Ext.Boot = (function (emptyFn)
             indexMap[index] = true;
 
             stop = false;
-            while (!stop)
-            {
+            while (!stop) {
                 added = false;
 
                 // iterate the requirements for each index and 
                 // accumulate in the index map
-                for (idx in indexMap)
-                {
-                    if (indexMap.hasOwnProperty(idx))
-                    {
+                for (idx in indexMap) {
+                    if (indexMap.hasOwnProperty(idx)) {
                         item = loadOrder[idx];
-                        if (!item)
-                        {
+                        if (!item) {
                             continue;
                         }
                         url = this.prepareUrl(item.path);
                         entry = Boot.getEntry(url);
-                        if (!skipLoaded || !entry || !entry.done)
-                        {
+                        if (!skipLoaded || !entry || !entry.done) {
                             reqs = item.requires;
-                            if (includeUses && item.uses)
-                            {
+                            if (includeUses && item.uses) {
                                 reqs = reqs.concat(item.uses);
                             }
-                            for (len = reqs.length, i = 0; i < len; i++)
-                            {
+                            for (len = reqs.length, i = 0; i < len; i++) {
                                 ridx = reqs[i];
                                 // if we find a requirement that wasn't 
                                 // already in the index map, 
                                 // set the added flag to indicate we need to 
                                 // reprocess
-                                if (!indexMap[ridx])
-                                {
+                                if (!indexMap[ridx]) {
                                     indexMap[ridx] = true;
                                     added = true;
                                 }
@@ -794,8 +708,7 @@ Ext.Boot = (function (emptyFn)
 
                 // if we made a pass through the index map and didn't add anything
                 // then we can stop
-                if (!added)
-                {
+                if (!added) {
                     stop = true;
                 }
             }
@@ -803,38 +716,31 @@ Ext.Boot = (function (emptyFn)
             return indexMap;
         },
 
-        getPathsFromIndexes: function (indexMap, loadOrder)
-        {
+        getPathsFromIndexes: function (indexMap, loadOrder) {
             var indexes = [],
                 paths = [],
                 index, len, i;
 
-            for (index in indexMap)
-            {
-                if (indexMap.hasOwnProperty(index) && indexMap[index])
-                {
+            for (index in indexMap) {
+                if (indexMap.hasOwnProperty(index) && indexMap[index]) {
                     indexes.push(index);
                 }
             }
 
-            indexes.sort(function (a, b)
-            {
+            indexes.sort(function (a, b) {
                 return a - b;
             });
 
             // convert indexes back into load paths
-            for (len = indexes.length, i = 0; i < len; i++)
-            {
+            for (len = indexes.length, i = 0; i < len; i++) {
                 paths.push(loadOrder[indexes[i]].path);
             }
 
             return paths;
         },
 
-        expandUrl: function (url, indexMap, includeUses, skipLoaded)
-        {
-            if (typeof url == 'string')
-            {
+        expandUrl: function (url, indexMap, includeUses, skipLoaded) {
+            if (typeof url == 'string') {
                 url = [url];
             }
 
@@ -842,8 +748,7 @@ Ext.Boot = (function (emptyFn)
                 loadOrder = me.loadOrder,
                 loadOrderMap = me.loadOrderMap;
 
-            if (loadOrder)
-            {
+            if (loadOrder) {
                 loadOrderMap = loadOrderMap || me.createLoadOrderMap(loadOrder);
                 me.loadOrderMap = loadOrderMap;
                 indexMap = indexMap || {};
@@ -851,15 +756,12 @@ Ext.Boot = (function (emptyFn)
                     unmapped = [],
                     i, item;
 
-                for (i = 0; i < len; i++)
-                {
+                for (i = 0; i < len; i++) {
                     item = loadOrderMap[url[i]];
-                    if (item)
-                    {
+                    if (item) {
                         me.getLoadIndexes(item.idx, indexMap, loadOrder, includeUses, skipLoaded);
                     }
-                    else
-                    {
+                    else {
                         unmapped.push(url[i]);
                     }
                 }
@@ -869,10 +771,8 @@ Ext.Boot = (function (emptyFn)
             return url;
         },
 
-        expandUrls: function (urls, includeUses)
-        {
-            if (typeof urls == "string")
-            {
+        expandUrls: function (urls, includeUses) {
+            if (typeof urls == "string") {
                 urls = [urls];
             }
 
@@ -882,41 +782,34 @@ Ext.Boot = (function (emptyFn)
                 len = urls.length,
                 i, t, tlen, tUrl;
 
-            for (i = 0; i < len; i++)
-            {
+            for (i = 0; i < len; i++) {
                 tmpExpanded = this.expandUrl(urls[i], {}, includeUses, true);
-                for (t = 0, tlen = tmpExpanded.length; t < tlen; t++)
-                {
+                for (t = 0, tlen = tmpExpanded.length; t < tlen; t++) {
                     tUrl = tmpExpanded[t];
-                    if (!expandMap[tUrl])
-                    {
+                    if (!expandMap[tUrl]) {
                         expandMap[tUrl] = true;
                         expanded.push(tUrl);
                     }
                 }
             }
 
-            if (expanded.length == 0)
-            {
+            if (expanded.length == 0) {
                 expanded = urls;
             }
 
             return expanded;
         },
 
-        expandLoadOrder: function ()
-        {
+        expandLoadOrder: function () {
             var me = this,
                 urls = me.urls,
                 expanded;
 
-            if (!me.expanded)
-            {
+            if (!me.expanded) {
                 expanded = this.expandUrls(urls);
                 me.expanded = true;
             }
-            else
-            {
+            else {
                 expanded = urls;
             }
 
@@ -924,40 +817,33 @@ Ext.Boot = (function (emptyFn)
 
             // if we added some urls to the request to honor the indicated
             // load order, the request needs to be sequential
-            if (urls.length != expanded.length)
-            {
+            if (urls.length != expanded.length) {
                 me.sequential = true;
             }
 
             return me;
         },
 
-        getUrls: function ()
-        {
+        getUrls: function () {
             this.expandLoadOrder();
             return this.urls;
         },
 
-        prepareUrl: function (url)
-        {
-            if (this.prependBaseUrl)
-            {
+        prepareUrl: function (url) {
+            if (this.prependBaseUrl) {
                 return Boot.baseUrl + url;
             }
             return url;
         },
 
-        getEntries: function ()
-        {
+        getEntries: function () {
             var me = this,
                 entries = me.entries,
                 i, entry, urls, url;
-            if (!entries)
-            {
+            if (!entries) {
                 entries = [];
                 urls = me.getUrls();
-                for (i = 0; i < urls.length; i++)
-                {
+                for (i = 0; i < urls.length; i++) {
                     url = me.prepareUrl(urls[i]);
                     entry = Boot.getEntry(url, {
                         buster: me.buster,
@@ -971,38 +857,31 @@ Ext.Boot = (function (emptyFn)
             return entries;
         },
 
-        loadEntries: function (sync)
-        {
+        loadEntries: function (sync) {
             var me = this,
                 entries = me.getEntries(),
                 len = entries.length,
                 start = me.loadStart || 0,
                 continueLoad, entry, i;
 
-            if (sync !== undefined)
-            {
+            if (sync !== undefined) {
                 me.sync = sync;
             }
 
             me.loaded = me.loaded || 0;
             me.loading = me.loading || len;
 
-            for (i = start; i < len; i++)
-            {
+            for (i = start; i < len; i++) {
                 entry = entries[i];
-                if (!entry.loaded)
-                {
+                if (!entry.loaded) {
                     continueLoad = entries[i].load(me.sync);
                 }
-                else
-                {
+                else {
                     continueLoad = true;
                 }
-                if (!continueLoad)
-                {
+                if (!continueLoad) {
                     me.loadStart = i;
-                    entry.onDone(function ()
-                    {
+                    entry.onDone(function () {
                         me.loadEntries(sync);
                     });
                     break;
@@ -1011,33 +890,27 @@ Ext.Boot = (function (emptyFn)
             me.processLoadedEntries();
         },
 
-        processLoadedEntries: function ()
-        {
+        processLoadedEntries: function () {
             var me = this,
                 entries = me.getEntries(),
                 len = entries.length,
                 start = me.startIndex || 0,
                 i, entry;
 
-            if (!me.done)
-            {
-                for (i = start; i < len; i++)
-                {
+            if (!me.done) {
+                for (i = start; i < len; i++) {
                     entry = entries[i];
 
-                    if (!entry.loaded)
-                    {
+                    if (!entry.loaded) {
                         me.startIndex = i;
                         return;
                     }
 
-                    if (!entry.evaluated)
-                    {
+                    if (!entry.evaluated) {
                         entry.evaluate();
                     }
 
-                    if (entry.error)
-                    {
+                    if (entry.error) {
                         me.error = true;
                     }
                 }
@@ -1045,11 +918,9 @@ Ext.Boot = (function (emptyFn)
             }
         },
 
-        notify: function ()
-        {
+        notify: function () {
             var me = this;
-            if (!me.done)
-            {
+            if (!me.done) {
                 var error = me.error,
                     fn = me[error ? 'failure' : 'success'],
                     delay = ('delay' in me)
@@ -1057,18 +928,14 @@ Ext.Boot = (function (emptyFn)
                         : (error ? 1 : Boot.config.chainDelay),
                     scope = me.scope || me;
                 me.done = true;
-                if (fn)
-                {
-                    if (delay === 0 || delay > 0)
-                    {
+                if (fn) {
+                    if (delay === 0 || delay > 0) {
                         // Free the stack (and defer the next script)
-                        setTimeout(function ()
-                        {
+                        setTimeout(function () {
                             fn.call(scope, me);
                         }, delay);
                     }
-                    else
-                    {
+                    else {
                         fn.call(scope, me);
                     }
                 }
@@ -1077,31 +944,25 @@ Ext.Boot = (function (emptyFn)
             }
         },
 
-        onDone: function (listener)
-        {
+        onDone: function (listener) {
             var me = this,
                 listeners = me.listeners || (me.listeners = []);
-            if (me.done)
-            {
+            if (me.done) {
                 listener(me);
             }
-            else
-            {
+            else {
                 listeners.push(listener);
             }
         },
 
-        fireListeners: function ()
-        {
+        fireListeners: function () {
             var listeners = this.listeners,
                 listener;
-            if (listeners)
-            {
+            if (listeners) {
                 //<debug>
                 _debug("firing request listeners");
                 //</debug>
-                while ((listener = listeners.shift()))
-                {
+                while ((listener = listeners.shift())) {
                     listener(this);
                 }
             }
@@ -1113,10 +974,8 @@ Ext.Boot = (function (emptyFn)
      * state of a particular url.  It is used to notify all Requests
      * interested in this url that the content is available.
      */
-    function Entry(cfg)
-    {
-        if (cfg.$isEntry)
-        {
+    function Entry(cfg) {
+        if (cfg.$isEntry) {
             return cfg;
         }
 
@@ -1143,11 +1002,9 @@ Ext.Boot = (function (emptyFn)
         evaluated: false,
         loaded: false,
 
-        isCrossDomain: function ()
-        {
+        isCrossDomain: function () {
             var me = this;
-            if (me.crossDomain === undefined)
-            {
+            if (me.crossDomain === undefined) {
                 //<debug>
                 _debug("checking " + me.getLoadUrl() + " for prefix " + Boot.origin);
                 //</debug>
@@ -1156,48 +1013,39 @@ Ext.Boot = (function (emptyFn)
             return me.crossDomain;
         },
 
-        isCss: function ()
-        {
+        isCss: function () {
             var me = this;
-            if (me.css === undefined)
-            {
+            if (me.css === undefined) {
                 me.css = me.url && cssRe.test(me.url);
             }
             return this.css;
         },
 
-        getElement: function (tag)
-        {
+        getElement: function (tag) {
             var me = this,
                 el = me.el;
-            if (!el)
-            {
+            if (!el) {
                 //<debug>
                 _debug("creating element for " + me.url);
                 //</debug>
-                if (me.isCss())
-                {
+                if (me.isCss()) {
                     tag = tag || "link";
                     el = doc.createElement(tag);
-                    if (tag == "link")
-                    {
+                    if (tag == "link") {
                         el.rel = 'stylesheet';
                         me.prop = 'href';
                     }
-                    else
-                    {
+                    else {
                         me.prop = "textContent";
                     }
                     el.type = "text/css";
                 }
-                else
-                {
+                else {
                     tag = tag || "script";
                     el = doc.createElement(tag);
                     el.type = 'text/javascript';
                     me.prop = 'src';
-                    if (Boot.hasAsync)
-                    {
+                    if (Boot.hasAsync) {
                         el.async = false;
                     }
                 }
@@ -1206,12 +1054,10 @@ Ext.Boot = (function (emptyFn)
             return el;
         },
 
-        getLoadUrl: function ()
-        {
+        getLoadUrl: function () {
             var me = this,
                 url = Boot.canonicalUrl(me.url);
-            if (!me.loadUrl)
-            {
+            if (!me.loadUrl) {
                 me.loadUrl = !!me.buster
                     ? (url + (url.indexOf('?') === -1 ? '?' : '&') + me.buster)
                     : url;
@@ -1219,22 +1065,18 @@ Ext.Boot = (function (emptyFn)
             return me.loadUrl;
         },
 
-        fetch: function (req)
-        {
+        fetch: function (req) {
             var url = this.getLoadUrl(),
                 async = !!req.async,
                 xhr = new XMLHttpRequest(),
                 complete = req.complete,
                 status, content, exception = false,
-                readyStateChange = function ()
-                {
-                    if (xhr && xhr.readyState == 4)
-                    {
-                        if (complete)
-                        {
+                readyStateChange = function () {
+                    if (xhr && xhr.readyState == 4) {
+                        if (complete) {
                             status = (xhr.status === 1223) ? 204 :
                                 (xhr.status === 0 && ((self.location || {}).protocol === 'file:' ||
-                                (self.location || {}).protocol === 'ionp:')) ? 200 : xhr.status;
+                                    (self.location || {}).protocol === 'ionp:')) ? 200 : xhr.status;
                             content = xhr.responseText;
                             complete({
                                 content: content,
@@ -1248,48 +1090,42 @@ Ext.Boot = (function (emptyFn)
 
             async = !!async;
 
-            if (async)
-            {
+            if (async) {
                 xhr.onreadystatechange = readyStateChange;
             }
 
-            try
-            {
+            try {
                 //<debug>
                 _debug("fetching " + url + " " + (async ? "async" : "sync"));
                 //</debug>
                 xhr.open('GET', url, async);
                 xhr.send(null);
             }
-            catch (err)
-            {
+            catch (err) {
                 exception = err;
                 readyStateChange();
             }
 
-            if (!async)
-            {
+            if (!async) {
                 readyStateChange();
             }
         },
 
-        onContentLoaded: function (response)
-        {
+        onContentLoaded: function (response) {
             var me = this,
                 status = response.status,
                 content = response.content,
                 exception = response.exception,
                 url = this.getLoadUrl();
             me.loaded = true;
-            if ((exception || status === 0) && !_environment.phantom)
-            {
+            if ((exception || status === 0) && !_environment.phantom) {
                 me.error =
                     //<debug>
                     ("Failed loading synchronously via XHR: '" + url +
-                    "'. It's likely that the file is either being loaded from a " +
-                    "different domain or from the local file system where cross " +
-                    "origin requests are not allowed for security reasons. Try " +
-                    "asynchronous loading instead.") ||
+                        "'. It's likely that the file is either being loaded from a " +
+                        "different domain or from the local file system where cross " +
+                        "origin requests are not allowed for security reasons. Try " +
+                        "asynchronous loading instead.") ||
                     //</debug>
                     true;
                 me.evaluated = true;
@@ -1297,67 +1133,55 @@ Ext.Boot = (function (emptyFn)
             else if ((status >= 200 && status < 300) || status === 304
                 || _environment.phantom
                 || (status === 0 && content.length > 0)
-            )
-            {
+            ) {
                 me.content = content;
             }
-            else
-            {
+            else {
                 me.error =
                     //<debug>
                     ("Failed loading synchronously via XHR: '" + url +
-                    "'. Please verify that the file exists. XHR status code: " +
-                    status) ||
+                        "'. Please verify that the file exists. XHR status code: " +
+                        status) ||
                     //</debug>
                     true;
                 me.evaluated = true;
             }
         },
 
-        createLoadElement: function (callback)
-        {
+        createLoadElement: function (callback) {
             var me = this,
                 el = me.getElement(),
-                readyStateChange = function ()
-                {
-                    if (this.readyState === 'loaded' || this.readyState === 'complete')
-                    {
-                        if (callback)
-                        {
+                readyStateChange = function () {
+                    if (this.readyState === 'loaded' || this.readyState === 'complete') {
+                        if (callback) {
                             callback();
                         }
                     }
                 },
-                errorFn = function ()
-                {
+                errorFn = function () {
                     me.error = true;
-                    if (callback)
-                    {
+                    if (callback) {
                         callback();
                     }
                 };
             me.preserve = true;
             el.onerror = errorFn;
-            if (Boot.hasReadyState)
-            {
+            if (Boot.hasReadyState) {
                 el.onreadystatechange = readyStateChange;
             }
-            else
-            {
+            else {
                 el.onload = callback;
             }
             // IE starts loading here
             el[me.prop] = me.getLoadUrl();
         },
 
-        onLoadElementReady: function ()
-        {
+        onLoadElementReady: function () {
             Boot.getHead().appendChild(this.getElement());
             this.evaluated = true;
         },
 
-        inject: function (content, asset)
-        {
+        inject: function (content, asset) {
             //<debug>
             _debug("injecting content for " + this.url);
             //</debug>
@@ -1367,25 +1191,21 @@ Ext.Boot = (function (emptyFn)
                 key = me.key,
                 base, el, ieMode, basePath;
 
-            if (me.isCss())
-            {
+            if (me.isCss()) {
                 me.preserve = true;
                 basePath = key.substring(0, key.lastIndexOf("/") + 1);
                 base = doc.createElement('base');
                 base.href = basePath;
-                if (head.firstChild)
-                {
+                if (head.firstChild) {
                     head.insertBefore(base, head.firstChild);
                 }
-                else
-                {
+                else {
                     head.appendChild(base);
                 }
                 // reset the href attribute to cuase IE to pick up the change
                 base.href = base.href;
 
-                if (url)
-                {
+                if (url) {
                     content += "\n/*# sourceURL=" + key + " */";
                 }
 
@@ -1395,26 +1215,22 @@ Ext.Boot = (function (emptyFn)
                 ieMode = ('styleSheet' in el);
 
                 head.appendChild(base);
-                if (ieMode)
-                {
+                if (ieMode) {
                     head.appendChild(el);
                     el.styleSheet.cssText = content;
                 }
-                else
-                {
+                else {
                     el.textContent = content;
                     head.appendChild(el);
                 }
                 head.removeChild(base);
 
             }
-            else
-            {
+            else {
                 // Debugger friendly, file names are still shown even though they're 
                 // eval'ed code. Breakpoints work on both Firebug and Chrome's Web
                 // Inspector.
-                if (url)
-                {
+                if (url) {
                     content += "\n//# sourceURL=" + key;
                 }
                 Ext.globalEval(content);
@@ -1422,24 +1238,19 @@ Ext.Boot = (function (emptyFn)
             return me;
         },
 
-        loadCrossDomain: function ()
-        {
+        loadCrossDomain: function () {
             var me = this,
-                complete = function ()
-                {
+                complete = function () {
                     me.loaded = me.evaluated = me.done = true;
                     me.notifyRequests();
                 };
-            if (me.isCss())
-            {
+            if (me.isCss()) {
                 me.createLoadElement();
                 me.evaluateLoadElement();
                 complete();
             }
-            else
-            {
-                me.createLoadElement(function ()
-                {
+            else {
+                me.createLoadElement(function () {
                     complete();
                 });
                 me.evaluateLoadElement();
@@ -1451,13 +1262,11 @@ Ext.Boot = (function (emptyFn)
             return true;
         },
 
-        loadSync: function ()
-        {
+        loadSync: function () {
             var me = this;
             me.fetch({
                 async: false,
-                complete: function (response)
-                {
+                complete: function (response) {
                     me.onContentLoaded(response);
                 }
             });
@@ -1465,13 +1274,10 @@ Ext.Boot = (function (emptyFn)
             me.notifyRequests();
         },
 
-        load: function (sync)
-        {
+        load: function (sync) {
             var me = this;
-            if (!me.loaded)
-            {
-                if (me.loading)
-                {
+            if (!me.loaded) {
+                if (me.loading) {
                     // if we're calling back through load and we're loading but haven't 
                     // yet loaded, then we should be in a sequential, cross domain 
                     // load scenario which means we can't continue the load on the 
@@ -1484,21 +1290,17 @@ Ext.Boot = (function (emptyFn)
                 me.loading = true;
 
                 // for async modes, we have some options 
-                if (!sync)
-                {
+                if (!sync) {
                     // if cross domain, just inject the script tag and let the onload
                     // events drive the progression
-                    if (me.isCrossDomain())
-                    {
+                    if (me.isCrossDomain()) {
                         return me.loadCrossDomain();
                     }
                     // for IE, use the readyStateChange allows us to load scripts in parallel
                     // but serialize the evaluation by appending the script node to the 
                     // document
-                    else if (!me.isCss() && Boot.hasReadyState)
-                    {
-                        me.createLoadElement(function ()
-                        {
+                    else if (!me.isCss() && Boot.hasReadyState) {
+                        me.createLoadElement(function () {
                             me.loaded = true;
                             me.notifyRequests();
                         });
@@ -1506,12 +1308,10 @@ Ext.Boot = (function (emptyFn)
 
                     // for other browsers, just ajax the content down in parallel, and use
                     // globalEval to serialize evaluation
-                    else
-                    {
+                    else {
                         me.fetch({
                             async: !sync,
-                            complete: function (response)
-                            {
+                            complete: function (response) {
                                 me.onContentLoaded(response);
                                 me.notifyRequests();
                             }
@@ -1522,8 +1322,7 @@ Ext.Boot = (function (emptyFn)
                 // for sync mode in js, global eval FTW.  IE won't honor the comment
                 // paths in the debugger, so eventually we need a sync mode for IE that
                 // uses the readyStateChange mechanism
-                else
-                {
+                else {
                     me.loadSync();
                 }
             }
@@ -1531,33 +1330,26 @@ Ext.Boot = (function (emptyFn)
             return true;
         },
 
-        evaluateContent: function ()
-        {
+        evaluateContent: function () {
             this.inject(this.content);
             this.content = null;
         },
 
-        evaluateLoadElement: function ()
-        {
+        evaluateLoadElement: function () {
             Boot.getHead().appendChild(this.getElement());
         },
 
-        evaluate: function ()
-        {
+        evaluate: function () {
             var me = this;
-            if (!me.evaluated)
-            {
-                if (me.evaluating)
-                {
+            if (!me.evaluated) {
+                if (me.evaluating) {
                     return;
                 }
                 me.evaluating = true;
-                if (me.content !== undefined)
-                {
+                if (me.content !== undefined) {
                     me.evaluateContent();
                 }
-                else if (!me.error)
-                {
+                else if (!me.error) {
                     me.evaluateLoadElement();
                 }
                 me.evaluated = me.done = true;
@@ -1568,37 +1360,30 @@ Ext.Boot = (function (emptyFn)
         /*
          * @private
          */
-        cleanup: function ()
-        {
+        cleanup: function () {
             var me = this,
                 el = me.el,
                 prop;
 
-            if (!el)
-            {
+            if (!el) {
                 return;
             }
 
-            if (!me.preserve)
-            {
+            if (!me.preserve) {
                 me.el = null;
 
                 el.parentNode.removeChild(el); // Remove, since its useless now
 
-                for (prop in el)
-                {
-                    try
-                    {
-                        if (prop !== me.prop)
-                        {
+                for (prop in el) {
+                    try {
+                        if (prop !== me.prop) {
                             // If we set the src property to null IE
                             // will try and request a script at './null'
                             el[prop] = null;
                         }
                         delete el[prop];      // and prepare for GC
                     }
-                    catch (cleanEx)
-                    {
+                    catch (cleanEx) {
                         //ignore
                     }
                 }
@@ -1610,47 +1395,38 @@ Ext.Boot = (function (emptyFn)
             el.onload = el.onerror = el.onreadystatechange = emptyFn;
         },
 
-        notifyRequests: function ()
-        {
+        notifyRequests: function () {
             var requests = this.requests,
                 len = requests.length,
                 i, request;
-            for (i = 0; i < len; i++)
-            {
+            for (i = 0; i < len; i++) {
                 request = requests[i];
                 request.processLoadedEntries();
             }
-            if (this.done)
-            {
+            if (this.done) {
                 this.fireListeners();
             }
         },
 
-        onDone: function (listener)
-        {
+        onDone: function (listener) {
             var me = this,
                 listeners = me.listeners || (me.listeners = []);
-            if (me.done)
-            {
+            if (me.done) {
                 listener(me);
             }
-            else
-            {
+            else {
                 listeners.push(listener);
             }
         },
 
-        fireListeners: function ()
-        {
+        fireListeners: function () {
             var listeners = this.listeners,
                 listener;
-            if (listeners && listeners.length > 0)
-            {
+            if (listeners && listeners.length > 0) {
                 //<debug>
                 _debug("firing event listeners for url " + this.url);
                 //</debug>
-                while ((listener = listeners.shift()))
-                {
+                while ((listener = listeners.shift())) {
                     listener(this);
                 }
             }
@@ -1665,8 +1441,7 @@ Ext.Boot = (function (emptyFn)
      * @param {Boolean} disable True to disable the cache buster.
      * @param {String} [path="/"] An optional path to scope the cookie.
      */
-    Ext.disableCacheBuster = function (disable, path)
-    {
+    Ext.disableCacheBuster = function (disable, path) {
         var date = new Date();
         date.setTime(date.getTime() + (disable ? 10 * 365 : -1) * 24 * 60 * 60 * 1000);
         date = date.toGMTString();
@@ -1674,10 +1449,8 @@ Ext.Boot = (function (emptyFn)
     };
 
 //<if nonBrowser>
-    if (_environment.node)
-    {
-        Boot.prototype.load = Boot.prototype.loadSync = function (request)
-        {
+    if (_environment.node) {
+        Boot.prototype.load = Boot.prototype.loadSync = function (request) {
             // @TODO
             require(filePath);
             onLoad.call(scope);
@@ -1691,8 +1464,7 @@ Ext.Boot = (function (emptyFn)
 
 // NOTE: We run the eval at global scope to protect the body of the function and allow
 // compressors to still process it.
-}(function ()
-{
+}(function () {
 }));//(eval("/*@cc_on!@*/!1"));
 
 /*
@@ -1703,12 +1475,10 @@ Ext.Boot = (function (emptyFn)
  * @method
  */
 Ext.globalEval = Ext.globalEval || (this.execScript
-        ? function (code)
-    {
+    ? function (code) {
         execScript(code);
     }
-        : function ($$code)
-    {
+    : function ($$code) {
         eval.call(window, $$code);
     });
 
@@ -1716,22 +1486,17 @@ Ext.globalEval = Ext.globalEval || (this.execScript
 /*
  * Only IE8 & IE/Quirks lack Function.prototype.bind so we polyfill that here.
  */
-if (!Function.prototype.bind)
-{
-    (function ()
-    {
+if (!Function.prototype.bind) {
+    (function () {
         var slice = Array.prototype.slice,
-        // To reduce overhead on call of the bound fn we have two flavors based on
-        // whether we have args to prepend or not:
-            bind = function (me)
-            {
+            // To reduce overhead on call of the bound fn we have two flavors based on
+            // whether we have args to prepend or not:
+            bind = function (me) {
                 var args = slice.call(arguments, 1),
                     method = this;
 
-                if (args.length)
-                {
-                    return function ()
-                    {
+                if (args.length) {
+                    return function () {
                         var t = arguments;
                         // avoid the slice/concat if the caller does not supply args
                         return method.apply(me, t.length ? args.concat(slice.call(t)) : args);
@@ -1740,8 +1505,7 @@ if (!Function.prototype.bind)
                 // this is the majority use case - just fn.bind(this) and no args
 
                 args = null;
-                return function ()
-                {
+                return function () {
                     return method.apply(me, arguments);
                 };
             };
